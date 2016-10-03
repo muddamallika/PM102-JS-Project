@@ -1,0 +1,33 @@
+Project Ideas
+
+Idea-1
+
+Take Care. 
+
+It is heatlh care management system where you can view options for different doctors in hospitals and clinics across
+the city.
+
+Home page
+Registration Page
+Login Page
+
+
+Check Doctor's availabiity
+Schedule Doctor's Appointment
+Bill Payment
+
+
+Idea-2
+
+Catch up!
+
+It is an event organisation system where you can create and join for any event across the city. 
+
+Home page
+Registration Page
+Login Page
+
+
+Book Tickets
+Cancel Tickets
+Ask for Volunteer 
