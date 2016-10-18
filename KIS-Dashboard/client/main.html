@@ -1,25 +1,50 @@
 <head>
   <title>KIS-Dashboard</title>
+  <style>
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+</style>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
 
-  {{> hello}}
-  {{> info}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="Home">
+ <h1 align="center">KIS Dashboard</h1>
+    <h4 align="center">Kiel International Students</h4>
+    <ul>
+  <li><a href="/">HOME</a></li>
+  <li><a href="/Articles">ARTICLES</a></li>
+  <li><a href="/Earnlearn">EARN & LEARN</a></li>
+  <li><a href="/About">ABOUT</a></li>
+  <li><a href="/Contact">CONTACT US</a></li>
+    </ul>
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
+<template name="About">
+    <h1>Welcome to about page</h1>
 </template>
