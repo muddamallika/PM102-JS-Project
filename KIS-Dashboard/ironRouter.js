@@ -17,3 +17,8 @@ Router.route('/About', function () {
 Router.route('/Articles', function() {
 	this.render('Articles');
 });
+
+//home Profile
+Router.route('/homeProfile/Profile', function() {
+	this.render('Profile');
+});
