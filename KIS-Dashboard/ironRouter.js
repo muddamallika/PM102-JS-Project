@@ -9,14 +9,6 @@ Router.route('/', function () {
   this.render('Home');
 });
 
-//About page
-Router.route('/About', function () {
-  this.render('About');
-});
-
-Router.route('/Articles', function() {
-	this.render('Articles');
-});
 
 //home Profile
 Router.route('/homeProfile/Profile', function() {
