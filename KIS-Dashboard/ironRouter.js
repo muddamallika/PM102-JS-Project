@@ -24,3 +24,8 @@ Router.route('/bArrival/beforeA', function() {
 Router.route('/bAGerman/beforeAGI', function() {
 	this.render('beforeAGI');
 });
+
+//before Arrival - Procedures and Checklists
+Router.route('/bAprocedure/bAproceed', function() {
+  this.render('bAproceed');
+});
