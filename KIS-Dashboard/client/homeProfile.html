@@ -41,10 +41,10 @@
     margin-top: -10px;
   }
   
-  .block{
+  .block {
     height: 250px;
     width: 33%;
-    background-color: antiquewhite;
+    
     
   }
   a{
@@ -73,6 +73,35 @@
     transform: scale(1.1);
   
 }
+
+.textbox:hover {
+opacity:1;
+}
+.text {
+padding-top: 80px;
+font-size: 40px;
+color: white;
+}
+.textbox {
+width:325px;
+height:220px;
+position:absolute;
+top:0;
+left:20;
+opacity:0;
+border-radius:5px;
+background-color: rgba(0,0,0,0.8);
+-webkit-box-shadow: 0px 0px 20px 4px rgba(255,255,255,.75);
+box-shadow: 0px 0px 25px 2px rgba(255,255,255,.75);
+-webkit-transition: all 0.7s ease;
+transition: all 0.7s ease;
+}
+
+.img1 {
+  width:325px;
+  height:220px;
+}
+
   
 </style>
 </head>
@@ -106,13 +135,23 @@
 <div class="container">
   <div class="con1">
     <div class="col-xs-4 block hvr-grow">
-      <a href="#"><p class="mid text-center">Before Arrival</p></a>
+      <img class="img1" src="https://isasuoe.files.wordpress.com/2015/07/luggage.jpg" alt="">
+      <div class="textbox">
+      <a href="https://www.google.com" style="text-decoration: none !important">
+        <p class="text text-center">Before Arrival</p></a>
+      </div>
     </div>
     <div class="col-xs-4 block hvr-grow">
-      <a href="#"><p class="mid text-center">During Arrival</p></a>
+      <img class="img1" src="http://www.foreignstudents.com/sites/default/files/webfm/With%20suitcase%20at%20airport%20comp.jpg" alt="">
+      <div class="textbox">
+        <p class="text text-center">During Arrival</p>
+      </div>
     </div>  
     <div class="col-xs-4 block hvr-grow">
-      <a href="#"><p class="mid text-center">After Arrival</p></a>
+      <img class="img1" src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/college-student-walking-on-campus_zyp_tqb-h__M0000.jpg" alt="">
+      <div class="textbox">
+        <p class="text text-center">After Arrival</p>
+      </div>
     </div>
   </div>
   <br/><br/><br/><br/>
