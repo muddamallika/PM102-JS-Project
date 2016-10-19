@@ -15,7 +15,12 @@ Router.route('/homeProfile/Profile', function() {
 	this.render('Profile');
 });
 
-//home Profile
+//before Arrival
 Router.route('/bArrival/beforeA', function() {
 	this.render('beforeA');
+});
+
+//before Arrival - German Institutes
+Router.route('/bAGerman/beforeAGI', function() {
+	this.render('beforeAGI');
 });
