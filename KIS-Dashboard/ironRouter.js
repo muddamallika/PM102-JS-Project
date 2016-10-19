@@ -14,3 +14,8 @@ Router.route('/', function () {
 Router.route('/homeProfile/Profile', function() {
 	this.render('Profile');
 });
+
+//home Profile
+Router.route('/bArrival/beforeA', function() {
+	this.render('beforeA');
+});
