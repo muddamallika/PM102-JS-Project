@@ -30,6 +30,7 @@ Router.route('/bAprocedure/bAproceed', function() {
   this.render('bAproceed');
 });
 
+
 //before Arrival - Accomodation
 Router.route('/bAaccomodation/bAaccom', function() {
   this.render('bAaccom');
@@ -45,4 +46,10 @@ Router.route('/dArrival/duringA', function() {
 	this.render('duringA');
 });
 
+
+
+//before Arrival - Travel economically
+Router.route('/bAtraveleco/bAtravel', function() {
+	this.render('bAtravel');
+});
 
