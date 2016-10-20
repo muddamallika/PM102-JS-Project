@@ -29,3 +29,20 @@ Router.route('/bAGerman/beforeAGI', function() {
 Router.route('/bAprocedure/bAproceed', function() {
   this.render('bAproceed');
 });
+
+//before Arrival - Accomodation
+Router.route('/bAaccomodation/bAaccom', function() {
+  this.render('bAaccom');
+});
+
+//arrival Arrival
+Router.route('/aArrival/afterA', function() {
+	this.render('afterA');
+});
+
+//during Arrival
+Router.route('/dArrival/duringA', function() {
+	this.render('duringA');
+});
+
+
