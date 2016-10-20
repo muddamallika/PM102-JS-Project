@@ -29,3 +29,8 @@ Router.route('/bAGerman/beforeAGI', function() {
 Router.route('/bAprocedure/bAproceed', function() {
   this.render('bAproceed');
 });
+
+//before Arrival - Travel economically
+Router.route('/bAtraveleco/bAtravel', function() {
+	this.render('bAtravel');
+});
