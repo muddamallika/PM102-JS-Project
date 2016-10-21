@@ -62,3 +62,8 @@ Router.route('/readArticle/rArticle', function() {
 Router.route('/postArticle/pArticle', function() {
 	this.render('pArticle');
 });
+
+//Contact Us
+Router.route('/contact/contactus', function() {
+	this.render('contactus');
+});
