@@ -14,8 +14,7 @@ Router.route('/', function () {
 Router.route('/homeProfile/Profile', function() {
 	this.render('Profile');
 });
-<<<<<<< HEAD
-=======
+
 
 //before Arrival
 Router.route('/bArrival/beforeA', function() {
@@ -64,4 +63,3 @@ Router.route('/readArticle/rArticle', function() {
 Router.route('/postArticle/pArticle', function() {
 	this.render('pArticle');
 });
->>>>>>> origin/master
