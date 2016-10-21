@@ -14,6 +14,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="//cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js" type="text/javascript"></script>
 
 
   <style>
@@ -72,6 +73,7 @@ li a:hover {
 
 
 </style>
+
 </head>
 
 <body>
@@ -115,17 +117,28 @@ li a:hover {
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="container">
-  <div class="col-xs-6">
-    <ul class="ar">
-      {{#each articles}}
-          {{> p_article}}<br>
-      {{/each}}
-    </ul>   
-<div class="col-xs-6">
-  
-</div>
 
+
+<div class="container">
+  
+  <div class="col-xs-6 mar" style="height: 200px">
+  <marquee behavior="scroll" direction="up" scrolldelay="200">
+  <p><a href="">Event 1</a></p>
+  <p>Event 2</p>
+  <br><br><br><br>
+  </marquee>
+  </div>
+
+  <div class="col-xs-6">
+    <button>MyEvents</button>
+  </div>
+</div>
+<div class="container">
+  <div class="col-xs-6">   
+  </div>
+  <div class="col-xs-6" style="margin-top: -140px">
+    <button>Create Event</button>
+  </div>
 </div>
 
 
