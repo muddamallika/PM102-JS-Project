@@ -53,3 +53,12 @@ Router.route('/bAtraveleco/bAtravel', function() {
 	this.render('bAtravel');
 });
 
+//read Article
+Router.route('/readArticle/rArticle', function() {
+	this.render('rArticle');
+});
+
+//post Article
+Router.route('/postArticle/pArticle', function() {
+	this.render('pArticle');
+});
