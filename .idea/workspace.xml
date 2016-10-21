@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd8ebf4-9a7a-4ed4-a5b7-b76e98561c73" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KIS-Dashboard/client/bAaccomodation.html" afterPath="$PROJECT_DIR$/KIS-Dashboard/client/bAaccomodation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KIS-Dashboard/client/bAtraveleco.html" afterPath="$PROJECT_DIR$/KIS-Dashboard/client/bAtraveleco.html" />
     </list>
     <ignored path="PM102-JS-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bAaccomodation.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bAaccomodation.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/bAaccomodation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
+            <state relative-caret-position="339">
               <caret line="106" column="49" selection-start-line="106" selection-start-column="49" selection-end-line="106" selection-end-column="49" />
               <folding />
             </state>
@@ -38,8 +38,18 @@
       <file leaf-file-name="bArrival.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/bArrival.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3270">
+            <state relative-caret-position="105">
               <caret line="218" column="26" selection-start-line="218" selection-start-column="26" selection-end-line="218" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bAtraveleco.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/bAtraveleco.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="453">
+              <caret line="112" column="77" selection-start-line="112" selection-start-column="77" selection-end-line="112" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -71,10 +81,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/KIS-Dashboard/ironRouter.js" />
-        <option value="$PROJECT_DIR$/KIS-Dashboard/client/bAtraveleco.html" />
         <option value="$PROJECT_DIR$/KIS-Dashboard/client/bAprocedure.html" />
         <option value="$PROJECT_DIR$/KIS-Dashboard/client/bAGerman.html" />
         <option value="$PROJECT_DIR$/KIS-Dashboard/client/bAaccomodation.html" />
+        <option value="$PROJECT_DIR$/KIS-Dashboard/client/bAtraveleco.html" />
       </list>
     </option>
   </component>
@@ -144,24 +154,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="KIS-Dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PM102-JS-Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PM102-JS-Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KIS-Dashboard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -256,12 +248,12 @@
       <workItem from="1476958034344" duration="1954000" />
       <workItem from="1476960278639" duration="4815000" />
       <workItem from="1477038420684" duration="2917000" />
-      <workItem from="1477049244534" duration="1614000" />
+      <workItem from="1477049244534" duration="4576000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13416000" />
+    <option name="totallyTimeSpent" value="16378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="743" extended-state="6" />
@@ -359,6 +351,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -400,13 +393,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/bAtraveleco.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KIS-Dashboard/ironRouter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -436,18 +422,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/bAaccomodation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="106" column="49" selection-start-line="106" selection-start-column="49" selection-end-line="106" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/bArrival.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3270">
+        <state relative-caret-position="105">
           <caret line="218" column="26" selection-start-line="218" selection-start-column="26" selection-end-line="218" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/bAaccomodation.html">
+    <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/bAtraveleco.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="106" column="49" selection-start-line="106" selection-start-column="49" selection-end-line="106" selection-end-column="49" />
+        <state relative-caret-position="453">
+          <caret line="112" column="77" selection-start-line="112" selection-start-column="77" selection-end-line="112" selection-end-column="77" />
           <folding />
         </state>
       </provider>
