@@ -44,7 +44,12 @@
 
   a{
     text-decoration: none !important;
-    color: black;
+    color:transparent;
+
+  }
+
+  a:visited{
+    color: none;
   }
   .mid{
     margin-top: 120px;
@@ -57,16 +62,19 @@
   position: relative;
   margin: 10px auto;
   height: 250px;
-  width: 50%;
+  width: 33.33%;
   background-color: none;
   z-index: 1;
 }
+
 #f1_container {
   perspective: 1000;
 }
+  
 #f1_card {
-  width: 100%;
-  height: 100%;
+  width: 33.33%  width: 33.33%;
+;
+  height: 250px;
   transform-style: preserve-3d;
   transition: all 1.0s linear;
 }
@@ -76,10 +84,11 @@
 }
 .face {
   position: absolute;
-  width: 100%;
+  width: 33.33%;
   height: 100%;
   backface-visibility: hidden;
 }
+
 .face.back {
   display: block;
   transform: rotateY(180deg);
@@ -96,7 +105,7 @@
   left: 0;
   top: 0;
   height: 250px;
-  width: 100%;
+  width: 33.33%;
 }
 
 </style>
@@ -110,9 +119,6 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    
-      
-    
     <div class="col-xs-5"></div>
 
     <div class="col-xs-3">
@@ -122,95 +128,169 @@
           <a class="navbar-brand down" href="#">KIS Dashboard</a> 
   </div>
       <div class="col-xs-4"></div>
-    
-    
-   
   </div><!-- /.container-fluid -->
 </nav>
 
 <div class="container">
-  <div>
-    <div class="col-xs-6" id="f1_container">
-      <div id="f1_card" class="shadow">
-          <div class="front face">
-          <div id="container">
-            <img id="image" src="http://www.hiltonhotels.de/assets/img/destinations/Germany/germany-1.jpg" />
-            
-          </div>
-          </div>
-          <div class="back face center">
-            <p class="lead" style="font-weight:bold;">
-            German Instithjh
-            </p>
-            <p class="lead">Before applying for German Universities, it is important to know about few institutions which help and work for International Students </p>
-            <p><a class="btn btn-info btn-lg" href="#" target="_blank" role="button">Learn more</a></p>
-          </div>
-      </div>
-    </div>
-    
-    <div class="col-xs-6 " id="f1_container">
-      <div id="f1_card" class="shadow">
-          <div class="front face">
-            
-          <div id="container">
-            <img id="image" src="http://www.americancollegespain.com/pagina/345/the-american-university-admission-proces.jpg" />
-            
-          </div>  
-          
-          
-          </div>
-          <div class="back face center">
-          <p class="lead" style="font-weight:bold;">
-            Procedures & Checklist
-          </p>
-          <p class="lead">Knowledge about various application procedure and checklist will help you during the admission process</p>
-            <p><a class="btn btn-info btn-lg" href="#" target="_blank" role="button">Learn more</a></p>
-          </div>
-      </div>
-    </div>
-    
-  </div>
-  <br/><br/>
-  
-  <div>
-    <div class="col-xs-6 " id="f1_container">
+   <div class="col-xs-4" id="f1_container">
       <div id="f1_card" class="shadow">
           <div class="front face">
             <div id="container">
-            <img id="image" src="https://www.tum.de/fileadmin/w00bfo/www/Unileben/Wohnen/20160408_Studentenviertel-Olympia_513x288px.jpg" />
-            
-          </div>  
-            
+              <img id="image" src="#" />
+            </div>
           </div>
           <div class="back face center">
-          <p class="lead" style="font-weight:bold;">
-            Finding Accomodation
-          </p>
-          <p class="lead">Finding an accomodation is one of major hurdle for students. Some of the best ways to find accomodation are below</p>
-            <p><a class="btn btn-info btn-lg" href="#" target="_blank" role="button">Learn more</a></p>
+            <p class="lead" style="font-weight:bold;">
+            Arrival Assistance
+            </p>
+            <p class="lead">Arrival Assistance Arrival Assistance </p>
+            <p><a class="btn btn-info btn-lg" href="/bAGerman/beforeAGI" target="_blank" role="button" style="background-color: black;color:white;">Learn more</a></p>
           </div>
       </div>
     </div>
     
-    <div class="col-xs-6 " id="f1_container">
+    <div class="col-xs-4" id="f1_container">
       <div id="f1_card" class="shadow">
           <div class="front face">
-          <div id="container">
-            <img id="image" src="http://static.wixstatic.com/media/1544f7aef92a890a48cb683aaa943cef.wix_mp_1024" />
-            
-          </div>  
+            <div id="container">
+              <img id="image" src="#" />
+            </div>
           </div>
           <div class="back face center">
-          <p class="lead" style="font-weight:bold;">
-            Travel Booking Tips
-          </p>
-            <p class="lead">These will help you to book your travel in an economical way</p>
-            <p><a class="btn btn-info btn-lg" href="#" target="_blank" role="button">Learn more</a></p>
+            <p class="lead" style="font-weight:bold;">
+            Insurance Facts
+            </p>
+            <p class="lead">Introduce yourself to German Insurance and its providers </p>
+            <p><a class="btn btn-info btn-lg" href="/bAGerman/beforeAGI" target="_blank" role="button">Learn more</a></p>
           </div>
       </div>
     </div>
-    
-  </div>
+  
+  <div class="col-xs-4" id="f1_container">
+      <div id="f1_card" class="shadow">
+          <div class="front face">
+            <div id="container">
+              <img id="image" src="#" />
+            </div>
+          </div>
+          <div class="back face center">
+            <p class="lead" style="font-weight:bold;">
+           College Registration
+            </p>
+            <p class="lead">College Registration College Registration </p>
+            <p><a class="btn btn-info btn-lg" href="/bAGerman/beforeAGI" target="_blank" role="button">Learn more</a></p>
+          </div>
+      </div>
+    </div>
+  
+</div>
+
+<div class="container">
+  <div class="col-xs-4" id="f1_container">
+      <div id="f1_card" class="shadow">
+          <div class="front face">
+            <div id="container">
+              <img id="image" src="#" />
+            </div>
+          </div>
+          <div class="back face center">
+            <p class="lead" style="font-weight:bold;">
+            City Registration
+            </p>
+            <p class="lead">City Registration City Registration</p>
+            <p><a class="btn btn-info btn-lg" href="/bAGerman/beforeAGI" target="_blank" role="button">Learn more</a></p>
+          </div>
+      </div>
+    </div>
+  
+  <div class="col-xs-4" id="f1_container">
+      <div id="f1_card" class="shadow">
+          <div class="front face">
+            <div id="container">
+              <img id="image" src="#" />
+            </div>
+          </div>
+          <div class="back face center">
+            <p class="lead" style="font-weight:bold;">
+            Food Facts in Germany
+            </p>
+            <p class="lead">Food Facts in Germany Food Facts in Germany </p>
+            <p><a class="btn btn-info btn-lg" href="/bAGerman/beforeAGI" target="_blank" role="button">Learn more</a></p>
+          </div>
+      </div>
+    </div>
+  
+  <div class="col-xs-4" id="f1_container">
+      <div id="f1_card" class="shadow">
+          <div class="front face">
+            <div id="container">
+              <img id="image" src="#" />
+            </div>
+          </div>
+          <div class="back face center">
+            <p class="lead" style="font-weight:bold;">
+            Shopping Tricks
+            </p>
+            <p class="lead">Shopping Tricks Shopping Tricks</p>
+            <p><a class="btn btn-info btn-lg" href="/bAGerman/beforeAGI" target="_blank" role="button">Learn more</a></p>
+          </div>
+      </div>
+    </div>
+  
+</div>
+
+  <div class="container">
+  <div class="col-xs-4" id="f1_container">
+      <div id="f1_card" class="shadow">
+          <div class="front face">
+            <div id="container">
+              <img id="image" src="#" />
+            </div>
+          </div>
+          <div class="back face center">
+            <p class="lead" style="font-weight:bold;">
+            Mobile Connections
+            </p>
+            <p class="lead">Mobile Connections Mobile Connections </p>
+            <p><a class="btn btn-info btn-lg" href="/bAGerman/beforeAGI" target="_blank" role="button">Learn more</a></p>
+          </div>
+      </div>
+    </div>
+  
+  <div class="col-xs-4" id="f1_container">
+      <div id="f1_card" class="shadow">
+          <div class="front face">
+            <div id="container">
+              <img id="image" src="#" />
+            </div>
+          </div>
+          <div class="back face center">
+            <p class="lead" style="font-weight:bold;">
+            DSL-Internet
+            </p>
+            <p class="lead">DSL-Internet DSL-Internet </p>
+            <p><a class="btn btn-info btn-lg" href="/bAGerman/beforeAGI" target="_blank" role="button">Learn more</a></p>
+          </div>
+      </div>
+    </div>
+  
+  <div class="col-xs-4" id="f1_container">
+      <div id="f1_card" class="shadow">
+          <div class="front face">
+            <div id="container">
+              <img id="image" src="#" />
+            </div>
+          </div>
+          <div class="back face center">
+            <p class="lead" style="font-weight:bold;">
+            Temporary Accommodation
+            </p>
+            <p class="lead">Temporary Accommodation</p>
+            <p><a class="btn btn-info btn-lg" href="/bAGerman/beforeAGI" target="_blank" role="button">Learn more</a></p>
+          </div>
+      </div>
+    </div>
+
 </div>
   
 <br>

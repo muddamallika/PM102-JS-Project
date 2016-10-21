@@ -59,6 +59,11 @@ Router.route('/readArticle/rArticle', function() {
 });
 
 //post Article
-Router.route('/postArticle/pArticle', function() {
-	this.render('pArticle');
+//Router.route('                                                                                                                                                                  ', function() {
+//	this.render('pArticle');
+//});
+
+Router.route('/public', function(){
+	this.render();
+
 });
