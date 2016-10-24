@@ -67,3 +67,8 @@ Router.route('/public', function(){
 	this.render();
 
 });
+
+//Contact Us
+Router.route('/contact/contactus', function() {
+	this.render('contactus');
+});
