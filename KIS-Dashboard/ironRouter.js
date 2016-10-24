@@ -31,6 +31,7 @@ Router.route('/bAprocedure/bAproceed', function() {
 });
 
 
+
 //before Arrival - Accomodation
 Router.route('/bAaccomodation/bAaccom', function() {
   this.render('bAaccom');
@@ -71,4 +72,9 @@ Router.route('/public', function(){
 //Contact Us
 Router.route('/contact/contactus', function() {
 	this.render('contactus');
+});
+
+//About Us
+Router.route('/aboutUs/aboutus', function() {
+	this.render('aboutus');
 });

@@ -1,12 +1,5 @@
 <head>
-  <title>KIS-Dashboard</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <title>Contact US</title>
 
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,60 +7,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<style>
-    .up {
-      margin-top: -36px;
-    }
+  <link rel="stylesheet" href="../css/contactUs.css">
 
-    .down {
-      margin-top: 10px;
-    }
-
-    .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-    }
-
-    .fa {
-      size: 20px;
-    }
-
-    .foot_img {
-      margin-bottom: : -50px;
-    }
-
-  .img-circle {
-    margin-top: -10px;
-  }
-
-
-  a{
-    text-decoration: none !important;
-    color: black;
-  }
-  .mid{
-    margin-top: 120px;
-    font-size: 30px;
-
-  }
-
-
-
-</style>
 </head>
-
 <body>
-
 </body>
 
 <template name="contactus">
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-
     <div class="col-xs-5"></div>
-
     <div class="col-xs-3">
           <a class="navbar-brand" href="#">
                     <img class="img-circle" src="https://image.freepik.com/free-icon/healthy-lifestyle-logo_318-52683.jpg" alt=""  width="50px" height="50px">
@@ -75,25 +26,21 @@
           <a class="navbar-brand down" href="#">KIS Dashboard</a>
   </div>
       <div class="col-xs-4"></div>
-
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="container">
-  <div class="jumbotron jumbotron-sm">
-      <div class="container">
-          <div class="row">
-              <div class="col-sm-12 col-lg-12">
-                  <h1 class="h1">
-                      Contact us <small>Feel free to contact us</small></h1>
-              </div>
-          </div>
-      </div>
-  </div>
+<div class="container contactUs-content">
+  <marquee scrollamount="20">
+  <div class="dashboardBanner">
+    <h1>Contact Us</h1>
+ </div>
+</marquee>
+ </div>
+
   <div class="container">
       <div class="row">
           <div class="col-md-8">
-              <div class="well well-sm">
+              <div class="well well-sm contact-details">
                   <form>
                   <div class="row">
                       <div class="col-md-6">
@@ -113,9 +60,9 @@
                           <div class="form-group">
                               <label for="subject">
                                   Subject</label>
-                              <select id="subject" name="subject" class="form-control" required="required">
+                              <select id="Subject" name="Subject" class="form-control" required="required">
                                   <option value="na" selected="">Choose One:</option>
-                                  <option value="service">General Customer Service</option>
+                                  <option value="service">Student Service</option>
                                   <option value="suggestions">Suggestions</option>
                                   <option value="product">Product Support</option>
                               </select>
@@ -130,86 +77,43 @@
                           </div>
                       </div>
                       <div class="col-md-12">
-                          <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                          <button type="submit" class="btn btn-primary pull-right submit" id="btnContactUs">
                               Send Message</button>
                       </div>
                   </div>
+
                   </form>
               </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 office-details">
               <form>
-              <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+              <legend><span class="glyphicon glyphicon-globe"></span> OFFICE DETAILS</legend>
               <address>
-                  <strong>Twitter, Inc.</strong><br>
-                  795 Folsom Ave, Suite 600<br>
-                  San Francisco, CA 94107<br>
+                  <strong>Fachhochschule Kiel</strong><br>
+                  Sokratesplatz 1<br>
+                  24149 Kiel<br>
                   <abbr title="Phone">
                       P:</abbr>
-                  (123) 456-7890
+                  (+49) (15168649946)
               </address>
               <address>
-                  <strong>Full Name</strong><br>
-                  <a href="mailto:#">first.last@example.com</a>
+                  <strong>Email To</strong><br>
+                  <a href="mailto:#">madhuchhanda.536@gmail.com</a>
               </address>
               </form>
           </div>
       </div>
 
-</div>
-  <br/><br/>
 
-  <div>
-    <div class="col-xs-6 " id="f1_container">
-      <div id="f1_card" class="shadow">
-          <div class="front face">
-            <div id="container">
-            <img id="image" src="https://www.tum.de/fileadmin/w00bfo/www/Unileben/Wohnen/20160408_Studentenviertel-Olympia_513x288px.jpg" />
 
-          </div>
-
-          </div>
-          <div class="back face center">
-          <p class="lead" style="font-weight:bold;">
-            Finding Accomodation
-          </p>
-          <p class="lead">Finding an accomodation is one of major hurdle for students. Some of the best ways to find accomodation are below</p>
-            <p><a class="btn btn-info btn-lg" href="/bAaccomodation/bAaccom" target="_blank" role="button">Learn more</a></p>
-          </div>
-      </div>
-    </div>
-
-    <div class="col-xs-6 " id="f1_container">
-      <div id="f1_card" class="shadow">
-          <div class="front face">
-          <div id="container">
-            <img id="image" src="http://static.wixstatic.com/media/1544f7aef92a890a48cb683aaa943cef.wix_mp_1024" />
-
-          </div>
-          </div>
-          <div class="back face center">
-          <p class="lead" style="font-weight:bold;">
-            Travel Booking Tips
-          </p>
-            <p class="lead">These will help you to book your travel in an economical way</p>
-            <p><a class="btn btn-info btn-lg" href="#" target="_blank" role="button">Learn more</a></p>
-          </div>
-      </div>
-    </div>
-
-  </div>
 </div>
 
-<br>
+
 <footer>
   <div class="container">
     <div class="col-xs-5">
-    <button type="button" class="btn btn-link">About Us</button>
 
-    <button type="button" class="btn btn-link contact">Contact Us</button>
-
-
-    </div>
+  </div>
     <div class="col-xs-2">
       <a class="foot_img" href="#">
          <img style="opacity: 0.4" class="img-circle" src="https://image.freepik.com/free-icon/healthy-lifestyle-logo_318-52683.jpg" alt=""  width="50px" height="50px">
