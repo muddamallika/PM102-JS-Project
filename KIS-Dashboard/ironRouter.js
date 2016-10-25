@@ -55,8 +55,14 @@ Router.route('/bAtraveleco/bAtravel', function() {
 });
 
 
-// Posting Articles
+// Posting Events
 
-Router.route('/Post_Articles/Article', function() {
-	this.render('Article')
+Router.route('/Events/event', function() {
+	this.render('event')
+});
+
+//Events_tab
+
+Router.route('/Events_tab/event_tab', function() {
+	this.render('event_tab')
 });
