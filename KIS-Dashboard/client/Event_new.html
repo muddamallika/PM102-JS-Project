@@ -92,8 +92,10 @@ li a:hover {
   background-color: transparent;
 }
 
-
-
+#event_new{
+  width: 40%;
+  margin-left: 30%;
+}
 
 
 
@@ -108,7 +110,7 @@ li a:hover {
 
 
 
-<template name="event">
+<template name="event_new">
  <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -143,41 +145,14 @@ li a:hover {
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<br><br><br><br>
 
 
-
-<div class="container">
+<div class="container form">
   
-  <div class="col-xs-6 mar" style="height: 200px">
-    <div class="marquee ver" style="height: 200px;" data-direction='up' data-duration='3000' data-pauseOnHover="true">
-    <p style="text-decoration: none !important"> 
-       {{> todoList}}
-  </p>
-     </div>
-<br/>
-<ul>
-    
-  </ul>
-<script >
- $(function() {
-  $('.marquee').marquee({
-    startVisible: true
-  });
-});
-</script>
+  {{> quickForm collection="Tdos" id="event_new" type="insert"}}
 
-  </div>
 
-  <div class="col-xs-6">
-    <button>MyEvents</button>
-  </div>
-</div>
-<div class="container">
-  <div class="col-xs-6">   
-  </div>
-  <div class="col-xs-6" style="margin-top: -140px">
-    <a href="/Event_new/event_new" class="btn btn-info" role="button" target="_blank">Create Event</a>
-  </div>
 </div>
 
 <br><br><br>
@@ -208,17 +183,3 @@ li a:hover {
 </footer> 
 </template>
 
-<template name="todo">
-<li>
-  {{label}}
-  
-  </li>
-</template>
-
-<template name="todoList">
-  <ul class="unorder">
-      {{#each tdos}}
-         <a href="/tdos/{{_id}}" target="_blank"> {{> todo}}</a><br><br>
-      {{/each}}
-  </ul>
-</template>
