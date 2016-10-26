@@ -54,12 +54,37 @@ Router.route('/bAtraveleco/bAtravel', function() {
 	this.render('bAtravel');
 });
 
+
+
+// Posting Events
+
+Router.route('/Events/event', function() {
+	this.render('event')
+});
+
+//Events_tab
+
+Router.route('/Events_tab/event_tab', function() {
+	this.render('event_tab')
+});
+
 //read Article
 Router.route('/readArticle/rArticle', function() {
 	this.render('rArticle');
 });
 
-//post Article
-Router.route('/postArticle/pArticle', function() {
-	this.render('pArticle');
+
+Router.route('/public', function(){
+	this.render();
+
+});
+
+//Contact Us
+Router.route('/contact/contactus', function() {
+	this.render('contactus');
+});
+
+//About Us
+Router.route('/aboutUs/aboutus', function() {
+	this.render('aboutus');
 });

@@ -1,0 +1,69 @@
+.aboutUs-heading{
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+.first-row li, .second-row li{
+  color:white;
+  width:100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#959595+0,0d0d0d+46,010101+50,0a0a0a+53,4e4e4e+76,383838+87,1b1b1b+100;Black+Gloss+Pipe */
+  background: rgb(149,149,149); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(149,149,149,1) 0%, rgba(13,13,13,1) 46%, rgba(1,1,1,1) 50%, rgba(10,10,10,1) 53%, rgba(78,78,78,1) 76%, rgba(56,56,56,1) 87%, rgba(27,27,27,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(149,149,149,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(78,78,78,1) 76%,rgba(56,56,56,1) 87%,rgba(27,27,27,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(149,149,149,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(78,78,78,1) 76%,rgba(56,56,56,1) 87%,rgba(27,27,27,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
+}
+.first-row .first-col li:first-child, .first-row .second-col li:first-child, .first-row .third-col li:first-child{
+  height: 260px;
+  width: 100%;
+}
+.first-row .first-col li:first-child{
+  background: url("/Images/madhu.jpg") no-repeat scroll 0 0 transparent;
+  background-size: 100%;
+  background-position: 50%;
+}
+.first-row .second-col li:first-child{
+  background: url("/Images/sravan.jpg") no-repeat scroll 0 0 transparent;
+  background-size: 100%;
+  background-position: 50%;
+}
+.first-row .third-col li:first-child{
+  background: url("/Images/mallika.jpg") no-repeat scroll 0 0 transparent;
+  background-size: 100%;
+  background-position: 50%;
+}
+.second-row{
+  margin-top:20px;
+}
+.second-row .first-col li:first-child, .second-row .second-col li:first-child, .second-row .third-col li:first-child{
+  height: 260px;
+  width: 100%;
+}
+.second-row .first-col li:first-child{
+  background: url("/Images/amrita.jpg") no-repeat scroll 0 0 transparent;
+  background-size: 100%;
+  background-position: 50%;
+}
+.second-row .second-col li:first-child{
+  background: url("/Images/ojeswini.jpg") no-repeat scroll 0 0 transparent;
+  background-size: 100%;
+  background-position: 50%;
+}
+.second-row .third-col li:first-child{
+  background: url("/Images/vinitha.jpg") no-repeat scroll 0 0 transparent;
+  background-size: 100%;
+  background-position: 50%;
+}
+.aboutUs-video{
+  margin-top:20px;
+}
+.video-info{
+  height:240px;
+  border:2px solid #000000;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b8c6df+0,6d88b7+100;Grey+Blue+3D+%231 */
+background: rgb(184,198,223); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(184,198,223,1) 0%, rgba(109,136,183,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(184,198,223,1) 0%,rgba(109,136,183,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(184,198,223,1) 0%,rgba(109,136,183,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8c6df', endColorstr='#6d88b7',GradientType=0 ); /* IE6-9 */
+
+}
