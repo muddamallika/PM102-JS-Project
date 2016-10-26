@@ -1,0 +1,1 @@
+Tdos = new Mongo.Collection("tdos");

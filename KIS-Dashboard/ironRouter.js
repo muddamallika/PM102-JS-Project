@@ -15,6 +15,7 @@ Router.route('/homeProfile/Profile', function() {
 	this.render('Profile');
 });
 
+
 //before Arrival
 Router.route('/bArrival/beforeA', function() {
 	this.render('beforeA');
@@ -31,7 +32,10 @@ Router.route('/bAprocedure/bAproceed', function() {
 });
 
 
+//<<<<<<< HEAD
+//=======
 
+//>>>>>>> 574bdb6f1011e0b30ea4adfa5452c235a001d291
 //before Arrival - Accomodation
 Router.route('/bAaccomodation/bAaccom', function() {
   this.render('bAaccom');
@@ -54,6 +58,20 @@ Router.route('/bAtraveleco/bAtravel', function() {
 	this.render('bAtravel');
 });
 
+//<<<<<<< HEAD
+
+// Posting Events
+
+Router.route('/Events/event', function() {
+	this.render('event')
+});
+
+//Events_tab
+
+Router.route('/Events_tab/event_tab', function() {
+	this.render('event_tab')
+});
+//=======
 //read Article
 Router.route('/readArticle/rArticle', function() {
 	this.render('rArticle');
@@ -78,3 +96,8 @@ Router.route('/contact/contactus', function() {
 Router.route('/aboutUs/aboutus', function() {
 	this.render('aboutus');
 });
+<<<<<<< HEAD
+=======
+
+//>>>>>>> 574bdb6f1011e0b30ea4adfa5452c235a001d291
+>>>>>>> origin/Sravan
