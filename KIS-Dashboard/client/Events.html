@@ -148,7 +148,7 @@ li a:hover {
   <div class="col-xs-6 mar" style="height: 200px">
     <div class="marquee ver" style="height: 200px;" data-direction='up' data-duration='3000' data-pauseOnHover="true">
     <p style="text-decoration: none !important"> 
-      <a href="/Events/event" target="_blank"> {{> todoList}}</a>
+       {{> todoList}}
   </p>
      </div>
 <br/>
@@ -215,7 +215,7 @@ li a:hover {
 <template name="todoList">
   <ul class="unorder">
       {{#each tdos}}
-          {{> todo}}<br><br>
+         <a href="/tdos/{{_id}}" target="_blank"> {{> todo}}</a><br><br>
       {{/each}}
   </ul>
 </template>
