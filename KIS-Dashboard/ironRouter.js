@@ -64,8 +64,16 @@ Router.route('/Events/event', function() {
 
 //Events_tab
 
-Router.route('/Events_tab/event_tab', function() {
-	this.render('event_tab')
+Router.route('/tdos/:_id', {
+    template: 'event_tab',
+    data: function(){
+        var currentList = this.params._id;
+        return Tdos.findOne({ _id: currentList });
+    }
+});
+
+Router.route('/Event_new/event_new',function(){
+this.render('event_new')
 });
 
 //read Article
@@ -88,3 +96,4 @@ Router.route('/contact/contactus', function() {
 Router.route('/aboutUs/aboutus', function() {
 	this.render('aboutus');
 });
+
