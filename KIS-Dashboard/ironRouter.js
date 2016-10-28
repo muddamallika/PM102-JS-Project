@@ -3,94 +3,103 @@
 //    data: function () { return Items.findOne({_id: this.params._id}); }
 //  });
 //});
+
+
+
+
+
 //Home page
 Router.route('/', function () {
-  this.render('Home');
+ this.render('Home');
 });
+
 
 //home Profile
 Router.route('/homeProfile/Profile', function() {
-	this.render('Profile');
+    this.render('Profile');
 });
+
 
 //before Arrival
 Router.route('/bArrival/beforeA', function() {
-	this.render('beforeA');
+    this.render('beforeA');
 });
 
 //before Arrival - German Institutes
 Router.route('/bAGerman/beforeAGI', function() {
-	this.render('beforeAGI');
+    this.render('beforeAGI');
 });
 
 //before Arrival - Procedures and Checklists
 Router.route('/bAprocedure/bAproceed', function() {
-  this.render('bAproceed');
+ this.render('bAproceed');
 });
 
 //before Arrival - Accomodation
 Router.route('/bAaccomodation/bAaccom', function() {
-  this.render('bAaccom');
+ this.render('bAaccom');
 });
 
-//after Arrival
+//arrival Arrival
 Router.route('/aArrival/afterA', function() {
-	this.render('afterA');
+    this.render('afterA');
 });
 
 //during Arrival
 Router.route('/dArrival/duringA', function() {
-	this.render('duringA');
+    this.render('duringA');
 });
+
+
 
 //before Arrival - Travel economically
 Router.route('/bAtraveleco/bAtravel', function() {
-	this.render('bAtravel');
+    this.render('bAtravel');
 });
 
+
+
+// Posting Events
+
 Router.route('/Events/event', function() {
-	this.render('event')
+    this.render('event')
 });
 
 //Events_tab
-Router.route('/Events_tab/event_tab', function() {
-	this.render('event_tab')
 
 Router.route('/tdos/:_id', {
-    template: 'event_tab',
-    data: function(){
-        var currentList = this.params._id;
-        return Tdos.findOne({ _id: currentList });
-    }
+   template: 'event_tab',
+   data: function(){
+       var currentList = this.params._id;
+       return Tdos.findOne({ _id: currentList });
+   }
 });
 
 Router.route('/Event_new/event_new',function(){
 this.render('event_new')
 });
 
-Router.route('/Articles/Articles_Sel',function(){
-this.render('Articles_Sel')
-});
-
 //read Article
 Router.route('/readArticle/rArticle', function() {
-	this.render('rArticle');
+    this.render('rArticle');
 });
 
-//For Public
+
 Router.route('/public', function(){
-	this.render();
+    this.render();
+
 });
 
 //Contact Us
 Router.route('/contact/contactus', function() {
-	this.render('contactus');
+    this.render('contactus');
 });
 
 //About Us
 Router.route('/aboutUs/aboutus', function() {
-	this.render('aboutus');
+    this.render('aboutus');
 });
+
 
 //Post Article
 Router.route('/postArticle/pArticle', function() {
