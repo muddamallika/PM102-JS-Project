@@ -105,3 +105,9 @@ Router.route('/aboutUs/aboutus', function() {
 Router.route('/postArticle/pArticle', function() {
 	this.render('pArticle');
 });
+
+//Articles_Sel
+Router.route('/Articles/Articles_Sel', function() {
+	this.render('Articles_Sel');
+});
+
