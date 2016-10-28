@@ -135,70 +135,9 @@
 </nav>
 
 <div class="container">
-  <!--Form for Article creation -->
-	<div class="form-group">
-		<!--Name of the Article label and input field -->
-		<div class="form-group row">
-			<div class="col-xs-3"></div>
-		  	<label for="ArticleName" class="col-xs-2 col-form-label">Name Your Article</label>
-		  	<div class="col-xs-4">
-				<input class="form-control" type="text" id="ArticleName" placeholder="Give an interesting name to your article">
-		  	</div>
-			<div class="col-xs-3"></div>
-		</div>
-    <br>
-		<!--Drop down to select a category -->
-		<div class="form-group row">
-			<div class="col-xs-3"></div>
-		  	<label for="Category" class="col-xs-2 col-form-label">Assign Category</label>
-		  	<div class="col-xs-4">
-        <!-- Drop down button for the Category -->
-        <div class="btn-group">
-          <button type="button" class="btn btn-default">Select Category</button>
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="caret"></span>
-            <span class="sr-only">Toggle Dropdown</span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">c1</a></li>
-            <li><a href="#">c2</a></li>
-            <li><a href="#">c3</a></li>
-            <li><a href="#">c4</a></li>
-            <li><a href="#">c5</a></li>
-            <li><a href="#">c6</a></li>
-            <li><a href="#">c7</a></li>
-            <li><a href="#">c8</a></li>
-            <li><a href="#">c9</a></li>
-            <li><a href="#">c10</a></li>
-            <li><a href="#">c11</a></li>
-            <li><a href="#">c12</a></li>
-          </ul>
-        </div>
-		  	</div>
-			<div class="col-xs-3"></div>
-		</div>
-    <br>
-    <!--Text Area for the user to type their article -->
-    <div class="form-group row">
-      <div class="col-xs-3"></div>
-        <label for="TextArea" class="col-xs-2 col-form-label">Type/Paste your Article</label>
-        <div class="col-xs-4">
-          <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-                                        placeholder="Message"></textarea>
-        </div>
-      <div class="col-xs-3"></div>
-    </div>
-    <br>
-    <!--Submit Button for the form-->
-    <div class="form-group row">
-      <div class="col-xs-5"></div>
-        <div class="col-xs-4">
-          <button type="button" class="btn btn-primary"> Submit </button>
-        </div>
-      <div class="col-xs-3"></div>
-    </div>
+  <!--Form for Article creation using Auto form-->
+	{{> quickForm id="postArticle" schema=Articles type="method" meteormethod="postArticleSubmission" template="bootstrap3-horizontal" label-class="col-sm-3" input-col-class="col-sm-9"}}
 
-  </div>
 </div>
 
 <br>
