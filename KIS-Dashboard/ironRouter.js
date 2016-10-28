@@ -79,6 +79,20 @@ Router.route('/Event_new/event_new',function(){
 this.render('event_new')
 });
 
+<<<<<<< HEAD
+=======
+//Articles_Sel
+Router.route('/Articles/Articles_Sel',function(){
+this.render('Articles_Sel')
+});
+
+//User Registration
+Router.route('/Register/user_registration',function(){
+this.render('user_registration')
+});
+
+
+>>>>>>> SravanK
 //read Article
 Router.route('/readArticle/rArticle', function() {
     this.render('rArticle');

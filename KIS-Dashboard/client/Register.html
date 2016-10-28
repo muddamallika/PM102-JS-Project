@@ -8,12 +8,17 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script type='text/javascript' src='//cdn.jsdelivr.net/jquery.marquee/1.3.9/jquery.marquee.min.js'></script>
+  <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
 
 
   <style>
@@ -65,17 +70,202 @@ li a:hover {
       margin-bottom: : -50px;
     }
 
+    .ar{
+      background-color: white;
+      color: black;
+    }
+
+    .marquee {
+  width: 300px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background: #ccc;
+}
+
+.ver {
+  height: 30px;
+  width: 200px;
+  margin-top: 30px;
+}
+
+.unorder {
+  color: black;
+  background-color: transparent;
+}
+
+#event_new{
+  width: 40%;
+  margin-left: 30%;
+}
+
+footer {
+  position: relative;
+  margin-bottom: 280px;
+  clear: both;
+
+}
+
+
+
+
+
+
+
+
+
+.addtocalendar var{
+    display: none;
+}
+
+.addtocalendar {
+    position: relative;
+    display: inline-block;
+    background: transparent!important;
+}
+
+.atcb-link {
+    display: block;
+    outline: none!important;
+    cursor: pointer;
+}
+
+.atcb-link:focus~ul,
+.atcb-link:active~ul,
+.atcb-list:hover{
+    visibility:visible !important;
+}
+
+.atcb-list {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 170px;
+    z-index: 900;
+}
+
+.atcb-list,
+.atcb-item
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #fff !important;
+}
+
+.atcb-item {
+    float: none;
+    text-align: left;
+}
+
+.atcb-item-link
+{
+    text-decoration: none !important;
+    outline: none;
+    display: block;
+}
+
+.atcb-item:hover,
+.atcb-item:hover {
+    position: relative;
+    z-index: 900;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+}
+
+
+/* Blue */
+
+.atc-style-blue .atcb-link,
+.atc-style-blue .atcb-link:hover,
+.atc-style-blue .atcb-link:active,
+.atc-style-blue .atcb-link:focus
+{
+    margin: 0;
+    padding: 7px 25px;
+    color: #fff;
+    font-family: "Verdana";
+    font-size: 14px;
+    text-decoration: none;
+    outline: none;
+    line-height: 20px;
+    vertical-align: middle;
+    background: rgb(66,129,244) !important;
+    box-shadow: 0 0 40px rgba(0, 0, 0, .13) inset;
+    border-radius: 4px;
+    zoom: 1;
+}
+
+.atc-style-blue .atcb-list {
+    width: 170px;
+    border: 1px solid rgb(186,186,186) !important;
+    border-radius: 2px;
+    box-shadow: 0 0 5px #AAA !important;
+}
+
+.atc-style-blue .atcb-list,
+.atc-style-blue .atcb-item
+{
+    background: #fff !important;
+    color: #000 !important;
+}
+
+.atc-style-blue .atcb-item,
+.atc-style-blue .atcb-item-link
+{
+    line-height: 1.3em;
+    vertical-align: middle;
+    zoom: 1;
+}
+
+.atc-style-blue .atcb-item-link,
+.atc-style-blue .atcb-item-link:hover,
+.atc-style-blue .atcb-item-link:active,
+.atc-style-blue .atcb-item-link:focus
+{
+    color: #000;
+    font-family: "Verdana";
+    font-size: 14px;
+    text-decoration: none;
+    outline: none;
+    padding: 5px 15px;
+}
+
+.atc-style-blue .atcb-item-link:hover,
+.atc-style-blue .atcb-item-link:active,
+.atc-style-blue .atcb-item-link:focus
+{
+    color: #fff !important;
+}
+
+.atc-style-blue .atcb-item:hover,
+.atc-style-blue .atcb-item:hover {
+    background: rgb(66,129,244) !important;
+}
+
+.calendar {
+  margin-left:50%;
+}
+
+
+
+
+
+
+
 
 </style>
+
+
 </head>
 
 <body>
-
 </body>
 
 
 
-<template name="Home">
+<template name="user_registration">
  <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -110,64 +300,25 @@ li a:hover {
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
-<div class="container">
-  <br>
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-
-      
-
-      <div class="item active"> 
-        <img src="/c1.jpeg" alt="Sravan" width="460" height="345">
-      </div>
+<br><br><br><br>
 
 
-      <div class="item">
-        <img src="/c2.jpg" alt="Chania" width="460" height="345">
-      </div>
+<div class="container form">
+  
+  {{> quickForm collection="Register" id="user_registration" type="insert"}}
 
-      <div class="item">
-        <img src="/c3.jpg" alt="Flower" width="460" height="345">
-      </div>
-
-      <div class="item">
-        <img src="/c4.jpg" alt="Flower" width="460" height="345">
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
 </div>
 
+<br><br><br>
 
-
-<br>
 <footer>
   <div class="container">
     <div class="col-xs-4">
     <button type="button" class="btn btn-link">About Us</button>
-    <a  href="contact/contactus" role="button" class="btn btn-link contact">
-    Contact Us</a>
+    
+    <button type="button" class="btn btn-link contact">Contact Us</button>
 
-
+    
     </div>
     <div class="col-xs-3">
       <a class="foot_img" href="#">
@@ -175,7 +326,7 @@ li a:hover {
        </a>
     </div>
     <div class="col-xs-2">
-
+    
     <a style="font-size: 30px;color: #3b5998;" class="fa" href="https://www.facebook.com/">&#xf230;</a>
     <a style="font-size: 30px;color: #00aced;" type="link" class="fa" href="https://twitter.com/">&#xf081;</a>
     <a style="font-size: 30px;color: #dd4b39;" type="link" class="fa" href="https://plus.google.com">&#xf0d4;</a></div>
@@ -183,6 +334,6 @@ li a:hover {
     <span style="opacity: 0.4; margin-left: 50px;"> © 2016,KIS Dashboard GmbH </span>
     </div>
   </div>
-</footer>
-
+</footer> 
 </template>
+
