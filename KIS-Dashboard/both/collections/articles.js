@@ -1,1 +1,1 @@
-Articles = new Mongo.Collection('articles');
+Articles = new Mongo.Collection("articles");
