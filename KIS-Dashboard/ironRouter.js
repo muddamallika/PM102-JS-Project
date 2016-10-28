@@ -68,6 +68,10 @@ Router.route('/Event_new/event_new',function(){
 this.render('event_new')
 });
 
+Router.route('/Articles/Articles_Sel',function(){
+this.render('Articles_Sel')
+});
+
 //read Article
 Router.route('/readArticle/rArticle', function() {
 	this.render('rArticle');

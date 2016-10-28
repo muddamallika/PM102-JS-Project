@@ -1,5 +1,6 @@
 Articles = new Mongo.Collection("articles");
 
+
 Articles.attachSchema(new SimpleSchema({
   NameOfArticle: {type: String},
   Category : {
