@@ -3,7 +3,6 @@
 //    data: function () { return Items.findOne({_id: this.params._id}); }
 //  });
 //});
-
 //Home page
 Router.route('/', function () {
   this.render('Home');
@@ -13,7 +12,6 @@ Router.route('/', function () {
 Router.route('/homeProfile/Profile', function() {
 	this.render('Profile');
 });
-
 
 //before Arrival
 Router.route('/bArrival/beforeA', function() {
@@ -30,10 +28,6 @@ Router.route('/bAprocedure/bAproceed', function() {
   this.render('bAproceed');
 });
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4ae917521bdc16e6d87edcd3e1f894f9c9684aab
 //before Arrival - Accomodation
 Router.route('/bAaccomodation/bAaccom', function() {
   this.render('bAaccom');
@@ -59,7 +53,6 @@ Router.route('/Events/event', function() {
 });
 
 //Events_tab
-
 Router.route('/Events_tab/event_tab', function() {
 	this.render('event_tab')
 
@@ -80,10 +73,9 @@ Router.route('/readArticle/rArticle', function() {
 	this.render('rArticle');
 });
 
-
+//For Public
 Router.route('/public', function(){
 	this.render();
-
 });
 
 //Contact Us
@@ -96,7 +88,7 @@ Router.route('/aboutUs/aboutus', function() {
 	this.render('aboutus');
 });
 
-//About Us
+//Post Article
 Router.route('/postArticle/pArticle', function() {
 	this.render('pArticle');
 });
