@@ -14,6 +14,7 @@ Router.route('/homeProfile/Profile', function() {
 	this.render('Profile');
 });
 
+
 //before Arrival
 Router.route('/bArrival/beforeA', function() {
 	this.render('beforeA');
@@ -29,6 +30,10 @@ Router.route('/bAprocedure/bAproceed', function() {
   this.render('bAproceed');
 });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ae917521bdc16e6d87edcd3e1f894f9c9684aab
 //before Arrival - Accomodation
 Router.route('/bAaccomodation/bAaccom', function() {
   this.render('bAaccom');
@@ -49,7 +54,6 @@ Router.route('/bAtraveleco/bAtravel', function() {
 	this.render('bAtravel');
 });
 
-// Posting Events
 Router.route('/Events/event', function() {
 	this.render('event')
 });
@@ -58,6 +62,17 @@ Router.route('/Events/event', function() {
 
 Router.route('/Events_tab/event_tab', function() {
 	this.render('event_tab')
+
+Router.route('/tdos/:_id', {
+    template: 'event_tab',
+    data: function(){
+        var currentList = this.params._id;
+        return Tdos.findOne({ _id: currentList });
+    }
+});
+
+Router.route('/Event_new/event_new',function(){
+this.render('event_new')
 });
 
 //read Article
