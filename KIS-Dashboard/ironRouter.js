@@ -86,6 +86,12 @@ Router.route('/Register/user_registration',function(){
 this.render('user_registration')
 });
 
+//User Login
+Router.route('/login/user_login',function(){
+this.render('user_login')
+});
+
+
 
 //read Article
 Router.route('/readArticle/rArticle', function() {
