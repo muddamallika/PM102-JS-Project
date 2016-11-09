@@ -14,8 +14,6 @@ Template.Articles_Sel.events({
   "change #chats": function(event, template){
     var selectValue = template.$("#chats").val();
     Session.set("selectval",selectValue);
-    
-   
   }
 });
 
