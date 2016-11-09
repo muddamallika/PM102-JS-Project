@@ -65,6 +65,17 @@ li a:hover {
       margin-bottom: : -50px;
     }
 
+    .logout:visited {
+      color: white;
+    }
+
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 30px;
+}
 
 </style>
 </head>
@@ -95,17 +106,13 @@ li a:hover {
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <form class="navbar-form navbar-right">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Username">
-          <br>
-          <button type="button" class="btn btn-link">New User?</button>
-        </div>
-        <div class="form-group">
-          <input type="password" class="form-control" placeholder="Password">
-          <br>
-          <button type="button" class="btn btn-link">Forget Password?</button>
-        </div>
-        <button type="submit" class="btn btn-default up">Login</button>
+      {{#if currentUser}}
+        <p>{{currentUser.profile.name}}</p>
+        {{> logout}}
+        {{else}}
+        <a type="submit" href="/Login/login" class="btn btn-default">Login</a>
+        <a type="submit" href="/Register/register" class="btn btn-default">SignUp</a>
+        {{/if}}
       </form>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -162,7 +169,7 @@ li a:hover {
 </template>
 <template name="footer">
 {{> yield}}
-<footer class="navbar-fixed-bottom">
+<footer>
   <div class="container">
     <div class="col-xs-4">
     <button type="button" class="btn btn-link">About Us</button>
@@ -187,4 +194,9 @@ li a:hover {
   </div>
 </footer>
 
+</template>
+
+<template name="logout">
+  
+<a href="/" class="btn btn-danger btn-logout logout">Logout</a>
 </template>

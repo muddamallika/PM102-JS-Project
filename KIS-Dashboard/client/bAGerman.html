@@ -70,7 +70,17 @@
          		</a>
         		<a class="navbar-brand down" href="#">KIS Dashboard</a>
   	</div>
-  		  <div class="col-xs-4"></div>
+  		  <div class="col-xs-4">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <form class="navbar-form navbar-right">
+      {{#if currentUser}}
+     <p> {{currentUser.profile.name}}</p>
+        {{else}}
+        
+        {{/if}}
+      </form>
+    </div> 
+        </div>
 </div><!-- /.container-fluid -->
   </nav>
   </template>

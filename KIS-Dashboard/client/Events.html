@@ -95,9 +95,9 @@ li a:hover {
   background-color: transparent;
 }
 
-
-
-
+.cevent:visited {
+  color: white;
+}
 
 
 
@@ -112,8 +112,8 @@ li a:hover {
 
 
 <template name="event">
-{{> Header}}
-<br><br><br><br><br>
+{{> centerheader}}
+<br><br>
 <div class="container">
   
   <div class="col-xs-6 mar" style="height: 200px">
@@ -123,9 +123,7 @@ li a:hover {
   </p>
      </div>
 <br/>
-<ul>
-    
-  </ul>
+
 <script >
  $(function() {
   $('.marquee').marquee({
@@ -149,12 +147,12 @@ li a:hover {
   <div class="col-xs-6">   
   </div>
   <div class="col-xs-6" style="margin-top: -140px">
-    <a href="/Event_new/event_new" class="btn btn-info" role="button" target="_blank">Create Event</a>
+    <a href="/Event_new/event_new" class="btn btn-info cevent" role="button" target="_blank">Create Event</a>
   </div>
 </div>
 
-<br><br><br>
- 
+<br><br><br><br><br><br><br>
+ <br><br><br><br><br>
 </template>
 
 <template name="todo">

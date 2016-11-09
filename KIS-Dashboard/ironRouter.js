@@ -4,10 +4,6 @@ Router.configure({
 });
 
 
-
-
-
-
 //Home page
 Router.route('/', function () {
  this.render('Home');
@@ -115,4 +111,12 @@ Router.route('/postArticle/pArticle', function() {
 	this.render('pArticle');
 });
 
+
+Router.route('/Register/register', function() {
+  this.render('register');
+});
+
+Router.route('/Login/login', function() {
+  this.render('login');
+});
 
