@@ -46,18 +46,15 @@
     text-decoration: none !important;
     color: black;
   }
+  a:visited{
+    color: none;
+
+  }
 
   
 
-   btn{
+   .btn{
     text-decoration: none !important;
-    
-  }
-
-
-  .mid{
-    margin-top: 120px;
-    font-size: 30px;
     
   }
   
@@ -116,27 +113,8 @@
 </body>
 
 <template name="beforeA">
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    
-      
-    
-    <div class="col-xs-5"></div>
-
-    <div class="col-xs-3">
-          <a class="navbar-brand" href="#">
-                    <img class="img-circle" src="https://image.freepik.com/free-icon/healthy-lifestyle-logo_318-52683.jpg" alt=""  width="50px" height="50px">
-          </a>
-          <a class="navbar-brand down" href="#">KIS Dashboard</a> 
-  </div>
-      <div class="col-xs-4"></div>
-    
-    
-   
-  </div><!-- /.container-fluid -->
-</nav>
-
+{{> Header}}
+<br><br><br><br>
 <div class="container">
   <div>
     <div class="col-xs-6" id="f1_container">
@@ -215,8 +193,6 @@
           </p>
             <p class="lead">These will help you to book your travel in an economical way</p>
 
-            <p><a class="btn btn-info btn-lg" href="#" target="_blank" role="button">Learn more</a></p>
-
             <p><a class="btn btn-info btn-lg" href="/bAtraveleco/bAtravel" target="_blank" role="button">Learn more</a></p>
 
           </div>
@@ -226,30 +202,5 @@
   </div>
 </div>
   
-<br>
-<footer>
-  <div class="container">
-    <div class="col-xs-5">
-    <button type="button" class="btn btn-link">About Us</button>
-    
-    <button type="button" class="btn btn-link contact">Contact Us</button>
-
-    
-    </div>
-    <div class="col-xs-2">
-      <a class="foot_img" href="#">
-         <img style="opacity: 0.4" class="img-circle" src="https://image.freepik.com/free-icon/healthy-lifestyle-logo_318-52683.jpg" alt=""  width="50px" height="50px">
-       </a>
-    </div>
-    <div class="col-xs-2">
-    
-    <a style="font-size: 30px;color: #3b5998;" class="fa" href="https://www.facebook.com/">&#xf230;</a>
-    <a style="font-size: 30px;color: #00aced;" type="link" class="fa" href="https://twitter.com/">&#xf081;</a>
-    <a style="font-size: 30px;color: #dd4b39;" type="link" class="fa" href="https://plus.google.com">&#xf0d4;</a></div>
-    <div class="col-xs-3">
-    <span style="opacity: 0.4; margin-left: 50px;"> © 2016,KIS Dashboard GmbH </span>
-    </div>
-  </div>
-</footer>
-  
+<br><br><br><br>
 </template>

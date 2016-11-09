@@ -80,13 +80,14 @@ li a:hover {
   overflow: hidden;
   border: 1px solid #ccc;
   background: #ccc;
+  animation-iteration-count: infinite;
 }
 
 .ver {
   height: 30px;
   width: 200px;
   margin-top: 30px;
-  overflow: hidden;
+  
 }
 
 .unorder {
@@ -151,7 +152,7 @@ li a:hover {
 <div class="container">
   
   <div class="col-xs-6 mar" style="height: 200px">
-    <div class="marquee ver" style="height: 200px;" data-direction='up' data-pauseOnHover="true" data-duration='5000'  >
+    <div class="marquee ver" style="height: 200px">
     <p style="text-decoration: none !important"> 
        {{> todoList}}
   </p>
@@ -163,6 +164,12 @@ li a:hover {
 <script >
  $(function() {
   $('.marquee').marquee({
+    duration: 3000,
+    direction: 'up',
+    duplicated: false,
+    gap: 50,
+    pauseOnHover: true
+
   });
 });
 </script>

@@ -1,8 +1,8 @@
-//Router.route('/', function () {
-//  this.render('Home', {
-//    data: function () { return Items.findOne({_id: this.params._id}); }
-//  });
-//});
+
+Router.configure({
+    layoutTemplate: 'footer'
+});
+
 
 //Home page
 Router.route('/', function () {
@@ -81,15 +81,6 @@ Router.route('/Articles/Articles_Sel',function(){
 this.render('Articles_Sel')
 });
 
-//User Registration
-Router.route('/Register/user_registration',function(){
-this.render('user_registration')
-});
-
-//User Login
-Router.route('/login/user_login',function(){
-this.render('user_login')
-});
 
 
 
