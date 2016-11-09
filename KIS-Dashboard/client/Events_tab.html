@@ -107,43 +107,10 @@ li a:hover {
 
 
 <template name="event_tab">
- <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-                    <img class="img-circle" src="https://image.freepik.com/free-icon/healthy-lifestyle-logo_318-52683.jpg" alt=""  width="50px" height="50px">
-       </a>
-      <a class="navbar-brand down" href="#">KIS Dashboard</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <form class="navbar-form navbar-right">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Username">
-          <br>
-          <button type="button" class="btn btn-link">New User?</button>
-        </div>
-        <div class="form-group">
-          <input type="password" class="form-control" placeholder="Password">
-          <br>
-          <button type="button" class="btn btn-link">Forget Password?</button>
-        </div>
-        <button type="submit" class="btn btn-default up">Login</button>
-      </form>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+ {{> Header}}
 
 
-
+<br><br><br><br><br>
 <div class="container">
 <br><br><br><br><br>
   <h2 class="text-center">Event: {{label}}</h2>
@@ -152,30 +119,5 @@ li a:hover {
   </div>
 
 <br><br><br>
-
-<footer>
-  <div class="container">
-    <div class="col-xs-4">
-    <button type="button" class="btn btn-link">About Us</button>
-    
-    <button type="button" class="btn btn-link contact">Contact Us</button>
-
-    
-    </div>
-    <div class="col-xs-3">
-      <a class="foot_img" href="#">
-         <img style="opacity: 0.4" class="img-circle" src="https://image.freepik.com/free-icon/healthy-lifestyle-logo_318-52683.jpg" alt=""  width="50px" height="50px">
-       </a>
-    </div>
-    <div class="col-xs-2">
-    
-    <a style="font-size: 30px;color: #3b5998;" class="fa" href="https://www.facebook.com/">&#xf230;</a>
-    <a style="font-size: 30px;color: #00aced;" type="link" class="fa" href="https://twitter.com/">&#xf081;</a>
-    <a style="font-size: 30px;color: #dd4b39;" type="link" class="fa" href="https://plus.google.com">&#xf0d4;</a></div>
-    <div class="col-xs-3">
-    <span style="opacity: 0.4; margin-left: 50px;"> © 2016,KIS Dashboard GmbH </span>
-    </div>
-  </div>
-</footer> 
 </template>
 
