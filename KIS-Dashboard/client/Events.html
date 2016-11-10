@@ -140,7 +140,11 @@ li a:hover {
   </div>
 
   <div class="col-xs-6">
-    <button>MyEvents</button>
+  {{#if currentUser}}
+    <a href="#" class="btn btn-info">MyEvents</a>
+    {{else}}
+    <a href="/Login/login" class="btn btn-info">MyEvents</a>
+    {{/if}}
   </div>
 </div>
 <div class="container">

@@ -14,7 +14,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-
+ <link href="https://fonts.googleapis.com/css?family=Exo+2:700" rel="stylesheet">
 
   <style>
 
@@ -77,6 +77,10 @@ footer {
     margin-bottom: 30px;
 }
 
+.username {
+  font-family: 'Exo 2', sans-serif;
+}
+
 </style>
 </head>
 
@@ -107,7 +111,7 @@ footer {
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <form class="navbar-form navbar-right">
       {{#if currentUser}}
-        <p>{{currentUser.profile.name}}</p>
+        <p class="username">{{currentUser.profile.name}}</p>
         {{> logout}}
         {{else}}
         <a type="submit" href="/Login/login" class="btn btn-default">Login</a>
