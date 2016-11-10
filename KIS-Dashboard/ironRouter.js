@@ -120,3 +120,52 @@ Router.route('/Login/login', function() {
   this.render('login');
 });
 
+//Assistance on arrival
+Router.route('/assistance', function() {
+  this.render('assistance');
+});
+
+//City Registration
+Router.route('/cityreg', function() {
+  this.render('cityreg');
+});
+
+//College information
+Router.route('/college', function() {
+  this.render('college');
+});
+
+//DSL Connection
+Router.route('/dsl', function() {
+  this.render('dsl');
+});
+
+
+// Food Facts
+Router.route('/foodfact', function() {
+  this.render('foodfact');
+});
+
+
+// Insurance information
+Router.route('/insurance', function() {
+  this.render('insurance');
+});
+
+//Mobile Contracts and Connections information
+Router.route('/mobile', function() {
+  this.render('mobile');
+});
+
+
+//Shopping Details
+Router.route('/shopping', function() {
+  this.render('shopping');
+});
+
+//Temperory Accomodation info
+Router.route('/tempaccom', function() {
+  this.render('tempaccom');
+});
+
+
