@@ -264,15 +264,20 @@ footer {
 </body>
 
 
-
 <template name="event_new">
  {{> centerheader}}
 <br><br><br><br><br><br>
 
 
 <div class="container form">
-  
-  {{> quickForm collection="Tdos" id="event_new" type="insert"}}
+  <form>
+        <label>Label</label>
+        <input type="text" name="label" placeholder="label"><br>
+        <label>Location</label>
+        <input type="text" name="location" placeholder="location">
+        <input type="submit" value="Submit">
+    </form>
+
 
 
   <script type="text/javascript">(function () {
