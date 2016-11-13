@@ -168,4 +168,7 @@ Router.route('/tempaccom', function() {
   this.render('tempaccom');
 });
 
-
+//Find friends
+Router.route('/Friends/findFriends', function() {
+    this.render('FindFriends');
+});
