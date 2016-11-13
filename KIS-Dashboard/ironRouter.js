@@ -168,4 +168,12 @@ Router.route('/tempaccom', function() {
   this.render('tempaccom');
 });
 
+//My Event
 
+Router.route('/myevent/:_id', {
+    template: 'myevent',
+    data: function(){
+        var currentList = this.params._id;
+        return Tdos.findOne({ _id: currentList });
+    }
+});

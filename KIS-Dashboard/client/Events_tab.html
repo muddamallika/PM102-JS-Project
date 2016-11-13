@@ -98,7 +98,30 @@ li a:hover {
 
 </style>
 
-
+<script>
+    
+function buttonclick()
+{
+   document.getElementById('registerDiv').style.display = "block";
+   document.getElementById('registerBtn').disabled = "true";
+     document.getElementById('registerCancelDiv').style.display = "none";
+     document.getElementById('registerCancelBtn').enabled = "true";
+   
+}
+    
+    function buttonCancelclick()
+{
+   document.getElementById('registerCancelDiv').style.display = "block";
+   document.getElementById('registerCancelBtn').disabled = "true";
+     document.getElementById('registerDiv').style.display = "none";
+    document.getElementById('registerBtn').disabled = "false";
+   
+}
+    
+    $('body').on('click', '', function(event) {
+    event.preventDefault();
+});
+    </script>
 </head>
 
 <body>
@@ -110,14 +133,21 @@ li a:hover {
  {{> centerheader}}
 
 
-<br><br><br><br><br>
 <div class="container">
 <br><br><br><br><br>
-  <h2 class="text-center">Event: {{label}}</h2>
-  <h3 class="text-center">Location: {{location}}</h3>
+  <h4>Event: {{label}}</h4>
+  <h5>Location: {{location}}</h5>
+    <h6>Description:<br>{{description}}</h6>
+
+    
+     <button id="registerBtn" onclick="buttonclick()" class="btn btn-info">Register</button>
+     <button id="registerCancelBtn" onclick="buttonCancelclick()" class="btn btn-info">Cancel</button>
+     <div id="registerDiv"  style="display:none;" > You are resgistered for the event {{label}}</div> 
+     <div id="registerCancelDiv"  style="display:none;" > You have cancelled for the event {{label}}</div> 
+    
+    
     
   </div>
-
 <br><br><br>
 </template>
 
