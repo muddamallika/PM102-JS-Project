@@ -1,0 +1,9 @@
+<template name="searchBox">
+	{{> EasySearch.Input index=usersIndex }}
+
+	<ul>
+		{{#EasySearch.Each index = usersIndex }}
+			<li>Your Friend: {{name}} </li>
+		{{/EasySearch.Each}}
+	</ul>
+</template>

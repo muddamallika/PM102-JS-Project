@@ -21,6 +21,13 @@ Template.register.events({
             else {
             	FlashMessages.sendSuccess("Successfully Registered");
             }
+
+        });
+
+        Search.insert({
+            email: email,
+            firstname: firstname,
+            lastname: lastname
         });
     }
 });
