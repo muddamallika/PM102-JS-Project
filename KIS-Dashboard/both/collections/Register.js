@@ -1,4 +1,5 @@
 Register = new Mongo.Collection("register");
+Search = new Mongo.Collection("search");
 
 Search = new Mongo.Collection("search");
 

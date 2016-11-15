@@ -29,7 +29,22 @@ Template.register.events({
             firstname: firstname,
             lastname: lastname
         });
+
+        Search.insert({
+            email: email,
+            firstname: firstname,
+            lastname: lastname
+        });
+        
+        event.target.email.value="";
+        event.target.password.value="";
+        event.target.firstname.value="";
+        event.target.lastname.value="";
+        Meteor.setTimeout(function () {
+            Router.go('/Login/login');
+        }, 8000);
     }
+
 });
 
 }

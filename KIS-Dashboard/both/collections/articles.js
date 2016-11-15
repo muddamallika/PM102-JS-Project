@@ -1,7 +1,7 @@
 Articles = new Mongo.Collection("articles");
 
 
-Articles.attachSchema(new SimpleSchema({
+/*Articles.attachSchema(new SimpleSchema({
   NameOfArticle: {type: String},
   Category : {
       type: Number,
@@ -29,3 +29,4 @@ Articles.attachSchema(new SimpleSchema({
       max: 2000,
    }
 }));
+*/

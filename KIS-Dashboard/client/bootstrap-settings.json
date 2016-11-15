@@ -1,0 +1,70 @@
+{
+  "less": {
+    "customVariables": false,
+
+    "exposeMixins": false,
+
+    "compile": true,
+
+    "modules": {
+       "alerts": false,
+       "badges": false,
+       "breadcrumbs": false,
+       "button-groups": false,
+       "buttons": false,
+       "carousel": false,
+       "close": false,
+       "code": false,
+       "component-animations": false,
+       "dropdowns": false,
+       "forms": false,
+       "glyphicons": false,
+       "grid": false,
+       "input-groups": false,
+       "jumbotron": false,
+       "labels": false,
+       "list-group": false,
+       "media": false,
+       "modals": false,
+       "navbar": false,
+       "navs": false,
+       "normalize": false,
+       "pager": false,
+       "pagination": false,
+       "panels": false,
+       "popovers": false,
+       "print": false,
+       "progress-bars": false,
+       "responsive-embed": false,
+       "responsive-utilities": false,
+       "scaffolding": false,
+       "tables": false,
+       "thumbnails": false,
+       "tooltip": false,
+       "type": false,
+       "utilities": false,
+       "wells": false
+    }
+  },
+
+  "javascript": {
+    "expose": false,
+
+    "modules": {
+      "affix": true,
+      "alert": true,
+      "button": true,
+      "carousel": true,
+      "collapse": true,
+      "dropdown": true,
+      "modal": true,
+      "popover": true,
+      "scrollspy": true,
+      "tab": true,
+      "tooltip": true,
+      "transition": true
+    }
+  },
+
+  "version": 2
+}
