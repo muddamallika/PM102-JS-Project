@@ -1,7 +1,6 @@
 Register = new Mongo.Collection("register");
 Search = new Mongo.Collection("search");
 
-Search = new Mongo.Collection("search");
 
 Register.attachSchema(new SimpleSchema({
   Username: {type: String, label: "Username"},

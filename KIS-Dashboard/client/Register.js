@@ -29,12 +29,6 @@ Template.register.events({
             firstname: firstname,
             lastname: lastname
         });
-
-        Search.insert({
-            email: email,
-            firstname: firstname,
-            lastname: lastname
-        });
         
         event.target.email.value="";
         event.target.password.value="";
