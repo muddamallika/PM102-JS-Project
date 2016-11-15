@@ -22,7 +22,15 @@ Template.register.events({
             	FlashMessages.sendSuccess("Successfully Registered");
             }
         });
+        event.target.email.value="";
+        event.target.password.value="";
+        event.target.firstname.value="";
+        event.target.lastname.value="";
+        Meteor.setTimeout(function () {
+            Router.go('/Login/login');
+        }, 8000);
     }
+
 });
 
 }

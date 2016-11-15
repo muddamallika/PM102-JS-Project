@@ -75,13 +75,13 @@ li a:hover {
       color: black;
     }
 
-    .marquee {
+  /*  .marquee {
   width: 300px;
   overflow: hidden;
   border: 1px solid #ccc;
   background: #ccc;
   animation-iteration-count: infinite;
-}
+}*/
 
 .ver {
   height: 30px;
@@ -117,7 +117,7 @@ li a:hover {
 <div class="container">
   
   <div class="col-xs-6 mar" style="height: 200px">
-    <div class="marquee ver" style="height: 200px">
+    <div class="marquee ver" style="height: 200px;" data-direction='up' data-duration='3000' data-pauseOnHover="true" >
     <p style="text-decoration: none !important"> 
        {{> todoList}}
   </p>
@@ -127,12 +127,7 @@ li a:hover {
 <script >
  $(function() {
   $('.marquee').marquee({
-    duration: 3000,
-    direction: 'up',
-    duplicated: false,
-    gap: 50,
-    pauseOnHover: true
-
+    startVisible: true
   });
 });
 </script>
@@ -151,7 +146,12 @@ li a:hover {
   <div class="col-xs-6">   
   </div>
   <div class="col-xs-6" style="margin-top: -140px">
+  {{#if currentUser}}
     <a href="/Event_new/event_new" class="btn btn-info cevent" role="button" target="_blank">Create Event</a>
+    {{else}}
+    <a href="/Login/login" class="btn btn-info">Create Event</a>
+    {{/if}}
+  
   </div>
 </div>
 
