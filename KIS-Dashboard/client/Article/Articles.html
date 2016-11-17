@@ -1,0 +1,310 @@
+<head>
+  <title>KIS-Dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script type='text/javascript' src='//cdn.jsdelivr.net/jquery.marquee/1.3.9/jquery.marquee.min.js'></script>
+  <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
+
+
+  <style>
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+
+.up {
+      margin-top: -36px;
+    }
+
+    .down {
+      margin-top: 10px;
+    }
+
+    .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+    }
+
+    .fa {
+      size: 20px;
+    }
+
+    .foot_img {
+      margin-bottom: : -50px;
+    }
+
+    .ar{
+      background-color: white;
+      color: black;
+    }
+
+    .marquee {
+  width: 300px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background: #ccc;
+}
+
+.ver {
+  height: 30px;
+  width: 200px;
+  margin-top: 30px;
+}
+
+.unorder {
+  color: black;
+  background-color: transparent;
+}
+
+#event_new{
+  width: 40%;
+  margin-left: 30%;
+}
+
+footer {
+  position: relative;
+  margin-bottom: 280px;
+  clear: both;
+
+}
+
+
+
+
+
+
+
+
+
+.addtocalendar var{
+    display: none;
+}
+
+.addtocalendar {
+    position: relative;
+    display: inline-block;
+    background: transparent!important;
+}
+
+.atcb-link {
+    display: block;
+    outline: none!important;
+    cursor: pointer;
+}
+
+.atcb-link:focus~ul,
+.atcb-link:active~ul,
+.atcb-list:hover{
+    visibility:visible !important;
+}
+
+.atcb-list {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 170px;
+    z-index: 900;
+}
+
+.atcb-list,
+.atcb-item
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #fff !important;
+}
+
+.atcb-item {
+    float: none;
+    text-align: left;
+}
+
+.atcb-item-link
+{
+    text-decoration: none !important;
+    outline: none;
+    display: block;
+}
+
+.atcb-item:hover,
+.atcb-item:hover {
+    position: relative;
+    z-index: 900;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+}
+
+
+/* Blue */
+
+.atc-style-blue .atcb-link,
+.atc-style-blue .atcb-link:hover,
+.atc-style-blue .atcb-link:active,
+.atc-style-blue .atcb-link:focus
+{
+    margin: 0;
+    padding: 7px 25px;
+    color: #fff;
+    font-family: "Verdana";
+    font-size: 14px;
+    text-decoration: none;
+    outline: none;
+    line-height: 20px;
+    vertical-align: middle;
+    background: rgb(66,129,244) !important;
+    box-shadow: 0 0 40px rgba(0, 0, 0, .13) inset;
+    border-radius: 4px;
+    zoom: 1;
+}
+
+.atc-style-blue .atcb-list {
+    width: 170px;
+    border: 1px solid rgb(186,186,186) !important;
+    border-radius: 2px;
+    box-shadow: 0 0 5px #AAA !important;
+}
+
+.atc-style-blue .atcb-list,
+.atc-style-blue .atcb-item
+{
+    background: #fff !important;
+    color: #000 !important;
+}
+
+.atc-style-blue .atcb-item,
+.atc-style-blue .atcb-item-link
+{
+    line-height: 1.3em;
+    vertical-align: middle;
+    zoom: 1;
+}
+
+.atc-style-blue .atcb-item-link,
+.atc-style-blue .atcb-item-link:hover,
+.atc-style-blue .atcb-item-link:active,
+.atc-style-blue .atcb-item-link:focus
+{
+    color: #000;
+    font-family: "Verdana";
+    font-size: 14px;
+    text-decoration: none;
+    outline: none;
+    padding: 5px 15px;
+}
+
+.atc-style-blue .atcb-item-link:hover,
+.atc-style-blue .atcb-item-link:active,
+.atc-style-blue .atcb-item-link:focus
+{
+    color: #fff !important;
+}
+
+.atc-style-blue .atcb-item:hover,
+.atc-style-blue .atcb-item:hover {
+    background: rgb(66,129,244) !important;
+}
+
+.calendar {
+  margin-left:50%;
+}
+
+
+.Pub_Article {
+  margin-right: 10%;  
+}
+
+
+
+
+
+</style>
+
+
+</head>
+
+<body>
+</body>
+
+
+
+<template name="Articles_Sel">
+ {{> Header}}
+<br><br><br><br>
+
+
+<!--<div class="container">
+<button type="button" class="btn btn-link Pub_Article">Publish an Article</button>
+<form>
+<select id="chats">
+    <option selected disabled>Choose one</option>
+    <option value="1">Catagory1</option>
+    <option value="2">Catagory2</option>
+    <option value="3">Catagory3</option>
+</select>
+</form>
+<br><br>
+
+  {{> article_group}}
+ 
+
+
+</div>-->
+
+<br><br><br>
+{{> pArticle}}
+</template>
+
+<template name="article_r">
+<li>
+  {{description}}
+  
+  </li>
+</template>
+
+<template name="article_group">
+  <ul class="unorder">
+      {{#each articles}}
+         {{> article_r}} <br><br><br>
+      {{/each}}
+  </ul>
+</template>
