@@ -9,6 +9,10 @@ Router.route('/', function () {
  this.render('Home');
 });
 
+// Contact
+Router.route('/contact_form/Contact', function(){
+  this.render('Contact');
+});
 
 //home Profile
 Router.route('/homeProfile/Profile', function() {
@@ -95,11 +99,6 @@ Router.route('/public', function(){
 
 });
 
-//Contact Us
-Router.route('/contact/contactus', function() {
-    this.render('contactus');
-});
-
 //About Us
 Router.route('/aboutUs/aboutus', function() {
     this.render('aboutus');
@@ -167,5 +166,3 @@ Router.route('/shopping', function() {
 Router.route('/tempaccom', function() {
   this.render('tempaccom');
 });
-
-
