@@ -166,3 +166,20 @@ Router.route('/shopping', function() {
 Router.route('/tempaccom', function() {
   this.render('tempaccom');
 });
+
+//Account Profile Page
+Router.route('/accountHome', function() {
+  this.render('accountHome');
+});
+
+
+//Arrival Main Page
+Router.route('/MainArrival', function() {
+  this.render('MainArrival');
+});
+
+
+//Arrival - On the Road Page
+Router.route('/ontheroad', function() {
+  this.render('ontheroad');
+});
