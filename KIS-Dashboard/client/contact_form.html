@@ -1,0 +1,78 @@
+<head>
+  <title>emailSample</title>
+  <style>
+  .col-xs-11 {
+    margin-right: -5px;
+  }
+
+  .title_size {
+    text-align: justify;
+    font-size: 30px;
+    margin-left: 50px;
+  }
+  </style>
+
+</head>
+
+<body>
+
+</body>
+
+<template name="Contact">
+  {{> centerheader}}
+  <div class="container">
+    <div class="col-xs-4">
+      <div class="jumbotron">
+        <h1>Contact Us</h1>
+        <p>...</p>
+            </div>
+    </div>
+    <div class="col-xs-8">
+      <br>
+    <form role="form" id="email-form" class="form-horizontal">
+      <div class="form-group row">
+        <label class="col-xs-1 control-label">Email</label>
+        <div class="col-xs-11">
+        <input type="email" class="form-control" id="inputEmail" placeholder="Your Mailing Address Please" name="email" >
+      </div>
+      </div>
+      <br>
+      <div class="form-group row">
+        <label for="inputSubject" class="col-xs-1 control-label">Subject</label>
+        <div class="col-xs-11">
+        <input type="text" class="form-control" id="inputSubject" placeholder="Regarding" name="subject">
+      </div>
+      </div>
+      <br>
+      <div class="form-group row">
+        <label for="inputBody" class="col-xs-1 control-label">Your Message</label>
+        <div class="col-xs-11">
+          <textarea class="form-control" rows="5" id="comment" name="message" placeholder="Query"></textarea>
+      </div>
+    </div>
+    <br>
+    <div class="form-group row">
+      <label for="inputBody" class="col-xs-1 control-label"></label>
+      <div class="col-xs-11">
+      <input type="submit" class="btn btn-primary" value="send now">
+    </div>
+  </div>
+      </form>
+    </div>
+    </div>
+<br><br><br>
+    <div class="container">
+      <div class="col-xs-4"></div>
+      <div class="col-xs-4">
+      <label class="title_size">Stop By Here </label>
+    </div>
+    <div class="col-xs-4"></div>
+        <div class="panel-body text-center">
+            <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9305.533538384228!2d10.1809815!3d54.3325316!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x67eb759431c88232!2sFachhochschule+Kiel!5e0!3m2!1sen!2sde!4v1478627685962" width="700" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <hr/>
+            </div>
+
+    </div>
+</template>
