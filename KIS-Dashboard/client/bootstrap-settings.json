@@ -4,7 +4,7 @@
 
     "exposeMixins": false,
 
-    "compile": true,
+    "compile": false,
 
     "modules": {
        "alerts": false,
@@ -51,18 +51,18 @@
     "expose": false,
 
     "modules": {
-      "affix": true,
-      "alert": true,
-      "button": true,
-      "carousel": true,
-      "collapse": true,
-      "dropdown": true,
-      "modal": true,
-      "popover": true,
-      "scrollspy": true,
-      "tab": true,
-      "tooltip": true,
-      "transition": true
+      "affix": false,
+      "alert": false,
+      "button": false,
+      "carousel": false,
+      "collapse": false,
+      "dropdown": false,
+      "modal": false,
+      "popover": false,
+      "scrollspy": false,
+      "tab": false,
+      "tooltip": false,
+      "transition": false
     }
   },
 

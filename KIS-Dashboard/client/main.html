@@ -81,6 +81,15 @@ footer {
   font-family: 'Exo 2', sans-serif;
 }
 
+.dropdown-item {
+  margin-left: 30px;
+}
+
+.dropdown-menu {
+  width: 80px;
+}
+
+
 
 </style>
 </head>
@@ -113,16 +122,14 @@ footer {
       <form class="navbar-form navbar-right">
       {{#if currentUser}}
              
-        <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            {{currentUser.profile.name}}
-            <span class="caret"></span>
+        <div class="btn-group">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{currentUser.profile.name}}
+              <b class="caret"></b>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-               <li><a href="#">Account</a></li>
-               <li>{{> logout}}</li>
-    
-             </ul>
+            <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Account</a><br>
+            <a class="dropdown-item" href="#">{{> logout}}</a>  
+            </div>
         </div>        
         {{else}}
         <a type="submit" href="/Login/login" class="btn btn-default">Login</a>
