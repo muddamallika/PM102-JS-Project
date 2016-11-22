@@ -56,7 +56,7 @@
   }
 /*=== 1. General Structure ===*/
 
-body {
+.acctHome {
   background: #efefef;
   background-image: url("https://trace.theprotag.com/public/src/assets/images/pages-bg.jpg");
   font-family: 'Varela Round';
@@ -73,11 +73,10 @@ a:hover {
 </style>
 </head>
 <body></body>
-<template name="accountHome">  {{> centerheader}}<br/>
-	<br/>
-	<br>
-	<br>
-<div class="container"> <!--Registration Form Creation -->
+<template name="accountHome">  {{> centerheader}}
+
+<div class="container acctHome">  <br>
+  <br>
 	<!-- REGISTRATION FORM -->
 <div class="text-center" style="padding:50px 0">  <br>
   <br>
@@ -93,8 +92,6 @@ a:hover {
   <div class="col-xs-4"></div>
   <!-- end:Main Form -->
 </div>
-</div><!--End of Registration Form Creation -->
-
-  <br/>
-	<br/>
-  <br/></template>
+</div>
+
+</template>
