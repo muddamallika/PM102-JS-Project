@@ -116,26 +116,30 @@
 
 <template name="pArticle">
 
-
+ {{> Header}}
+<br><br><br><br>
+    
  <div class="container">
 	<!--code from here-->
 	<div class="jumbotron" >
-    <div>Category : <select name="Category">
-  <option value="Tech">Technology</option>
-  <option value="Fashion">Fashion</option>
-  <option value="Life">Lifestyle</option>
+ <form>       
+    <div>Category : <select name="Category" id="Category">
+  <option value="1">Technology</option>
+  <option value="2">Fashion</option>
+  <option value="3">Lifestyle</option>
 </select>
         </div>
       <br>
         <br>
-       <textarea rows="4" cols="50" placeholder="Please write your blog here"></textarea>
+       <textarea id="Article" rows="4" cols="50" placeholder="Please write your blog here"></textarea>
         <br>
-        <br>
+        <!--<br>
          <input type="file"/>
 
+        <br>-->
         <br>
-        <br>
- <button type="button">Post your Blog</button>
+ <input type="submit" value="Post your Blog">
+     </form>
     </div>
     </div>
 </template>

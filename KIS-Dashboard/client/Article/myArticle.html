@@ -249,7 +249,9 @@ footer {
 }
 
 
-
+.Pub_Article {
+  margin-right: 10%;  
+}
 
 
 
@@ -264,49 +266,43 @@ footer {
 </body>
 
 
-<template name="articlehome1">
-<!-- {{> centerheader}}-->
-<br><br><br><br><br><br>
+
+<template name="myArticle">
+ {{> Header}}
+<br><br><br><br>
 
 
-<div class="container form">
-  <form>
-        <label>Label</label>
-        <input type="text" name="label" placeholder="label"><br>
-        <label>Location</label>
-        <input type="text" name="description" placeholder="Write your blog here">
-        <input type="submit" value="Submit">
-    </form>
+<div class="container">
+<form>
+<select id="chats">
+    <option selected disabled>Choose one</option>
+    <option value="1">Technology</option>
+    <option value="2">Fashion</option>
+    <option value="3">Lifestyle</option>
+</select>
+</form>
+<br><br>
 
-
-
-  <script type="text/javascript">(function () {
-            if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
-            if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
-                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-                s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
-                s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
-                var h = d[g]('body')[0];h.appendChild(s); }})();
-    </script>
-
-    <!-- 3. Place event data -->
-    <span class="addtocalendar atc-style-blue calendar" >
-        <var class="atc_event">
-            <var class="atc_date_start">2016-10-10 12:00:00</var>
-            <var class="atc_date_end">2016-05-04 18:00:00</var>
-            <var class="atc_timezone">Europe/London</var>
-            <var class="atc_title">Star Wars Day Party</var>
-            <var class="atc_description">May the force be with you</var>
-            <var class="atc_location">Tatooine</var>
-            <var class="atc_organizer">Luke Skywalker</var>
-            <var class="atc_organizer_email">luke@starwars.com</var>
-        </var>
-    </span>
+  {{> myarticle_group}}
+ 
 
 
 </div>
 
 <br><br><br>
- 
 </template>
 
+<template name="myarticle_r">
+<li>
+  {{Article}}
+  
+  </li>
+</template>
+
+<template name="myarticle_group">
+  <ul class="unorder">
+      {{#each myarticles}}
+         {{> myarticle_r}} <br><br><br>
+      {{/each}}
+  </ul>
+</template>

@@ -80,18 +80,6 @@ this.render('event_new')
 });
 
 
-//Articles_Sel
-Router.route('/Articles/Articles_Sel',function(){
-this.render('Articles_Sel')
-});
-
-
-
-
-//read Article
-Router.route('/readArticle/rArticle', function() {
-    this.render('rArticle');
-});
 
 
 Router.route('/public', function(){
@@ -105,10 +93,7 @@ Router.route('/aboutUs/aboutus', function() {
 });
 
 
-//Post Article
-Router.route('/postArticle/pArticle', function() {
-	this.render('pArticle');
-});
+
 
 
 Router.route('/Register/register', function() {
@@ -173,6 +158,7 @@ Router.route('/accountHome', function() {
 });
 
 
+<<<<<<< HEAD
 //Arrival Main Page
 Router.route('/MainArrival', function() {
   this.render('MainArrival');
@@ -183,3 +169,38 @@ Router.route('/MainArrival', function() {
 Router.route('/ontheroad', function() {
   this.render('ontheroad');
 });
+=======
+///////Article//////////
+
+//Article Home
+
+Router.route('/ArticleHome/ArticleHome',function(){
+this.render('ArticleHome')
+});
+
+//View all Article
+
+Router.route('/Articles/Articles_Sel',function(){
+this.render('Articles_Sel')
+});
+
+//View my Article
+
+Router.route('/myArticle/myArticle',function(){
+this.render('myArticle')
+});
+
+//Post Article
+Router.route('/postArticle/pArticle', function() {
+	this.render('pArticle');
+});
+
+
+//read Article (optional)
+Router.route('/readArticle/rArticle', function() {
+    this.render('rArticle');
+});
+
+////////////////////////////////
+
+>>>>>>> amrita_16Nov

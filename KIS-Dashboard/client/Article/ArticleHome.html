@@ -75,13 +75,13 @@ li a:hover {
       color: black;
     }
 
-    .marquee {
+  /*  .marquee {
   width: 300px;
   overflow: hidden;
   border: 1px solid #ccc;
   background: #ccc;
   animation-iteration-count: infinite;
-}
+}*/
 
 .ver {
   height: 30px;
@@ -111,51 +111,43 @@ li a:hover {
 
 
 
-<template name="articlehome">
-<!--{{> centerheader}}-->
+<template name="ArticleHome">
+{{> centerheader}}
 <br><br>
 <div class="container">
   
-  <div class="col-xs-6 mar" style="height: 200px">
-    <div class="marquee ver" style="height: 200px">
-    <p style="text-decoration: none !important"> 
-    <!--  {{> todoList}}-->
-  </p>
-     </div>
-<br/>
-
-<script >
- $(function() {
-  $('.marquee').marquee({
-    duration: 3000,
-    direction: 'up',
-    duplicated: false,
-    gap: 50,
-    pauseOnHover: true
-
-  });
-});
-</script>
-
-  </div>
-
-  <div class="col-xs-6">
-    {{#if currentUser}}
-    <a href="#" class="btn btn-info">MyArticle</a>
+<div class="col-xs-6">
+  {{#if currentUser}}
+    <a href="/Articles/Articles_Sel" class="btn btn-info" target="_blank">View all Articles</a>
     {{else}}
-    <a href="/Login/login" class="btn btn-info">MyArticle</a>
+    <a href="/Login/login" class="btn btn-info">View all Articles</a>
     {{/if}}
   </div>
-</div>
+     </div>
+ <div class="container">
+<br><br>
+  <div class="col-xs-6">
+  {{#if currentUser}}
+    <a href="/myArticle/myArticle" class="btn btn-info" target="_blank">My Articles</a>
+    {{else}}
+    <a href="/Login/login" class="btn btn-info">My Articles</a>
+    {{/if}}
+  </div>
+     </div>
+    <br><br>
 <div class="container">
   <div class="col-xs-6">   
-  </div>
-  <div class="col-xs-6" style="margin-top: -140px">
-    <a href="/Event_new/event_new" class="btn btn-info cevent" role="button" target="_blank">Write your own blog</a>
+  {{#if currentUser}}
+    <a href="/postArticle/pArticle" class="btn btn-info cevent"  target="_blank">Post Your Own Article</a>
+    {{else}}
+    <a href="/Login/login" class="btn btn-info">Post Your Own Article</a>
+    {{/if}}
+  
   </div>
 </div>
 
 <br><br><br><br><br><br><br>
  <br><br><br><br><br>
+
 </template>
 
