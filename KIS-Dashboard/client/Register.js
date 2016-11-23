@@ -14,6 +14,8 @@ Template.register.events({
 
         var user = {'email':email,password:password,profile:{name:firstname +" "+lastname}};
 
+
+
         Accounts.createUser(user,function(err){
             if(err) {
                 FlashMessages.sendError("Already user exist. Go and try to login");
