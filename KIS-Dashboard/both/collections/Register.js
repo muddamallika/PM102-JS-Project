@@ -1,7 +1,11 @@
-Register = new Mongo.Collection("register");
+Register_Search = new Mongo.Collection("register_search");
 
-Register.attachSchema(new SimpleSchema({
-  Username: {type: String, label: "Username"},
-  Email : {type: String, label: "Email"},
-  Password : {type: String, label:"Password"}
-}));
+if(Meteor.isServer) {
+   Meteor.publish('register_search', function() {
+      return Register_Search.find();
+   });
+}
+
+if(Meteor.isClient) {
+	Meteor.subscribe('register_search');
+}

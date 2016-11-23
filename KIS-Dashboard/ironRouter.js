@@ -183,3 +183,16 @@ Router.route('/MainArrival', function() {
 Router.route('/ontheroad', function() {
   this.render('ontheroad');
 });
+
+//Find friends
+Router.route('/Friends/search', function() {
+    this.render('search');
+});
+
+Router.route('/register_search/:_id', {
+   template: 'publicprofile',
+   data: function(){
+       var currentList = this.params._id;
+       return Register_Search.findOne({ _id: currentList });
+   }
+});
