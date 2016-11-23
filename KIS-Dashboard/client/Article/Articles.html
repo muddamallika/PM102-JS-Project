@@ -272,14 +272,13 @@ footer {
 <br><br><br><br>
 
 
-<!--<div class="container">
-<button type="button" class="btn btn-link Pub_Article">Publish an Article</button>
+<div class="container">
 <form>
 <select id="chats">
-    <option selected disabled>Choose one</option>
-    <option value="1">Catagory1</option>
-    <option value="2">Catagory2</option>
-    <option value="3">Catagory3</option>
+    <option selected disabled>Select Your Category </option>
+    <option value="1">Technology</option>
+    <option value="2">Fashion</option>
+    <option value="3">Lifestyle</option>
 </select>
 </form>
 <br><br>
@@ -288,15 +287,14 @@ footer {
  
 
 
-</div>-->
+</div>
 
 <br><br><br>
-{{> pArticle}}
 </template>
 
 <template name="article_r">
 <li>
-  {{description}}
+  {{Article}}
   
   </li>
 </template>
