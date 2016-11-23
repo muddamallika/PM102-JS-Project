@@ -14,14 +14,23 @@ Template.register.events({
 
         var user = {'email':email,password:password,profile:{name:firstname +" "+lastname}};
 
+
+
         Accounts.createUser(user,function(err){
             if(err) {
                 FlashMessages.sendError("Already user exist. Go and try to login");
             }
             else {
             	FlashMessages.sendSuccess("Successfully Registered");
+
+              Register_Search.insert({
+                       firstname :firstname,
+                       lastname:lastname
+                });
+
             }
         });
+
 
         event.target.email.value="";
         event.target.password.value="";
