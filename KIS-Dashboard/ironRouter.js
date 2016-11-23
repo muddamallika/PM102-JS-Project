@@ -158,7 +158,7 @@ Router.route('/accountHome', function() {
 });
 
 
-<<<<<<< HEAD
+
 //Arrival Main Page
 Router.route('/MainArrival', function() {
   this.render('MainArrival');
@@ -169,7 +169,7 @@ Router.route('/MainArrival', function() {
 Router.route('/ontheroad', function() {
   this.render('ontheroad');
 });
-=======
+
 ///////Article//////////
 
 //Article Home
@@ -203,4 +203,4 @@ Router.route('/readArticle/rArticle', function() {
 
 ////////////////////////////////
 
->>>>>>> amrita_16Nov
+
