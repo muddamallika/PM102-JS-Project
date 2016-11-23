@@ -195,7 +195,8 @@ Router.route('/register_search/:_id', {
    data: function(){
        var currentList = this.params._id;
        return Register_Search.findOne({ _id: currentList });
-   }
+}
+});
 
 
 //Before Arrival Landing Page
