@@ -183,3 +183,14 @@ Router.route('/MainArrival', function() {
 Router.route('/ontheroad', function() {
   this.render('ontheroad');
 });
+
+
+//Before Arrival Landing Page
+Router.route('/before', function() {
+  this.render('before');
+});
+
+//During Arrival Landing Page
+Router.route('/during', function() {
+  this.render('during');
+});
