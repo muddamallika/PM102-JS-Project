@@ -114,58 +114,32 @@ input {
 <body>
 </body>
 
-
-
-<template name="event_tab">
+<template name="event_tab1">
  {{> centerheader}}
 
 <div class="container">
 <br><br><br><br><br>
-  <h2 class="text-center">Event: {{label}}</h2>
-  <h3 class="text-center">Location: {{location}}</h3>
   <p>{{_id}}</p>
-  <form class="userinfo_event">
-  <input type="text" class="username" name="username" value="{{currentUser.profile.name}}" readonly>
-  <input type="text" class="userid" name="userid" value="{{currentUser._id}}" readonly>
-  {{> mytemplate}}
-</form>
-  
-    
-    {{> eventuser}}
-    {{> totalregistrations}}
+    {{> eventuser1}}
   </div>
   
 
 <br><br><br>
 </template>
-<template name="eventuser">
+<template name="eventuser1">
   <ul class="unorder1">
-      {{#each tdos}}
-         {{> todo1}}<br><br>
-      {{/each}}
+      
+         {{> todo2}}<br><br>
+      
   </ul>
 </template>
 
-  <template name="todo1">
+  <template name="todo2">
 <li>
-  {{label}}
+{{#each regis_events}}
+  {{_id}}
+  {{RegisteredUser_id}}
+  {{/each}}
+
   </li>
-</template>
-
-<template name="mytemplate">
-  {{#if productcount x}}
-  <input type="submit" class="btn btn-primary active" name="status" value="Register">
-  {{else}}
-  <input type="submit" class="btn btn-primary disabled" name="status" value="Register">
-  {{/if}}
-
-  {{#if productcount x}}
-  <input type="submit" class="btn btn-primary disabled" name="status" value="Cancel">
-  {{else}}
-  <input type="submit" class="btn btn-primary active" name="status" value="Cancel">
-  {{/if}}
-</template>
-
-<template name="totalregistrations">
-{{totalnum}}
 </template>

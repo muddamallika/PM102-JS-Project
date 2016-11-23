@@ -119,6 +119,10 @@ Router.route('/Login/login', function() {
   this.render('login');
 });
 
+Router.route('/Event_cancel/event_tab1', function(){
+  this.render('event_tab1');
+});
+
 //Assistance on arrival
 Router.route('/assistance', function() {
   this.render('assistance');
