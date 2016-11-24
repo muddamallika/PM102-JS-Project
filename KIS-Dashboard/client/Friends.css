@@ -1,101 +1,38 @@
-body {
-  padding-bottom: 40px;
-  color: #5a5a5a;
-}
-
-#tfheader{
-		background-color:#c3dfef;
-	}
-	#tfnewsearch{
-		float:right;
-		padding:20px;
-	}
-	.tftextinput{
-		margin: 0;
-		padding: 5px 15px;
-		font-family: Arial, Helvetica, sans-serif;
-		font-size:14px;
-		border:1px solid #0076a3; border-right:0px;
-		border-top-left-radius: 5px 5px;
-		border-bottom-left-radius: 5px 5px;
-	}
-	.tfbutton {
-		margin: 0;
-		padding: 5px 15px;
-		font-family: Arial, Helvetica, sans-serif;
-		font-size:14px;
-		outline: none;
-		cursor: pointer;
-		text-align: center;
-		text-decoration: none;
-		color: #ffffff;
-		border: solid 1px #0076a3; border-right:0px;
-		background: #0095cd;
-		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
-		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
-		border-top-right-radius: 5px 5px;
-		border-bottom-right-radius: 5px 5px;
-	}
-	.tfbutton:hover {
-		text-decoration: none;
-		background: #007ead;
-		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
-		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
-	}
-	/* Fixes submit button height problem in Firefox */
-	.tfbutton::-moz-focus-inner {
-	  border: 0;
-	}
-	.tfclear{
-		clear:both;
-	}
-
-
-/* CUSTOMIZE THE CAROUSEL
---------------------------------------------------
-
-.carousel {
-  margin-bottom: 60px;
-}
-
-.carousel-control {
-  top: 76%;
-}
-
-.carousel-caption {
-  z-index: 10;
-}
-
-.carousel .item {
-  height: 500px;
-  background-color:#bbb;
-  overflow:hidden;
-}
-.carousel img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
-}
-
 #searchForm {
-	position:absolute;
-  width: 100px;
-  	top:20%;
-} -->
 
-/* RESPONSIVE CSS
---------------------------------------------------
-@media (max-width: 768px) {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top:20%;
 
-  .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-  	max-width:inherit;
-  }
+}
 
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
-  }
-} */
+#searchForm input[type="text"] {
+    background: url(http://www.iconsdb.com/icons/preview/dark-gray/active-search-xxl.png) #444;
+    background-size: 30px 30px;
+    background-position: left;
+    background-repeat: no-repeat;
+    border: 0 none;
+    font-size: 18px;
+    font-style: bold;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: #15173E;
+    width: 400px;
+    padding: 15px 15px 15px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    }
+
+#searchForm input[type="text"]:focus {
+    width: 550px;
+    }

@@ -5,7 +5,7 @@ if(Meteor.isClient){
 Template.searchdb.helpers({
   register_search: function() {
   	var selectval=Session.get("searchValue");
-    return Register_Search.find({lastname: selectval},{firstname: selectval}).fetch();
+    return Register_Search.find({firstname: selectval}).fetch();
   }
 });
 
