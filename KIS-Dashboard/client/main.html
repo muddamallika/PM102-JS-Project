@@ -71,10 +71,11 @@ li a:hover {
 
 
 footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
     margin-bottom: 30px;
+    height: 60px;
 }
 
 .username {
@@ -88,7 +89,6 @@ footer {
 .dropdown-menu {
   width: 80px;
 }
-
 
 
 </style>
@@ -121,16 +121,16 @@ footer {
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <form class="navbar-form navbar-right">
       {{#if currentUser}}
-             
+
         <div class="btn-group">
             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{currentUser.profile.name}}
               <b class="caret"></b>
             </button>
             <div class="dropdown-menu">
             <a class="dropdown-item" href="#">Account</a><br>
-            <a class="dropdown-item" href="#">{{> logout}}</a>  
+            <a class="dropdown-item" href="#">{{> logout}}</a>
             </div>
-        </div>        
+        </div>
         {{else}}
         <a type="submit" href="/Login/login" class="btn btn-default">Login</a>
         <a type="submit" href="/Register/register" class="btn btn-default">SignUp</a>
@@ -197,7 +197,8 @@ footer {
     <button type="button" class="btn btn-link">About Us</button>
     <a  href="contact/contactus" role="button" class="btn btn-link contact">
     Contact Us</a>
-
+    <a  href="contact/contactus" role="button" class="btn btn-link contact">
+    Our Team</a>
 
     </div>
     <div class="col-xs-2">
@@ -219,7 +220,6 @@ footer {
 </template>
 
 <template name="logout">
-  
+
 <a href="/" class="btn btn-danger btn-logout logout">Logout</a>
 </template>
-
