@@ -6,7 +6,7 @@ Template.event_new.events({
     var location = event.target.location.value;
     var currentUserId = Meteor.userId();
     var createdat = new Date();
-    Tdos.insert({
+    Total_Events.insert({
         label: label,
         location: location        
     });

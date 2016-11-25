@@ -64,31 +64,7 @@
 
 </body>
 
-<template name="centerheader">
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-  	  <div class="col-xs-5"></div>
-  	  <div class="col-xs-3">
-        		<a class="navbar-brand" href="#">
-                      <img class="img-circle" src="https://image.freepik.com/free-icon/healthy-lifestyle-logo_318-52683.jpg" alt=""  width="50px" height="50px">
-         		</a>
-        		<a class="navbar-brand down" href="#">KIS Dashboard</a>
-  	</div>
-  		  <div class="col-xs-4">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <form class="navbar-form navbar-right">
-      {{#if currentUser}}
-     <p class="username"> {{currentUser.profile.name}}</p>
-        {{else}}
-        
-        {{/if}}
-      </form>
-    </div> 
-        </div>
-</div><!-- /.container-fluid -->
-  </nav>
-  </template>
+
   <template name="beforeAGI">
   {{> centerheader}}
   <br><br><br><br>
