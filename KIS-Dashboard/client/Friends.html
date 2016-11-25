@@ -14,7 +14,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
   <style>
       .up {
         margin-top: -36px;
@@ -59,6 +59,41 @@
 
     }
 
+    .searchresult {
+      font-family: 'Nunito', sans-serif;
+      font-size: 18px;
+      color: white;
+    }
+
+    .card {
+      /* Add shadows to create the "card" effect */
+      position: absolute;
+      top:60px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      background-color: #19ABA7;
+      color: white;
+      width: 320px;
+      height: 300px;
+      transition: 0.3s;
+      border-radius: 5px; /* 5px rounded corners */
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+
+  }
+
+  .container {
+    padding: 2px 16px;
+}
+
+  .card-title{
+    font-size: 25px;
+  }
+
+  .card-text{
+    font-size: 18px;
+  }
   </style>
 </head>
 
@@ -67,6 +102,11 @@
 </body>
 
 <template name="search">
+  <script>
+  $(document).ready(function(){
+      $(window).scrollTop(0);
+  });
+  </script>
   {{> centerheader}}
   <div class="container friendsui">
   <div class="container">
@@ -90,14 +130,15 @@
   {{> searchdb}}
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
-<br><br><br>
+<br>
 </template>
 
 <template name="searchresult">
   <br><br><br>
   <div>
     <div class="col-xs-5"></div>
-    <div class="col-xs-2">
+    <div class="col-xs-2 searchresult">
+      <p id="text"></p>
   {{firstname}} {{lastname}}
   </div>
   <div class="col-xs-5"></div>
@@ -115,6 +156,26 @@
 </template>
 
 <template name="publicprofile">
-  {{firstname}}
-  {{lastname}}
+  {{> centerheader}}
+  <div class="container friendsui">
+    <div class="col-xs-4"></div>
+    <div class="col-xs-4">
+    <div class="card">
+      <div class="card-container">
+        <br>
+      <h4 class="card-title" align="center">{{firstname}} {{lastname}}</h4>
+      <p class="card-text" align="center">{{email}}</p>
+      <br>
+      <div class="col-xs-4"></div>
+      <div class="col-xs-5" style="margin-left:-10px;">
+      <button type="submit" class="btn btn-default">Send email</button>
+      </div>
+      <div class="col-xs-3"></div>
+    </div>
+    </div>
+  </div>
+  <div class="col-xs-4"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+  </div>
 </template>

@@ -36,11 +36,11 @@
     .foot_img {
       margin-bottom: : -50px;
     }
-  
+
   .img-circle {
     margin-top: -10px;
   }
-  
+
 
   a{
     text-decoration: none !important;
@@ -53,9 +53,9 @@
   .mid{
     margin-top: 120px;
     font-size: 30px;
-    
+
   }
-  
+
 
 #f1_container {
   position: relative;
@@ -92,7 +92,7 @@
   color: black;
   text-align: center;
   background-color: white;
-  
+
 }
 
 #image {
@@ -111,6 +111,11 @@
 </body>
 
 <template name="duringA">
+  <script>
+  $(document).ready(function(){
+      $(window).scrollTop(0);
+  });
+  </script>
 {{> centerheader}}
 <br><br><br><br><br>
 <div class="container">
@@ -120,7 +125,7 @@
           <div class="front face">
           <div id="container">
             <img id="image" src="http://www.hiltonhotels.de/assets/img/destinations/Germany/germany-1.jpg" />
-            
+
           </div>
           </div>
           <div class="back face center">
@@ -132,17 +137,17 @@
           </div>
       </div>
     </div>
-    
+
     <div class="col-xs-6 " id="f1_container">
       <div id="f1_card" class="shadow">
           <div class="front face">
-            
+
           <div id="container">
             <img id="image" src="http://www.americancollegespain.com/pagina/345/the-american-university-admission-proces.jpg" />
-            
-          </div>  
-          
-          
+
+          </div>
+
+
           </div>
           <div class="back face center">
           <p class="lead" style="font-weight:bold;">
@@ -153,19 +158,19 @@
           </div>
       </div>
     </div>
-    
+
   </div>
   <br/><br/>
-  
+
   <div>
     <div class="col-xs-6 " id="f1_container">
       <div id="f1_card" class="shadow">
           <div class="front face">
             <div id="container">
             <img id="image" src="https://www.tum.de/fileadmin/w00bfo/www/Unileben/Wohnen/20160408_Studentenviertel-Olympia_513x288px.jpg" />
-            
-          </div>  
-            
+
+          </div>
+
           </div>
           <div class="back face center">
           <p class="lead" style="font-weight:bold;">
@@ -176,14 +181,14 @@
           </div>
       </div>
     </div>
-    
+
     <div class="col-xs-6 " id="f1_container">
       <div id="f1_card" class="shadow">
           <div class="front face">
           <div id="container">
             <img id="image" src="http://static.wixstatic.com/media/1544f7aef92a890a48cb683aaa943cef.wix_mp_1024" />
-            
-          </div>  
+
+          </div>
           </div>
           <div class="back face center">
           <p class="lead" style="font-weight:bold;">
@@ -194,9 +199,9 @@
           </div>
       </div>
     </div>
-    
+
   </div>
 </div>
-  
-<br><br><br><br><br>  
+
+<br><br><br><br><br>
 </template>

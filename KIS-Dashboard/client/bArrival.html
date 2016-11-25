@@ -52,7 +52,7 @@
 
    .btn{
     text-decoration: none !important;
-    
+
   }
 
 
@@ -110,7 +110,11 @@
 </body>
 
 <template name="beforeA">
-
+  <script>
+  $(document).ready(function(){
+      $(window).scrollTop(0);
+  });
+  </script>
 {{> centerheader}}
 <br><br>
 <div class="container">
@@ -188,6 +192,6 @@
   </div> <!-- end of second row -->
 </div>
 
-  
+
 <br><br><br><br>
 </template>

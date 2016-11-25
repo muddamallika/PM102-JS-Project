@@ -25,7 +25,8 @@ Template.register.events({
 
               Register_Search.insert({
                        firstname :firstname,
-                       lastname:lastname
+                       lastname:lastname,
+                       email: email
                 });
 
             }
