@@ -174,7 +174,7 @@ Router.route('/ontheroad', function() {
   this.render('ontheroad');
 });
 
-<<<<<<< HEAD
+
 
 //Find friends
 Router.route('/Friends/search', function() {
