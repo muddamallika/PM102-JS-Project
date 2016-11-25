@@ -9,7 +9,7 @@
 }
 
 #searchForm input[type="text"] {
-    background: url(http://www.iconsdb.com/icons/preview/dark-gray/active-search-xxl.png) #444;
+    background: url(http://www.books360degree.com/home/img/home/search.png) #19ABA7;
     background-size: 30px 30px;
     background-position: left;
     background-repeat: no-repeat;
@@ -17,21 +17,30 @@
     font-size: 18px;
     font-style: bold;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    color: #15173E;
+    color: white;
     width: 400px;
     padding: 15px 15px 15px 35px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+
     -webkit-transition: all 0.7s ease 0s;
     -moz-transition: all 0.7s ease 0s;
     -o-transition: all 0.7s ease 0s;
     transition: all 0.7s ease 0s;
     }
+
+    ::-webkit-input-placeholder { /* Chrome */
+      color: white;
+    };
+    :-ms-input-placeholder { /* IE 10+ */
+      color: white;
+    };
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: white;
+      opacity: 1;
+    };
 
 #searchForm input[type="text"]:focus {
     width: 550px;
