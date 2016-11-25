@@ -67,11 +67,11 @@ Router.route('/Events/event', function() {
 
 //Events_tab
 
-Router.route('/tdos/:_id', {
+Router.route('/total_events/:_id', {
    template: 'event_tab',
    data: function(){
        var currentList = this.params._id;
-       return Tdos.findOne({ _id: currentList });
+       return Total_Events.findOne({ _id: currentList });
    }
 });
 
@@ -104,8 +104,8 @@ Router.route('/Login/login', function() {
   this.render('login');
 });
 
-Router.route('/Event_cancel/event_tab1', function(){
-  this.render('event_tab1');
+Router.route('/Event_cancel/event_cancel', function(){
+  this.render('event_cancel');
 });
 
 //Assistance on arrival
@@ -204,6 +204,7 @@ Router.route('/during', function() {
 
 
 
+
 //Article Home
 
 Router.route('/ArticleHome/ArticleHome',function(){
@@ -246,3 +247,19 @@ Router.route('/after', function() {
 
 
 });
+
+Router.route('/Events/my_events', function() {
+  this.render('my_events');
+
+});
+
+
+
+Router.route('Event_cancel/regis_events/:_id', {
+   template: 'cancel_event',
+   data: function(){
+       var currentList = this.params._id;
+       return Regis_Events.findOne({ _id: currentList });
+}
+});
+
