@@ -239,7 +239,7 @@ Router.route('/readArticle/:_id', {
        var currentArticle = this.params._id;
        return Articles.findOne({ _id: currentArticle });
    }
-
+});
 //after Arrival Landing Page
 Router.route('/after', function() {
   this.render('after');
