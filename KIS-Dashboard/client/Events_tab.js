@@ -3,11 +3,17 @@ import { Session } from 'meteor/session'
 if(Meteor.isClient) {
 
 Template.eventuser.helpers({
-  tdos: function() {
+  total_events: function() {
   	var currentList = this._id;
+  	var location = this.location;
   	var label = this.label;
+  	console.log(location);
+  	console.log(currentList);
+  	console.log(label);
   	Session.set("currentList", currentList);
-    return Tdos.find({ _id: currentList });
+  	Session.set("location", location);
+  	Session.set("label", label);
+    return Total_Events.find({ _id: currentList });
   }
 });
 
@@ -17,18 +23,23 @@ Template.event_tab.events({
 	 var Eventcreated_id = Session.get("currentList");
 	 var RegisteredUser_id = event.target.userid.value;
 	 var RegisteredUser_name = event.target.username.value;
+	 
+	 var Location = Session.get("location");
+	 var Label = Session.get("label");
 	 var Status = event.target.status.value;
 	 Regis_Events.insert({
 	 	Eventcreated_id: Eventcreated_id,
 	 	RegisteredUser_id: RegisteredUser_id,
 	 	RegisteredUser_name: RegisteredUser_name,
-	 	Status: Status
+	 	Location:Location,
+	 	Label: Label
 	 });
 	 Total_Regis_Events.insert({
 	 	Eventcreated_id: Eventcreated_id,
 	 	RegisteredUser_id: RegisteredUser_id,
 	 	RegisteredUser_name: RegisteredUser_name,
-	 	Status: Status
+	 	Location: Location,
+	 	Label: Label
 	 });
 	}
 });

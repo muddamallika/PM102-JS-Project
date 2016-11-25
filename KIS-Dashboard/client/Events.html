@@ -136,7 +136,7 @@ li a:hover {
 
   <div class="col-xs-6">
   {{#if currentUser}}
-    <a href="#" class="btn btn-info">MyEvents</a>
+    <a href="/Events/my_events" class="btn btn-info">MyEvents</a>
     {{else}}
     <a href="/Login/login" class="btn btn-info">MyEvents</a>
     {{/if}}
@@ -168,8 +168,23 @@ li a:hover {
 
 <template name="todoList">
   <ul class="unorder">
-      {{#each tdos}}
-         <a href="/tdos/{{_id}}" target="_blank"> {{> todo}}</a><br><br>
+      {{#each total_events}}
+         <a href="/total_events/{{_id}}" target="_blank"> {{> todo}}</a><br><br>
       {{/each}}
   </ul>
+</template>
+
+<template name="my_events">
+ {{> centerheader}}
+
+<div class="container">
+<br><br><br><br><br>
+  <p>{{_id}}</p>
+  <p>Hey, {{currentUser.profile.name}} below are the list of Events that you Registered</p>
+    {{> canceldb}}
+  </div>
+  
+
+<br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 </template>

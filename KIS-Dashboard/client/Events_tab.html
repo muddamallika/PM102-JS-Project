@@ -119,6 +119,8 @@ input {
 <template name="event_tab">
  {{> centerheader}}
 
+ {{#if currentUser}}
+ 
 <div class="container">
 <br><br><br><br><br>
   <h2 class="text-center">Event: {{label}}</h2>
@@ -128,19 +130,24 @@ input {
   <input type="text" class="username" name="username" value="{{currentUser.profile.name}}" readonly>
   <input type="text" class="userid" name="userid" value="{{currentUser._id}}" readonly>
   {{> mytemplate}}
+
 </form>
   
     
-    {{> eventuser}}
-    {{> totalregistrations}}
   </div>
   
-
+  {{else}}
+  
+  <p>Please log in 
+  <a href="/Login/login"></a>
+  </p>
+{{/if}}
+<br><br><br>
 <br><br><br>
 </template>
 <template name="eventuser">
   <ul class="unorder1">
-      {{#each tdos}}
+      {{#each total_events}}
          {{> todo1}}<br><br>
       {{/each}}
   </ul>
@@ -148,7 +155,7 @@ input {
 
   <template name="todo1">
 <li>
-  {{label}}
+  {{label}} 
   </li>
 </template>
 
@@ -162,10 +169,13 @@ input {
   {{#if productcount x}}
   <input type="submit" class="btn btn-primary disabled" name="status" value="Cancel">
   {{else}}
-  <input type="submit" class="btn btn-primary active" name="status" value="Cancel">
+  <a href="/Event_cancel/event_cancel" class="btn btn-primary active" name="status" value="Cancel">Cancel</a>
   {{/if}}
 </template>
 
 <template name="totalregistrations">
 {{totalnum}}
 </template>
+
+
+
