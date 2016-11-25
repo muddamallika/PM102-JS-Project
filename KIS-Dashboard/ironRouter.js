@@ -197,10 +197,17 @@ Router.route('/postArticle/pArticle', function() {
 
 
 //read Article (optional)
-Router.route('/readArticle/rArticle', function() {
+Router.route('/readArticles/rArticle', function() {
     this.render('rArticle');
 });
 
+Router.route('/readArticle/:_id', {
+   template: 'readArticle',
+   data: function(){
+       var currentArticle = this.params._id;
+       return Articles.findOne({ _id: currentArticle });
+   }
+});
 ////////////////////////////////
 
 

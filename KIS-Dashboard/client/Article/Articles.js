@@ -17,7 +17,18 @@ Template.Articles_Sel.events({
   }
 });
 
-
+    Template.Allarticle.helpers({
+  articles: function() {
+    return Articles.find().fetch();
+  }
+});
+    
+    Template.readArticle.helpers({
+  articles: function() {
+    return Articles.find().fetch();
+  }
+});
+     
 if(Meteor.isServer) {
 
 }
