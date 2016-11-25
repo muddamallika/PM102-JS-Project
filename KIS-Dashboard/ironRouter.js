@@ -181,6 +181,7 @@ Router.route('/Friends/search', function() {
     this.render('search');
 });
 
+//Public Profile
 Router.route('/register_search/:_id', {
    template: 'publicprofile',
    data: function(){
