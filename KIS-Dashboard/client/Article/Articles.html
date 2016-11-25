@@ -254,9 +254,57 @@ footer {
 }
 
 
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
 
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
 
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.allArticle
+      {
+      background-image: url("/Images/ws_Winter_Bokeh_2560x1440.jpg")  ;  
+      background-size: cover;
+      }
 </style>
 
 
@@ -271,40 +319,76 @@ footer {
  {{> Header}}
 <br><br><br><br>
 
-
-<!--<div class="container">
-<button type="button" class="btn btn-link Pub_Article">Publish an Article</button>
-<form>
-<select id="chats">
-    <option selected disabled>Choose one</option>
-    <option value="1">Catagory1</option>
-    <option value="2">Catagory2</option>
-    <option value="3">Catagory3</option>
-</select>
-</form>
-<br><br>
-
+<div class="container allArticle">
+    <br> <br>
+      <div class="page-header"><h1>Articles</h1></div>
+{{> articleDropdwn}}
+<div class="row">
+    <div class="col-xs-6">
   {{> article_group}}
- 
+        </div>
+    <div class="col-xs-6 mar" style="height: 200px">
+    <div class="marquee ver" style="height: 180px;width:200px;position:right;" data-direction='up' data-duration='3000' data-pauseOnHover="true" >
+    <p style="text-decoration: none !important"> 
+        {{> Allarticle}}
+  </p>
+     </div>
+        </div>
+    </div>
+<br/>
 
+<script >
+ $(function() {
+  $('.marquee').marquee({
+    startVisible: true
+  });
+});
+</script> 
 
-</div>-->
-
+    </div>
 <br><br><br>
-{{> pArticle}}
 </template>
 
+<template name="articleDropdwn">
+<form>
+    <div class="dropdown">
+  <select class="dropbtn" id="chats"> 
+      
+  <div>
+      <option selected disabled>Select Your Category </option>
+    <option value="Technology">Technology</option>
+    <option value="Fashion">Fashion</option>
+    <option value="Lifestyle">Lifestyle</option>
+
+  </div>
+        </select>
+</div>
+</form>
+<br><br>
+        </template>
 <template name="article_r">
+
+ 
 <li>
-  {{description}}
-  
+       <summary><h3>{{ArticleName}}</h3><p>By : {{AuthorName}}</p> </summary>
+    <a href="/readArticle/{{_id}}"> Click to View </a><br><br>
   </li>
 </template>
 
 <template name="article_group">
   <ul class="unorder">
       {{#each articles}}
-         {{> article_r}} <br><br><br>
+         {{> article_r}}  <br><br><br>
       {{/each}}
   </ul>
+    
+   
 </template>
+
+<template name="Allarticle">
+  <ul class="unorder">
+      {{#each articles}}
+      <a href="/readArticle/{{_id}}" target="_blank"><li><h5>{{ArticleName}}</h5> <br> <p>By : {{AuthorName}}</p> </li> </a><br>
+      {{/each}}
+  </ul>
+    </template>

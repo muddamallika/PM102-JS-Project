@@ -5,8 +5,8 @@ if(Meteor.isClient) {
 Template.article_group.helpers({
   articles: function() {
   	var selectval=Session.get("selectval");
-    var a = parseInt(selectval);
-    return Articles.find({choose: a}).fetch();
+    var a = selectval;
+    return Articles.find({Category: a}).fetch();
   }
 });
 
@@ -17,7 +17,18 @@ Template.Articles_Sel.events({
   }
 });
 
-
+    Template.Allarticle.helpers({
+  articles: function() {
+    return Articles.find().fetch();
+  }
+});
+    
+    Template.readArticle.helpers({
+  articles: function() {
+    return Articles.find().fetch();
+  }
+});
+     
 if(Meteor.isServer) {
 
 }

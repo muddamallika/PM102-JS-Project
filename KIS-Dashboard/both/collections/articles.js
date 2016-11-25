@@ -1,4 +1,20 @@
 Articles = new Mongo.Collection("articles");
+MyArticles = new Mongo.Collection("myarticles");
+
+if(Meteor.isServer) {
+   Meteor.publish('articles', function() {
+      return Articles.find();
+   });
+    Meteor.publish('myarticles', function() {
+     var currentUserId = this.userId;
+      return MyArticles.find({createdBy: currentUserId});
+   });
+
+}
+if (Meteor.isClient) {
+   Meteor.subscribe('articles');
+   Meteor.subscribe('myarticles');
+};
 
 
 /*Articles.attachSchema(new SimpleSchema({

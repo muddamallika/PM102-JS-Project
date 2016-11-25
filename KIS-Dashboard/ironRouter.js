@@ -80,18 +80,6 @@ this.render('event_new')
 });
 
 
-//Articles_Sel
-Router.route('/Articles/Articles_Sel',function(){
-this.render('Articles_Sel')
-});
-
-
-
-
-//read Article
-Router.route('/readArticle/rArticle', function() {
-    this.render('rArticle');
-});
 
 
 Router.route('/public', function(){
@@ -105,10 +93,7 @@ Router.route('/aboutUs/aboutus', function() {
 });
 
 
-//Post Article
-Router.route('/postArticle/pArticle', function() {
-	this.render('pArticle');
-});
+
 
 
 Router.route('/Register/register', function() {
@@ -177,6 +162,7 @@ Router.route('/accountHome', function() {
 });
 
 
+
 //Arrival Main Page
 Router.route('/MainArrival', function() {
   this.render('MainArrival');
@@ -188,6 +174,7 @@ Router.route('/ontheroad', function() {
   this.render('ontheroad');
 });
 
+<<<<<<< HEAD
 
 //Find friends
 Router.route('/Friends/search', function() {
@@ -212,4 +199,42 @@ Router.route('/before', function() {
 Router.route('/during', function() {
   this.render('during');
 
+});
+
+
+//Article Home
+
+Router.route('/ArticleHome/ArticleHome',function(){
+this.render('ArticleHome')
+});
+
+//View all Article
+
+Router.route('/Articles/Articles_Sel',function(){
+this.render('Articles_Sel')
+});
+
+//View my Article
+
+Router.route('/myArticle/myArticle',function(){
+this.render('myArticle')
+});
+
+//Post Article
+Router.route('/postArticle/pArticle', function() {
+	this.render('pArticle');
+});
+
+
+//read Article (optional)
+Router.route('/readArticles/rArticle', function() {
+    this.render('rArticle');
+});
+
+Router.route('/readArticle/:_id', {
+   template: 'readArticle',
+   data: function(){
+       var currentArticle = this.params._id;
+       return Articles.findOne({ _id: currentArticle });
+   }
 });

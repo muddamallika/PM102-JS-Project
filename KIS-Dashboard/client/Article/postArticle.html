@@ -106,7 +106,12 @@
   height: 250px;
   width: 100%;
 }
-
+    .postarticle
+      {
+      background-image:url("/Images/articleBG.jpg");  
+      background-size: cover;
+      }
+    
 </style>
 </head>
 
@@ -116,26 +121,32 @@
 
 <template name="pArticle">
 
-
- <div class="container">
+ {{> Header}}
+<br><br><br><br>
+    
+ <div class="container postarticle">
 	<!--code from here-->
-	<div class="jumbotron" >
-    <div>Category : <select name="Category">
-  <option value="Tech">Technology</option>
-  <option value="Fashion">Fashion</option>
-  <option value="Life">Lifestyle</option>
+ <form> 
+     <div class="page-header"><h1>Put your thoughts in words</h1></div>
+     <div>Article Name :<input type="Text" id="ArticleName" placeholder="Give a name to your article" required="true" /></div><br>
+    <div>Category : <select name="Category" id="Category">
+  <option value="Technology"  >Technology</option>
+  <option value="Fashion" >Fashion</option>
+  <option value="Lifestyle" >Lifestyle</option>
 </select>
         </div>
       <br>
         <br>
-       <textarea rows="4" cols="50" placeholder="Please write your blog here"></textarea>
+       <textarea id="Article" rows="4" cols="50" placeholder="Please write the content of your article here" required="true" ></textarea>
         <br>
-        <br>
+        <!--<br>
          <input type="file"/>
 
+        <br>-->
         <br>
-        <br>
- <button type="button">Post your Blog</button>
-    </div>
+     <div>Author Name :<input type="Text" id="AuthorName" placeholder="Give a name of the Author" /></div><br>
+ <input type="submit" class="btn btn-submit" value="Post your Blog">
+       <a href="/Articles/Articles_Sel" class="btn">View Articles</a><br><br>
+     </form>
     </div>
 </template>
