@@ -250,7 +250,7 @@ footer {
 
 
 .Pub_Article {
-  margin-right: 10%;  
+  margin-right: 10%;
 }
 
 
@@ -302,7 +302,7 @@ footer {
 
 .allArticle
       {
-      background-image: url("/Images/ws_Winter_Bokeh_2560x1440.jpg")  ;  
+      background-image: url("/Images/ws_Winter_Bokeh_2560x1440.jpg")  ;
       background-size: cover;
       }
 </style>
@@ -329,7 +329,7 @@ footer {
         </div>
     <div class="col-xs-6 mar" style="height: 200px">
     <div class="marquee ver" style="height: 180px;width:200px;position:right;" data-direction='up' data-duration='3000' data-pauseOnHover="true" >
-    <p style="text-decoration: none !important"> 
+    <p style="text-decoration: none !important">
         {{> Allarticle}}
   </p>
      </div>
@@ -343,7 +343,7 @@ footer {
     startVisible: true
   });
 });
-</script> 
+</script>
 
     </div>
 <br><br><br>
@@ -352,8 +352,8 @@ footer {
 <template name="articleDropdwn">
 <form>
     <div class="dropdown">
-  <select class="dropbtn" id="chats"> 
-      
+  <select class="dropbtn" id="chats">
+
   <div>
       <option selected disabled>Select Your Category </option>
     <option value="Technology">Technology</option>
@@ -368,27 +368,28 @@ footer {
         </template>
 <template name="article_r">
 
- 
+
 <li>
        <summary><h3>{{ArticleName}}</h3><p>By : {{AuthorName}}</p> </summary>
     <a href="/readArticle/{{_id}}"> Click to View </a><br><br>
   </li>
+  <br><br><br><br><br>
 </template>
 
 <template name="article_group">
   <ul class="unorder">
       {{#each articles}}
-         {{> article_r}}  <br><br><br>
+         {{> article_r}}  <br><br><br><br>
       {{/each}}
   </ul>
-    
-   
+
+
 </template>
 
 <template name="Allarticle">
   <ul class="unorder">
       {{#each articles}}
-      <a href="/readArticle/{{_id}}" target="_blank"><li><h5>{{ArticleName}}</h5> <br> <p>By : {{AuthorName}}</p> </li> </a><br>
+      <a href="/readArticle/{{_id}}" target="_blank"><li><h4>{{ArticleName}}</h4> <br> <p class="lead">By : {{AuthorName}}</p> </li> </a> <br><br><br><br><br>
       {{/each}}
   </ul>
     </template>

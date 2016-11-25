@@ -127,7 +127,7 @@ footer {
               <b class="caret"></b>
             </button>
             <div class="dropdown-menu">
-            <a class="dropdown-item btn btn-default" href="#">Account</a><br>
+            <a class="dropdown-item btn btn-default" href="/accountHome">Account</a><br>
             <a class="dropdown-item" href="#">{{> logout}}</a>
             </div>
         </div>
@@ -221,7 +221,7 @@ footer {
 <template name="logout">
 
 
-<a href="/" class="btn btn-logout logout">Logout</a>
+<a href="/" class="btn btn-danger btn-logout logout">Logout</a>
 </template>
 
 <template name="centerheader">
@@ -241,12 +241,11 @@ footer {
       {{#if currentUser}}
      <p class="username"> {{currentUser.profile.name}}</p>
         {{else}}
-        
+
         {{/if}}
       </form>
-    </div> 
+    </div>
         </div>
 </div><!-- /.container-fluid -->
   </nav>
   </template>
-
