@@ -213,3 +213,9 @@ Router.route('/during', function() {
   this.render('during');
 
 });
+
+//after Arrival Landing Page
+Router.route('/after', function() {
+  this.render('after');
+
+});
