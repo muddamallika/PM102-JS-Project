@@ -29,7 +29,7 @@
     	createdBy: currentUserId,
         createdat:createdat
     });
-    event.target.Category.value = "1";
+    event.target.Category.value = "Technology";
     event.target.Article.value = "";
     event.target.ArticleName.value = "";
     event.target.AuthorName.value = "";
