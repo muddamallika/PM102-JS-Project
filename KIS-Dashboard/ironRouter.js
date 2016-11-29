@@ -262,4 +262,3 @@ Router.route('Event_cancel/regis_events/:_id', {
        return Regis_Events.findOne({ _id: currentList });
 }
 });
-
