@@ -10,7 +10,7 @@ Router.route('/', function () {
 });
 
 // Contact
-Router.route('/contact_form/Contact', function(){
+Router.route('/Contact', function(){
   this.render('Contact');
 });
 
@@ -75,6 +75,8 @@ Router.route('/total_events/:_id', {
    }
 });
 
+
+
 Router.route('/Event_new/event_new',function(){
 this.render('event_new')
 });
@@ -87,8 +89,8 @@ Router.route('/public', function(){
 
 });
 
-//About Us
-Router.route('/aboutUs/aboutus', function() {
+//About Us Page
+Router.route('/aboutus', function() {
     this.render('aboutus');
 });
 
@@ -244,16 +246,13 @@ Router.route('/readArticle/:_id', {
 //after Arrival Landing Page
 Router.route('/after', function() {
   this.render('after');
-
-
 });
+
 
 Router.route('/Events/my_events', function() {
   this.render('my_events');
 
 });
-
-
 
 Router.route('Event_cancel/regis_events/:_id', {
    template: 'cancel_event',
@@ -262,3 +261,51 @@ Router.route('Event_cancel/regis_events/:_id', {
        return Regis_Events.findOne({ _id: currentList });
 }
 });
+<<<<<<< HEAD
+=======
+
+//Events Main Page
+Router.route('/eventsMain', function() {
+    this.render('eventsMain');
+});
+
+//Create Event Page
+Router.route('/createEvent', function() {
+  this.render('createEvent');
+});
+
+//Event Detail Page
+Router.route('/eventDetail',function(){
+this.render('eventDetail')
+});
+
+//My Events Page
+Router.route('/myEventsMain', function() {
+    this.render('myEventsMain');
+});
+
+//My Events Page
+Router.route('/myRegEvents', function() {
+    this.render('myRegEvents');
+});
+
+//My Events Page
+Router.route('/myCreateEvents', function() {
+    this.render('myCreateEvents');
+});
+
+//Articles Main Home Page
+Router.route('/articleMain', function() {
+  this.render('articleMain');
+});
+
+//Post Article Page
+Router.route('/postArticles', function() {
+  this.render('postArticles');
+});
+
+//View All Articles Page
+Router.route('/viewAllArticles', function(){
+  this.render('/viewAllArticles');
+});
+>>>>>>> mallika-b5

@@ -1,0 +1,76 @@
+<!--Article Main Home Page Template start-->
+<template name="articleMain">
+  {{> centerheader}}
+  <div class="container-fluid articleMainCSS">
+
+    <!--first half for scrolling articles box -->
+    <div class="col-xs-6">
+      <br><br><br>
+      <div class="container">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-4">
+          <div class="marquee" style="height: 320px;width: 550px; background-color: white;border-radius: 70px 10px;" data-direction='up' data-duration='3000' data-pauseOnHover="true" >
+            <p class="lead" style="text-decoration: underline;font-weight: bold; font-family:cursive; font-size: 45px;">Latest Articles</p>
+            <p class="lead" style="margin-left: 100px;font-size: 25px;font-family:cursive;"> {{> Allarticle}} </p>
+          </div>
+          <script >
+           $(function() {
+            $('.marquee').marquee({
+              startVisible: true
+            });
+          });
+          </script>
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+
+      <br><br><br>
+    </div>
+
+
+    <!--second half for three icons -->
+    <div class="col-xs-6">
+      <br><br><br><br><br>
+      <div class="container">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-4" style="height: 50px;width: 350px; background-color: white;border-radius: 40px 10px;">
+          {{#if currentUser}}
+          <a href="/myArticle/myArticle" style="color: #030805;font-weight: bold;font-family: cursive;font-size: 30px;" class="lead"  target="_blank">My Articles</a>
+          {{else}}
+          <a href="/Login/login" style="color: #030805;font-weight: bold;font-family: cursive;font-size: 30px;" class="lead"  target="_blank">My Articles</a>
+          {{/if}}
+        </div>
+      </div>
+
+      <br><br>
+      <div class="container">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-4" style="height: 50px;width: 350px; background-color: white;border-radius: 40px 10px;">
+          {{#if currentUser}}
+          <a href="/postArticles" style="color: #030805;font-weight: bold;font-family: cursive;font-size: 30px;" class="lead" target="_blank">Post Your Own Article</a>
+          {{else}}
+          <a href="/Login/login" style="color: #030805;font-weight: bold; font-family: cursive;font-size: 30px;" class="lead" target="_blank">Post Your Own Article</a>
+          {{/if}}
+        </div>
+      </div>
+
+      <br><br>
+      <div class="container">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-4" style="height: 50px;width: 350px; background-color: white;border-radius: 40px 10px;">
+          {{#if currentUser}}
+          <a href="/Articles/Articles_Sel" style="color: #030805;font-weight: bold;font-family: cursive;font-size: 30px;" class="lead" target="_blank">View all Articles</a>
+          {{else}}
+          <a href="/Login/login" style="color: #030805;font-weight: bold;font-family: cursive;font-size: 30px;" class="lead" target="_blank">View all Articles</a>
+          {{/if}}
+        </div>
+      </div>
+
+      <br><br>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <br><br>
+  </div>
+</template>
+<!--Article Main Home Page  Template end-->

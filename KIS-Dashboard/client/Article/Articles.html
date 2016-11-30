@@ -248,7 +248,12 @@ footer {
 <template name="Allarticle">
   <ul class="unorder">
       {{#each articles}}
-      <a href="/readArticle/{{_id}}" target="_blank"><li><h4>{{ArticleName}}</h4> <br> <p class="lead">By : {{AuthorName}}</p> </li> </a> <br><br><br><br><br>
+      <a href="/readArticle/{{_id}}" target="_blank">
+        <li>
+          <h4>{{ArticleName}}</h4>
+          <p>By : {{AuthorName}}</p>
+        </li>
+      </a> <br>
       {{/each}}
   </ul>
     </template>

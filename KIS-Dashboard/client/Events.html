@@ -1,4 +1,5 @@
 <head>
+
   <title>KIS-Dashboard</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -22,54 +23,10 @@
   <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
 
 
+  <title>Events Main</title>
+
+
   <style>
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333333;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    border: 1px solid black;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #111111;
-}
-
-.up {
-      margin-top: -36px;
-    }
-
-    .down {
-      margin-top: 10px;
-    }
-
-    .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-    }
-
-    .fa {
-      size: 20px;
-    }
-
-    .foot_img {
-      margin-bottom: : -50px;
-    }
 
     .ar{
       background-color: white;
@@ -88,7 +45,7 @@ li a:hover {
   height: 30px;
   width: 200px;
   margin-top: 30px;
-  
+
 }
 
 .unorder {
@@ -99,6 +56,7 @@ li a:hover {
 .cevent:visited {
   color: white;
 }
+
 
 
 
@@ -217,52 +175,68 @@ ul li a:hover,ul li a:focus{
 
 
 
+
 </style>
-
-
 </head>
 
 <body>
 </body>
 
-
-
 <template name="event">
+
 {{> centerheader}}
 <br><br>
 <div class="container container1">
   {{> todoList}}
 
+  {{> centerheader}}
+  <br><br>
+  <div class="container">
+    <div class="col-xs-6 mar" style="height: 200px">
+      <div class="marquee ver" style="height: 200px;" data-direction='up' data-duration='3000' data-pauseOnHover="true" >
+        <p style="text-decoration: none !important"> {{> todoList}}</p>
+      </div>
+      <br/>
+      <script >
+       $(function() {
+        $('.marquee').marquee({
+          startVisible: true
+        });
+      });
+      </script>
+    </div>
+
   <div class="col-xs-6">
-  {{#if currentUser}}
+    {{#if currentUser}}
     <a href="/Events/my_events" class="btn btn-info">MyEvents</a>
     {{else}}
     <a href="/Login/login" class="btn btn-info">MyEvents</a>
     {{/if}}
   </div>
-</div>
-<div class="container">
-  <div class="col-xs-6">   
   </div>
-  <div class="col-xs-6" style="margin-top: -140px">
-  {{#if currentUser}}
-    <a href="/Event_new/event_new" class="btn btn-info cevent" role="button" target="_blank">Create Event</a>
-    {{else}}
-    <a href="/Login/login" class="btn btn-info">Create Event</a>
-    {{/if}}
-  
-  </div>
-</div>
 
-<br><br><br><br><br><br><br>
- <br><br><br><br><br>
+  <div class="container">
+    <div class="col-xs-6"></div>
+    <div class="col-xs-6" style="margin-top: -140px">
+    {{#if currentUser}}
+      <a href="/Event_new/event_new" class="btn btn-info cevent" role="button" target="_blank">Create Event</a>
+      {{else}}
+      <a href="/Login/login" class="btn btn-info">Create Event</a>
+      {{/if}}
+    </div>
+  </div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
 </template>
 
 <template name="todo">
+
 <div class="stickyinfo">
 <h2>  {{label}} </h2>
-<p> {{location}} </p>  
-</div> 
+<p> {{location}} </p>
+</div>
+
+<li>{{label}}</li>
 </template>
 
 <template name="todoList">
@@ -277,15 +251,11 @@ ul li a:hover,ul li a:focus{
 
 <template name="my_events">
  {{> centerheader}}
-
-<div class="container">
-<br><br><br><br><br>
-  <p>{{_id}}</p>
-  <p>Hey, {{currentUser.profile.name}} below are the list of Events that you Registered</p>
-    {{> canceldb}}
-  </div>
-  
-
-<br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="container">
+      <br><br><br><br><br>
+      <p>{{_id}}</p>
+      <p>Hey, {{currentUser.profile.name}} below are the list of Events that you Registered</p>
+        {{> canceldb}}
+    </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </template>
