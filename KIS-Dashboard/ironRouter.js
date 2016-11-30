@@ -261,8 +261,6 @@ Router.route('Event_cancel/regis_events/:_id', {
        return Regis_Events.findOne({ _id: currentList });
 }
 });
-<<<<<<< HEAD
-=======
 
 //Events Main Page
 Router.route('/eventsMain', function() {
@@ -308,4 +306,3 @@ Router.route('/postArticles', function() {
 Router.route('/viewAllArticles', function(){
   this.render('/viewAllArticles');
 });
->>>>>>> mallika-b5
