@@ -1,0 +1,68 @@
+<!--Events Main Template start-->
+<template name="eventsMain">
+  {{> centerheader}}
+  <div class="container-fluid eventsMainCSS">
+   <div class="col-xs-6">
+    <div class="container">
+        <br><br><br>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-4">
+          {{#if currentUser}}
+             <p class="lead myeve">
+               <a href="/myEventsMain" style="color: #030805;font-weight: bold; font-size: 30px;">
+                 <br>
+                 My Events</a>
+             </p>
+
+          {{else}}
+            <p class="lead myeve">
+              <a href="/Login/login" style="color: #030805;font-weight: bold; font-size: 30px;">
+                <br>
+                My Events</a>
+            </p>
+          {{/if}}
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+
+      <div class="container">
+        <br><br><br><br>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-4">
+          {{#if currentUser}}
+            <p class="lead creve">
+              <a href="/createEvent" style="color: #030805;font-weight: bold; font-size: 30px;" target="_blank">
+                <br>
+                Create Event</a>
+            </p>
+          {{else}}
+            <p class="lead creve">
+              <a href="/createEvent" style="color: #030805;font-weight: bold; font-size: 30px;" target="_blank">
+                <br>
+                Create Event</a>
+            </p>
+          {{/if}}
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+    </div>
+
+    <div class="col-xs-6">
+      <br><br><br><br>
+      <div class="marquee marqBox" style="height: 300px;width: 500px; background-color: white" data-direction='up' data-duration='3000' data-pauseOnHover="true" >
+      <p class="lead" style="text-decoration: underline;font-weight: bold; font-size: 45px;">Latest Events</p>
+      <p class="lead" style="margin-left: 150px;font-size: 25px;"> {{> todoList}} </p>
+      </div>
+      <script >
+       $(function() {
+        $('.marquee').marquee({
+          startVisible: true
+        });
+      });
+      </script>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
+  <br>
+</template>
+<!--Events Main Template end-->
