@@ -163,7 +163,10 @@ Router.route('/accountHome', function() {
   this.render('accountHome');
 });
 
-
+//User Profile Page
+Router.route('/userProfile', function() {
+  this.render('userProfile');
+});
 
 //Arrival Main Page
 Router.route('/MainArrival', function() {
