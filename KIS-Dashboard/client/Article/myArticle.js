@@ -16,7 +16,13 @@ Template.myArticle.events({
     var selectValue = template.$("#chats").val();
     Session.set("selectval",selectValue);
   }
+
 });
+
+    Template.myArticle.helpers({
+         myarticles: function() { return MyArticles.find().fetch();}
+    });
+
 
 
 if(Meteor.isServer) {
