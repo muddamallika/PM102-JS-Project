@@ -291,18 +291,3 @@ Router.route('/myRegEvents', function() {
 Router.route('/myCreateEvents', function() {
     this.render('myCreateEvents');
 });
-
-//Articles Main Home Page
-Router.route('/articleMain', function() {
-  this.render('articleMain');
-});
-
-//Post Article Page
-Router.route('/postArticles', function() {
-  this.render('postArticles');
-});
-
-//View All Articles Page
-Router.route('/viewAllArticles', function(){
-  this.render('/viewAllArticles');
-});
