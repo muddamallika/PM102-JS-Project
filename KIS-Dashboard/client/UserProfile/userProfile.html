@@ -1,0 +1,66 @@
+<head>
+  <title> User Profile </title>
+  <style>
+  body
+  {
+      font-family: 'Open Sans', sans-serif;
+  }
+
+
+  .user-image-profile
+  {
+      margin: -5px 10px 0px 70px;
+      z-index: 9;
+      width: 20%;
+  }
+
+  .userProfileui{
+    background-image: url("http://wallpapercave.com/wp/nkTc1C9.jpg");
+    background-size: 1000px 800px;
+
+  }
+
+  .user-details{
+    background-color: #19ABA7;
+    background-size: 1000px 800px;
+  }
+
+  @media (max-width:768px)
+  {
+
+  .user-profile-text>h1{
+      align: left;
+      top: 30%;
+      font-size:16px;
+
+  }
+
+  }
+
+</style>
+</head>
+<body>
+</body>
+
+<template name="userProfile">
+  {{> centerheader}}
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<div class="container userProfileui">
+    <div class="user-profile">
+
+        <img align="left" class="user-image-profile thumbnail" src="http://lorempixel.com/180/180/people/9/" alt="Profile image example"/>
+        <div class="user-profile-text">
+            <h1>Eli Macy</h1>
+            <p>Girls just wanna go fun.</p>
+        </div>
+    </div>
+</div> <!-- /container -->
+
+<div class="container userProfileDetails">
+  <div class="user-details">
+    <h1> Personal Information </h1>
+  </div>
+</div>
+
+</template>
