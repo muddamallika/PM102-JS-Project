@@ -291,3 +291,14 @@ Router.route('/myRegEvents', function() {
 Router.route('/myCreateEvents', function() {
     this.render('myCreateEvents');
 });
+
+
+
+
+
+//Team Page
+Router.route('/team',function (){
+   this.render('team');
+});
+
+)
