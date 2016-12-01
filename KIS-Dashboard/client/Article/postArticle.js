@@ -18,7 +18,7 @@
         Category: Category,
         Article: Article  ,
         ArticleName: ArticleName,
-    	  AuthorName : AuthorName,
+        AuthorName : AuthorName,
         createdat:createdat
 
     });
@@ -26,7 +26,7 @@
         Category: Category,
         Article: Article,
         ArticleName: ArticleName,
-    	  createdBy: currentUserId,
+        createdBy: currentUserId,
         createdat:createdat
     });
     event.target.Category.value = "Technology";
