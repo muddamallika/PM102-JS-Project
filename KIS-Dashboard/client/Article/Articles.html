@@ -108,149 +108,8 @@ footer {
 
 
 
-
-
-
-
-
-.addtocalendar var{
-    display: none;
-}
-
-.addtocalendar {
-    position: relative;
-    display: inline-block;
-    background: transparent!important;
-}
-
-.atcb-link {
-    display: block;
-    outline: none!important;
-    cursor: pointer;
-}
-
-.atcb-link:focus~ul,
-.atcb-link:active~ul,
-.atcb-list:hover{
-    visibility:visible !important;
-}
-
-.atcb-list {
-    visibility: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 170px;
-    z-index: 900;
-}
-
-.atcb-list,
-.atcb-item
-{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background: #fff !important;
-}
-
-.atcb-item {
-    float: none;
-    text-align: left;
-}
-
-.atcb-item-link
-{
-    text-decoration: none !important;
-    outline: none;
-    display: block;
-}
-
-.atcb-item:hover,
-.atcb-item:hover {
-    position: relative;
-    z-index: 900;
-    cursor: pointer;
-    text-decoration: none;
-    outline: none;
-}
-
-
-/* Blue */
-
-.atc-style-blue .atcb-link,
-.atc-style-blue .atcb-link:hover,
-.atc-style-blue .atcb-link:active,
-.atc-style-blue .atcb-link:focus
-{
-    margin: 0;
-    padding: 7px 25px;
-    color: #fff;
-    font-family: "Verdana";
-    font-size: 14px;
-    text-decoration: none;
-    outline: none;
-    line-height: 20px;
-    vertical-align: middle;
-    background: rgb(66,129,244) !important;
-    box-shadow: 0 0 40px rgba(0, 0, 0, .13) inset;
-    border-radius: 4px;
-    zoom: 1;
-}
-
-.atc-style-blue .atcb-list {
-    width: 170px;
-    border: 1px solid rgb(186,186,186) !important;
-    border-radius: 2px;
-    box-shadow: 0 0 5px #AAA !important;
-}
-
-.atc-style-blue .atcb-list,
-.atc-style-blue .atcb-item
-{
-    background: #fff !important;
-    color: #000 !important;
-}
-
-.atc-style-blue .atcb-item,
-.atc-style-blue .atcb-item-link
-{
-    line-height: 1.3em;
-    vertical-align: middle;
-    zoom: 1;
-}
-
-.atc-style-blue .atcb-item-link,
-.atc-style-blue .atcb-item-link:hover,
-.atc-style-blue .atcb-item-link:active,
-.atc-style-blue .atcb-item-link:focus
-{
-    color: #000;
-    font-family: "Verdana";
-    font-size: 14px;
-    text-decoration: none;
-    outline: none;
-    padding: 5px 15px;
-}
-
-.atc-style-blue .atcb-item-link:hover,
-.atc-style-blue .atcb-item-link:active,
-.atc-style-blue .atcb-item-link:focus
-{
-    color: #fff !important;
-}
-
-.atc-style-blue .atcb-item:hover,
-.atc-style-blue .atcb-item:hover {
-    background: rgb(66,129,244) !important;
-}
-
-.calendar {
-  margin-left:50%;
-}
-
-
 .Pub_Article {
-  margin-right: 10%;  
+  margin-right: 10%;
 }
 
 
@@ -302,7 +161,7 @@ footer {
 
 .allArticle
       {
-      background-image: url("/Images/ws_Winter_Bokeh_2560x1440.jpg")  ;  
+      background-image: url("/Images/ws_Winter_Bokeh_2560x1440.jpg")  ;
       background-size: cover;
       }
 </style>
@@ -329,7 +188,7 @@ footer {
         </div>
     <div class="col-xs-6 mar" style="height: 200px">
     <div class="marquee ver" style="height: 180px;width:200px;position:right;" data-direction='up' data-duration='3000' data-pauseOnHover="true" >
-    <p style="text-decoration: none !important"> 
+    <p style="text-decoration: none !important">
         {{> Allarticle}}
   </p>
      </div>
@@ -343,7 +202,7 @@ footer {
     startVisible: true
   });
 });
-</script> 
+</script>
 
     </div>
 <br><br><br>
@@ -352,8 +211,8 @@ footer {
 <template name="articleDropdwn">
 <form>
     <div class="dropdown">
-  <select class="dropbtn" id="chats"> 
-      
+  <select class="dropbtn" id="chats">
+
   <div>
       <option selected disabled>Select Your Category </option>
     <option value="Technology">Technology</option>
@@ -368,27 +227,33 @@ footer {
         </template>
 <template name="article_r">
 
- 
+
 <li>
        <summary><h3>{{ArticleName}}</h3><p>By : {{AuthorName}}</p> </summary>
     <a href="/readArticle/{{_id}}"> Click to View </a><br><br>
   </li>
+  <br><br><br><br><br>
 </template>
 
 <template name="article_group">
   <ul class="unorder">
       {{#each articles}}
-         {{> article_r}}  <br><br><br>
+         {{> article_r}}  <br><br><br><br>
       {{/each}}
   </ul>
-    
-   
+
+
 </template>
 
 <template name="Allarticle">
   <ul class="unorder">
       {{#each articles}}
-      <a href="/readArticle/{{_id}}" target="_blank"><li><h5>{{ArticleName}}</h5> <br> <p>By : {{AuthorName}}</p> </li> </a><br>
+      <a href="/readArticle/{{_id}}" target="_blank">
+        <li>
+          <h4>{{ArticleName}}</h4>
+          <p>By : {{AuthorName}}</p>
+        </li>
+      </a> <br>
       {{/each}}
   </ul>
     </template>

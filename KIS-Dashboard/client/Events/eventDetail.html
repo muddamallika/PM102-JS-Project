@@ -1,0 +1,23 @@
+
+<template name="eventDetail">
+ <div class="eventDetailCss"> <!--Event Detail Page Container Start -->
+   {{> centerheader}}
+   {{#if currentUser}}
+   <br><br><br><br>
+   <div class="container"> <!--Event Detail Container Start -->
+     <!--use these names in the collections-->
+
+      <p class="lead eDetail">Event Name {{eventName}}</p>
+      <p class="lead eDetail">Event Description {{eventDesc}}</p>
+      <p class="lead eDetail">Event Location {{eventLoc}}</p>
+      <p class="lead eDetail">Event Date {{eventDate}}</p>
+      <p class="lead eDetail">Event Time {{eventTime}}</p>
+      <br><br>
+      {{> mytemplate}}
+    </div> <!--Event Detail Page Container Start -->
+    {{else}}
+    <p class="lead"><a href="/Login/login">Please log in here</a></p>
+    {{/if}}
+    <br><br><br>
+  </div>
+</template>

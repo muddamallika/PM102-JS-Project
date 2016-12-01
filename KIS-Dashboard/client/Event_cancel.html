@@ -114,32 +114,51 @@ input {
 <body>
 </body>
 
-<template name="event_tab1">
+<template name="event_cancel">
  {{> centerheader}}
 
 <div class="container">
 <br><br><br><br><br>
-  <p>{{_id}}</p>
-    {{> eventuser1}}
-  </div>
   
+  <p>Hey, {{currentUser.profile.name}} below are the list of Events that you Registered</p>
+    {{> canceldb}}
+  </div>
+
 
 <br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 </template>
-<template name="eventuser1">
-  <ul class="unorder1">
-      
-         {{> todo2}}<br><br>
-      
+
+<template name="cancelinfo">
+  Label: {{Label}}     Location: {{Location}}
+  <br><br>
+</template>
+
+<template name="canceldb">
+  <ul class="unorder">
+      {{#each regis_events}}
+       <a href="regis_events/{{_id}}"> {{> cancelinfo}} <br></a>
+      {{/each}}
   </ul>
 </template>
 
-  <template name="todo2">
-<li>
-{{#each regis_events}}
-  {{_id}}
-  {{RegisteredUser_id}}
-  {{/each}}
+<template name="cancel_event">
+{{> centerheader}}
+<br><br>
 
-  </li>
+{{#if currentUser}}
+
+<form>
+<p> Full Details of the event that you want to cancel</p>
+<input type="text" name="cancel" value="{{_id}}" id="cancel" readonly>
+<p class="text-center"><b>Label: </b> {{Label}} </p>
+<p class="text-center"><b>Location: </b>{{Location}} </p>
+<input type="submit" name="OK">
+</form>
+
+{{else}}
+
+<p>Please Login before you cancel an Event</p>
+<a href="/Login/login">Click here for Logging in</a>
+{{/if}}
 </template>

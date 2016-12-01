@@ -104,51 +104,62 @@ input {
   border-color: transparent;
 }
 
-
-
 </style>
-
-
 </head>
 
 <body>
 </body>
 
-
-
 <template name="event_tab">
  {{> centerheader}}
+ {{#if currentUser}}
+
 
 <div class="container">
 <br><br><br><br><br>
-  <h2 class="text-center">Event: {{label}}</h2>
-  <h3 class="text-center">Location: {{location}}</h3>
-  <p>{{_id}}</p>
-  <form class="userinfo_event">
+<form class="userinfo_event">
+  <h2 class="text-center">Event: <input type="text" name="label" value="{{label}}" readonly></h2>
+  <h3 class="text-center">Location: <input type="text" name="location" value="{{location}}" readonly></h3>
+
+
   <input type="text" class="username" name="username" value="{{currentUser.profile.name}}" readonly>
   <input type="text" class="userid" name="userid" value="{{currentUser._id}}" readonly>
   {{> mytemplate}}
-</form>
-  
-    
-    {{> eventuser}}
-    {{> totalregistrations}}
-  </div>
-  
 
-<br><br><br>
+</form>
+
+
+  </div>
+
+
+ <div class="container">
+    <br><br><br><br><br>
+    <h2 class="text-center">Event: {{label}}</h2>
+    <h3 class="text-center">Location: {{location}}</h3>
+    <form class="userinfo_event">
+      <input type="text" class="username" name="username" value="{{currentUser.profile.name}}" readonly>
+      <input type="text" class="userid" name="userid" value="{{currentUser._id}}" readonly>
+      {{> mytemplate}}
+    </form>
+ </div>
+
+  {{else}}
+  <p>Please log in<a href="/Login/login"></a></p>
+  {{/if}}
+  <br><br><br><br><br><br>
 </template>
+
 <template name="eventuser">
   <ul class="unorder1">
-      {{#each tdos}}
-         {{> todo1}}<br><br>
-      {{/each}}
+    {{#each total_events}}
+       {{> todo1}}<br><br>
+    {{/each}}
   </ul>
 </template>
 
-  <template name="todo1">
-<li>
-  {{label}}
+<template name="todo1">
+  <li>
+    {{label}}
   </li>
 </template>
 
@@ -158,11 +169,10 @@ input {
   {{else}}
   <input type="submit" class="btn btn-primary disabled" name="status" value="Register">
   {{/if}}
-
   {{#if productcount x}}
   <input type="submit" class="btn btn-primary disabled" name="status" value="Cancel">
   {{else}}
-  <input type="submit" class="btn btn-primary active" name="status" value="Cancel">
+  <a href="/Event_cancel/event_cancel" class="btn btn-primary active" name="status" value="Cancel">Cancel</a>
   {{/if}}
 </template>
 

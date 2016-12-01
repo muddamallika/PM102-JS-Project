@@ -1,4 +1,4 @@
-Tdos = new Mongo.Collection("tdos");
+Total_Events = new Mongo.Collection("total_events");
 Events = new Mongo.Collection("events");
 Regis_Events = new Mongo.Collection("regis_events");
 Total_Regis_Events = new Mongo.Collection("total_regis_events");
@@ -10,8 +10,8 @@ if(Meteor.isServer) {
       return Events.find({ createdBy: currentUserId });
    });
 
-   Meteor.publish('tdos', function() {
-      return Tdos.find();
+   Meteor.publish('total_events', function() {
+      return Total_Events.find();
    });
 
    Meteor.publish('regis_events', function(){
@@ -25,7 +25,7 @@ if(Meteor.isServer) {
  }
 
 if (Meteor.isClient) {
-   Meteor.subscribe('tdos');
+   Meteor.subscribe('total_events');
    Meteor.subscribe('events');
    Meteor.subscribe('regis_events');
    Meteor.subscribe('total_regis_events');

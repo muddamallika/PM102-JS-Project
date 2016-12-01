@@ -10,7 +10,7 @@ Router.route('/', function () {
 });
 
 // Contact
-Router.route('/contact_form/Contact', function(){
+Router.route('/Contact', function(){
   this.render('Contact');
 });
 
@@ -67,13 +67,15 @@ Router.route('/Events/event', function() {
 
 //Events_tab
 
-Router.route('/tdos/:_id', {
+Router.route('/total_events/:_id', {
    template: 'event_tab',
    data: function(){
        var currentList = this.params._id;
-       return Tdos.findOne({ _id: currentList });
+       return Total_Events.findOne({ _id: currentList });
    }
 });
+
+
 
 Router.route('/Event_new/event_new',function(){
 this.render('event_new')
@@ -87,8 +89,8 @@ Router.route('/public', function(){
 
 });
 
-//About Us
-Router.route('/aboutUs/aboutus', function() {
+//About Us Page
+Router.route('/aboutus', function() {
     this.render('aboutus');
 });
 
@@ -104,8 +106,8 @@ Router.route('/Login/login', function() {
   this.render('login');
 });
 
-Router.route('/Event_cancel/event_tab1', function(){
-  this.render('event_tab1');
+Router.route('/Event_cancel/event_cancel', function(){
+  this.render('event_cancel');
 });
 
 //Assistance on arrival
@@ -203,6 +205,8 @@ Router.route('/during', function() {
 });
 
 
+
+
 //Article Home
 
 Router.route('/ArticleHome/ArticleHome',function(){
@@ -238,4 +242,67 @@ Router.route('/readArticle/:_id', {
        var currentArticle = this.params._id;
        return Articles.findOne({ _id: currentArticle });
    }
+});
+//after Arrival Landing Page
+Router.route('/after', function() {
+  this.render('after');
+});
+
+
+Router.route('/Events/my_events', function() {
+  this.render('my_events');
+
+});
+
+Router.route('Event_cancel/regis_events/:_id', {
+   template: 'cancel_event',
+   data: function(){
+       var currentList = this.params._id;
+       return Regis_Events.findOne({ _id: currentList });
+}
+});
+
+//Events Main Page
+Router.route('/eventsMain', function() {
+    this.render('eventsMain');
+});
+
+//Create Event Page
+Router.route('/createEvent', function() {
+  this.render('createEvent');
+});
+
+//Event Detail Page
+Router.route('/eventDetail',function(){
+this.render('eventDetail')
+});
+
+//My Events Page
+Router.route('/myEventsMain', function() {
+    this.render('myEventsMain');
+});
+
+//My Events Page
+Router.route('/myRegEvents', function() {
+    this.render('myRegEvents');
+});
+
+//My Events Page
+Router.route('/myCreateEvents', function() {
+    this.render('myCreateEvents');
+});
+
+//Articles Main Home Page
+Router.route('/articleMain', function() {
+  this.render('articleMain');
+});
+
+//Post Article Page
+Router.route('/postArticles', function() {
+  this.render('postArticles');
+});
+
+//View All Articles Page
+Router.route('/viewAllArticles', function(){
+  this.render('/viewAllArticles');
 });

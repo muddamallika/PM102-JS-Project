@@ -114,7 +114,7 @@ footer {
       <a class="navbar-brand" href="/">
                     <img class="img-circle" src="https://image.freepik.com/free-icon/healthy-lifestyle-logo_318-52683.jpg" alt=""  width="50px" height="50px">
        </a>
-      <a class="navbar-brand down" href="/">KIS Dashboard</a>
+      <a class="navbar-brand down" href="/">Knowledge Information System - KIS Dashboard</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -127,7 +127,7 @@ footer {
               <b class="caret"></b>
             </button>
             <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Account</a><br>
+            <a class="dropdown-item btn btn-default" href="/accountHome">Account</a><br>
             <a class="dropdown-item" href="#">{{> logout}}</a>
             </div>
         </div>
@@ -194,14 +194,11 @@ footer {
 <footer>
   <div class="container">
     <div class="col-xs-5">
-    <button type="button" class="btn btn-link">About Us</button>
-    <a  href="contact/contactus" role="button" class="btn btn-link contact">
-    Contact Us</a>
-
-
+    <a  href="/aboutus" role="button" class="btn btn-link">About Us</a>
+    <a  href="/contact" role="button" class="btn btn-link">Contact Us</a>
     </div>
     <div class="col-xs-2">
-      <a class="foot_img" href="#">
+      <a class="foot_img" href="/">
          <img style="opacity: 0.4" class="img-circlez" src="https://image.freepik.com/free-icon/healthy-lifestyle-logo_318-52683.jpg" alt=""  width="50px" height="50px">
        </a>
     </div>
@@ -220,5 +217,32 @@ footer {
 
 <template name="logout">
 
+
 <a href="/" class="btn btn-danger btn-logout logout">Logout</a>
 </template>
+
+<template name="centerheader">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="col-xs-5"></div>
+      <div class="col-xs-3">
+            <a class="navbar-brand" href="/">
+              <img class="img-circle" src="https://image.freepik.com/free-icon/healthy-lifestyle-logo_318-52683.jpg" alt=""  width="50px" height="50px">
+            </a>
+            <a class="navbar-brand down" href="/">KIS Dashboard</a>
+      </div>
+      <div class="col-xs-4">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <form class="navbar-form navbar-right">
+      {{#if currentUser}}
+     <p class="username"> {{currentUser.profile.name}}</p>
+        {{else}}
+
+        {{/if}}
+      </form>
+    </div>
+        </div>
+</div><!-- /.container-fluid -->
+  </nav>
+  </template>

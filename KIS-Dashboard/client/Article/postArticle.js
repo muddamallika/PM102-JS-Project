@@ -6,33 +6,33 @@
     var Article = event.target.Article.value;
     var ArticleName = event.target.ArticleName.value;
     var currentUserId = Meteor.userId();
-        
+
     var AuthorName="";
     if(event.target.AuthorName.value!="")
         AuthorName=event.target.AuthorName.value;
     else
-            AuthorName="Annonymus";
-        
+        AuthorName="Anonymous";
+
     var createdat = new Date();
     Articles.insert({
         Category: Category,
         Article: Article  ,
         ArticleName: ArticleName,
-    	AuthorName : AuthorName,
+    	  AuthorName : AuthorName,
         createdat:createdat
-        
+
     });
    MyArticles.insert({
         Category: Category,
         Article: Article,
         ArticleName: ArticleName,
-    	createdBy: currentUserId,
+    	  createdBy: currentUserId,
         createdat:createdat
     });
-    event.target.Category.value = "1";
+    event.target.Category.value = "Technology";
     event.target.Article.value = "";
     event.target.ArticleName.value = "";
     event.target.AuthorName.value = "";
-}  
+}
 });
   }

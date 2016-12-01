@@ -28,7 +28,11 @@ Template.Articles_Sel.events({
     return Articles.find().fetch();
   }
 });
-     
+        Template.ArticleHome.helpers({
+  articles: function() {
+    return Articles.find().fetch();
+  }
+}); 
 if(Meteor.isServer) {
 
 }
