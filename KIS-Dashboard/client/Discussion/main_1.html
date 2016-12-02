@@ -1,0 +1,765 @@
+<template name="discussionMain">
+<head>
+        <title>Discussion</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
+        <link rel="stylesheet" href="font-awesome-4.0.3/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+
+    </head>
+<style>
+
+    .btn-primary {
+        background-color: #1abc9c;
+        box-shadow: none;
+        border-radius: 2px;
+        padding: 10px 15px;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: 'Open Sans Bold', sans-serif;
+        border: none;
+
+    }
+
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:focus {
+        border: none;
+        background-color: #20e1bb;
+        box-shadow: none;
+    }
+
+
+    .paginationforum li {
+        list-style: none;
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    .paginationforum li a {
+        min-width: 24px;
+        height: 24px;
+        font-size: 14px;
+        font-family: 'Open Sans Semibold', sans-serif;
+        color: #ffffff;
+        background-color: #cfd5d7;
+        border-radius: 2px;
+        display: block;
+        padding: 0 8px;
+        line-height: 24px;
+    }
+
+    .paginationforum li a.active,
+    .paginationforum li a:hover,
+    .paginationforum li a:focus,
+    .paginationforum li a:active {
+        color: #363838;
+        background-color: #ffffff;
+        box-shadow: 0 1px 2px #c9cccd;
+        font-family: 'Open Sans Bold', sans-serif;
+        text-decoration: none;
+
+    }
+
+    .sidebarblock {
+        background-color: #ffffff;
+        border-radius: 2px;
+        box-shadow: 0 1px 2px #c9cccd;
+        margin-bottom: 20px;
+    }
+
+    .sidebarblock h3 {
+        color: #363838;
+        font-size: 14px;
+        font-family: 'Open Sans Bold', sans-serif;
+        margin: 0;
+        padding: 20px;
+
+
+    }
+
+    .sidebarblock .divline {
+        height: 1px;
+        line-height: 1px;
+        border-bottom: solid 1px #f1f1f1;
+    }
+
+    .sidebarblock .blocktxt {
+        padding:20px;
+    }
+
+    ul.cats li {
+        list-style: none;
+        display: block;
+        margin:0;
+        padding:0;
+        line-height: 30px;
+    }
+
+    ul.cats {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul.cats li a {
+        font-size: 14px;
+        color: #363838;
+        font-family: 'Open Sans Light', sans-serif;
+        line-height: 30px;
+    }
+
+    .post {
+        background-color: #ffffff;
+
+        border-radius: 2px;
+        box-shadow: 0 1px 2px #c9cccd;
+        margin-bottom: 20px;
+    }
+
+    .post .wrap-ut {
+        width: 85%;
+    }
+
+    .post .userinfo {
+        width: 15%;
+        padding: 20px 0 15px 15px;
+    }
+
+    .post .posttext {
+        width: 85%;
+        padding-right: 30px;
+        padding-top: 20px;
+        padding-bottom: 15px;
+
+        color: #989c9e;
+        font-size: 14px;
+        font-family: 'Open Sans Light', sans-serif;
+        line-height: 25px;
+    }
+
+    .post .postinfo {
+        width: 15%;
+        border-left: solid 1px #f1f1f1;
+
+
+    }
+
+    .post .avatar {
+        width: 37px;
+        margin-left: 5px;
+    }
+
+    .post .icons {
+        width: 48px;
+        border-top: solid 1px #f1f1f1;
+        margin-top: 12px;
+        padding-top: 7px;
+    }
+
+    .post h2 {
+        color: #363838;
+        font-size: 18px;
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .post .comments {
+        border-bottom: solid 1px #f1f1f1;
+        padding: 18px 0 25px 0;
+        text-align: center;
+    }
+
+
+    .post .comments .commentbg {
+        background-color: #bdc3c7;
+        border-radius: 2px;
+        display: inline-block;
+        padding: 12px 17px;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: 'Open Sans Bold', sans-serif;
+        position: relative;
+    }
+
+    .post .comments .commentbg .mark {
+        width: 11px;
+        height: 11px;
+        background-color: #bdc3c7;
+        position: absolute;
+        bottom: 0;
+        left: 43%;
+        margin-bottom: -5px;
+        transform:rotate(45deg);
+        -ms-transform:rotate(45deg); /* IE 9 */
+        -webkit-transform:rotate(45deg); /* Opera, Chrome, and Safari */
+    }
+
+    .post .views {
+        border-bottom: solid 1px #f1f1f1;
+        color:#9da6aa;
+        font-size: 12px;
+        font-family: 'Open Sans Regular', sans-serif;
+        text-align: center;
+        line-height: 29px;
+    }
+
+    .post .views i {
+        font-size: 14px;
+    }
+
+    .post .time {
+        color:#9da6aa;
+        font-size: 12px;
+        font-family: 'Open Sans Regular', sans-serif;
+        text-align: center;
+        line-height: 29px;
+
+    }
+
+    .post .time i {
+        font-size: 14px;
+    }
+
+    .avt {
+        margin-top: 16px;
+        height: 38px;
+    }
+
+    .avt button {
+        height: 38px;
+        border: none;
+        box-shadow: none;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: 'Open Sans Bold', sans-serif;
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: #1abc9c;
+    }
+
+    .avt .btn-primary:hover,
+    .avt .btn-primary:focus,
+    .avt .btn-primary:active,
+    .avt .btn-primary.active{
+        background-color: #1abc9c;
+
+
+        border: none;
+        box-shadow: none;
+
+    }
+    .avatar {
+        position: relative;
+    }
+
+    .avatar img {
+        border-radius: 50%;
+    }
+
+    .avatar .status {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 12px;
+        height: 12px;
+        line-height: 12px;
+        border-radius: 50%;
+        border: solid 2px #ffffff;
+    }
+
+    .dropdown.avatar .status {
+        right: 14px;
+    }
+    .caretl {
+        color:#363838;
+        font-size: 14px;
+        line-height: 38px;
+        padding: 0 15px;
+    }
+
+    body {
+        font-family: 'Open Sans Light', sans-serif;
+        font-size: 14px;
+        color: #989c9e;
+    }
+
+    a {
+        color: #363838;
+    }
+    a:hover {
+        color: #989c9e;
+    }
+
+    footer {
+        height: 69px;
+        line-height: 69px;
+        color: #363838;
+    }
+
+    footer .logo {
+        line-height: normal;
+    }
+
+
+    ul.socialicons li {
+        display: inline-block;
+        list-style: none;
+        font-size: 18px;
+        color:#bdc3c7;
+        margin-left: 15px;
+    }
+
+    ul.socialicons li a {
+        color:#bdc3c7;
+    }
+
+    ul.socialicons li a:hover {
+        color:#363838;
+
+    }
+
+
+</style>
+<body>
+
+<div class="container-fluid">
+
+
+    <div class="tp-banner-container">
+        <div class="tp-banner" >
+            <ul>
+
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
+                    <img src="http://www.cultofpedagogy.com/wp-content/uploads/2015/10/Discussion.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="center" data-bgrepeat="no-repeat">
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="headernav">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1 col-xs-3 col-sm-2 col-md-2 logo "><a href="index.html"><img class="img-circle" src="https://image.freepik.com/free-icon/healthy-lifestyle-logo_318-52683.jpg" alt=""  width="50px" height="50px"  /></a></div>
+                <div class="col-lg-3 col-xs-9 col-sm-5 col-md-3 selecttopic">
+                    <div class="dropdown">
+                        <a data-toggle="dropdown" href="#" >December</a> <b class="caret"></b>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">January</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-2" href="#">February</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-3" href="#">March</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-4" href="#">April</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-5" href="#">May</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-6" href="#">June</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-7" href="#">July</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-8" href="#">August</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-9" href="#">September</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-10" href="#">October</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-11" href="#">November</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-12" href="#">December</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 search hidden-xs hidden-sm col-md-3">
+                    <div class="wrap">
+                        <form action="#" method="post" class="form">
+                            <div class="pull-left txt"><input type="text" class="form-control" placeholder="Search Topics"></div>
+                            <div class="pull-right"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></div>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xs-12 col-sm-5 col-md-4 avt">
+                    <div class="stnt pull-left">
+                        <form action="#" method="post" class="form">
+                            <button class="btn btn-primary">Start New Topic</button>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-4 col-xs-12 col-sm-5 col-md-5 avt">
+                        <div class="avatar pull-left dropdown">
+                            <a data-toggle="dropdown" href="#"><img src="#" alt="" /></a> <b class="caret"></b>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">My Profile</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-2" href="#">Log Out</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-3" href="Friends.html">Find Friends</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-xs-12 col-md-8">
+                        <div class="pull-left"><a href="#" class="prevnext"><i class="fa fa-angle-left"></i></a></div>
+                        <div class="pull-left">
+                            <ul class="paginationforum">
+                                <li class="hidden-xs"><a href="#">1</a></li>
+                                <li class="hidden-xs"><a href="#">2</a></li>
+                                <li><a href="#" class="active">3</a></li>
+
+                                <li><a href="#">4</a></li>
+                            </ul>
+                        </div>
+                        <div class="pull-left"><a href="#" class="prevnext last"><i class="fa fa-angle-right"></i></a></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8">
+                        <!-- POST -->
+                        <div class="post">
+                            <div class="wrap-ut pull-left">
+                                <div class="userinfo pull-left">
+                                    <div class="avatar">
+                                        <img src="images/avatar.jpg" alt="" />
+                                        <div class="status green">&nbsp;</div>
+                                    </div>
+
+                                    <div class="icons">
+                                        <img src="images/icon1.jpg" alt="" /><img src="images/icon4.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="posttext pull-left">
+                                    <h2><a href="02_topic.html">The Kieler Weinachtsmarkt</a></h2>
+                                    <p>The huge market of lights , food and music is up and running! Anybody feels like joining in for a glass of gluhwein?</p>
+
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="postinfo pull-left">
+                                <div class="comments">
+                                    <div class="commentbg">
+                                        0
+                                        <div class="mark"></div>
+                                    </div>
+
+                                </div>
+                                <div class="views"><i class="fa fa-eye"></i> 8</div>
+                                <div class="time"><i class="fa fa-clock-o"></i> 24 min</div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+
+
+
+                        <!-- POST -->
+                        <div class="post">
+                            <div class="wrap-ut pull-left">
+                                <div class="userinfo pull-left">
+                                    <div class="avatar">
+                                        <img src="images/avatar3.jpg" alt="" />
+                                        <div class="status red">&nbsp;</div>
+                                    </div>
+
+                                    <div class="icons">
+                                        <img src="images/icon2.jpg" alt="" /><img src="images/icon4.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="posttext pull-left">
+                                    <h2><a href="02_topic.html">The Kieler Weinachtsmarkt</a></h2>
+                                    <p>The huge market of lights , food and music is up and running! Anybody feels like joining in for a glass of gluhwein?</p>
+
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="postinfo pull-left">
+                                <div class="comments">
+                                    <div class="commentbg">
+                                        6
+                                        <div class="mark"></div>
+                                    </div>
+
+                                </div>
+                                <div class="views"><i class="fa fa-eye"></i> 7</div>
+                                <div class="time"><i class="fa fa-clock-o"></i> 2 days</div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+
+                        <!-- POST -->
+                        <div class="post">
+                            <div class="wrap-ut pull-left">
+                                <div class="userinfo pull-left">
+                                    <div class="avatar">
+                                        <img src="images/avatar4.jpg" alt="" />
+                                        <div class="status yellow">&nbsp;</div>
+                                    </div>
+
+                                    <div class="icons">
+                                        <img src="images/icon1.jpg" alt="" /><img src="images/icon4.jpg" alt="" /><img src="images/icon6.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="posttext pull-left">
+                                    <h2><a href="02_topic.html">Glutenfrei products</a></h2>
+                                    <p>Hi, anyone has a good idea where we can have a variety of gluten frei produkts in Kiel.Any suggestions would be helpful</p>
+
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="postinfo pull-left">
+                                <div class="comments">
+                                    <div class="commentbg">
+                                        5
+                                        <div class="mark"></div>
+                                    </div>
+
+                                </div>
+                                <div class="views"><i class="fa fa-eye"></i> 8</div>
+                                <div class="time"><i class="fa fa-clock-o"></i> 24 min</div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+
+                        <!-- POST -->
+                        <div class="post">
+                            <div class="wrap-ut pull-left">
+                                <div class="userinfo pull-left">
+                                    <div class="avatar">
+                                        <img src="images/avatar.jpg" alt="" />
+                                        <div class="status green">&nbsp;</div>
+                                    </div>
+
+                                    <div class="icons">
+                                        <img src="images/icon1.jpg" alt="" /><img src="images/icon4.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="posttext pull-left">
+                                    <h2><a href="02_topic.html">Glutenfrei products</a></h2>
+                                    <p>Hi, anyone has a good idea where we can have a variety of gluten frei produkts in Kiel.Any suggestions would be helpful</p>
+
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="postinfo pull-left">
+                                <div class="comments">
+                                    <div class="commentbg">
+                                        2
+                                        <div class="mark"></div>
+                                    </div>
+
+                                </div>
+                                <div class="views"><i class="fa fa-eye"></i> 7</div>
+                                <div class="time"><i class="fa fa-clock-o"></i> 24 min</div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+
+                        <!-- POST -->
+                        <div class="post">
+                            <div class="wrap-ut pull-left">
+                                <div class="userinfo pull-left">
+                                    <div class="avatar">
+                                        <img src="images/avatar2.jpg" alt="" />
+                                        <div class="status red">&nbsp;</div>
+                                    </div>
+
+                                    <div class="icons">
+                                        <img src="images/icon3.jpg" alt="" /><img src="images/icon4.jpg" alt="" /><img src="images/icon5.jpg" alt="" /><img src="images/icon6.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="posttext pull-left">
+                                    <h2><a href="02_topic.html">Glutenfrei products</a></h2>
+                                    <p>Hi, anyone has a good idea where we can have a variety of gluten frei produkts in Kiel.Any suggestions would be helpful</p>
+
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="postinfo pull-left">
+                                <div class="comments">
+                                    <div class="commentbg">
+                                        1
+                                        <div class="mark"></div>
+                                    </div>
+
+                                </div>
+                                <div class="views"><i class="fa fa-eye"></i> 5</div>
+                                <div class="time"><i class="fa fa-clock-o"></i> 15 min</div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+
+                        <!-- POST -->
+                        <div class="post">
+                            <div class="wrap-ut pull-left">
+                                <div class="userinfo pull-left">
+                                    <div class="avatar">
+                                        <img src="images/avatar3.jpg" alt="" />
+                                        <div class="status red">&nbsp;</div>
+                                    </div>
+
+                                    <div class="icons">
+                                        <img src="images/icon2.jpg" alt="" /><img src="images/icon4.jpg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="posttext pull-left">
+                                    <h2><a href="02_topic.html">Glutenfrei products</a></h2>
+                                    <p>Hi, anyone has a good idea where we can have a variety of gluten frei produkts in Kiel.Any suggestions would be helpful</p>
+
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="postinfo pull-left">
+                                <div class="comments">
+                                    <div class="commentbg">
+                                        4
+                                        <div class="mark"></div>
+                                    </div>
+
+                                </div>
+                                <div class="views"><i class="fa fa-eye"></i> 14</div>
+                                <div class="time"><i class="fa fa-clock-o"></i> 2 days</div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+
+
+                        <div class="sidebarblock">
+                            <h3>Categories</h3>
+                            <div class="divline"></div>
+                            <div class="blocktxt">
+                                <ul class="cats">
+                                    <li><a href="#">Learn and earn<span class="badge pull-right">2</span></a></li>
+                                    <li><a href="#">To give away <span class="badge pull-right">10</span></a></li>
+                                    <li><a href="#">Party Tonight<span class="badge pull-right">5</span></a></li>
+                                    <li><a href="#">Food <span class="badge pull-right">3</span></a></li>
+                                    <li><a href="#">Sports  <span class="badge pull-right">4</span></a></li>
+                                    <li><a href="#">Lost &amp; Found <span class="badge pull-right">2</span></a></li>
+                                    <li><a href="#">Hitch a ride <span class="badge pull-right">5</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="sidebarblock">
+                            <h3>Active Threads</h3>
+                            <div class="divline"></div>
+                            <div class="blocktxt">
+                                <a href="#">Weinachts sales</a>
+                            </div>
+                            <div class="divline"></div>
+                            <div class="blocktxt">
+                                <a href="#">Weinachts sales</a>
+                            </div>
+                            <div class="divline"></div>
+                            <div class="blocktxt">
+                                <a href="#">Weinachts sales</a>
+                            </div>
+                            <div class="divline"></div>
+                            <div class="blocktxt">
+                                <a href="#">Weinachts sales</a>
+                            </div>
+                            <div class="divline"></div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-xs-12">
+                        <div class="pull-left"><a href="#" class="prevnext"><i class="fa fa-angle-left"></i></a></div>
+                        <div class="pull-left">
+                            <ul class="paginationforum">
+                                <li class="hidden-xs"><a href="#">1</a></li>
+                                <li class="hidden-xs"><a href="#">2</a></li>
+                                <li><a href="#" class="active">3</a></li>
+
+                                <li><a href="#">4</a></li>
+                            </ul>
+                        </div>
+                        <div class="pull-left"><a href="#" class="prevnext last"><i class="fa fa-angle-right"></i></a></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="col-xs-5">
+                    <button type="button" class="btn btn-link">About Us</button>
+
+                    <button type="button" class="btn btn-link contact">Contact Us</button>
+
+
+                </div>
+                <div class="col-xs-2">
+                    <a class="foot_img" href="#">
+                        <img style="opacity: 0.4" class="img-circle" src="https://image.freepik.com/free-icon/healthy-lifestyle-logo_318-52683.jpg" alt=""  width="50px" height="50px">
+                    </a>
+                </div>
+                <div class="col-xs-2">
+
+                    <a style="font-size: 30px;color: #3b5998;" class="fa" href="https://www.facebook.com/">&#xf230;</a>
+                    <a style="font-size: 30px;color: #00aced;" type="link" class="fa" href="https://twitter.com/">&#xf081;</a>
+                    <a style="font-size: 30px;color: #dd4b39;" type="link" class="fa" href="https://plus.google.com">&#xf0d4;</a></div>
+                <div class="col-xs-3">
+                    <span style="opacity: 0.4; margin-left: 50px;"> © 2016,KIS Dashboard GmbH </span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+
+
+
+    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        var revapi;
+
+        jQuery(document).ready(function() {
+            "use strict";
+            revapi = jQuery('.tp-banner').revolution(
+                    {
+                        delay: 15000,
+                        startwidth: 1200,
+                        startheight: 278,
+                        hideThumbs: 10,
+                        fullWidth: "on"
+                    });
+
+        });	//ready
+
+    </script>
+
+</div>
+</body>
+</template>
