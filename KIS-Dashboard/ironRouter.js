@@ -293,6 +293,7 @@ Router.route('/myCreateEvents', function() {
 });
 
 
+
 //Discussion main page
 Router.route('/main_1.html',function(){
     this.render('discussionMain')
