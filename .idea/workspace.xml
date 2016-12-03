@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd8ebf4-9a7a-4ed4-a5b7-b76e98561c73" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KIS-Dashboard/client/Discussion/discussionMain.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KIS-Dashboard/client/Discussion/mainTest.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KIS-Dashboard/client/Discussion/main_1.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KIS-Dashboard/client/Discussion/discussionHome.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KIS-Dashboard/client/Team/team.html" afterPath="$PROJECT_DIR$/KIS-Dashboard/client/Team/team.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KIS-Dashboard/ironRouter.js" afterPath="$PROJECT_DIR$/KIS-Dashboard/ironRouter.js" />
     </list>
     <ignored path="PM102-JS-Project.iws" />
@@ -32,8 +31,49 @@
       <file leaf-file-name="bAaccomodation.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/BeforeArrival/bAaccomodation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+            <state relative-caret-position="2431">
+              <caret line="143" column="131" selection-start-line="143" selection-start-column="131" selection-end-line="143" selection-end-column="131" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bAGerman.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/BeforeArrival/bAGerman.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="discussionHome.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/Discussion/discussionHome.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+              <folding>
+                <element signature="e#4775#4782#0#HTML" expanded="true" />
+                <element signature="e#5253#5260#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#footer#0;n#body#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#6218#6226#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#2;n#div#0;n#footer#0;n#body#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#6341#6349#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#a#2;n#div#2;n#div#0;n#footer#0;n#body#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#6467#6475#1#HTML" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#footer#0;n#body#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact_form.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/contact_form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -49,48 +89,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createEvent.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/Events/createEvent.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="81" selection-start-line="5" selection-start-column="81" selection-end-line="5" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ironRouter.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ironRouter.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/KIS-Dashboard/ironRouter.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="563">
-              <caret line="298" column="33" selection-start-line="298" selection-start-column="33" selection-end-line="298" selection-end-column="33" />
+              <caret line="310" column="0" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="discussionMain.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="discussionMain.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/Discussion/discussionMain.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4175">
-              <caret line="764" column="11" selection-start-line="764" selection-start-column="11" selection-end-line="764" selection-end-column="11" />
-              <folding>
-                <element signature="e#13809#13815#1#HTML" expanded="true" />
-                <element signature="e#15777#15783#1#HTML" expanded="true" />
-                <element signature="e#17746#17752#1#HTML" expanded="true" />
-                <element signature="e#19747#19753#1#HTML" expanded="true" />
-                <element signature="e#21710#21716#1#HTML" expanded="true" />
-                <element signature="e#23747#23753#1#HTML" expanded="true" />
-                <element signature="e#26280#26285#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#29609#29617#1#HTML" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#2;n#div#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#29740#29748#1#HTML" expanded="true" />
-                <element signature="n#style#0;n#a#2;n#div#2;n#div#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#29874#29882#1#HTML" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -110,16 +124,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="833">
               <caret line="49" column="26" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Friends.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/FindFriends/Friends.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -158,8 +162,9 @@
         <option value="$PROJECT_DIR$/KIS-Dashboard/client/DuringArrival/duringAccom.html" />
         <option value="$PROJECT_DIR$/KIS-Dashboard/client/Discussion/main_1.html" />
         <option value="$PROJECT_DIR$/KIS-Dashboard/client/Discussion/discussionMain.html" />
-        <option value="$PROJECT_DIR$/KIS-Dashboard/ironRouter.js" />
         <option value="$PROJECT_DIR$/KIS-Dashboard/client/Discussion/mainTest.html" />
+        <option value="$PROJECT_DIR$/KIS-Dashboard/client/Discussion/discussionHome.html" />
+        <option value="$PROJECT_DIR$/KIS-Dashboard/ironRouter.js" />
       </list>
     </option>
   </component>
@@ -200,7 +205,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -273,8 +277,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PM102-JS-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PM102-JS-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KIS-Dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BeforeArrival" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -370,12 +397,13 @@
       <workItem from="1480693231218" duration="4637000" />
       <workItem from="1480699265669" duration="232000" />
       <workItem from="1480699612469" duration="582000" />
-      <workItem from="1480703834496" duration="490000" />
+      <workItem from="1480703834496" duration="2784000" />
+      <workItem from="1480727982211" duration="292000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21222000" />
+    <option name="totallyTimeSpent" value="23808000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1366" height="735" extended-state="0" />
@@ -384,9 +412,9 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24592593" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981076" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -398,6 +426,24 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24592593" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981076" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -418,30 +464,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/KIS-Dashboard/ironRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/Events/eventsMain.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="26" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/FindFriends/Friends.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/FindFriends/Friends.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -603,19 +625,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/BeforeArrival/bAaccomodation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/Events/createEvent.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="81" selection-start-line="5" selection-start-column="81" selection-end-line="5" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -666,14 +679,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/Discussion/main_1.html" />
-    <entry file="file://$PROJECT_DIR$/KIS-Dashboard/ironRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="298" column="33" selection-start-line="298" selection-start-column="33" selection-end-line="298" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/Discussion/mainTest.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -682,27 +687,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/contact_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/BeforeArrival/bAaccomodation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2431">
+          <caret line="143" column="131" selection-start-line="143" selection-start-column="131" selection-end-line="143" selection-end-column="131" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/BeforeArrival/bAGerman.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/Discussion/discussionMain.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4175">
-          <caret line="764" column="11" selection-start-line="764" selection-start-column="11" selection-end-line="764" selection-end-column="11" />
+        <state relative-caret-position="153">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KIS-Dashboard/client/Discussion/discussionHome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
           <folding>
-            <element signature="e#13809#13815#1#HTML" expanded="true" />
-            <element signature="e#15777#15783#1#HTML" expanded="true" />
-            <element signature="e#17746#17752#1#HTML" expanded="true" />
-            <element signature="e#19747#19753#1#HTML" expanded="true" />
-            <element signature="e#21710#21716#1#HTML" expanded="true" />
-            <element signature="e#23747#23753#1#HTML" expanded="true" />
-            <element signature="e#26280#26285#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#29609#29617#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#2;n#div#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#29740#29748#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#div#2;n#div#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#29874#29882#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#footer#0;n#div#1;n#div#0;n#body#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#4775#4782#0#HTML" expanded="true" />
+            <element signature="e#5253#5260#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#footer#0;n#body#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#footer#0;n#body#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#6218#6226#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#2;n#div#0;n#footer#0;n#body#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#6341#6349#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#div#2;n#div#0;n#footer#0;n#body#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#6467#6475#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#footer#0;n#body#0;n#template#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KIS-Dashboard/ironRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="310" column="0" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

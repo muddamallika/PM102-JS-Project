@@ -1,10 +1,202 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<template name="discussionHome">
+    <head>
+        <title>Discussion</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
+        <link rel="stylesheet" href="font-awesome-4.0.3/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+
+    </head>
+    <style>
+        .up {
+            margin-top: -36px;
+        }
+
+        .down {
+            margin-top: 10px;
+        }
+
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 70%;
+            margin: auto;
+        }
+
+        .fa {
+            size: 20px;
+        }
+
+        .foot_img {
+            margin-bottom: : -50px;
+        }
+
+        .img-circle {
+            margin-top: -10px;
+        }
+
+
+        a{
+            text-decoration: none !important;
+            color: black;
+        }
+        .mid{
+            margin-top: 120px;
+            font-size: 30px;
+
+        }
+
+
+        #f1_container {
+            position: relative;
+            margin: 10px auto;
+            height: 250px;
+            width: 50%;
+            background-color: none;
+            z-index: 1;
+        }
+        #f1_container {
+            perspective: 1000;
+        }
+        #f1_card {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all 1.0s linear;
+        }
+        #f1_container:hover #f1_card {
+            transform: rotateY(180deg);
+            box-shadow: -5px 5px 5px #aaa;
+        }
+        .face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        .face.back {
+            display: block;
+            transform: rotateY(180deg);
+            box-sizing: border-box;
+            padding: 10px;
+            color: black;
+            text-align: center;
+            background-color: white;
+
+        }
+        .thumbnail{
+            background-color:aliceblue;
+        }
+
+    </style>
+    <body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+
+
+
+            <div class="col-xs-5"></div>
+
+            <div class="col-xs-3">
+                <a class="navbar-brand" href="#">
+                    <img class="img-circle" src="https://image.freepik.com/free-icon/healthy-lifestyle-logo_318-52683.jpg" alt=""  width="50px" height="50px">
+                </a>
+                <a class="navbar-brand down" href="#">KIS Dashboard</a>
+            </div>
+            <div class="col-xs-4"></div>
+
+
+
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3"><nav class="navbar navbar-default">
+                <div class="row">
+                    <br> <div class="col-sm-10">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>FAQ's</h3>
+                            <p>...</p>
+                            <a href="#" class="btn btn-default" role="button">Read more..</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </nav>
+                <nav class="navbar navbar-default">
+                    <div class="row">
+                        <br> <div class="col-sm-10">
+                        <div class="thumbnail">
+                            <div class="caption">
+                                <h3>FAQ's</h3>
+                                <p>...</p>
+                                <a href="#" class="btn btn-default" role="button">Read more..</a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-sm-9 offset-sm-2"><nav class="navbar navbar-default">
+                <div class="page-header">
+                    <h1>Question1 <br> <small>Subtext for header</small></h1>
+                </div>
+                <div class="page-header">
+                    <h1>Question1 <br> <small>Subtext for header</small></h1>
+                </div>
+                <div class="page-header">
+                    <h1>Question1 <br> <small>Subtext for header</small></h1>
+                </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav></nav></div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <div class="container">
+            <div class="col-xs-5">
+                <button type="button" class="btn btn-link">About Us</button>
+
+                <button type="button" class="btn btn-link contact">Contact Us</button>
+
+
+            </div>
+            <div class="col-xs-2">
+                <a class="foot_img" href="#">
+                    <img style="opacity: 0.4" class="img-circle" src="https://image.freepik.com/free-icon/healthy-lifestyle-logo_318-52683.jpg" alt=""  width="50px" height="50px">
+                </a>
+            </div>
+            <div class="col-xs-2">
+
+                <a style="font-size: 30px;color: #3b5998;" class="fa" href="https://www.facebook.com/">&#xf230;</a>
+                <a style="font-size: 30px;color: #00aced;" type="link" class="fa" href="https://twitter.com/">&#xf081;</a>
+                <a style="font-size: 30px;color: #dd4b39;" type="link" class="fa" href="https://plus.google.com">&#xf0d4;</a></div>
+            <div class="col-xs-3">
+                <span style="opacity: 0.4; margin-left: 50px;"> © 2016,KIS Dashboard GmbH </span>
+            </div>
+        </div>
+    </footer>
+
+    </body>
+    </html>

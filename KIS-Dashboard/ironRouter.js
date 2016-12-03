@@ -299,6 +299,11 @@ Router.route('/main_1.html',function(){
     this.render('discussionMain')
 }
 
+//Discussion Home page
+Router.route('/discussionHome.html',function(){
+    this.render('discussionHome')
+}
+
 //Team Page
 Router.route('/team',function (){
    this.render('team');
