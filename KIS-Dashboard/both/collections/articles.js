@@ -1,5 +1,6 @@
 Articles = new Mongo.Collection("articles");
 MyArticles = new Mongo.Collection("myarticles");
+Comments= new Mongo.Collection("comments");
 
 if(Meteor.isServer) {
    Meteor.publish('articles', function() {
@@ -9,40 +10,13 @@ if(Meteor.isServer) {
      var currentUserId = this.userId;
       return MyArticles.find({createdBy: currentUserId});
    });
-
+   Meteor.publish('comments', function() {
+      return Comments.find();
+   });
 }
 if (Meteor.isClient) {
    Meteor.subscribe('articles');
-   Meteor.subscribe('myarticles');
+   Meteor.subscribe('myarticles'); 
+   Meteor.subscribe('comments');
 };
 
-
-/*Articles.attachSchema(new SimpleSchema({
-  NameOfArticle: {type: String},
-  Category : {
-      type: Number,
-      allowedValues: [
-         1,
-         2,
-         3,
-         4,
-         5,
-         6,
-         7,
-         8,
-         9,
-         10,
-         11,
-         12
-      ],
-      optional: true,
-      label: "Select Category",
-    },
-
-  PostArticle: {
-      type: String,
-      min: 20,
-      max: 2000,
-   }
-}));
-*/

@@ -1,0 +1,17 @@
+<template name="searchArticle">
+    {{> centerheader}}
+      <div class="container searcharticles">
+          <div class="col-xs-6">
+     {{#each articles}}
+        <li>
+          <h1>{{ArticleName}}</h1>
+          <p class="lead">
+          by <a href="#">{{AuthorName}}</a>
+          </p>
+            <p><span class="glyphicon glyphicon-time"></span> Posted on {{createdat}}</p>
+    <a href="/readArticle/{{_id}}"> Click to View </a><br><br>
+  </li>
+    {{/each}}
+          </div>
+        </div>
+</template>

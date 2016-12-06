@@ -12,7 +12,7 @@
         AuthorName=event.target.AuthorName.value;
     else
         AuthorName="Anonymous";
-
+alert(AuthorName);
     var createdat = new Date();
     Articles.insert({
         Category: Category,

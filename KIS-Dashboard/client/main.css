@@ -69,7 +69,6 @@
 }
 
 
-<<<<<<< HEAD
 /* Articles Main page */
 .articleMainCSS {
   background-image: url("/Images/Backgrounds/bg9.jpg");
@@ -282,7 +281,6 @@
 
 
 /*Friends.html end*/
-=======
 /*  During.html css -------------------------START------------------------- */
 
 /* Carousel base class */
@@ -322,4 +320,35 @@
 }
 
 /*  During.html css ---------------END----------------------------------- */
->>>>>>> fe7e69ebc6417f2f88ab63f77a0cbf6e05a215c5
+
+/* Article CSS starts */
+
+/*Article Home Page*/
+.articlehome{
+  background-image: url("/Images/articleHome.jpg") ;
+  height:500px;
+  width:100%;
+  background-position: left;
+}
+.allArticle{
+  background-image: url("/Images/MyArticle.jpg")  ;
+  background-size: cover;
+}
+.postarticle{
+  background-image:url("/Images/articleBG.jpg");  
+  background-size: cover;
+}
+.readarticles{
+  background-image: url("/Images/maxresdefault.jpg")  ;  
+  background-size: cover;
+}
+.myarticle{
+  background-image: url("/Images/MyArticle.jpg") ;
+  background-size: "500px 500px";
+}
+.searcharticles
+{
+  background-image: url("/Images/MyArticle.jpg") ;
+  background-size: "500px 500px";
+}
+/*Article CSS Ends  */

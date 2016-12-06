@@ -115,10 +115,6 @@ footer {
 
 
 
- .myarticle{
-          background-image: url("/Images/ws_Winter_Bokeh_2560x1440.jpg") ;
-          background-size: "500px 500px";
-      }
       
 body{
   font-family:arial,sans-serif;
@@ -212,20 +208,14 @@ ol li a{color:#fff;}
 
 </head>
 
-<body>
-</body>
-
 
 
 <template name="myArticle">
  {{> Header}}
 <br><br><br><br>
-
-
 <div class="container myarticle">
-     <br>
-      <div class="page-header"><h1>My Articles</h1></div>
- <div class="row">      
+<h1 align="center">My Articles</h1>
+<div class="row">      
 <div class="col-xs-6">
     {{> articleDropdwn}}
 
@@ -243,7 +233,7 @@ ol li a{color:#fff;}
 
   </ul></div>
     </div>
-</div>
+    </div>
 <br><br><br>
 </template>
 
@@ -258,7 +248,7 @@ ol li a{color:#fff;}
 <template name="myarticle_group">
   <ul class="unorder">
       {{#each myarticles}}
-         {{> myarticle_r}} <br><br><br>
+         {{> myarticle_r}} <br><br><br><br><br><br>
       {{/each}}
   </ul>
 </template>

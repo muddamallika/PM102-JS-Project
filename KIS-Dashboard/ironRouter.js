@@ -239,12 +239,18 @@ Router.route('/readArticles/rArticle', function() {
     this.render('rArticle');
 });
 
+//search Article 
+Router.route('/searchArticle/searchArticle', function() {
+    this.render('searchArticle');
+});
+
 Router.route('/readArticle/:_id', {
    template: 'readArticle',
    data: function(){
        var currentArticle = this.params._id;
        return Articles.findOne({ _id: currentArticle });
    }
+   
 });
 //after Arrival Landing Page
 Router.route('/after', function() {

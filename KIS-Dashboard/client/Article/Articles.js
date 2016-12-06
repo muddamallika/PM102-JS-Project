@@ -22,7 +22,11 @@ Template.Articles_Sel.events({
     return Articles.find().fetch().reverse();
   }
 });
-    
+      Template.Article1.helpers({
+  articles: function() {
+    return Articles.find().fetch().reverse() ;
+  }
+});
     Template.readArticle.helpers({
   articles: function() {
     return Articles.find().fetch();
@@ -40,21 +44,7 @@ Template.Articles_Sel.events({
   }
 }); 
     
-    Template.Article1.helpers({
-  articles: function() {
-    return Articles.find().fetch().reverse()[0] ;
-  }
-});
-       Template.Article2.helpers({
-  articles: function() {
-    return Articles.find().fetch().reverse()[1] ;
-  }
-});
-       Template.Article3.helpers({
-  articles: function() {
-    return Articles.find().fetch().reverse()[2] ;
-  }
-});
+  
     
 if(Meteor.isServer) {
 
