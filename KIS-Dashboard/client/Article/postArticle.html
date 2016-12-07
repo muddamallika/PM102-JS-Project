@@ -2,30 +2,50 @@
 
  {{> Header}}
 <br><br><br><br>
-    
  <div class="container postarticle">
-	<!--code from here-->
  <form> 
-     <div class="page-header"><h1>Put your thoughts in words</h1></div>
-     <div>Article Name :<input type="Text" id="ArticleName" placeholder="Give a name to your article" required="true" /></div><br>
-    <div>Category : <select name="Category" id="Category">
-  <option value="Technology"  >Technology</option>
-  <option value="Fashion" >Fashion</option>
-  <option value="Lifestyle" >Lifestyle</option>
-</select>
-        </div>
-      <br>
+     <div class="container">
+     <h1 align="center">Put your thoughts in words</h1>
+     <div class="row">
+     <div class="col-xs-6">
+         </div>
+      <div class="col-xs-6">
+          <br><br>
+          <input type="text" name="ArticleName" id="ArticleName" class="form-control input-lg" style="width: 300px" placeholder="Give a name to your article" required="true" >
+          <br>
+          <select  name="Category" id="Category" class="form-control input-lg" style="width: 300px" >
+            <option value="Technology"  >Technology</option>
+            <option value="Fashion" >Fashion</option>
+            <option value="Lifestyle" >Lifestyle</option>
+          </select>
         <br>
-       <textarea id="Article" rows="4" cols="50" placeholder="Please write the content of your article here" required="true" ></textarea>
+       <textarea id="Article" rows="4" cols="50" placeholder="Please write the content of your article here" required="true"  class="form-control input-lg" style="width: 300px" ></textarea>
         <br>
         <!--<br>
          <input type="file"/>
 
         <br>-->
-        <br>
-     <div>Author Name :<input type="Text" id="AuthorName" placeholder="Give a name of the Author" /></div><br>
- <input type="submit" class="btn btn-submit" value="Post your Blog">
-       <a href="/Articles/Articles_Sel" class="btn">View Articles</a><br><br>
+      <input type="text" name="AuthorName" id="AuthorName" placeholder="Give a name of the Author"  class="form-control input-lg" style="width: 300px"><br>
+        <div class="col-xs-3" style="width: 150px"> 
+            <input type="submit" class="btn btn-submit btn-primary" value="Post your Blog" style="width: 150px"></div>
+          
+          <div class="col-xs-1"></div>
+          <div class="col-xs-2"><input id="back" type="reset" class="btn btn-submit" value="Reset" style="width: 100px"></div>
+          <div class="col-xs-6">
+    <div class="alert alert-success alert-dismissable fade in" style="width: 300px" >
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <strong>Success!</strong> The article has been successfully posted
+     </div>
+          </div>
+         </div>
+         </div>
+          </div>
      </form>
     </div>
+    <script>
+          $(document).ready(function(){
+              $(".alert").hide()
+      $(window).scrollTop(0);
+  });
+    </script>
 </template>

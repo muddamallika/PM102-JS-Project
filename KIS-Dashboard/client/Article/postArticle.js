@@ -6,13 +6,11 @@
     var Article = event.target.Article.value;
     var ArticleName = event.target.ArticleName.value;
     var currentUserId = Meteor.userId();
-
     var AuthorName="";
     if(event.target.AuthorName.value!="")
         AuthorName=event.target.AuthorName.value;
     else
         AuthorName="Anonymous";
-alert(AuthorName);
     var createdat = new Date();
     Articles.insert({
         Category: Category,
@@ -33,6 +31,17 @@ alert(AuthorName);
     event.target.Article.value = "";
     event.target.ArticleName.value = "";
     event.target.AuthorName.value = "";
-}
+      
+    $(".alert").show() ;
+        
+    $(":submit").attr("disabled", true);  
+        
+        
+},
+     'reset .container': function(event){ 
+         $(":submit").removeAttr("disabled");  
+          $(".alert").hide() ;
+     }
 });
+    
   }

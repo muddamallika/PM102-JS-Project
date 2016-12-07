@@ -335,8 +335,10 @@
   background-size: cover;
 }
 .postarticle{
-  background-image:url("/Images/articleBG.jpg");  
+  background-image:url("/Images/postArticle.jpg");  
   background-size: cover;
+  height:550px;
+  width:100%;
 }
 .readarticles{
   background-image: url("/Images/maxresdefault.jpg")  ;  
