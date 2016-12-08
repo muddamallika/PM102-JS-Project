@@ -1,5 +1,4 @@
 <head>
-
   <title>KIS-Dashboard</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -23,29 +22,65 @@
   <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
 
 
-  <title>Events Main</title>
-
-
   <style>
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+
+.up {
+      margin-top: -36px;
+    }
+
+    .down {
+      margin-top: 10px;
+    }
+
+    .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+    }
+
+    .fa {
+      size: 20px;
+    }
+
+    .foot_img {
+      margin-bottom: : -50px;
+    }
 
     .ar{
       background-color: white;
       color: black;
     }
 
-  /*  .marquee {
-  width: 300px;
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background: #ccc;
-  animation-iteration-count: infinite;
-}*/
-
 .ver {
   height: 30px;
   width: 200px;
   margin-top: 30px;
-
+  
 }
 
 .unorder {
@@ -56,7 +91,6 @@
 .cevent:visited {
   color: white;
 }
-
 
 
 
@@ -76,14 +110,14 @@
   font-size:100%;
   font-weight:normal;
 }*/
-ul,li{
+ .unorder_list,.order_list {
   list-style:none;
 }
-ul{
+ .unorder_list {
   overflow:hidden;
   padding:3em;
 }
-ul li a{
+ .unorder_list .order_list .sticky {
   text-decoration:none;
   color:#000;
   background:#ffc;
@@ -92,7 +126,7 @@ ul li a{
   width:10em;
   padding:1em;
 }
-ul li{
+ .unorder_list .order_list p{
   margin:1em;
   float:left;
 }
@@ -107,7 +141,7 @@ ul li{
   font-size:180%;
 }
 
-ul li a{
+ .unorder_list .order_list .sticky {
   text-decoration:none;
   color:#000;
   background:#ffc;
@@ -123,27 +157,27 @@ ul li a{
   box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
 
-ul li a{
+ .unorder_list .order_list .sticky {
   -webkit-transform:rotate(-6deg);
   -o-transform:rotate(-6deg);
   -moz-transform:rotate(-6deg);
 }
 
-ul li:nth-child(even) a{
+ .unorder_list .order_list:nth-child(even) .sticky {
   -o-transform:rotate(4deg);
   -webkit-transform:rotate(4deg);
   -moz-transform:rotate(4deg);
   position:relative;
   top:5px;
 }
-ul li:nth-child(3n) a{
+ .unorder_list .order_list:nth-child(3n) .sticky {
   -o-transform:rotate(-3deg);
   -webkit-transform:rotate(-3deg);
   -moz-transform:rotate(-3deg);
   position:relative;
   top:-5px;
 }
-ul li:nth-child(5n) a{
+ .unorder_list .order_list:nth-child(5n) .sticky {
   -o-transform:rotate(5deg);
   -webkit-transform:rotate(5deg);
   -moz-transform:rotate(5deg);
@@ -151,7 +185,7 @@ ul li:nth-child(5n) a{
   top:-10px;
 }
 
-ul li a:hover,ul li a:focus{
+ .unorder_list .order_list .sticky:hover,.unorder_list .order_list .sticky:focus {
   -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
   -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
   box-shadow:10px 10px 7px rgba(0,0,0,.7);
@@ -164,98 +198,106 @@ ul li a:hover,ul li a:focus{
   background:#ffc;
 }
 
-
-
-
-
-
-
-
-
-
-
+.unorder_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
 
 
 </style>
+
+
 </head>
 
 <body>
 </body>
 
-<template name="event">
 
+
+<template name="event">
 {{> centerheader}}
 <br><br>
 <div class="container container1">
-  {{> todoList}}
-
-  {{> centerheader}}
-  <br><br>
-  <div class="container">
-    <div class="col-xs-6 mar" style="height: 200px">
-      <div class="marquee ver" style="height: 200px;" data-direction='up' data-duration='3000' data-pauseOnHover="true" >
-        <p style="text-decoration: none !important"> {{> todoList}}</p>
-      </div>
-      <br/>
-      <script >
-       $(function() {
-        $('.marquee').marquee({
-          startVisible: true
-        });
-      });
-      </script>
-    </div>
+  {{> total_events_display}}   <!-- Template call to display all the events that are present -->
 
   <div class="col-xs-6">
-    {{#if currentUser}}
+  {{#if currentUser}}   <!-- Verifying wheather user had logged in or not -->
     <a href="/Events/my_events" class="btn btn-info">MyEvents</a>
     {{else}}
     <a href="/Login/login" class="btn btn-info">MyEvents</a>
     {{/if}}
   </div>
+</div>
+<div class="container">
+  <div class="col-xs-6">   
   </div>
-
-  <div class="container">
-    <div class="col-xs-6"></div>
-    <div class="col-xs-6" style="margin-top: -140px">
-    {{#if currentUser}}
-      <a href="/Event_new/event_new" class="btn btn-info cevent" role="button" target="_blank">Create Event</a>
-      {{else}}
-      <a href="/Login/login" class="btn btn-info">Create Event</a>
-      {{/if}}
-    </div>
+  <div class="col-xs-6" style="margin-top: -140px">
+  {{#if currentUser}}   <!-- Verifying wheather user had logged in or not -->
+    <a href="/Event_new/event_new" class="btn btn-info cevent" role="button" target="_blank">Create Event</a>
+    {{else}}
+    <a href="/Login/login" class="btn btn-info">Create Event</a>
+    {{/if}}
+  
   </div>
 </div>
+
+<br><br><br><br><br><br><br>
+ <br><br><br><br><br>
+</template>
+
+<!-- Templates for Total events display -->
+
+
+<template name="event_display">
+<div class="stickyinfo">   <!-- Applying Sticky notes display to the events -->
+<h2>  {{eventName}} </h2>
+<p> {{eventDate}}</p>
+</div> 
+</template>
+
+<template name="total_events_display">
+<div class="stickydisp">
+  <ul class="unorder_list">
+      {{#each total_events}}   <!-- Implementing looping for the collection total_events -->
+        <li class="order_list">
+         <a class="sticky" href="/total_events/{{_id}}" target="_blank"> {{> event_display}}</a><br><br>
+        </li>
+      {{/each}}
+  </ul>
+  </div>
+</template>
+
+<!-- Template for displaying Created events & Registered events  -->
+
+<template name="my_events">
+ {{> centerheader}}
+
+    <a href="/Events_My_Created_Events/my_created_events" class="btn btn-info cevent" role="button" target="_blank">My Created Events</a>
+    <a href="/Events_My_Created_Events/my_registered_events" class="btn btn-info cevent" role="button" target="_blank">My Registered Events</a>
+<br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br>
 </template>
 
-<template name="todo">
 
+
+<template name="my_created_events_list">
 <div class="stickyinfo">
-<h2>  {{label}} </h2>
-<p> {{location}} </p>
-</div>
-
-<li>{{label}}</li>
+<h2>  {{eventName}} </h2>
+<p> {{eventDate}} </p>  
+</div> 
 </template>
 
-<template name="todoList">
-  <ul class="unorder">
-      {{#each total_events}}
-        <li>
-         <a href="/total_events/{{_id}}" target="_blank"> {{> todo}}</a><br><br>
+<template name="my_created_events_db">
+  <ul class="unorder_list">
+      {{#each events}}
+        <li class="order_list">
+         <a class="sticky" href="/events/{{_id}}" target="_blank"> {{> my_created_events_list}}</a><br><br>
         </li>
       {{/each}}
   </ul>
 </template>
 
-<template name="my_events">
- {{> centerheader}}
-    <div class="container">
-      <br><br><br><br><br>
-      <p>{{_id}}</p>
-      <p>Hey, {{currentUser.profile.name}} below are the list of Events that you Registered</p>
-        {{> canceldb}}
-    </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</template>
+

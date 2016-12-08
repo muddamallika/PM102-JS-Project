@@ -92,17 +92,14 @@ li a:hover {
   background-color: transparent;
 }
 
-.username{
-  color: transparent;
-}
-
-.userid{
-  color: transparent;
+.cancel {
+  color:transparent;  
 }
 
 input {
   border-color: transparent;
 }
+
 
 
 
@@ -119,18 +116,16 @@ input {
 
 <div class="container">
 <br><br><br><br><br>
-  
   <p>Hey, {{currentUser.profile.name}} below are the list of Events that you Registered</p>
     {{> canceldb}}
   </div>
-
 
 <br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br>
 </template>
 
 <template name="cancelinfo">
-  Label: {{Label}}     Location: {{Location}}
+  Event Name: {{eventName}}     Event Date: {{eventDate}}
   <br><br>
 </template>
 
@@ -150,10 +145,11 @@ input {
 
 <form>
 <p> Full Details of the event that you want to cancel</p>
-<input type="text" name="cancel" value="{{_id}}" id="cancel" readonly>
-<p class="text-center"><b>Label: </b> {{Label}} </p>
-<p class="text-center"><b>Location: </b>{{Location}} </p>
+
+<p class="text-center"><b>Event Name: </b> {{eventName}} </p>
+<p class="text-center"><b>Event Date: </b>{{eventDate}} </p>
 <input type="submit" name="OK">
+<input type="text" name="cancel" value="{{_id}}" class="cancel" readonly>
 </form>
 
 {{else}}
@@ -161,4 +157,5 @@ input {
 <p>Please Login before you cancel an Event</p>
 <a href="/Login/login">Click here for Logging in</a>
 {{/if}}
+<br><br><br><br>
 </template>

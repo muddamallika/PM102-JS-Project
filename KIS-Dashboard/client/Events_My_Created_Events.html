@@ -1,0 +1,15 @@
+<template name="my_created_events">
+{{> centerheader}}
+  {{> my_created_events_db}}
+
+</template>
+
+<template name="my_registered_events">
+{{> centerheader}}
+<div class="container">
+<br><br><br><br><br>
+  <p>{{_id}}</p>
+  <p>Hey, {{currentUser.profile.name}} below are the list of Events that you Registered</p>
+    {{> canceldb}}  
+  </div>
+</template>
