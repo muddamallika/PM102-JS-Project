@@ -100,66 +100,99 @@ li a:hover {
   color: transparent;
 }
 
-input {
-  border-color: transparent;
+.col8{
+  margin-left: 170px;
+  background-image: url(http://slodive.com/wp-content/uploads/2012/09/plain-backgrounds/grungy-greenish-background.jpg);
 }
 
 </style>
+
+
 </head>
 
 <body>
 </body>
 
+
+
 <template name="event_tab">
  {{> centerheader}}
+
  {{#if currentUser}}
 
-
 <div class="container">
-<br><br><br><br><br>
-<form class="userinfo_event">
-  <h2 class="text-center">Event: <input type="text" name="label" value="{{label}}" readonly></h2>
-  <h3 class="text-center">Location: <input type="text" name="location" value="{{location}}" readonly></h3>
+<br>
+<form>
+<div class="col-xs-2"></div>
+<div class="col-xs-8 col8">
 
-
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label label_events">Event Name</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="eventName" name="eventName" value="{{eventName}}" readonly>
+      </div>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Event Description</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="eventDesc" name="eventDesc" value="{{eventDesc}}" readonly>
+      </div>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Event Location</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="eventLoc" name="eventLoc" value="{{eventLoc}}" readonly>
+      </div>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Event Date</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="eventDate" name="eventDate" value="{{eventDate}}" readonly>
+      </div>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Event Time</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="eventTime" name="eventTime" value="{{eventTime}}" readonly>
+      </div>
+  </div>
+  <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        {{> mytemplate}}
+      </div>
+  </div>
+  
+</div>
+<div class="col-xs-2"></div>
   <input type="text" class="username" name="username" value="{{currentUser.profile.name}}" readonly>
   <input type="text" class="userid" name="userid" value="{{currentUser._id}}" readonly>
-  {{> mytemplate}}
+  
 
 </form>
 
 
   </div>
 
-
- <div class="container">
-    <br><br><br><br><br>
-    <h2 class="text-center">Event: {{label}}</h2>
-    <h3 class="text-center">Location: {{location}}</h3>
-    <form class="userinfo_event">
-      <input type="text" class="username" name="username" value="{{currentUser.profile.name}}" readonly>
-      <input type="text" class="userid" name="userid" value="{{currentUser._id}}" readonly>
-      {{> mytemplate}}
-    </form>
- </div>
-
   {{else}}
-  <p>Please log in<a href="/Login/login"></a></p>
-  {{/if}}
-  <br><br><br><br><br><br>
-</template>
 
+  <p>Please log in
+  <a href="/Login/login"></a>
+  </p>
+{{/if}}
+<br><br><br>
+<br><br><br>
+</template>
 <template name="eventuser">
   <ul class="unorder1">
-    {{#each total_events}}
-       {{> todo1}}<br><br>
-    {{/each}}
+      {{#each total_events}}
+         {{> todo1}}<br><br>
+      {{/each}}
   </ul>
 </template>
 
-<template name="todo1">
-  <li>
-    {{label}}
+  <template name="todo1">
+<li>
+  {{label}}
   </li>
 </template>
 
@@ -169,6 +202,7 @@ input {
   {{else}}
   <input type="submit" class="btn btn-primary disabled" name="status" value="Register">
   {{/if}}
+
   {{#if productcount x}}
   <input type="submit" class="btn btn-primary disabled" name="status" value="Cancel">
   {{else}}
