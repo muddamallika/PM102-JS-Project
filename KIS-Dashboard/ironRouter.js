@@ -291,3 +291,34 @@ Router.route('/myRegEvents', function() {
 Router.route('/myCreateEvents', function() {
     this.render('myCreateEvents');
 });
+
+//During Arrival - Accomodation Details Page
+Router.route('/duringAccom', function(){
+  this.render('duringAccom');
+});
+
+//During Arrival - Transportation Details Page
+Router.route('/duringTrans', function(){
+  this.render('duringTrans');
+});
+
+//During Arrival - Assistance Details Page
+Router.route('/duringAssist',function(){
+  this.render('duringAssist');
+});
+
+//Team Page
+Router.route('/teamPage',function(){
+  this.render('teamPage');
+});
+
+
+//forum Main Page
+Router.route('/forumMain',function(){
+  this.render('forumMain');
+});
+
+//new Discussion Page
+Router.route('/newDisc',function(){
+  this.render('newDisc');
+});
