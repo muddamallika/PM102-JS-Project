@@ -213,7 +213,7 @@ Router.route('/readArticles/rArticle', function() {
     this.render('rArticle');
 });
 
-//search Article 
+//search Article
 Router.route('/searchArticle/searchArticle', function() {
     this.render('searchArticle');
 });
@@ -224,7 +224,7 @@ Router.route('/readArticle/:_id', {
        var currentArticle = this.params._id;
        return Articles.findOne({ _id: currentArticle });
    }
-   
+
 });
 //after Arrival Landing Page
 Router.route('/after', function() {
@@ -263,9 +263,6 @@ Router.route('/myRegEvents', function() {
 Router.route('/myCreateEvents', function() {
     this.render('myCreateEvents');
 });
-
-<<<<<<< HEAD
-
 
 
 // Posting Events
@@ -324,7 +321,7 @@ Router.route('Event_cancel/regis_events/:_id', {
 Router.route('/Event_cancel/event_cancel', function(){
   this.render('event_cancel');
 });
-=======
+
 //During Arrival - Accomodation Details Page
 Router.route('/duringAccom', function(){
   this.render('duringAccom');
@@ -355,4 +352,3 @@ Router.route('/forumMain',function(){
 Router.route('/newDisc',function(){
   this.render('newDisc');
 });
->>>>>>> mallika-b6
