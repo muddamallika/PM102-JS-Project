@@ -1,24 +1,34 @@
 if(Meteor.isClient) {
 Template.event_new.events({
-	'submit form': function(event){
-	event.preventDefault();
-    var label = event.target.label.value;
-    var location = event.target.location.value;
+    'submit form': function(event){
+    event.preventDefault();
+    var eventName = event.target.eventName.value;
+    var eventDesc = event.target.eventDesc.value;
+    var eventLoc = event.target.eventLoc.value;
+    var eventDate = event.target.eventDate.value;
+    var eventTime = event.target.eventTime.value;
     var currentUserId = Meteor.userId();
-    var createdat = new Date();
     Total_Events.insert({
-        label: label,
-        location: location        
+        eventName:eventName,
+        eventDesc:eventDesc,
+        eventLoc:eventLoc,
+        eventDate:eventDate,
+        eventTime:eventTime        
     });
     Events.insert({
-    	label:label,
-    	location:location,
-    	createdBy: currentUserId,
-        createdat:createdat
+        eventName:eventName,
+        eventDesc:eventDesc,
+        eventLoc:eventLoc,
+        eventDate:eventDate,
+        eventTime:eventTime,
+        createdBy: currentUserId
     });
 
-    event.target.label.value = "";
-    event.target.location.value = "";
+    event.target.eventName.value="";
+    event.target.eventDesc.value="";
+    event.target.eventLoc.value="";
+    event.target.eventDate.value="";
+    event.target.eventTime.value="";
 }  
 });
 

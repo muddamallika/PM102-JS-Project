@@ -59,29 +59,6 @@ Router.route('/bAtraveleco/bAtravel', function() {
 
 
 
-// Posting Events
-
-Router.route('/Events/event', function() {
-    this.render('event')
-});
-
-//Events_tab
-
-Router.route('/total_events/:_id', {
-   template: 'event_tab',
-   data: function(){
-       var currentList = this.params._id;
-       return Total_Events.findOne({ _id: currentList });
-   }
-});
-
-
-
-Router.route('/Event_new/event_new',function(){
-this.render('event_new')
-});
-
-
 
 
 Router.route('/public', function(){
@@ -106,9 +83,6 @@ Router.route('/Login/login', function() {
   this.render('login');
 });
 
-Router.route('/Event_cancel/event_cancel', function(){
-  this.render('event_cancel');
-});
 
 //Assistance on arrival
 Router.route('/assistance', function() {
@@ -258,18 +232,7 @@ Router.route('/after', function() {
 });
 
 
-Router.route('/Events/my_events', function() {
-  this.render('my_events');
 
-});
-
-Router.route('Event_cancel/regis_events/:_id', {
-   template: 'cancel_event',
-   data: function(){
-       var currentList = this.params._id;
-       return Regis_Events.findOne({ _id: currentList });
-}
-});
 
 //Events Main Page
 Router.route('/eventsMain', function() {
@@ -299,4 +262,64 @@ Router.route('/myRegEvents', function() {
 //My Events Page
 Router.route('/myCreateEvents', function() {
     this.render('myCreateEvents');
+});
+
+
+
+
+// Posting Events
+
+Router.route('/Events/event', function() {
+    this.render('event');
+});
+
+//Events_tab
+
+Router.route('/total_events/:_id', {
+   template: 'event_tab',
+   data: function(){
+       var currentList = this.params._id;
+       return Total_Events.findOne({ _id: currentList });
+   }
+});
+
+
+Router.route('/events/:_id', {
+   template: 'my_events',
+   data: function(){
+       var currentList = this.params._id;
+       return Events.findOne({ _id: currentList});
+   }
+});
+
+
+Router.route('/Event_new/event_new',function(){
+this.render('event_new');
+});
+
+Router.route('/Events_My_Created_Events/my_created_events', function(){
+  this.render('my_created_events');
+});
+
+Router.route('/Events_My_Created_Events/my_registered_events', function(){
+  this.render('my_registered_events');
+});
+
+Router.route('/Events/my_events', function() {
+  this.render('my_events');
+
+});
+
+
+
+Router.route('Event_cancel/regis_events/:_id', {
+   template: 'cancel_event',
+   data: function(){
+       var currentList = this.params._id;
+       return Regis_Events.findOne({ _id: currentList });
+}
+});
+
+Router.route('/Event_cancel/event_cancel', function(){
+  this.render('event_cancel');
 });
