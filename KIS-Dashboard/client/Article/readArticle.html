@@ -9,7 +9,8 @@
           <p class="lead">
           by <a href="#">{{AuthorName}}</a>
           </p>
-                        </div>
+                        </div> 
+              <div class="col-xs-2 btnlike"><br><br><br><br><span class="glyphicon glyphicon-thumbs-up"></span>  <input type="hidden" name="currentArticle" value="{{_id}}" id="currentArticle" ><input type="button" id="btnlike" class="btn btn-primary" value="Like"> </div>
            </div>
           <hr>
             <p><span class="glyphicon glyphicon-time"></span> Posted on {{createdat}}</p>
@@ -49,4 +50,8 @@
          </div>
         </div> 
     {{/each}}
+</template>
+
+  <template name="LikesCount">
+     <span class="glyphicon glyphicon-thumbs-up"></span> {{likes}} likes
 </template>
