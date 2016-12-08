@@ -321,7 +321,7 @@
 
 /*  During.html css ---------------END----------------------------------- */
 
-<<<<<<< HEAD
+
 /* Article CSS starts */
 
 /*Article Home Page*/
@@ -342,7 +342,7 @@
   height:550px;
 }
 .readarticles{
-  background-image: url("/Images/maxresdefault.jpg")  ;  
+  background-image: url("/Images/maxresdefault.jpg")  ;
   background-size: cover;
 }
 .myarticle{
@@ -357,7 +357,7 @@
   width:100%;
 }
 /*Article CSS Ends  */
-=======
+
 /*  duringAccom.html page CSS start */
 .duringAccomCSS .mt-100 {
     margin-top: 100px;
@@ -634,4 +634,3 @@ used to vertically center elements, may need modification if you're not using de
 /* .html page CSS end */
 
 /* .html page CSS end */
->>>>>>> mallika-b6
