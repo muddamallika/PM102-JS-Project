@@ -3,12 +3,15 @@
 <br><br><br><br>
    <div class="container readarticles">
       <form>
+          <div class="row">
+              <div class="col-xs-10">
           <h1>{{ArticleName}}</h1>
           <p class="lead">
           by <a href="#">{{AuthorName}}</a>
           </p>
-            <hr>
-            <!-- Date/Time -->
+                        </div>
+           </div>
+          <hr>
             <p><span class="glyphicon glyphicon-time"></span> Posted on {{createdat}}</p>
       <p>Category: <i>{{Category}} </i> </p>
 
@@ -28,8 +31,11 @@
                
            <br><br></form>
     </div>   
-</template>
 
+</template>
+<template name="CommentsCount">
+    <span class="glyphicon glyphicon-comment"></span> {{comments}} comments  
+</template>
 <template name="comments"> 
    {{#each comments}}
         <div class="media">
@@ -44,4 +50,3 @@
         </div> 
     {{/each}}
 </template>
-  

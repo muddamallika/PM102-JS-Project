@@ -332,13 +332,13 @@
 }
 .allArticle{
   background-image: url("/Images/MyArticle.jpg")  ;
-  background-size: cover;
+  background-size:cover;
+  width:100%;
 }
 .postarticle{
-  background-image:url("/Images/postArticle.jpg");  
+  background-image:url("/Images/postArticle.jpg");
   background-size: cover;
   height:550px;
-  width:100%;
 }
 .readarticles{
   background-image: url("/Images/maxresdefault.jpg")  ;  
@@ -346,11 +346,13 @@
 }
 .myarticle{
   background-image: url("/Images/MyArticle.jpg") ;
-  background-size: "500px 500px";
+  background-size: cover;
+  width:100%;
 }
 .searcharticles
 {
   background-image: url("/Images/MyArticle.jpg") ;
-  background-size: "500px 500px";
+  background-size: cover;
+  width:100%;
 }
 /*Article CSS Ends  */

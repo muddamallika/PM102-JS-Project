@@ -5,6 +5,7 @@
   <style>
 
 
+
 .Pub_Article {
   margin-right: 10%;
 }
@@ -55,7 +56,10 @@
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
-
+      .authourclass{
+          font-size: 100%;
+           font-weight: normal
+      }
 
 </style>
 
@@ -65,22 +69,18 @@
 <template name="Articles_Sel">
  {{> Header}}
 <br><br><br><br>
-
 <div class="container allArticle">
-    <br> <br>
-      <div class="page-header"><h1>Articles</h1></div>
-{{> articleDropdwn}}
+    <h1 align="center">Article Hub<small> find all articles here...</small></h1>
+    <br><br>
 <div class="row">
     <div class="col-xs-6">
-  {{> article_group}}
+  {{> articleDropdwn}}
+     <div class="col-xs-6">  
+  {{> article_group}}</div> 
         </div>
-    <div class="col-xs-6 mar" style="height: 200px">
-    <div class="marquee ver" style="height: 180px;width:200px;position:right;" data-direction='up' data-duration='3000' data-pauseOnHover="true" >
-    <p style="text-decoration: none !important">
-        {{> Allarticle}}
-  </p>
-     </div>
-        </div>
+    <div class="col-xs-6 mar" style="height: 150px">
+           {{> LatestArticle}}
+    </div>
     </div>
 <br/>
 
@@ -115,14 +115,13 @@
         </template>
 <template name="article_r">
         <li>
-          <h1>{{ArticleName}}</h1>
-          <p class="lead">
-          by <a href="#">{{AuthorName}}</a>
+          <h3>{{ArticleName}}</h3>
+          <p>
+          by <I>{{AuthorName}} </I> 
           </p>
             <hr>
-            <!-- Date/Time -->
             <p><span class="glyphicon glyphicon-time"></span> Posted on {{createdat}}</p>
-    <a href="/readArticle/{{_id}}"> Click to View </a><br><br>
+    <a class="authourclass"  href="/readArticle/{{_id}}">{{ArticleInitial}}....<br> <br> Click to View </a><br><br>
   </li>
   <br><br><br><br><br>
 </template>

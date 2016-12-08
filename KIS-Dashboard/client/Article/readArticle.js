@@ -26,4 +26,13 @@ Template.comments.helpers({
     return Comments.find({ currentArticleID: currentArticleID }).fetch().reverse();
   }
 });
+      
+Template.CommentsCount.helpers({
+  comments: function() {
+    var currentArticleID= this._id;
+    return Comments.find({ currentArticleID: currentArticleID }).count();
   }
+});
+
+
+}
