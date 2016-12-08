@@ -264,6 +264,7 @@ Router.route('/myCreateEvents', function() {
     this.render('myCreateEvents');
 });
 
+<<<<<<< HEAD
 
 
 
@@ -323,3 +324,35 @@ Router.route('Event_cancel/regis_events/:_id', {
 Router.route('/Event_cancel/event_cancel', function(){
   this.render('event_cancel');
 });
+=======
+//During Arrival - Accomodation Details Page
+Router.route('/duringAccom', function(){
+  this.render('duringAccom');
+});
+
+//During Arrival - Transportation Details Page
+Router.route('/duringTrans', function(){
+  this.render('duringTrans');
+});
+
+//During Arrival - Assistance Details Page
+Router.route('/duringAssist',function(){
+  this.render('duringAssist');
+});
+
+//Team Page
+Router.route('/teamPage',function(){
+  this.render('teamPage');
+});
+
+
+//forum Main Page
+Router.route('/forumMain',function(){
+  this.render('forumMain');
+});
+
+//new Discussion Page
+Router.route('/newDisc',function(){
+  this.render('newDisc');
+});
+>>>>>>> mallika-b6
