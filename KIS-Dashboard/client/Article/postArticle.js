@@ -50,6 +50,9 @@
     event.target.Article.value = "";
     event.target.ArticleName.value = "";
     event.target.AuthorName.value = "";
+     Meteor.setTimeout(function () {
+            Router.go('/ArticleHome/ArticleHome');
+        }, 5000);
       
     $(".alert").show() ;
         

@@ -1,6 +1,7 @@
 
 Router.configure({
-    layoutTemplate: 'footer'
+    layoutTemplate: 'footer',
+    notFoundTemplate: 'notFound'
 });
 
 
