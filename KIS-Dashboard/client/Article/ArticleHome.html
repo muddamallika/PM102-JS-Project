@@ -47,7 +47,16 @@
                 </div>
   
 <div class="col-xs-4 mar">
- {{> LatestArticle}}
+ <div class="well" style="height: 310px;width: 330px">
+                    <h4>Latest Articles</h4>
+    <div class="marquee marqBox" style="height: 240px;width: 300px" data-direction='up' data-duration='3000' data-pauseOnHover="true" >
+ 
+      <p style="text-decoration: none !important">
+          {{> Allarticle}}
+      </p>
+        
+    </div>
+</div>
     </div>
 <br/>
     
@@ -65,16 +74,21 @@
     </div>
       </form>
 </template>
-
-<template name="LatestArticle">
-<div class="well" style="height: 310px;width: 330px">
-                    <h4>Latest Articles</h4>
-    <div class="marquee marqBox" style="height: 240px;width: 300px" data-direction='up' data-duration='3000' data-pauseOnHover="true" >
- 
-      <p style="text-decoration: none !important">
-          {{> Allarticle}}
-      </p>
-        
-    </div>
-</div>
+<template name="Article1">
+     {{#each articles}}
+    <h1>{{ArticleName}}</h1>
+	 <p>{{Article}}</p>
+    {{/each}}
+</template>
+<template name="Article2">
+    {{#each articles}}
+    <h1>{{ArticleName}}</h1>
+	 <p>{{Article}}</p>
+    {{/each}}
+</template>
+<template name="Article3">
+     {{#each articles}}
+    <h1>{{ArticleName}}</h1>
+	 <p>{{Article}}</p>
+    {{/each}}
 </template>

@@ -6,7 +6,7 @@
     var Article = event.target.Article.value;
     var ArticleName = event.target.ArticleName.value;
     var currentUserId = Meteor.userId();
-    var ArticleInitial,MyArticleInitial = "";
+    var ArticleInitial= "",MyArticleInitial = "";
     var spliter= Article.split(" ");
     var len = (spliter.length > 5)? 5 :spliter.length;
     var mylen = (spliter.length > 25)? 25 :spliter.length;

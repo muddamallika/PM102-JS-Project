@@ -24,64 +24,6 @@
 
   <style>
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333333;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    border: 1px solid black;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #111111;
-}
-
-.up {
-      margin-top: -36px;
-    }
-
-    .down {
-      margin-top: 10px;
-    }
-
-    .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-    }
-
-    .fa {
-      size: 20px;
-    }
-
-    .foot_img {
-      margin-bottom: : -50px;
-    }
-
-    .ar{
-      background-color: white;
-      color: black;
-    }
-
-.ver {
-  height: 30px;
-  width: 200px;
-  margin-top: 30px;
-  
-}
 
 .unorder {
   color: black;
@@ -92,24 +34,18 @@ li a:hover {
   color: white;
 }
 
-
-
-
-
-
 *{
   margin:0;
   padding:0;
 }
-.container1{
+
+.eventCSS{
   font-family:arial,sans-serif;
   font-size:100%;
   margin:3em;
   color:#fff;
-}/*h2,p{
-  font-size:100%;
-  font-weight:normal;
-}*/
+}
+
  .unorder_list,.order_list {
   list-style:none;
 }
@@ -118,10 +54,9 @@ li a:hover {
   padding:3em;
 }
  .unorder_list .order_list .sticky {
-  text-decoration:none;
+  /*text-decoration:none;*/
   color:#000;
   background:#ffc;
-  display:block;
   height:10em;
   width:10em;
   padding:1em;
@@ -129,16 +64,6 @@ li a:hover {
  .unorder_list .order_list p{
   margin:1em;
   float:left;
-}
-
-.stickyinfo h2{
-  font-size:140%;
-  font-weight:bold;
-  padding-bottom:10px;
-}
-.stickyinfo p{
-  font-family:"Reenie Beanie",arial,sans-serif;
-  font-size:180%;
 }
 
  .unorder_list .order_list .sticky {
@@ -216,88 +141,101 @@ li a:hover {
 </body>
 
 
-
+<!-- Template for the event main page-->
 <template name="event">
 {{> centerheader}}
-<br><br>
-<div class="container container1">
-  {{> total_events_display}}   <!-- Template call to display all the events that are present -->
+<hr>
+  <div class="container-fluid eventCSS">
+    <div class="col-xs-3">
+      <!-- Verifying whether user had logged in or not -->
+      <br>
+      <div class="container">
+        {{#if currentUser}}
+          <a href="/Events/my_events" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">My Events</a>
+        {{else}}
+          <a href="/Login/login" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">My Events</a>
+        {{/if}}
+      </div>
 
-  <div class="col-xs-6">
-  {{#if currentUser}}   <!-- Verifying wheather user had logged in or not -->
-    <a href="/Events/my_events" class="btn btn-info">MyEvents</a>
-    {{else}}
-    <a href="/Login/login" class="btn btn-info">MyEvents</a>
-    {{/if}}
-  </div>
-</div>
-<div class="container">
-  <div class="col-xs-6">   
-  </div>
-  <div class="col-xs-6" style="margin-top: -140px">
-  {{#if currentUser}}   <!-- Verifying wheather user had logged in or not -->
-    <a href="/Event_new/event_new" class="btn btn-info cevent" role="button" target="_blank">Create Event</a>
-    {{else}}
-    <a href="/Login/login" class="btn btn-info">Create Event</a>
-    {{/if}}
-  
-  </div>
-</div>
+      <br><hr><br>
+      <!-- Verifying whether user had logged in or not -->
+      <div class="container">
+        {{#if currentUser}}
+          <a href="/Event_new/event_new" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">Create Event</a>
+        {{else}}
+          <a href="/Login/login" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">Create Event</a>
+        {{/if}}
+      </div>
+    </div>
 
-<br><br><br><br><br><br><br>
- <br><br><br><br><br>
+    <div class="col-xs-9">
+      <!-- Template call to display all the events that are present -->
+      <div class="container">
+       <p class="lead" style="text-decoration: underline;font-weight: bold; font-size: 35px;color: black;text-align:center">Latest Events</p>
+      </div>
+      <div class="container">
+        {{> total_events_display}}
+      </div>
+    </div>
+ </div>
+<hr>
 </template>
 
-<!-- Templates for Total events display -->
-
-
+<!-- Template for event_display -->
 <template name="event_display">
-<div class="stickyinfo">   <!-- Applying Sticky notes display to the events -->
-<h2>  {{eventName}} </h2>
-<p> {{eventDate}}</p>
-</div> 
+  <!-- Applying Sticky notes display to the events -->
+    <p class="lead" style="font-weight: bold; font-size: 10px;">  {{eventName}} </p>
+    <p class="lead" style="font-weight: normal; font-size: 10px;"> {{eventDate}}</p>
 </template>
 
+<!-- Template for total_events_display page -->
 <template name="total_events_display">
-<div class="stickydisp">
-  <ul class="unorder_list">
-      {{#each total_events}}   <!-- Implementing looping for the collection total_events -->
+    <ul class="unorder_list">
+      <br><br><div style="margin-left:30px;">
+        <!-- Fetching from the total_events collection - this collection contains list of all the events-->
+        {{#each total_events}}
+        <!-- Implementing looping for the collection total_events -->
         <li class="order_list">
-         <a class="sticky" href="/total_events/{{_id}}" target="_blank"> {{> event_display}}</a><br><br>
+          <a class="sticky" href="/total_events/{{_id}}" target="_blank">
+            {{> event_display}}
+          </a>
+          <br><br>
         </li>
-      {{/each}}
-  </ul>
+        {{/each}}
+      </div>
+    </ul>
+</template>
+
+<!-- Template for my_events main page -->
+<template name="my_events">
+   {{> centerheader}}
+   <a href="/Events_My_Created_Events/my_created_events" class="btn btn-info cevent" role="button" target="_blank">
+     My Created Events
+   </a>
+   <a href="/Events_My_Created_Events/my_registered_events" class="btn btn-info cevent" role="button" target="_blank">
+     My Registered Events
+   </a>
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</template>
+
+<!--Template for my_created_events_list page-->
+<template name="my_created_events_list">
+  <div class="stickyinfo">
+    <h2> {{eventName}} </h2>
+    <p> {{eventDate}} </p>
   </div>
 </template>
 
-<!-- Template for displaying Created events & Registered events  -->
-
-<template name="my_events">
- {{> centerheader}}
-
-    <a href="/Events_My_Created_Events/my_created_events" class="btn btn-info cevent" role="button" target="_blank">My Created Events</a>
-    <a href="/Events_My_Created_Events/my_registered_events" class="btn btn-info cevent" role="button" target="_blank">My Registered Events</a>
-<br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-</template>
-
-
-
-<template name="my_created_events_list">
-<div class="stickyinfo">
-<h2>  {{eventName}} </h2>
-<p> {{eventDate}} </p>  
-</div> 
-</template>
-
+<!--Template for my_created_events_db page-->
 <template name="my_created_events_db">
   <ul class="unorder_list">
       {{#each events}}
         <li class="order_list">
-         <a class="sticky" href="/events/{{_id}}" target="_blank"> {{> my_created_events_list}}</a><br><br>
+          <a class="sticky" href="/events/{{_id}}" target="_blank">
+            {{> my_created_events_list}}
+          </a>
+          <br><br>
         </li>
       {{/each}}
   </ul>
 </template>
-
-

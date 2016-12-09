@@ -15,10 +15,11 @@
           <hr>
             <p><span class="glyphicon glyphicon-time"></span> Posted on {{createdat}}</p>
       <p>Category: <i>{{Category}} </i> </p>
-
+ <p>{{> CommentsCount}}
+    {{> LikesCount}}</p>
+          <br>
                 <!-- Post Content -->
                 <p class="lead">{{Article}}</p>
-
                     <h4>Leave a Comment:</h4>
                         <div class="form-group">
                             <input type="hidden" name="currentArticleID" value="{{_id}}" id="currentArticleID" >
