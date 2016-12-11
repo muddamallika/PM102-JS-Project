@@ -7,13 +7,17 @@ Template.event_new.events({
     var eventLoc = event.target.eventLoc.value;
     var eventDate = event.target.eventDate.value;
     var eventTime = event.target.eventTime.value;
+    var eventPrice = event.target.eventPrice.value;
+    var eventSeats = event.target.eventSeats.value;
     var currentUserId = Meteor.userId();
     Total_Events.insert({       // Inserting Variables in a Collection named Total_Events
         eventName:eventName,
         eventDesc:eventDesc,
         eventLoc:eventLoc,
         eventDate:eventDate,
-        eventTime:eventTime        
+        eventTime:eventTime,
+        eventPrice:eventPrice,
+        eventSeats:eventSeats        
     });
     Events.insert({           // Inserting Variables in a Collection named Events
         eventName:eventName,
@@ -21,7 +25,9 @@ Template.event_new.events({
         eventLoc:eventLoc,
         eventDate:eventDate,
         eventTime:eventTime,
-        createdBy: currentUserId
+        createdBy:currentUserId,
+        eventPrice:eventPrice,
+        eventSeats:eventSeats
     });
 
     event.target.eventName.value="";        // After Adding them Emptying the values.
@@ -29,6 +35,8 @@ Template.event_new.events({
     event.target.eventLoc.value="";
     event.target.eventDate.value="";
     event.target.eventTime.value="";
+    event.target.eventPrice.value="";
+    event.target.eventSeats.value="";
 }  
 });
 
