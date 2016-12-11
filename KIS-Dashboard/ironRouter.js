@@ -80,7 +80,7 @@ Router.route('/Register/register', function() {
   this.render('register');
 });
 
-Router.route('/Login/login', function() {
+Router.route('/login', function() {
   this.render('login');
 });
 
@@ -265,13 +265,20 @@ Router.route('/myCreateEvents', function() {
     this.render('myCreateEvents');
 });
 
-
+// onBeforeAction: function(){
+  //      var currentUser = Meteor.userId();
+    //    if(currentUser){
+      //      this.next();
+      //  } else {
+       //     this.render("login");
+       // }
+   // }
 
 
 // Posting Events
 
-Router.route('/Events/event', function() {
-    this.render('event');
+Router.route('/Events/event', {
+    template: 'event'
 });
 
 //Events_tab
@@ -294,21 +301,52 @@ Router.route('/events/:_id', {
 });
 
 
-Router.route('/Event_new/event_new',function(){
-this.render('event_new');
+Router.route('/Event_new/event_new',{
+  template:'event_new',
+   onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            this.next();
+        } else {
+            this.render("login");
+        }
+    }
 });
 
-Router.route('/Events_My_Created_Events/my_created_events', function(){
-  this.render('my_created_events');
+Router.route('/Events_My_Created_Events/my_created_events',{
+  template:'my_created_events',
+  onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            this.next();
+        } else {
+            this.render("login");
+        }
+    }
 });
 
-Router.route('/Events_My_Created_Events/my_registered_events', function(){
-  this.render('my_registered_events');
+Router.route('/Events_My_Created_Events/my_registered_events', {
+  template:'my_registered_events',
+  onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            this.next();
+        } else {
+            this.render("login");
+        }
+    }
 });
 
-Router.route('/Events/my_events', function() {
-  this.render('my_events');
-
+Router.route('/Events/my_events', {
+  template:'my_events',
+   onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            this.next();
+        } else {
+            this.render("login");
+        }
+    }
 });
 
 

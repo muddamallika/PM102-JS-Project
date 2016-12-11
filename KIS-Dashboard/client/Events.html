@@ -166,21 +166,14 @@
       <!-- Verifying whether user had logged in or not -->
       <br>
       <div class="container">
-        {{#if currentUser}}
           <a href="/Events/my_events" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">My Events</a>
-        {{else}}
-          <a href="/Login/login" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">My Events</a>
-        {{/if}}
       </div>
 
       <br><hr><br>
       <!-- Verifying whether user had logged in or not -->
       <div class="container">
-        {{#if currentUser}}
+        
           <a href="/Event_new/event_new" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">Create Event</a>
-        {{else}}
-          <a href="/Login/login" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">Create Event</a>
-        {{/if}}
       </div>
     </div>
 
@@ -271,11 +264,13 @@
   <p class="errorcodepage"> Error Code: 404</p>
   <br>
   <p class="errorcodepage">Here are some helpful link instead: </p>
-  <a href="#" class="btn btn-link" role="button">Home Page</a><br>
+  <!--<a href="#" role="button" class="btn btn-link">Home Page</a><br>
   <a href="/Login/login" class="btn btn-link" role="button">Login</a><br>
   <a href="/ArticleHome/ArticleHome" class="btn btn-link" role="button">Articles</a><br>
   <a href="/Events/event" class="btn btn-link" role="button">Events</a><br>
-  <a href="#" class="btn btn-link" role="button">About Us</a><br>
+  <a href="#" class="btn btn-link" role="button">About Us</a><br>-->
+  <a href="/login" role="button" class="btn btn-link">Home Page</a>
+  <a href="#" class="btn btn-info" role="button">Link Button</a>
 
 </div>
 <div class="col-xs-6">
