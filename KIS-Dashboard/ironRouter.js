@@ -265,8 +265,7 @@ Router.route('/myCreateEvents', function() {
     this.render('myCreateEvents');
 });
 
-<<<<<<< HEAD
-=======
+
 // onBeforeAction: function(){
   //      var currentUser = Meteor.userId();
     //    if(currentUser){
@@ -276,7 +275,7 @@ Router.route('/myCreateEvents', function() {
        // }
    // }
 
->>>>>>> Sravan11thDec
+
 
 // Posting Events
 
