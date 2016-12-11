@@ -214,7 +214,7 @@ Router.route('/readArticles/rArticle', function() {
     this.render('rArticle');
 });
 
-//search Article 
+//search Article
 Router.route('/searchArticle/searchArticle', function() {
     this.render('searchArticle');
 });
@@ -225,7 +225,7 @@ Router.route('/readArticle/:_id', {
        var currentArticle = this.params._id;
        return Articles.findOne({ _id: currentArticle });
    }
-   
+
 });
 //after Arrival Landing Page
 Router.route('/after', function() {
@@ -264,8 +264,6 @@ Router.route('/myRegEvents', function() {
 Router.route('/myCreateEvents', function() {
     this.render('myCreateEvents');
 });
-
-
 
 
 // Posting Events
@@ -323,4 +321,44 @@ Router.route('Event_cancel/regis_events/:_id', {
 
 Router.route('/Event_cancel/event_cancel', function(){
   this.render('event_cancel');
+});
+
+//During Arrival - Accomodation Details Page
+Router.route('/duringAccom', function(){
+  this.render('duringAccom');
+});
+
+//During Arrival - Transportation Details Page
+Router.route('/duringTrans', function(){
+  this.render('duringTrans');
+});
+
+//During Arrival - Assistance Details Page
+Router.route('/duringAssist',function(){
+  this.render('duringAssist');
+});
+
+//Team Page
+Router.route('/teamPage',function(){
+  this.render('teamPage');
+});
+
+
+//forum Main Page
+Router.route('/forumMain',function(){
+  this.render('forumMain');
+});
+
+//new Discussion Page
+Router.route('/newDisc',function(){
+  this.render('newDisc');
+});
+
+//Discussion Detail Page
+Router.route('forum/:_id', {
+   template: 'discDetailPage',
+   data: function(){
+       var currentList = this.params._id;
+       return Regis_Events.findOne({ _id: currentList });
+}
 });
