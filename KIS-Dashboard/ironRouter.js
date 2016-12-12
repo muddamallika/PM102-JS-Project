@@ -352,3 +352,12 @@ Router.route('/forumMain',function(){
 Router.route('/newDisc',function(){
   this.render('newDisc');
 });
+
+//Discussion Detail Page
+Router.route('forum/:_id', {
+   template: 'discDetailPage',
+   data: function(){
+       var currentList = this.params._id;
+       return Regis_Events.findOne({ _id: currentList });
+}
+});
