@@ -1,0 +1,32 @@
+
+
+<template name="chat">
+  {{> centerheader}}
+  <div class="container-fluid">
+  {{> chatting_display}}
+
+  <form>
+      <input type="text" name="username" value="{{currentUser.profile.name}}" readonly>
+  		<input type="text" name="chat" placeholder="Enter the Text ..." id="chat">
+  		<input class="btn" value="send" type="submit">
+  		</form>
+  </div>
+  <br>
+</template>
+
+
+
+<!--Template for my_created_events_db page-->
+<template name="chatting_display">
+  <ul style="background-color:white">
+      {{#each chatting}}
+        {{> chatting_msg}}<br>
+      {{/each}}
+  </ul>
+</template>
+<template name="chatting_msg">
+	<li>
+    {{username}}
+    {{message}}
+  </li>
+</template>

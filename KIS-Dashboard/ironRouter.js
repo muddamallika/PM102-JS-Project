@@ -427,3 +427,16 @@ Router.route('/admin',{
   };
 }
 });
+
+// Chat Route
+Router.route('/chat',{
+  template:'chat',
+  onBeforeAction: function(){
+       var currentUser = Meteor.userId();
+       if(currentUser){
+           this.next();
+       } else {
+           this.render("login");
+       }
+   }
+});

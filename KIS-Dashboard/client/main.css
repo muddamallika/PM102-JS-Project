@@ -748,3 +748,20 @@ ol .stickyliClass .stickyaClass{color:#fff;}
   font-family: 'Varela Round';
 }
 /*Register.hmtl page CSS end*/
+/*Chat.html page CSS start*/
+#chat {
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #DFDCDC;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #DFDCDC;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #DFDCDC;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #DFDCDC;
+}
+}
