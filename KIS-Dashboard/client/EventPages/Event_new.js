@@ -1,3 +1,4 @@
+//
 if(Meteor.isClient) {
 Template.event_new.events({
     'submit form': function(event){
@@ -13,7 +14,7 @@ Template.event_new.events({
         eventDesc:eventDesc,
         eventLoc:eventLoc,
         eventDate:eventDate,
-        eventTime:eventTime        
+        eventTime:eventTime
     });
     Events.insert({
         eventName:eventName,
@@ -29,7 +30,7 @@ Template.event_new.events({
     event.target.eventLoc.value="";
     event.target.eventDate.value="";
     event.target.eventTime.value="";
-}  
+}
 });
 
 }

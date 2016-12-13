@@ -1,0 +1,65 @@
+<head>
+  <style>
+    .unorder {
+      color: black;
+      background-color: transparent;
+    }
+
+    .cancel {
+      color:transparent;
+    }
+
+    input {
+      border-color: transparent;
+    }
+ </style>
+</head>
+
+<body>
+</body>
+<!-- -->
+<template name="event_cancel">
+  {{> centerheader}}
+  <div class="container">
+    <br><br><br><br><br>
+    <p>Hey, {{currentUser.profile.name}} below are the list of Events that you Registered</p>
+    {{> canceldb}}
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</template>
+
+<!-- -->
+<template name="cancelinfo">
+    Event Name: {{eventName}}     Event Date: {{eventDate}}
+    <br><br>
+</template>
+
+<!-- -->
+<template name="canceldb">
+    <ul class="unorder">
+        {{#each regis_events}}
+          <a href="regis_events/{{_id}}">
+            {{> cancelinfo}}<br>
+          </a>
+        {{/each}}
+    </ul>
+</template>
+
+<!-- -->
+<template name="cancel_event">
+  {{> centerheader}}
+  <br><br>
+  {{#if currentUser}}
+    <form>
+      <p> Full Details of the event that you want to cancel</p>
+      <p class="text-center"><b>Event Name: </b> {{eventName}} </p>
+      <p class="text-center"><b>Event Date: </b>{{eventDate}} </p>
+      <input type="submit" name="OK">
+      <input type="text" name="cancel" value="{{_id}}" class="cancel" readonly>
+    </form>
+  {{else}}
+      <p>Please Login before you cancel an Event</p>
+      <a href="/Login/login">Click here for Logging in</a>
+  {{/if}}
+  <br><br><br><br>
+</template>

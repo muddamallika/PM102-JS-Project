@@ -1,20 +1,23 @@
-<!--New Discussion Creation Start-->
+<!--New Discussion Form Creation Start-->
 <template name="newDisc">
   {{> centerheader}}
   <div class="container-fluid">
+    <!-- A flash message is displayed after successful post of discussion-->
     {{> flashMessages}}
     <div class="form-style-5">
     <form>
       <fieldset>
-          <legend>&nbsp;&nbsp;<span class="number">1</span> Post Your Query to Discuss</legend>
-          <input type="text" name="discTitle" placeholder="Give a title to your discussion*" required="true">
+        <legend>&nbsp;&nbsp;<span class="number">1</span> Post Your Query to Discuss</legend>
+        <input type="text" name="discTitle" placeholder="Give a title to your discussion*" required="true">
       </fieldset>
-
       <fieldset>
         <legend>&nbsp;&nbsp;<span class="number">2</span> Give a brief explanation to your query</legend>
         <textarea name="discContent" rows="4" cols="50" placeholder="Write [or] Copy and paste your article here" required="true"></textarea>
       </fieldset>
-
+      <fieldset>
+        <legend>&nbsp;&nbsp;<span class="number" >3</span> You are posting as <input class="discAuth" name="discAuthor" style="color:red" value="{{currentUser.profile.name}}" readonly ></legend>
+      </fieldset>
+      <br>
       <input type="submit" value="Submit Your Query" />
     </form>
     </div>
@@ -22,4 +25,4 @@
   </div>
   <br>
 </template>
-<!--New Discussion Creation end-->
+<!--New Discussion Form Creation end-->

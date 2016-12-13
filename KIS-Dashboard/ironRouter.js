@@ -79,7 +79,8 @@ Router.route('/Register/register', function() {
   this.render('register');
 });
 
-Router.route('/Login/login', function() {
+
+Router.route('/login', function() {
   this.render('login');
 });
 
@@ -349,9 +350,18 @@ Router.route('/forumMain',function(){
 });
 
 //new Discussion Page
-Router.route('/newDisc',function(){
-  this.render('newDisc');
+Router.route('/newDisc',{
+  template:'newDisc',
+  onBeforeAction: function(){
+       var currentUser = Meteor.userId();
+       if(currentUser){
+           this.next();
+       } else {
+           this.render("login");
+       }
+   }
 });
+
 
 //Discussion Detail Page
 Router.route('forum/:_id', {
@@ -359,5 +369,22 @@ Router.route('forum/:_id', {
    data: function(){
        var currentList = this.params._id;
        return Regis_Events.findOne({ _id: currentList });
+}
+});
+
+//Admin Routes
+Router.route('/admin',{
+  template: 'admin',
+  '/admin': function() {
+  return {
+    as: 'admin',
+    to: function() {
+      if (Meteor.user() && Meteor.user().username === 'admin@gmail.com') {
+        return 'admin';
+      } else {
+        return 'teamPage';
+      }
+    }
+  };
 }
 });

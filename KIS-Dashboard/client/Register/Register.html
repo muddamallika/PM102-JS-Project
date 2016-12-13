@@ -1,100 +1,44 @@
-<head>
-  <title></title>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
-
-<!-- Optional theme -->
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!--font-->
-
-<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-
-
-
-<!-- Latest compiled and minified JavaScript -->
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-
-<meta charset="utf-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-
-
-  <style>
-   
-
-
-.panel-heading {
-    height: 50px;
-}
-
-.title1 {
-    margin-top: -2px;
-}
-
-  </style>
-</head>
- 
-<body>
-
-
-</body>
-
-
 <template name="register">
-<div class="rgtr" style="background-image: url(https://trace.theprotag.com/public/src/assets/images/pages-bg.jpg); background-repeat: no-repeat;">
+<div class="rgtr registerCSS" style="background-repeat: no-repeat;">
   {{> centerheader}}
-    <div class="row">
-        <div class="col-md-5 col-md-offset-3">
-        {{> flashMessages}}
-        <br><br><br><br>
-            <form class="register-form">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="title1 text-center">Registration</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class="form-group col-lg-12">
-                            <input type="email"  class="form-control" id="email" value="" placeholder="Email Id" name="email">
-                        </div>
- 
-                        <div class="form-group col-lg-6">
-                            
-                            <input type="text" name="firstname" class="form-control" id="firstname" value="" placeholder="First Name">
-                        </div>
- 
-                        <div class="form-group col-lg-6">
-                            
-                            <input type="text" name="lastname" class="form-control" id="lastname" value="" placeholder="Last Name">
-                        </div>
- 
-                        <div class="form-group col-lg-12">
-                           
-                            <input type="password" name="password" class="form-control" id="password" value="" placeholder="Password">
-                        </div>
-                    </div>
-                    <div class="panel-footer">
-                        <button type="submit" class="btn btn-primary login-button"><i class="fa fa-chevron-right"></i></button>
-                    </div>
-                </div>
-            </form>
-        </div>
+  <div class="container">
+    <div class="col-xs-3"></div>
+    <div class="col-xs-6">
+      {{> flashMessages}}
+      <br><br><br><br>
+          <form class="register-form">
+              <div class="panel panel-default">
+                  <div class="panel-heading" style="height: 60px">
+                      <h2 class="title1 text-center" style="margin-top:-2px">Register Here</h2>
+                  </div>
+                  <div class="panel-body">
+                      <div class="form-group col-lg-12">
+                          <input type="email"  class="form-control" id="email" value="" placeholder="Email" name="email">
+                      </div>
+
+                      <div class="form-group col-lg-6">
+                          <input type="text" name="firstname" class="form-control" id="firstname" value="" placeholder="First Name">
+                      </div>
+
+                      <div class="form-group col-lg-6">
+                          <input type="text" name="lastname" class="form-control" id="lastname" value="" placeholder="Last Name">
+                      </div>
+
+                      <div class="form-group col-lg-12">
+                          <input type="password" name="password" class="form-control" id="password" value="" placeholder="Password">
+                      </div>
+
+                  </div>
+
+                  <div class="panel-footer">
+                     <button type="submit" class="btn btn-lg btn-default" style="margin-left: 190px">Register</button>
+                  </div>
+              </div>
+          </form>
     </div>
-    <br><br>
-    </div>
-    <br><br>
+    <div class="col-xs-3"></div>
+  </div>
+<br><br><br>
+</div>
+<br>
 </template>

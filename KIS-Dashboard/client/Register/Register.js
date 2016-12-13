@@ -38,7 +38,7 @@ Template.register.events({
         event.target.firstname.value="";
         event.target.lastname.value="";
         Meteor.setTimeout(function () {
-            Router.go('/Login/login');
+            Router.go('/login');
         }, 8000);
     }
 

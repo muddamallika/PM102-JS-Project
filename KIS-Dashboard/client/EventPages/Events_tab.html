@@ -1,0 +1,138 @@
+<head>
+<style>
+    .unorder {
+      color: black;
+      background-color: transparent;
+    }
+
+    .username{
+      color: transparent;
+    }
+
+    .userid{
+      color: transparent;
+    }
+
+    .col8{
+      margin-left: 170px;
+      background-image: url(http://slodive.com/wp-content/uploads/2012/09/plain-backgrounds/grungy-greenish-background.jpg);
+    }
+</style>
+</head>
+
+<body>
+</body>
+
+<!-- -->
+<template name="event_tab">
+ {{> centerheader}}
+ {{#if currentUser}}
+ <div class="container">
+   <br>
+   <form>
+     <div class="col-xs-2"></div>
+     <div class="col-xs-8 col8">
+       <!-- Event Name field-->
+       <div class="form-group row">
+         <label class="col-sm-2 col-form-label label_events">
+           Event Name
+         </label>
+         <div class="col-sm-5">
+           <input type="text" class="form-control" id="eventName" name="eventName" value="{{eventName}}" readonly>
+         </div>
+       </div>
+       <!-- Event Description field-->
+       <div class="form-group row">
+          <label class="col-sm-2 col-form-label">
+            Event Description
+          </label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="eventDesc" name="eventDesc" value="{{eventDesc}}" readonly>
+          </div>
+       </div>
+       <!-- Event Location field-->
+       <div class="form-group row">
+         <label class="col-sm-2 col-form-label">
+           Event Location
+         </label>
+         <div class="col-sm-5">
+           <input type="text" class="form-control" id="eventLoc" name="eventLoc" value="{{eventLoc}}" readonly>
+         </div>
+       </div>
+       <!--Event Date field -->
+       <div class="form-group row">
+          <label class="col-sm-2 col-form-label">
+            Event Date
+          </label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="eventDate" name="eventDate" value="{{eventDate}}" readonly>
+          </div>
+       </div>
+       <!-- Event Time field-->
+       <div class="form-group row">
+         <label class="col-sm-2 col-form-label">
+           Event Time
+         </label>
+         <div class="col-sm-5">
+           <input type="text" class="form-control" id="eventTime" name="eventTime" value="{{eventTime}}" readonly>
+         </div>
+       </div>
+       <!-- Register and Cancel buttons-->
+       <div class="form-group row">
+          <div class="offset-sm-2 col-sm-10">
+            {{> mytemplate}}
+          </div>
+       </div>
+
+     </div>
+     <div class="col-xs-2"></div>
+     <input type="text" class="username" name="username" value="{{currentUser.profile.name}}" readonly>
+     <input type="text" class="userid" name="userid" value="{{currentUser._id}}" readonly>
+  </form>
+</div>
+
+  {{else}}
+    <p>Please log in
+      <a href="/Login/login"></a>
+    </p>
+  {{/if}}
+    <br><br><br><br><br><br>
+</template>
+
+<!-- -->
+<template name="eventuser">
+  <ul class="unorder1">
+      {{#each total_events}}
+        {{> todo1}}
+        <br><br>
+      {{/each}}
+  </ul>
+</template>
+
+<!-- -->
+<template name="todo1">
+  <li>
+    {{label}}
+  </li>
+</template>
+
+<!-- -->
+<template name="mytemplate">
+  <!-- -->
+  {{#if productcount x}}
+    <input type="submit" class="btn btn-primary active" name="status" value="Register">
+  {{else}}
+    <input type="submit" class="btn btn-primary disabled" name="status" value="Register">
+  {{/if}}
+  <!-- -->
+  {{#if productcount x}}
+    <input type="submit" class="btn btn-primary disabled" name="status" value="Cancel">
+  {{else}}
+    <a href="/Event_cancel/event_cancel" class="btn btn-primary active" name="status" value="Cancel">Cancel</a>
+  {{/if}}
+</template>
+
+<!-- -->
+<template name="totalregistrations">
+{{totalnum}}
+</template>

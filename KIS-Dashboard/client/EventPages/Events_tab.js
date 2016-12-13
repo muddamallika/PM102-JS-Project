@@ -29,7 +29,7 @@ Template.event_tab.events({
         eventDesc:eventDesc,
         eventLoc:eventLoc,
         eventDate:eventDate,
-        eventTime:eventTime 
+        eventTime:eventTime
 	 });
 	 Total_Regis_Events.insert({
 	 	Eventcreated_id: Eventcreated_id,
@@ -39,7 +39,7 @@ Template.event_tab.events({
         eventDesc:eventDesc,
         eventLoc:eventLoc,
         eventDate:eventDate,
-        eventTime:eventTime 
+        eventTime:eventTime
 	 });
 	}
 });
@@ -49,7 +49,7 @@ Template.mytemplate.helpers({
 	productcount: function(x){
 		var x=0;
 		var Event_id = Session.get("currentList");
-		return x === Regis_Events.find({ Eventcreated_id:Event_id }).count();	
+		return x === Regis_Events.find({ Eventcreated_id:Event_id }).count();
 	}
 });
 

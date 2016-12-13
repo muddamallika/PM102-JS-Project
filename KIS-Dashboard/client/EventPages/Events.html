@@ -1,30 +1,5 @@
 <head>
-  <title>KIS-Dashboard</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-  <script type='text/javascript' src='//cdn.jsdelivr.net/jquery.marquee/1.3.9/jquery.marquee.min.js'></script>
-  <script src="//cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js" type="text/javascript"></script>
-  <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
-
-
   <style>
-
-
 .unorder {
   color: black;
   background-color: transparent;
@@ -131,53 +106,49 @@
     background-color: white;
 }
 
-
 </style>
-
-
 </head>
 
 <body>
 </body>
 
-
 <!-- Template for the event main page-->
 <template name="event">
-{{> centerheader}}
-<hr>
+  {{> centerheader}}
+  <hr>
   <div class="container-fluid eventCSS">
-    <div class="col-xs-3">
-      <!-- Verifying whether user had logged in or not -->
-      <br>
-      <div class="container">
-        {{#if currentUser}}
-          <a href="/Events/my_events" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">My Events</a>
-        {{else}}
-          <a href="/Login/login" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">My Events</a>
-        {{/if}}
+      <div class="col-xs-3">
+          <!-- Verifying whether user had logged in or not -->
+          <br>
+          <div class="container">
+            {{#if currentUser}}
+              <a href="/Events/my_events" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">My Events</a>
+            {{else}}
+              <a href="/Login/login" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">My Events</a>
+            {{/if}}
+          </div>
+
+          <br><hr><br>
+          <!-- Verifying whether user had logged in or not -->
+          <div class="container">
+            {{#if currentUser}}
+              <a href="/Event_new/event_new" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">Create Event</a>
+            {{else}}
+              <a href="/Login/login" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">Create Event</a>
+            {{/if}}
+          </div>
       </div>
 
-      <br><hr><br>
-      <!-- Verifying whether user had logged in or not -->
-      <div class="container">
-        {{#if currentUser}}
-          <a href="/Event_new/event_new" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">Create Event</a>
-        {{else}}
-          <a href="/Login/login" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">Create Event</a>
-        {{/if}}
+      <div class="col-xs-9">
+        <!-- Template call to display all the events that are present -->
+        <div class="container">
+         <p class="lead" style="text-decoration: underline;font-weight: bold; font-size: 35px;color: black;text-align:center">Latest Events</p>
+        </div>
+        <div class="container">
+          {{> total_events_display}}
+        </div>
       </div>
-    </div>
-
-    <div class="col-xs-9">
-      <!-- Template call to display all the events that are present -->
-      <div class="container">
-       <p class="lead" style="text-decoration: underline;font-weight: bold; font-size: 35px;color: black;text-align:center">Latest Events</p>
-      </div>
-      <div class="container">
-        {{> total_events_display}}
-      </div>
-    </div>
- </div>
+   </div>
 <hr>
 </template>
 
