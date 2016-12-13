@@ -326,10 +326,8 @@
 
 /*Article Home Page*/
 .articlehome{
-  background-image: url("/Images/articleHome.jpg") ;
-  height:500px;
-  width:100%;
-  background-position: left;
+  background-image: url("/Images/articlesHome.jpg") ;
+  background-size: 1000px 800px;
 }
 .allArticle{
   background-image: url("/Images/MyArticle.jpg")  ;
@@ -337,7 +335,7 @@
   width:100%;
 }
 .postarticle{
-  background-image:url("/Images/postArticle.jpg");
+  background-image:url("/Images/articlesHome.jpg");
   background-size: cover;
   height:550px;
 }
@@ -346,9 +344,8 @@
   background-size: cover;
 }
 .myarticle{
-  background-image: url("/Images/MyArticle.jpg") ;
+  background-image: url("/Images/allArticle.jpg") ;
   background-size: cover;
-  width:100%;
 }
 .searcharticles
 {
@@ -356,6 +353,140 @@
   background-size: cover;
   width:100%;
 }
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: blue;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: blue}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: blue;
+}
+      .authourclass{
+          font-size: 100%;
+           font-weight: normal
+      }
+
+
+.stickyh4Class,.stickypClass{
+  font-size:100%;
+  font-weight:normal;
+}
+.stickyulClass,.stickyliClass{
+  list-style:none;
+}
+.stickyulClass{
+  overflow:hidden;
+  padding:3em;
+  background-color: transparent;
+}
+.stickyulClass .stickyliClass .stickyaClass{
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  height:10em;
+  width:10em;
+  padding:1em;
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -moz-transition:-moz-transform .15s linear;
+  -o-transition:-o-transform .15s linear;
+  -webkit-transition:-webkit-transform .15s linear;
+}
+.stickyulClass .stickyliClass{
+  margin:1em;
+  float:left;
+}
+.stickyulClass .stickyliClass .stickyh4Class{
+  font-size:140%;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+.stickyulClass .stickyliClass .stickypClass{
+  font-family:"Reenie Beanie",arial,sans-serif;
+  font-size:180%;
+}
+.stickyulClass .stickyliClass .stickyaClass{
+  -webkit-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  -moz-transform:rotate(-6deg);
+}
+.stickyulClass .stickyliClass:nth-child(even) .stickyaClass{
+  -o-transform:rotate(4deg);
+  -webkit-transform:rotate(4deg);
+  -moz-transform:rotate(4deg);
+  position:relative;
+  top:5px;
+  background:#cfc;
+}
+.stickyulClass .stickyliClass:nth-child(3n) .stickyaClass{
+  -o-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+  -moz-transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+  background:#ccf;
+}
+.stickyulClass .stickyliClass:nth-child(5n) .stickyaClass{
+  -o-transform:rotate(5deg);
+  -webkit-transform:rotate(5deg);
+  -moz-transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+}
+.stickyulClass .stickyliClass .stickyaClass:hover,.stickyulClass .stickyliClass .stickyaClass:focus{
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+ol{text-align:center;}
+ol .stickyliClass{display:inline;padding-right:1em;}
+ol .stickyliClass .stickyaClass{color:#fff;}
+
+
 /*Article CSS Ends  */
 
 /*  duringAccom.html page CSS start */

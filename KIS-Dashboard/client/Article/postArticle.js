@@ -54,10 +54,11 @@
             Router.go('/ArticleHome/ArticleHome');
         }, 5000);
       
-    $(".alert").show() ;
-        
+    $(".alert").show() ;       
     $(":submit").attr("disabled", true);  
-        
+    Meteor.setTimeout(function () {
+            Router.go('/ArticleHome/ArticleHome');
+    }, 6000);
         
 },
      'reset .container': function(event){ 
