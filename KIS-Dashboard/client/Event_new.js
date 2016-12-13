@@ -10,6 +10,7 @@ Template.event_new.events({
     var eventPrice = event.target.eventPrice.value;
     var eventSeats = event.target.eventSeats.value;
     var currentUserId = Meteor.userId();
+    
     Total_Events.insert({       // Inserting Variables in a Collection named Total_Events
         eventName:eventName,
         eventDesc:eventDesc,
@@ -17,7 +18,9 @@ Template.event_new.events({
         eventDate:eventDate,
         eventTime:eventTime,
         eventPrice:eventPrice,
-        eventSeats:eventSeats        
+        eventSeats:eventSeats,
+        user_id: currentUserId
+
     });
     Events.insert({           // Inserting Variables in a Collection named Events
         eventName:eventName,
@@ -37,6 +40,10 @@ Template.event_new.events({
     event.target.eventTime.value="";
     event.target.eventPrice.value="";
     event.target.eventSeats.value="";
+    FlashMessages.sendSuccess("Successfully Created the Event");
+    Meteor.setTimeout(function () {
+            Router.go('/Events/event');
+        }, 8000);
 }  
 });
 

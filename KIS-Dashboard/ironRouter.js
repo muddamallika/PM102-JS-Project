@@ -295,7 +295,7 @@ Router.route('/total_events/:_id', {
 
 
 Router.route('/events/:_id', {
-   template: 'my_events',
+   template: 'my_event_discr',
    data: function(){
        var currentList = this.params._id;
        return Events.findOne({ _id: currentList});
@@ -339,16 +339,8 @@ Router.route('/Events_My_Created_Events/my_registered_events', {
     }
 });
 
-Router.route('/Events/my_events', {
-  template:'my_events',
-   onBeforeAction: function(){
-        var currentUser = Meteor.userId();
-        if(currentUser){
-            this.next();
-        } else {
-            this.render("login");
-        }
-    }
+Router.route('/my_event_buttons', function() {
+  this.render('my_event_buttons');
 });
 
 
