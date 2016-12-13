@@ -1,5 +1,13 @@
 /* CSS declarations go here */
-/* createEvent.html page - CSS for colorgraph in the form */
+/* accountHome.html page - CSS body of the account Home page */
+.acctHome {
+  background: #efefef;
+  background-image: url("https://trace.theprotag.com/public/src/assets/images/pages-bg.jpg");
+  font-family: 'Varela Round';
+}
+/* accountHome.html page - END */
+
+/* event_new.html page - CSS for colorgraph in the form */
 .colorgraph {
   height: 5px;
   border-top: 0;
@@ -596,9 +604,6 @@ ol .stickyliClass .stickyaClass{color:#fff;}
 /* teamPage.html page CSS end */
 
 /* newDisc.html page CSS start */
-.postArticlesCSS{
-  background-image: url("/Images/Backgrounds/bg9.jpg");
-}
 
 .form-style-5{
     max-width: 500px;
@@ -702,13 +707,44 @@ ol .stickyliClass .stickyaClass{color:#fff;}
 {
     background: #109177;
 }
+
+.discAuth {
+  background: #f4f7f8;
+}
 /* newDisc.html page CSS end */
 
+/* forumMain.html page CSS start */
+.forumMainCSS{
+  font-family: Varela Round;
+}
 /* forumMain.html page CSS end */
 
 
-/* forumMain.html page CSS end */
-
+/* .html page CSS end */
+.discDetailsCSS{
+  font-family: Varela Round;
+}
 /* .html page CSS end */
 
-/* .html page CSS end */
+.discAuthorFetchCSS {
+  background-color: transparent;
+}
+
+.discTitleFetchCSS {
+  background-color: transparent;
+}
+
+.discDateFetchCSS {
+  background-color: transparent;
+}
+
+
+/*Register.hmtl page CSS start*/
+.registerCSS {
+  background: #efefef;
+
+  background-image: url("https://trace.theprotag.com/public/src/assets/images/pages-bg.jpg");
+
+  font-family: 'Varela Round';
+}
+/*Register.hmtl page CSS end*/

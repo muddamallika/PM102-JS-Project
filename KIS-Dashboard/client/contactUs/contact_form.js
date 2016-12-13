@@ -1,3 +1,4 @@
+//Retrieves values from the contact form and inserts them into the Contact_Details collection
 if (Meteor.isClient){
   Template.Contact.events({
    'submit form': function(event){

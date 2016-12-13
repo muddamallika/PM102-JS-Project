@@ -1,8 +1,20 @@
-
+//
 if (Meteor.isClient){
-  Template.discFetch.helpers({
+  Template.discTitleFetch.helpers({
     forum: function() {
       return Forum.find();
     }
+});
+
+Template.discAuthorFetch.helpers({
+  forum: function() {
+    return Forum.find();
+  }
+});
+
+Template.discDateFetch.helpers({
+  forum: function() {
+    return Forum.find();
+  }
 });
 }
