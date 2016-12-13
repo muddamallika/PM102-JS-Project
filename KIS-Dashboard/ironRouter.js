@@ -1,6 +1,7 @@
 
 Router.configure({
-    layoutTemplate: 'footer'
+    layoutTemplate: 'footer',
+    notFoundTemplate: 'notFound'
 });
 
 
@@ -59,29 +60,6 @@ Router.route('/bAtraveleco/bAtravel', function() {
 
 
 
-// Posting Events
-
-Router.route('/Events/event', function() {
-    this.render('event')
-});
-
-//Events_tab
-
-Router.route('/total_events/:_id', {
-   template: 'event_tab',
-   data: function(){
-       var currentList = this.params._id;
-       return Total_Events.findOne({ _id: currentList });
-   }
-});
-
-
-
-Router.route('/Event_new/event_new',function(){
-this.render('event_new')
-});
-
-
 
 
 Router.route('/public', function(){
@@ -102,13 +80,10 @@ Router.route('/Register/register', function() {
   this.render('register');
 });
 
-Router.route('/Login/login', function() {
+Router.route('/login', function() {
   this.render('login');
 });
 
-Router.route('/Event_cancel/event_cancel', function(){
-  this.render('event_cancel');
-});
 
 //Assistance on arrival
 Router.route('/assistance', function() {
@@ -244,12 +219,18 @@ Router.route('/readArticles/rArticle', function() {
     this.render('rArticle');
 });
 
+//search Article
+Router.route('/searchArticle/searchArticle', function() {
+    this.render('searchArticle');
+});
+
 Router.route('/readArticle/:_id', {
    template: 'readArticle',
    data: function(){
        var currentArticle = this.params._id;
        return Articles.findOne({ _id: currentArticle });
    }
+
 });
 //after Arrival Landing Page
 Router.route('/after', function() {
@@ -257,18 +238,7 @@ Router.route('/after', function() {
 });
 
 
-Router.route('/Events/my_events', function() {
-  this.render('my_events');
 
-});
-
-Router.route('Event_cancel/regis_events/:_id', {
-   template: 'cancel_event',
-   data: function(){
-       var currentList = this.params._id;
-       return Regis_Events.findOne({ _id: currentList });
-}
-});
 
 //Events Main Page
 Router.route('/eventsMain', function() {
@@ -298,4 +268,136 @@ Router.route('/myRegEvents', function() {
 //My Events Page
 Router.route('/myCreateEvents', function() {
     this.render('myCreateEvents');
+});
+
+
+// onBeforeAction: function(){
+  //      var currentUser = Meteor.userId();
+    //    if(currentUser){
+      //      this.next();
+      //  } else {
+       //     this.render("login");
+       // }
+   // }
+
+
+
+// Posting Events
+
+Router.route('/Events/event', {
+    template: 'event'
+});
+
+//Events_tab
+
+Router.route('/total_events/:_id', {
+   template: 'event_tab',
+   data: function(){
+       var currentList = this.params._id;
+       return Total_Events.findOne({ _id: currentList });
+   }
+});
+
+
+Router.route('/events/:_id', {
+   template: 'my_event_discr',
+   data: function(){
+       var currentList = this.params._id;
+       return Events.findOne({ _id: currentList});
+   }
+});
+
+
+Router.route('/Event_new/event_new',{
+  template:'event_new',
+   onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            this.next();
+        } else {
+            this.render("login");
+        }
+    }
+});
+
+Router.route('/Events_My_Created_Events/my_created_events',{
+  template:'my_created_events',
+  onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            this.next();
+        } else {
+            this.render("login");
+        }
+    }
+});
+
+Router.route('/Events_My_Created_Events/my_registered_events', {
+  template:'my_registered_events',
+  onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            this.next();
+        } else {
+            this.render("login");
+        }
+    }
+});
+
+Router.route('/my_event_buttons', function() {
+  this.render('my_event_buttons');
+});
+
+
+
+Router.route('Event_cancel/regis_events/:_id', {
+   template: 'cancel_event',
+   data: function(){
+       var currentList = this.params._id;
+       return Regis_Events.findOne({ _id: currentList });
+}
+});
+
+Router.route('/Event_cancel/event_cancel', function(){
+  this.render('event_cancel');
+});
+
+//During Arrival - Accomodation Details Page
+Router.route('/duringAccom', function(){
+  this.render('duringAccom');
+});
+
+//During Arrival - Transportation Details Page
+Router.route('/duringTrans', function(){
+  this.render('duringTrans');
+});
+
+//During Arrival - Assistance Details Page
+Router.route('/duringAssist',function(){
+  this.render('duringAssist');
+});
+
+//Team Page
+Router.route('/teamPage',function(){
+  this.render('teamPage');
+});
+
+
+//forum Main Page
+Router.route('/forumMain',function(){
+  this.render('forumMain');
+});
+
+//new Discussion Page
+Router.route('/newDisc',function(){
+  this.render('newDisc');
+});
+
+//Discussion Detail Page
+Router.route('forum/:_id', {
+   template: 'discDetailPage',
+   data: function(){
+       var currentList = this.params._id;
+       return Regis_Events.findOne({ _id: currentList });
+}
 });

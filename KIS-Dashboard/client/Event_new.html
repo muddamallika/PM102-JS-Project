@@ -23,197 +23,16 @@
 
   <style>
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333333;
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    border: 1px solid black;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #111111;
-}
-
-.up {
-      margin-top: -36px;
-    }
-
-    .down {
-      margin-top: 10px;
-    }
-
-    .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-    }
-
-    .fa {
-      size: 20px;
-    }
-
-    .foot_img {
-      margin-bottom: : -50px;
-    }
-
-    .ar{
-      background-color: white;
-      color: black;
-    }
-
-
-.addtocalendar var{
-    display: none;
-}
-
-.addtocalendar {
-    position: relative;
-    display: inline-block;
-    background: transparent!important;
-}
-
-.atcb-link {
-    display: block;
-    outline: none!important;
-    cursor: pointer;
-}
-
-.atcb-link:focus~ul,
-.atcb-link:active~ul,
-.atcb-list:hover{
-    visibility:visible !important;
-}
-
-.atcb-list {
-    visibility: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 170px;
-    z-index: 900;
-}
-
-.atcb-list,
-.atcb-item
-{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background: #fff !important;
-}
-
-.atcb-item {
-    float: none;
-    text-align: left;
-}
-
-.atcb-item-link
-{
-    text-decoration: none !important;
-    outline: none;
-    display: block;
-}
-
-.atcb-item:hover,
-.atcb-item:hover {
-    position: relative;
-    z-index: 900;
-    cursor: pointer;
-    text-decoration: none;
-    outline: none;
-}
-
-
-/* Blue */
-
-.atc-style-blue .atcb-link,
-.atc-style-blue .atcb-link:hover,
-.atc-style-blue .atcb-link:active,
-.atc-style-blue .atcb-link:focus
-{
-    margin: 0;
-    padding: 7px 25px;
-    color: #fff;
-    font-family: "Verdana";
-    font-size: 14px;
-    text-decoration: none;
-    outline: none;
-    line-height: 20px;
-    vertical-align: middle;
-    background: rgb(66,129,244) !important;
-    box-shadow: 0 0 40px rgba(0, 0, 0, .13) inset;
-    border-radius: 4px;
-    zoom: 1;
-}
-
-.atc-style-blue .atcb-list {
-    width: 170px;
-    border: 1px solid rgb(186,186,186) !important;
-    border-radius: 2px;
-    box-shadow: 0 0 5px #AAA !important;
-}
-
-.atc-style-blue .atcb-list,
-.atc-style-blue .atcb-item
-{
-    background: #fff !important;
-    color: #000 !important;
-}
-
-.atc-style-blue .atcb-item,
-.atc-style-blue .atcb-item-link
-{
-    line-height: 1.3em;
-    vertical-align: middle;
-    zoom: 1;
-}
-
-.atc-style-blue .atcb-item-link,
-.atc-style-blue .atcb-item-link:hover,
-.atc-style-blue .atcb-item-link:active,
-.atc-style-blue .atcb-item-link:focus
-{
-    color: #000;
-    font-family: "Verdana";
-    font-size: 14px;
-    text-decoration: none;
-    outline: none;
-    padding: 5px 15px;
-}
-
-.atc-style-blue .atcb-item-link:hover,
-.atc-style-blue .atcb-item-link:active,
-.atc-style-blue .atcb-item-link:focus
-{
-    color: #fff !important;
-}
-
-.atc-style-blue .atcb-item:hover,
-.atc-style-blue .atcb-item:hover {
-    background: rgb(66,129,244) !important;
-}
-
-.calendar {
-  margin-left:50%;
-}
-
-
-
-
 
 
 
@@ -229,53 +48,67 @@ li a:hover {
 
 <template name="event_new">
  {{> centerheader}}
-<br><br><br><br><br><br>
 
 
-<div class="container form">
-<div class="col-xs-4"></div>
-<div class="col-xs-4">
-  <form>
-        <label>Label</label>
-        <input type="text" name="label" style="border: 1px solid black"><br>
-        <label>Location</label>
-        <input type="text" name="location" style="border: 1px solid black"><br>
-        <input type="submit" value="Submit">
-    </form>
+<div class="container"> <!--Container start-->
+    <div class="row"> <!--Row start-->
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+         {{> flashMessages}}
+            <form role="form" id="createEvent-form"> <!--Form start-->
+                <fieldset>
+                    <h2 style="text-align: center;">Here's Your Chance To Earn or Teach</h2>
+
+                    <hr class="colorgraph">
+
+                    <div class="form-group">
+              <input type="text" name="eventName" id="eventName" class="form-control input-lg" placeholder="Event Name" required>
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="eventDesc" id="eventDesc" class="form-control input-lg" placeholder="Event Description" required>
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="eventLoc" id="eventLoc" class="form-control input-lg" placeholder="Event Location" required>
+            </div>
+
+            <div class="form-group">
+              <input type="date" name="eventDate" id="eventDate" class="form-control input-lg" placeholder="Event Date" required>
+            </div>
+
+            <div class="form-group">
+              <input type="time" name="eventTime" id="eventTime" class="form-control input-lg" placeholder="Event Time" required>
+            </div>
+
+            <div class="form-group">
+              <input type="number" name="eventPrice" id="eventPrice" class="form-control input-lg" placeholder="Event Price in €" required>
+            </div>
+
+            <div class="form-group">
+              <input type="number" name="eventSeats" id="eventSeats" class="form-control input-lg" placeholder="Event Seats" required>
+            </div>
 
 
 
-  <script type="text/javascript">(function () {
-            if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
-            if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
-                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-                s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
-                s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
-                var h = d[g]('body')[0];h.appendChild(s); }})();
-    </script>
 
-    <!-- 3. Place event data -->
-    <span class="addtocalendar atc-style-blue calendar" >
-        <var class="atc_event">
-            <var class="atc_date_start">2016-10-10 12:00:00</var>
-            <var class="atc_date_end">2016-05-04 18:00:00</var>
-            <var class="atc_timezone">Europe/London</var>
-            <var class="atc_title">Star Wars Day Party</var>
-            <var class="atc_description">May the force be with you</var>
-            <var class="atc_location">Tatooine</var>
-            <var class="atc_organizer">Luke Skywalker</var>
-            <var class="atc_organizer_email">luke@starwars.com</var>
-        </var>
-    </span>
 
-</div>
-<div class="col-xs-4"></div>
-</div>
+                    <hr class="colorgraph">
+
+                    <div class="row"> <!-- Div for Centered Register Button-->
+              <div class="col-xs-4"></div>
+                        <div class="col-xs-4">
+                            <input class="btn btn-lg btn-primary btn-block" value="Create Event" type="submit">
+                        </div>
+              <div class="col-xs-4"></div>
+                    </div><!-- Div for Centered Register Button-->
+                </fieldset>
+            </form> <!--Form end-->
+        </div>
+    </div> <!--Row end-->
+  </div> <!--Container end-->
 
 <br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br>
+
  
 </template>
 

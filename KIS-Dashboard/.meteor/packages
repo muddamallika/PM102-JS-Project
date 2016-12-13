@@ -34,7 +34,8 @@ session@1.1.7
 accounts-password
 mrt:flash-messages
 
-huttonr:bootstrap3
 zuuk:stale-session
 
 easy:search
+huttonr:bootstrap3
+accounts-facebook

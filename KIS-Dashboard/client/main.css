@@ -69,7 +69,6 @@
 }
 
 
-<<<<<<< HEAD
 /* Articles Main page */
 .articleMainCSS {
   background-image: url("/Images/Backgrounds/bg9.jpg");
@@ -282,7 +281,6 @@
 
 
 /*Friends.html end*/
-=======
 /*  During.html css -------------------------START------------------------- */
 
 /* Carousel base class */
@@ -322,3 +320,395 @@
 }
 
 /*  During.html css ---------------END----------------------------------- */
+
+
+
+/* Article CSS starts */
+
+/*Article Home Page*/
+.articlehome{
+  background-image: url("/Images/articlesHome.jpg") ;
+  background-size: 1000px 800px;
+}
+.allArticle{
+  background-image: url("/Images/MyArticle.jpg")  ;
+  background-size:cover;
+  width:100%;
+}
+.postarticle{
+  background-image:url("/Images/articlesHome.jpg");
+  background-size: cover;
+  height:550px;
+}
+.readarticles{
+  background-image: url("/Images/maxresdefault.jpg")  ;
+  background-size: cover;
+}
+.myarticle{
+  background-image: url("/Images/allArticle.jpg") ;
+  background-size: cover;
+}
+.searcharticles
+{
+  background-image: url("/Images/MyArticle.jpg") ;
+  background-size: cover;
+  width:100%;
+}
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: blue;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: blue}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: blue;
+}
+      .authourclass{
+          font-size: 100%;
+           font-weight: normal
+      }
+
+
+.stickyh4Class,.stickypClass{
+  font-size:100%;
+  font-weight:normal;
+}
+.stickyulClass,.stickyliClass{
+  list-style:none;
+}
+.stickyulClass{
+  overflow:hidden;
+  padding:3em;
+  background-color: transparent;
+}
+.stickyulClass .stickyliClass .stickyaClass{
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  height:10em;
+  width:10em;
+  padding:1em;
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -moz-transition:-moz-transform .15s linear;
+  -o-transition:-o-transform .15s linear;
+  -webkit-transition:-webkit-transform .15s linear;
+}
+.stickyulClass .stickyliClass{
+  margin:1em;
+  float:left;
+}
+.stickyulClass .stickyliClass .stickyh4Class{
+  font-size:140%;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+.stickyulClass .stickyliClass .stickypClass{
+  font-family:"Reenie Beanie",arial,sans-serif;
+  font-size:180%;
+}
+.stickyulClass .stickyliClass .stickyaClass{
+  -webkit-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  -moz-transform:rotate(-6deg);
+}
+.stickyulClass .stickyliClass:nth-child(even) .stickyaClass{
+  -o-transform:rotate(4deg);
+  -webkit-transform:rotate(4deg);
+  -moz-transform:rotate(4deg);
+  position:relative;
+  top:5px;
+  background:#cfc;
+}
+.stickyulClass .stickyliClass:nth-child(3n) .stickyaClass{
+  -o-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+  -moz-transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+  background:#ccf;
+}
+.stickyulClass .stickyliClass:nth-child(5n) .stickyaClass{
+  -o-transform:rotate(5deg);
+  -webkit-transform:rotate(5deg);
+  -moz-transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+}
+.stickyulClass .stickyliClass .stickyaClass:hover,.stickyulClass .stickyliClass .stickyaClass:focus{
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+ol{text-align:center;}
+ol .stickyliClass{display:inline;padding-right:1em;}
+ol .stickyliClass .stickyaClass{color:#fff;}
+
+
+/*Article CSS Ends  */
+
+/*  duringAccom.html page CSS start */
+.duringAccomCSS .mt-100 {
+    margin-top: 100px;
+}
+.duringAccomCSS .mb-100 {
+    margin-bottom: 100px;
+}
+
+.duringAccomCSS .icon {
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    padding: 7px 8px;
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+.duringAccomCSS .header {
+    padding-top: 50px;
+    background-color: #eee;
+    overflow: hidden;
+}
+.duringAccomCSS .footer {
+    color: #887;
+    background-color: #eee;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.duringAccomCSS .content {
+    position: relative;
+    display: table;
+    width: 100%;
+    min-height: 100vh;
+}
+.duringAccomCSS .pull-middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.duringAccomCSS .btn {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.duringAccomCSS .btn-circle {
+    border-radius: 20px;
+}
+
+.duringAccomCSS .input-group input {
+    border: 0;
+    box-shadow: none;
+    padding-right: 30px;
+}
+.duringAccomCSS .input-group input:focus,
+.duringAccomCSS .input-group input:active {
+    outline: 0;
+    box-shadow: none;
+}
+.duringAccomCSS .input-group-btn:last-child>.btn {
+    z-index: 2;
+    margin-left: -18px;
+    border-radius: 20px;
+}
+
+.duringAccomCSS .phone {
+    position: relative;
+    max-width: 263px;
+    margin: 0 auto;
+    padding: 65px 15px 55px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    background-color: #222;
+    box-shadow: 20px 20px 40px #887;
+}
+
+/*  duringAccom.html page CSS end */
+
+
+/*  teamPage.html page CSS start */
+.teamPageCSS {
+  font-family: cursive;
+}
+.teamPageCSS h1{
+    font-size:3.5em;
+}
+
+.teamPageCSS p{
+ font-weight:400;
+ font-size:3em;
+}
+
+.teamPageCSS  .img-quadrata {
+       border-radius:50%;
+       width:250px;
+       height:250px;
+}
+
+.teamPageCSS h3{
+    	font-weight:800;
+        color:#f0ad4e;
+        font-size:2em;
+}
+
+/* teamPage.html page CSS end */
+
+/* newDisc.html page CSS start */
+.postArticlesCSS{
+  background-image: url("/Images/Backgrounds/bg9.jpg");
+}
+
+.form-style-5{
+    max-width: 500px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    margin: 10px auto;
+    padding: 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form-style-5 fieldset{
+    border: none;
+}
+.form-style-5 legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.form-style-5 label {
+    display: block;
+    margin-bottom: 8px;
+}
+.form-style-5 input[type="text"],
+.form-style-5 input[type="date"],
+.form-style-5 input[type="datetime"],
+.form-style-5 input[type="email"],
+.form-style-5 input[type="number"],
+.form-style-5 input[type="search"],
+.form-style-5 input[type="time"],
+.form-style-5 input[type="url"],
+.form-style-5 textarea,
+.form-style-5 select {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #e8eeef;
+    color:#8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+
+}
+.form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="date"]:focus,
+.form-style-5 input[type="datetime"]:focus,
+.form-style-5 input[type="email"]:focus,
+.form-style-5 input[type="number"]:focus,
+.form-style-5 input[type="search"]:focus,
+.form-style-5 input[type="time"]:focus,
+.form-style-5 input[type="url"]:focus,
+.form-style-5 textarea:focus,
+.form-style-5 select:focus{
+    background: #d2d9dd;
+}
+.form-style-5 select{
+    -webkit-appearance: menulist-button;
+    height:35px;
+}
+.form-style-5 .number {
+    background: #1abc9c;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+
+.form-style-5 input[type="submit"],
+.form-style-5 input[type="button"]
+{
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #1abc9c;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #16a085;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover
+{
+    background: #109177;
+}
+/* newDisc.html page CSS end */
+
+/* forumMain.html page CSS end */
+
+
+/* forumMain.html page CSS end */
+
+/* .html page CSS end */
+
+/* .html page CSS end */

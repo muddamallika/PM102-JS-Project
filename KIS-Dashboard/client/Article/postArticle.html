@@ -1,152 +1,44 @@
-<head>
-  <title>KIS-Dashboard</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<style>
-    .up {
-      margin-top: -36px;
-    }
-
-    .down {
-      margin-top: 10px;
-    }
-
-    .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-    }
-
-    .fa {
-      size: 20px;
-    }
-
-    .foot_img {
-      margin-bottom: : -50px;
-    }
-
-  .img-circle {
-    margin-top: -10px;
-  }
-
-
-  a{
-    text-decoration: none !important;
-    color: black;
-  }
-
-
-
-   btn{
-    text-decoration: none !important;
-
-  }
-
-  .mid{
-    margin-top: 120px;
-    font-size: 30px;
-
-  }
-
-
-#f1_container {
-  position: relative;
-  margin: 10px auto;
-  height: 250px;
-  width: 50%;
-  background-color: none;
-  z-index: 1;
-}
-#f1_container {
-  perspective: 1000;
-}
-#f1_card {
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: all 1.0s linear;
-}
-#f1_container:hover #f1_card {
-  transform: rotateY(180deg);
-  box-shadow: -5px 5px 5px #aaa;
-}
-.face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-.face.back {
-  display: block;
-  transform: rotateY(180deg);
-  box-sizing: border-box;
-  padding: 10px;
-  color: black;
-  text-align: center;
-  background-color: white;
-
-}
-
-#image {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 250px;
-  width: 100%;
-}
-    .postarticle
-      {
-      background-image:url("/Images/articleBG.jpg");  
-      background-size: cover;
-      }
-    
-</style>
-</head>
-
-<body>
-
-</body>
-
 <template name="pArticle">
 
  {{> Header}}
 <br><br><br><br>
-    
  <div class="container postarticle">
-	<!--code from here-->
  <form> 
-     <div class="page-header"><h1>Put your thoughts in words</h1></div>
-     <div>Article Name :<input type="Text" id="ArticleName" placeholder="Give a name to your article" required="true" /></div><br>
-    <div>Category : <select name="Category" id="Category">
-  <option value="Technology"  >Technology</option>
-  <option value="Fashion" >Fashion</option>
-  <option value="Lifestyle" >Lifestyle</option>
-</select>
-        </div>
-      <br>
+     <div class="container">
+     <h1 align="center">Put your thoughts in words</h1>
+         <br>
+     <div class="row">
+      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+     <div class="alert alert-success alert-dismissable fade in">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <strong>Success!</strong> The article has been successfully posted
+     </div>
+          <input type="text" name="ArticleName" id="ArticleName" class="form-control input-lg" placeholder="Give a name to your article" required="true" >
+          <br>
+          <select  name="Category" id="Category" class="form-control input-lg">
+            <option value="Technology"  >Technology</option>
+            <option value="Fashion" >Fashion</option>
+            <option value="Lifestyle" >Lifestyle</option>
+          </select>
         <br>
-       <textarea id="Article" rows="4" cols="50" placeholder="Please write the content of your article here" required="true" ></textarea>
+       <textarea id="Article" rows="4" cols="120" placeholder="Please write the content of your article here" required="true"  class="form-control input-lg" ></textarea>
         <br>
-        <!--<br>
-         <input type="file"/>
-
-        <br>-->
-        <br>
-     <div>Author Name :<input type="Text" id="AuthorName" placeholder="Give a name of the Author" /></div><br>
- <input type="submit" class="btn btn-submit" value="Post your Blog">
-       <a href="/Articles/Articles_Sel" class="btn">View Articles</a><br><br>
+      <input type="text" name="AuthorName" id="AuthorName" placeholder="Give a name of the Author"  class="form-control input-lg"><br>
+          <div class="col-xs-3"> </div>
+          <div class="col-xs-3">  <input type="submit" class="btn btn-submit btn-primary" value="Post your Blog"></div>
+          
+          <div class="col-xs-1"></div>
+          <div class="col-xs-2"><input id="back" type="reset" class="btn btn-submit" value="Reset"></div>
+      
+         </div>
+         </div>
+          </div>
      </form>
     </div>
+    <script>
+          $(document).ready(function(){
+              $(".alert").hide()
+      $(window).scrollTop(0);
+  });
+    </script>
 </template>

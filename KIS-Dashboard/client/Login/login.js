@@ -11,10 +11,10 @@ Template.login.events({
             	FlashMessages.sendError("Please check your password and userid");
                 
             }
-            else {
-                Router.go('/');
-            }
-            
+            else
+                var loginroute= Router.current().route.getName();
+                if(loginroute=='login')
+                Router.go('/');   
         });
     }
 });

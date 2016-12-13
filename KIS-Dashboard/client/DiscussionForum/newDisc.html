@@ -1,0 +1,25 @@
+<!--New Discussion Creation Start-->
+<template name="newDisc">
+  {{> centerheader}}
+  <div class="container-fluid">
+    {{> flashMessages}}
+    <div class="form-style-5">
+    <form>
+      <fieldset>
+          <legend>&nbsp;&nbsp;<span class="number">1</span> Post Your Query to Discuss</legend>
+          <input type="text" name="discTitle" placeholder="Give a title to your discussion*" required="true">
+      </fieldset>
+
+      <fieldset>
+        <legend>&nbsp;&nbsp;<span class="number">2</span> Give a brief explanation to your query</legend>
+        <textarea name="discContent" rows="4" cols="50" placeholder="Write [or] Copy and paste your article here" required="true"></textarea>
+      </fieldset>
+
+      <input type="submit" value="Submit Your Query" />
+    </form>
+    </div>
+    <br>
+  </div>
+  <br>
+</template>
+<!--New Discussion Creation end-->

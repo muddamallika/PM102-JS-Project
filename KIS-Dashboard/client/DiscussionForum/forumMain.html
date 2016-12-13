@@ -1,0 +1,36 @@
+<!--Forum Main Page tab-->
+<template name="forumMain">
+  {{> centerheader}}
+  <div class="container-fluid forumMainCSS">
+
+    <div class="col-xs-4">
+
+    </div>
+
+    <div class="col-xs-8" style="color:white">
+      {{> discFetch}}
+    </div>
+
+  </div>
+  <br>
+</template>
+<!--Forum Main Page tab end-->
+
+<!--Template to fetch the required field values from the Database-->
+<template name="discFetch">
+  <ul class="unorder1">
+      <!--Values are fetched from the collection - forum-->
+      {{#each forum}}
+        <a class="lead" href="/forum/{{_id}}" target="_blank">
+         {{> discDisplay}} <br>
+        </a>
+      {{/each}}
+  </ul>
+</template>
+
+<!--Template to display the requested values from the Database-->
+<template name="discDisplay">
+  <li>
+    {{dTitle}}
+  </li>
+</template>
