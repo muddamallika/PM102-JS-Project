@@ -3,37 +3,32 @@
   <form id="article">
 <div class="container articlehome">
 <div class="container">
-<h1 align="center">Article <small>Put your thoughts here...</small></h1>
-<div class="container">
+<h1 style="text-align: center;">Article <small>Put your thoughts here...</small></h1><br><br>
+    <div class="container">
     <div class="row">
 
     
 <div class="col-xs-8">
       <div class="col-xs-2">
     {{#if currentUser}}
-    <a href="/myArticle/myArticle" class="btn btn-info">My Articles</a>
+    <a href="/myArticle/myArticle" class="btn btn-info" style="color: #030805;font-weight: bold; font-size: 20px;">My Articles</a>
     {{else}}
-    <a href="/Login/login" class="btn btn-info">My Articles</a>
+    <a href="/Login/login" class="btn btn-info" style="color: #030805;font-weight: bold; font-size: 20px;">My Articles</a>
     {{/if}}
-  </div><br><br>
+  </div><br><br><br><br>
   <div class="col-xs-2">
     {{#if currentUser}}
-    <a href="/postArticle/pArticle" class="btn btn-info" >Post Your Own Article</a>
+    <a href="/postArticle/pArticle" class="article btn btn-info" style="color: #030805;font-weight: bold; font-size: 20px;" >Post Your Own Article</a>
     {{else}}
-    <a href="/Login/login" class="btn btn-info">Post Your Own Article</a>
+    <a href="/Login/login" class="btn btn-info" style="color: #030805;font-weight: bold; font-size: 20px;">Post Your Own Article</a>
     {{/if}}
-  </div><br><br>
+  </div><br><br><br><br>
   <div class="col-xs-2">
-    {{#if currentUser}}
-    <a href="/Articles/Articles_Sel" class="btn btn-info">View all Articles</a>
-    {{else}}
-    <a href="/Login/login" class="btn btn-info">View all Articles</a>
-    {{/if}}
+      <a href="/Articles/Articles_Sel" class="btn btn-info" style="color: #030805;font-weight: bold; font-size: 20px;">View all Articles</a>
    </div>
   </div>
 <div class="col-xs-4">
-                <!-- Blog Search Well -->
-                <div class="well" style="height: 100px;width: 340px">
+             <div class="well" style="height: 100px;width: 330px">
                     <h4>Blog Search</h4>
                     <div class="input-group">
                         <input type="text" id="articleSearch" class="form-control">
@@ -43,13 +38,12 @@
                         </a>
                         </span>
                     </div>
-                    <!-- /.input-group -->
-                </div>
+    </div>
   
 <div class="col-xs-4 mar">
- <div class="well" style="height: 310px;width: 330px">
+ <div class="well" style="height: 310px;width: 320px">
                     <h4>Latest Articles</h4>
-    <div class="marquee marqBox" style="height: 240px;width: 300px" data-direction='up' data-duration='3000' data-pauseOnHover="true" >
+    <div class="marquee marqBox" style="color: #030805;height: 240px;width: 300px" data-direction='up' data-duration='3000' data-pauseOnHover="true" >
  
       <p style="text-decoration: none !important">
           {{> Allarticle}}
