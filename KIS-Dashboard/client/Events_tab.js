@@ -53,12 +53,4 @@ Template.mytemplate.helpers({
 	}
 });
 
-
-Template.totalregistrations.helpers({
-	totalnum: function(){
-		var Event_id = Session.get("currentList");
-		return Total_Regis_Events.find({ Eventcreated_id:Event_id }).count();
-	}
-});
-
 }
