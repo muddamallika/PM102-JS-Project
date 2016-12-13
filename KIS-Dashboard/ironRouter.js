@@ -168,6 +168,11 @@ Router.route('/userProfile', function() {
   this.render('userProfile');
 });
 
+//Edit User Profile Page
+Router.route('/userProfile/edit', function() {
+  this.render('editProfile');
+});
+
 //Arrival Main Page
 Router.route('/MainArrival', function() {
   this.render('MainArrival');
