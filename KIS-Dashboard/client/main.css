@@ -19,8 +19,8 @@
   background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
 /* eventDetail.html page - Background settings for whole page*/
-.eventDetailCss {
-  background-image: url("/Images/Backgrounds/bg5.jpg");
+.eventCSS {
+  background-image: url("/Images/Backgrounds/bg10.jpg");
 
 }
 
@@ -754,4 +754,16 @@ ol .stickyliClass .stickyaClass{color:#fff;}
   width: 300px;
   height: 200px;
   overflow: scroll;
+}
+
+/*Events_tab.html start*/
+.eveDetails{
+  color:black;
+  font-size:130%;
+  font-weight: normal;
+}
+
+/*Event_cancel.html start*/
+.cancelEveCSS{
+  font-family: 'Varela Round';
 }

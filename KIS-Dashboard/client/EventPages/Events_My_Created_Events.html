@@ -1,14 +1,17 @@
+<!--Template for displaying events created by the user -->
 <template name="my_created_events">
   {{> centerheader}}
   {{> my_created_events_db}}
 </template>
 
+<!-- Template for displaying the events registered by the user-->
 <template name="my_registered_events">
   {{> centerheader}}
   <div class="container">
     <br><br><br><br><br>
     <p>{{_id}}</p>
-    <p>Hey, {{currentUser.profile.name}} below are the list of Events that you Registered</p>
-    {{> canceldb}}
+    <p class="lead">Dear {{currentUser.profile.name}}, below are the list of Events that you have Registered</p>
+    <!--canceldb renders the list of all events registered by the user-->
+    <p class="lead">{{> canceldb}}</p>
   </div>
 </template>
