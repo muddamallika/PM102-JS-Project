@@ -748,3 +748,10 @@ ol .stickyliClass .stickyaClass{color:#fff;}
   font-family: 'Varela Round';
 }
 /*Register.hmtl page CSS end*/
+
+
+.scroll {
+  width: 300px;
+  height: 200px;
+  overflow: scroll;
+}
