@@ -11,14 +11,14 @@
     Comments.insert({
         Comment:   comment,
         currentArticleID:currentArticleID,
-        currentUserId: currentUserId,
+        commenterUserID: currentUserId,
         createdat: createdat
 
     });
         
     event.target.comment.value = "";
 },
-     'click .btnlike': function(event){
+     'click #btnlike': function(event){
 	event.preventDefault();
     var like = "Liked";
     var currentArticleID=document.getElementById("currentArticleID").value;
@@ -32,8 +32,7 @@
         createdat: createdat
 
     });
-         $("#btnlike").attr("value", "Liked"); 
-         $("#btnlike").attr("disabled", true); 
+         $("#divlike").hide(); 
           
      }
 });
@@ -57,6 +56,11 @@ Template.CommentsCount.helpers({
     return Likes.find({ currentArticleID: currentArticleID }).count();
   }
 });
-
+    Template.Commentby.helpers({
+          commentby: function() {
+    var currentUserId= document.getElementById("currentCommenterID").value;
+    return Register_Search.find({ usrId: currentUserId }).fetch();
+  }
+      });
 
 }
