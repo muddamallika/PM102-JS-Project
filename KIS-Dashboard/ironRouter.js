@@ -1,4 +1,4 @@
-
+//Route for Footer - By default appears in all the pages.
 Router.configure({
     layoutTemplate: 'footer',
     notFoundTemplate: 'notFound'
@@ -15,12 +15,12 @@ Router.route('/Contact', function(){
   this.render('Contact');
 });
 
-//home Profile
+//home Profile - route for the 9 tabs which feature functionalities
 Router.route('/homeProfile/Profile', function() {
     this.render('Profile');
 });
 
-
+//**************************************************STATIC PAGES ROUTES******************************************
 //before Arrival
 Router.route('/bArrival/beforeA', function() {
     this.render('beforeA');
@@ -52,36 +52,14 @@ Router.route('/dArrival/duringA', function() {
 });
 
 
-
 //before Arrival - Travel economically
 Router.route('/bAtraveleco/bAtravel', function() {
     this.render('bAtravel');
 });
 
-
-
-
-
-Router.route('/public', function(){
-    this.render();
-
-});
-
 //About Us Page
 Router.route('/aboutus', function() {
     this.render('aboutus');
-});
-
-
-
-
-
-Router.route('/Register/register', function() {
-  this.render('register');
-});
-
-Router.route('/login', function() {
-  this.render('login');
 });
 
 
@@ -159,9 +137,58 @@ Router.route('/ontheroad', function() {
   this.render('ontheroad');
 });
 
+//Before Arrival Landing Page
+Router.route('/before', function() {
+  this.render('before');
+});
+
+//During Arrival Landing Page
+Router.route('/during', function() {
+  this.render('during');
+
+});
+
+//after Arrival Landing Page
+Router.route('/after', function() {
+  this.render('after');
+});
+
+//During Arrival - Accomodation Details Page
+Router.route('/duringAccom', function(){
+  this.render('duringAccom');
+});
+
+//During Arrival - Transportation Details Page
+Router.route('/duringTrans', function(){
+  this.render('duringTrans');
+});
+
+//During Arrival - Assistance Details Page
+Router.route('/duringAssist',function(){
+  this.render('duringAssist');
+});
+
+//Team Page
+Router.route('/teamPage',function(){
+  this.render('teamPage');
+});
+//**************************************************STATIC PAGES ROUTES******************************************
+Router.route('/public', function(){
+    this.render();
+});
+
+//******************REGISTER PAGE ROUTE**********************
+Router.route('/Register/register', function() {
+  this.render('register');
+});
+
+//*******************LOGIN PAGE ROUTE*********************
+Router.route('/login', function() {
+  this.render('login');
+});
 
 
-//Find friends
+//****************Search / Find Friends Page routes*********
 Router.route('/Friends/search', function() {
     this.render('search');
 });
@@ -175,35 +202,18 @@ Router.route('/register_search/:_id', {
 }
 });
 
-
-//Before Arrival Landing Page
-Router.route('/before', function() {
-  this.render('before');
-});
-
-//During Arrival Landing Page
-Router.route('/during', function() {
-  this.render('during');
-
-});
-
-
-
-
+//***************************************ARTICLE PAGE ROUTES*************************************************
 //Article Home
-
 Router.route('/ArticleHome/ArticleHome',function(){
 this.render('ArticleHome')
 });
 
 //View all Article
-
 Router.route('/Articles/Articles_Sel',function(){
 this.render('Articles_Sel')
 });
 
 //View my Article
-
 Router.route('/myArticle/myArticle',function(){
 this.render('myArticle')
 });
@@ -212,7 +222,6 @@ this.render('myArticle')
 Router.route('/postArticle/pArticle', function() {
 	this.render('pArticle');
 });
-
 
 //read Article (optional)
 Router.route('/readArticles/rArticle', function() {
@@ -232,13 +241,11 @@ Router.route('/readArticle/:_id', {
    }
 
 });
-//after Arrival Landing Page
-Router.route('/after', function() {
-  this.render('after');
-});
+
+//***************************************ARTICLE PAGE ROUTES*************************************************
 
 
-
+//************************EVENTS PAGES ROUTES**************************
 
 //Events Main Page
 Router.route('/eventsMain', function() {
@@ -283,13 +290,11 @@ Router.route('/myCreateEvents', function() {
 
 
 // Posting Events
-
 Router.route('/Events/event', {
     template: 'event'
 });
 
 //Events_tab
-
 Router.route('/total_events/:_id', {
    template: 'event_tab',
    data: function(){
@@ -298,7 +303,6 @@ Router.route('/total_events/:_id', {
    }
 });
 
-
 Router.route('/events/:_id', {
    template: 'my_event_discr',
    data: function(){
@@ -306,7 +310,6 @@ Router.route('/events/:_id', {
        return Events.findOne({ _id: currentList});
    }
 });
-
 
 Router.route('/Event_new/event_new',{
   template:'event_new',
@@ -348,8 +351,6 @@ Router.route('/my_event_buttons', function() {
   this.render('my_event_buttons');
 });
 
-
-
 Router.route('Event_cancel/regis_events/:_id', {
    template: 'cancel_event',
    data: function(){
@@ -362,27 +363,9 @@ Router.route('/Event_cancel/event_cancel', function(){
   this.render('event_cancel');
 });
 
-//During Arrival - Accomodation Details Page
-Router.route('/duringAccom', function(){
-  this.render('duringAccom');
-});
+//************************EVENTS PAGES ROUTES**************************
 
-//During Arrival - Transportation Details Page
-Router.route('/duringTrans', function(){
-  this.render('duringTrans');
-});
-
-//During Arrival - Assistance Details Page
-Router.route('/duringAssist',function(){
-  this.render('duringAssist');
-});
-
-//Team Page
-Router.route('/teamPage',function(){
-  this.render('teamPage');
-});
-
-
+//*******************************DISCUSSION FORUM PAGES*******************************
 //forum Main Page
 Router.route('/forumMain',function(){
   this.render('forumMain');
@@ -401,7 +384,6 @@ Router.route('/newDisc',{
    }
 });
 
-
 //Discussion Detail Page
 Router.route('forum/:_id', {
    template: 'discDetailPage',
@@ -410,6 +392,7 @@ Router.route('forum/:_id', {
        return Regis_Events.findOne({ _id: currentList });
 }
 });
+//*******************************DISCUSSION FORUM PAGES*******************************
 
 //Admin Routes
 Router.route('/admin',{
@@ -426,4 +409,18 @@ Router.route('/admin',{
     }
   };
 }
+});
+
+//*******************************CHAT PAGES ROUTES*******************************
+// Chat Route
+Router.route('/chat',{
+  template:'chat',
+  onBeforeAction: function(){
+       var currentUser = Meteor.userId();
+       if(currentUser){
+           this.next();
+       } else {
+           this.render("login");
+       }
+   }
 });

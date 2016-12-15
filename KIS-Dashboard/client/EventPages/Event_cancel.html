@@ -4,11 +4,9 @@
       color: black;
       background-color: transparent;
     }
-
     .cancel {
       color:transparent;
     }
-
     input {
       border-color: transparent;
     }
@@ -17,49 +15,77 @@
 
 <body>
 </body>
-<!-- -->
+<!--Template for displaying all the events that user have registered for-->
 <template name="event_cancel">
   {{> centerheader}}
-  <div class="container">
-    <br><br><br><br><br>
-    <p>Hey, {{currentUser.profile.name}} below are the list of Events that you Registered</p>
-    {{> canceldb}}
+  <div class="container text-center">
+    <br>
+    <p class="lead" style="font-weight:normal;font-size:190%">Dear {{currentUser.profile.name}}, Below are the details of all Events that you have registered:</p>
+    <p class="lead" style="font-weight:bold;font-family:cursive;">{{> canceldb}}</p>
   </div>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br>
 </template>
 
-<!-- -->
+<!--Template to render the Event information that user want to cancel-->
 <template name="cancelinfo">
-    Event Name: {{eventName}}     Event Date: {{eventDate}}
+    <p class="lead">
+    {{eventName}}
+    </p>
     <br><br>
 </template>
 
-<!-- -->
+<!--Template for fetching the details that need to be cancelled -->
 <template name="canceldb">
     <ul class="unorder">
         {{#each regis_events}}
           <a href="regis_events/{{_id}}">
-            {{> cancelinfo}}<br>
+            {{> cancelinfo}}
           </a>
         {{/each}}
     </ul>
 </template>
 
-<!-- -->
-<template name="cancel_event">
+<!--Template to cancel the event that user selects-->
+<template name="cancel_event" >
   {{> centerheader}}
-  <br><br>
+  <br>
   {{#if currentUser}}
     <form>
-      <p> Full Details of the event that you want to cancel</p>
-      <p class="text-center"><b>Event Name: </b> {{eventName}} </p>
-      <p class="text-center"><b>Event Date: </b>{{eventDate}} </p>
-      <input type="submit" name="OK">
+      <h2 class="text-center" style="font-family:Varela Round" > Details of the event that you would like to cancel</h2>
+      <div class="container" ><hr></div>
+      {{> flashMessages}}
+      <div class="container cancelEveCSS" >
+        <div class="col-xs-3"></div>
+        <div class="col-xs-3 lead"><b>Event Name:</b></div>
+        <div class="col-xs-6 lead">{{eventName}}</div>
+      </div>
+      <div class="container cancelEveCSS">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-3 lead"><b>Event Description:</b></div>
+        <div class="col-xs-6 lead">{{eventDesc}}</div>
+      </div>
+      <div class="container cancelEveCSS">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-3 lead"><b>Event Location:</b></div>
+        <div class="col-xs-6 lead">{{eventLoc}}</div>
+      </div>
+      <div class="container cancelEveCSS">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-3 lead"><b>Event Date:</b></div>
+        <div class="col-xs-6 lead">{{eventDate}}</div>
+      </div>
+      <div class="container"><hr></div>
+
+      <div class="container cancelEveCSS">
+        <div class="col-xs-5"></div>
+        <div class="col-xs-4"><input type="submit" class="btn btn-lg btn-default" value="Cancel Event" name="cancel"></div>
+        <div class="col-xs-3"></div>
+      </div>
       <input type="text" name="cancel" value="{{_id}}" class="cancel" readonly>
     </form>
   {{else}}
-      <p>Please Login before you cancel an Event</p>
-      <a href="/Login/login">Click here for Logging in</a>
+      <p class="lead">Please Login before you cancel an Event<br><br><br>
+      <a href="/login">Click here for Logging in</a> </p>
   {{/if}}
   <br><br><br><br>
 </template>

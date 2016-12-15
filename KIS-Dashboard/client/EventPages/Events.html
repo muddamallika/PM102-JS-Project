@@ -94,7 +94,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: white;
+    background-color: transparent;
 }
 </style>
 </head>
@@ -105,16 +105,15 @@
 <!-- Template for the event main page-->
 <template name="event">
   {{> centerheader}}
-  <hr>
-  <div class="container-fluid eventCSS">
+  <div class="container eventCSS">
       <div class="col-xs-3">
           <!-- Verifying whether user had logged in or not -->
           <br>
           <div class="container">
             {{#if currentUser}}
-              <a href="/Events/my_events" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">My Events</a>
+              <a href="/Events/my_events" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" >My Events</a>
             {{else}}
-              <a href="/Login/login" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">My Events</a>
+              <a href="/login" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" >My Events</a>
             {{/if}}
           </div>
 
@@ -122,9 +121,9 @@
           <!-- Verifying whether user had logged in or not -->
           <div class="container">
             {{#if currentUser}}
-              <a href="/Event_new/event_new" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">Create Event</a>
+              <a href="/Event_new/event_new" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" >Create Event</a>
             {{else}}
-              <a href="/Login/login" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">Create Event</a>
+              <a href="/login" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" >Create Event</a>
             {{/if}}
           </div>
       </div>
@@ -132,7 +131,7 @@
       <div class="col-xs-9">
         <!-- Template call to display all the events that are present -->
         <div class="container">
-         <p class="lead" style="text-decoration: underline;font-weight: bold; font-size: 35px;color: black;text-align:center">Latest Events</p>
+         <p class="lead text-center" style="text-decoration: underline;font-weight: bold; font-size: 35px;color: black;margin-right: 220px" >Latest Events</p>
         </div>
         <div class="container">
           {{> total_events_display}}
@@ -145,8 +144,9 @@
 <!-- Template for event_display -->
 <template name="event_display">
   <!-- Applying Sticky notes display to the events -->
-    <p class="lead" style="font-weight: bold; font-size: 10px;">  {{eventName}} </p>
-    <p class="lead" style="font-weight: normal; font-size: 10px;"> {{eventDate}}</p>
+    <h3 class="lead" style="font-weight: bold; font-size: 10px;">  {{eventName}} </h3>
+    <h3 class="lead" style="font-weight: normal; font-size: 10px;"> {{eventDate}}</h3>
+    <h3 class="lead" style="font-weight: normal; font-size: 10px;"> {{eventLoc}}</h3>
 </template>
 
 <!-- Template for total_events_display page -->
@@ -157,7 +157,7 @@
         {{#each total_events}}
         <!-- Implementing looping for the collection total_events -->
         <li class="order_list">
-          <a class="sticky" href="/total_events/{{_id}}" target="_blank">
+          <a class="sticky" href="/total_events/{{_id}}">
             {{> event_display}}
           </a>
           <br><br>
@@ -170,10 +170,10 @@
 <!-- Template for my_events main page -->
 <template name="my_events">
    {{> centerheader}}
-   <a href="/Events_My_Created_Events/my_created_events" class="btn btn-info cevent" role="button" target="_blank">
+   <a href="/Events_My_Created_Events/my_created_events" class="btn btn-info cevent" role="button" >
      My Created Events
    </a>
-   <a href="/Events_My_Created_Events/my_registered_events" class="btn btn-info cevent" role="button" target="_blank">
+   <a href="/Events_My_Created_Events/my_registered_events" class="btn btn-info cevent" role="button" >
      My Registered Events
    </a>
    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -183,7 +183,8 @@
 <template name="my_created_events_list">
   <div class="stickyinfo">
     <h2> {{eventName}} </h2>
-    <p> {{eventDate}} </p>
+    <h3> {{eventDate}} </h3>
+    <h3> {{eventLoc}} </h3>
   </div>
 </template>
 
@@ -192,7 +193,7 @@
   <ul class="unorder_list">
       {{#each events}}
         <li class="order_list">
-          <a class="sticky" href="/events/{{_id}}" target="_blank">
+          <a class="sticky" href="/events/{{_id}}" >
             {{> my_created_events_list}}
           </a>
           <br><br>
