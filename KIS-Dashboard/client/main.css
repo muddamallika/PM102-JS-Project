@@ -769,3 +769,18 @@ ol .stickyliClass .stickyaClass{color:#fff;}
 .cancelEveCSS{
   font-family: 'Varela Round';
 }
+
+
+/*404 error page  start*/
+.errorpage {
+  font-family: 'Bree Serif', serif;
+  font-size: 95px;
+}
+.errorsearchpage {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 33px;
+}
+.errorcodepage {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 20px;
+}
