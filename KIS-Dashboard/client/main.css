@@ -787,3 +787,34 @@ ol .stickyliClass .stickyaClass{color:#fff;}
   font-family: 'Catamaran', sans-serif;
   font-size: 20px;
 }
+
+/****answersFetch.html CSS start ***/
+.answersFetchCSS{
+  font-family: 'Varela Round';
+}
+
+.answersFetchCSS ul{
+  background-color: transparent;
+  font-family: 'Varela Round';
+  font-size: 20px;
+
+}
+
+.answersFetchCSS blockquote{
+    border-left:none
+}
+
+.answersFetchCSS .quote-box{
+    overflow: hidden;
+    margin-top: -50px;
+    padding-top: -100px;
+    border-radius: 17px;
+    background-color: #D78892;
+    margin-top: 25px;
+    color:whitesmoke;
+    box-shadow: 2px 2px 2px 2px #E0E0E0;
+}
+
+.answersFetchCSS .quote-text{
+    font-size: 19px;
+}

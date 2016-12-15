@@ -1,22 +1,23 @@
 <!--Discussion Details Page Template start-->
 <template name="discDetailPage">
   {{> centerheader}}
-  {{#if currentUser}}
   <div class="container-fluid discDetailCSS">
     <div class="container">
-     <h1 align="center" style="color:black;font-size:300%;font-family: Varela Round;font-weight: bold" > {{dTitle}} fnjdsfnsk</h1>
+     <h1 align="center" style="color:black;font-size:300%;font-family: Varela Round;font-weight: bold" > {{dTitle}} </h1>
      <hr>
-     <h4 style="color:black;font-size:150%;font-family: Varela Round;font-weight: normal" > Discussion Details: {{dContent}}fjfjksdfjks </h4>
+     <h4 class="text-center" style="color:black;font-size:150%;font-family: Varela Round;font-weight: bold" > {{dContent}}</h4>
      <hr>
-     <textarea name="answerQuery" rows="4" cols="50" placeholder="Please post your answers for the Query here" style="color:black;font-size:150%;font-family: Varela Round;font-weight: normal" required="true"></textarea>
+     <h4 class="text-center" style="color:black;font-size:200%;font-family: Varela Round;font-weight: bold" > Posted Answers</h4>
+     {{> answersFetch}}
+     <form class="text-center ansPostCSS" action="index.html" method="post">
+       <textarea name="answerQuery" rows="4" cols="50" placeholder="Please post your answers for the Query here" style="color:black;font-size:150%;font-family: Varela Round;font-weight: normal;border-radius:20px;" required="true"></textarea>
+       <br><br><br>
+       <input type="text" name="discId" value="{{_id}}" >
+       <input class="btn btn-lg btn-default" value="Post Answer" type="submit" name="postAnswer">
+     </form>
     </div>
+    {{> flashMessages}}
   </div>
-  {{else}}
-    <div class="container">
-        <a href="/login"><p>Please log in</p></a>
-      <br><br><br><br><br><br>
-    </div>
-  {{/if}}
-  <br>
+  <br><br>
 </template>
 <!--Discussion Details Page Template end-->
