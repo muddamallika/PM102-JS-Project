@@ -14,6 +14,7 @@
                   <input type="hidden" name="currentArticle" value="{{_id}}" id="currentArticle">
                   <div id="divlike">
                       <span class="glyphicon glyphicon-thumbs-up"></span> <input type="button" id="btnlike" class="btn btn-primary" value="Like"></div>
+                   <div id="divUnlike"><span class="glyphicon glyphicon-thumbs-down"></span><input type="button" id="btnunlike" class="btn btn-primary" value="Unlike"></div> {{> Liked}}
               </div>
            </div>
           <hr>
@@ -38,7 +39,22 @@
                
            <br><br></form>
     </div>
-
+<script> 
+        $(document).ready(function(){    
+                    
+               var x= document.getElementById("liked").value;
+            if(x=="yes")
+                {
+                     $("#divlike").hide();
+                    $("#divUnlike").show();
+                }
+            else{ 
+                $("#divlike").show();
+                $("#divUnlike").hide();
+                
+            }
+      $(window).scrollTop(0);
+  });</script>
 </template>
 
 <template name="CommentsCount">
@@ -72,4 +88,15 @@
 </template>
   <template name="LikesCount">
      <span class="glyphicon glyphicon-thumbs-up"></span> {{likes}} likes
+</template>
+<template name="Liked">
+       {{#if liked}}
+    <input type="hidden" name="liked" value="yes" id="liked" >
+    {{else}}
+    <input type="hidden" name="liked" value="no" id="liked" >
+    {{/if}}
+     {{#each liked}}
+     <input type="hidden" name="LikeID" value="{{_id}}" id="LikeID" >
+    {{/each}}
+    
 </template>

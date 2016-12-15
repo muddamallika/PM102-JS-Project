@@ -33,8 +33,16 @@
 
     });
          $("#divlike").hide(); 
-          
+         $("#divUnlike").show();
+     },
+     'click #btnunlike': function(event){
+	event.preventDefault();
+    var currentid = document.getElementById("LikeID").value;
+     Likes.remove({_id: currentid});
+        $("#divUnlike").hide(); 
+         $("#divlike").show();
      }
+
 });
 
 Template.comments.helpers({
@@ -60,6 +68,13 @@ Template.CommentsCount.helpers({
           commentby: function() {
     var currentUserId= document.getElementById("currentCommenterID").value;
     return Register_Search.find({ usrId: currentUserId }).fetch();
+  }
+      });
+        Template.Liked.helpers({
+          liked: function() {
+            var currentArticleID= this._id;
+            var currentUserId = Meteor.userId();
+            return Likes.find({ currentArticleID: currentArticleID, currentUserId: currentUserId}).fetch();
   }
       });
 
