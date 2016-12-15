@@ -364,12 +364,14 @@
 }
 /* Style The Dropdown Button */
 .dropbtn {
-    background-color: blue;
-    color: white;
+    background-color: skyblue;
+    color: #030805;
     padding: 16px;
     font-size: 16px;
+    font-weight: bold;
     border: none;
     cursor: pointer;
+    width: 220px;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -396,7 +398,7 @@
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: blue}
+.dropdown-content a:hover {background-color: skyblue}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -405,7 +407,7 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: blue;
+    background-color: skyblue;
 }
       .authourclass{
           font-size: 100%;

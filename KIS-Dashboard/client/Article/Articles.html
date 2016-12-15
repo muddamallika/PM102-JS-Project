@@ -10,29 +10,29 @@
      <div class="col-xs-6">  
   {{> article_group}}</div> 
         </div>
-    <div class="col-xs-6 mar" style="height: 150px">
-           {{> LatestArticle}}
+    <div class="col-xs-6 mar" style="height: 150px width:150px">
+        <div id="imgF" style="height: 100px width:100px"><img  src="/Images/6359636369325365532128639689_fashion2.jpg"></div>
+        <div id="imgT" style="height: 100px width:100px"><img src="/Images/healthcare-technology-8-04-2015.jpg"></div>
+        <div id="imgL" style="height: 100px width:100px"><img src="/Images/22eab4ed66_lifestyle.jpg"></div>
     </div>
     </div>
 <br/>
-
-<script >
- $(function() {
-  $('.marquee').marquee({
-    startVisible: true
-  });
-});
-</script>
-
     </div>
 <br><br><br>
+    <script>
+        $(document).ready(function(){
+              $("#imgF").hide();
+             $("#imgT").hide();
+             $("#imgL").hide();
+      $(window).scrollTop(0);
+  });
+    </script>
 </template>
 
 <template name="articleDropdwn">
 <form>
     <div class="dropdown">
   <select class="dropbtn" id="chats">
-
   <div>
       <option selected disabled>Select Your Category </option>
     <option value="Technology">Technology</option>
@@ -53,21 +53,19 @@
           </p>
             <hr>
             <p><span class="glyphicon glyphicon-time"></span> Posted on {{createdat}}</p>
-    <a class="authourclass"  href="/readArticle/{{_id}}">{{ArticleInitial}}....<br> <br> Click to View </a><br><br>
+            <p>{{ArticleInitial}}....</p>
+    <a class="btn btn-primary" href="/readArticle/{{_id}}">Click to View</a><br><br>
   </li>
   <br><br><br><br><br>
 </template>
 
 <template name="article_group">
   <ul class="unorder">
-      {{#each articles}}
+       {{#each articles}}
          {{> article_r}}  <br><br><br><br>
       {{/each}}
   </ul>
-
-
 </template>
-
 <template name="Allarticle">
   <ul class="unorder">
       {{#each articles}}
