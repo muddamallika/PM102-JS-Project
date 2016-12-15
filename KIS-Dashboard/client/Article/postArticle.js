@@ -58,7 +58,7 @@
     $(":submit").attr("disabled", true);  
     Meteor.setTimeout(function () {
             Router.go('/ArticleHome/ArticleHome');
-    }, 6000);
+    }, 3000);
         
 },
      'reset .container': function(event){ 

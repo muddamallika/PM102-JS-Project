@@ -3,6 +3,7 @@
       <div class="container searcharticles">
           <div class="row">
               <div class="col-xs-8">
+  {{#if articles}} 
      {{#each articles}}
         <li>
           <h1>{{ArticleName}}</h1>
@@ -13,6 +14,9 @@
     <a class="btn btn-primary" href="/readArticle/{{_id}}"> Click to View </a><br><br>
   </li>
     {{/each}}
+    {{else}}
+       {{> NoArticleFound}}
+    {{/if}}
               </div>
                  <div class="col-xs-4">
                      <img src="/Images/Dude_With_Magnifying_Glass.png" >

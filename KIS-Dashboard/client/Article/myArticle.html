@@ -32,9 +32,13 @@
 
 <template name="myarticle_group">
   <ul class="unorder">
-      {{#each articles}}
-         {{> myarticle_r}} <br><br><br><br><br><br><br><br>
+       {{#if articles}} 
+       {{#each articles}}
+         {{> myarticle_r}}  <br><br><br><br><br><br><br><br>
       {{/each}}
+    {{else}}
+       {{> NoArticleFound}}
+    {{/if}}
   </ul>
 </template>
 
