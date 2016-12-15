@@ -89,7 +89,6 @@
 
 
 <template name="article_group">
-    
   <ul class="unorder">
      {{#if articles}} 
        {{#each articles}}
@@ -98,13 +97,6 @@
     {{else}}
        {{> NoArticleFound}}
     {{/if}}
-  </ul>
- <ul class="pagination">
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
   </ul>
 
 </template>
