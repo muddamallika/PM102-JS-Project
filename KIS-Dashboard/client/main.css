@@ -18,10 +18,14 @@
   background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
   background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
-/* eventDetail.html page - Background settings for whole page*/
+/* eventDetail.html page - Background settings for whole page */
 .eventCSS {
-  background-image: url("/Images/Backgrounds/bg10.jpg");
+  /*background-image: url("https://trace.theprotag.com/public/src/assets/images/pages-bg.jpg");*/
+  background-color: black;
+}
 
+.mycreEveCSS{
+    background-color: black;
 }
 
 .eDetail{
@@ -72,7 +76,6 @@
 
 /* My Events Main page */
 .myeventsMainCSS {
-  background-image: url("/Images/Backgrounds/bg8.jpg");
   text-align: center;
 }
 
