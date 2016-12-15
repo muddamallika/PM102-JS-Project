@@ -19,11 +19,12 @@
 <template name="event_cancel">
   {{> centerheader}}
   <div class="container text-center">
-    <br>
-    <p class="lead" style="font-weight:normal;font-size:190%">Dear {{currentUser.profile.name}}, Below are the details of all Events that you have registered:</p>
+    <br><br>
+    <p class="lead" style="font-weight:bold;font-family:varela round;font-size:240%">Dear {{currentUser.profile.name}}, Below are list of all Events that you have registered:</p>
+    <p class="lead" style="font-weight:normal;font-family:varela round;font-size:190%">Please select the event that you would like to cancel</p>
     <p class="lead" style="font-weight:bold;font-family:cursive;">{{> canceldb}}</p>
   </div>
-  <br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br>
 </template>
 
 <!--Template to render the Event information that user want to cancel-->
@@ -38,7 +39,7 @@
 <template name="canceldb">
     <ul class="unorder">
         {{#each regis_events}}
-          <a href="regis_events/{{_id}}">
+          <a href="regis_events/{{_id}}" style="color: #0D2621">
             {{> cancelinfo}}
           </a>
         {{/each}}
@@ -87,5 +88,5 @@
       <p class="lead">Please Login before you cancel an Event<br><br><br>
       <a href="/login">Click here for Logging in</a> </p>
   {{/if}}
-  <br><br><br><br>
+  <br><br>
 </template>

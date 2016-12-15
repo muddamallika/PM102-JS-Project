@@ -61,7 +61,11 @@ Template.Articles_Sel.events({
   }
 }); 
     
-  
+      Template.Top3Article.helpers({
+  articles: function() {
+    return Articles.find({},{limit:3}).fetch();
+  }
+}); 
     
 if(Meteor.isServer) {
 

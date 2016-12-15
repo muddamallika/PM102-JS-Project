@@ -4,19 +4,48 @@
 <div class="container allArticle">
     <h1 align="center">Article Hub<small> find all articles here...</small></h1>
     <br><br>
-<div class="row">
-    <div class="col-xs-6">
-  {{> articleDropdwn}}
+    <div class="row">
+         <div class="col-md-6">
+  {{> articleDropdwn}}<br><br>
      <div class="col-xs-6">  
-  {{> article_group}}</div> 
-        </div>
-    <div class="col-xs-6 mar" style="height: 150px width:150px">
+         {{> article_group}}</div></div>
+           <div class="col-md-6">
         <div id="imgF" style="height: 100px width:100px"><img  src="/Images/6359636369325365532128639689_fashion2.jpg"></div>
         <div id="imgT" style="height: 100px width:100px"><img src="/Images/Technology.jpg"></div>
         <div id="imgL" style="height: 100px width:100px"><img src="/Images/22eab4ed66_lifestyle.jpg"></div>
+         </div>
+        </div>
+      
+<br/>    <div class="row">
+     <div class="col-md-6"> 
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Carousel Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="/c1.jpeg" alt="Sravan" width="460" height="345">
+        </div>
+        {{> Top3Article}}
     </div>
-    </div>
-<br/>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+         </div></div>
+             </div>
+    <br>
     </div>
 <br><br><br>
     <script>
@@ -61,6 +90,7 @@
 
 
 <template name="article_group">
+    
   <ul class="unorder">
      {{#if articles}} 
        {{#each articles}}
@@ -70,7 +100,13 @@
        {{> NoArticleFound}}
     {{/if}}
   </ul>
-
+ <ul class="pagination">
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+  </ul>
 
 </template>
 <template name="NoArticleFound">
@@ -90,3 +126,16 @@
       {{/each}}
   </ul>
     </template>
+<template name="Top3Article">
+      
+            {{#each articles}}
+<div class="item">
+        <h3>{{ArticleName}}</h3>
+          <p>
+          by <I>{{AuthorName}} </I> 
+          </p>
+            <hr>
+            <p>{{ArticleInitial}}....</p></div>
+        {{/each}}
+            
+</template>

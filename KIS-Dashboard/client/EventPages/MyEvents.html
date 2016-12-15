@@ -1,0 +1,92 @@
+<!--Template for displaying events created by the user -->
+<template name="my_created_events">
+  {{> centerheader}}
+  <div class="container mycreEveCSS">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-8">
+      <br><br>
+      <div class="container-fluid">
+       <h1 align="center" style="color:white;font-size:300%;font-family: Varela Round;font-weight: bold;" > Events I have Created</h1>
+       <hr>
+      </div>
+      {{> my_created_events_db}}
+      <br><br><br><br><br>
+    </div>
+    <div class="col-xs-2"></div>
+  </div>
+<br><br>
+</template>
+
+<!--Template for my_created_events_list page-->
+<template name="my_created_events_list">
+  <div class="stickyinfo">
+    <h2 style="font-weight: bold; font-size: 20px;font-family:cursive;color:red">  {{eventName}} </h2>
+    <h4 style="font-weight: normal; font-size: 15px;font-family:cursive;"> {{eventDate}}</h4>
+    <h4 style="font-weight: normal; font-size: 15px;font-family:cursive;"> {{eventLoc}}</h4>
+  </div>
+</template>
+
+<!--Template for my_created_events_db page-->
+<template name="my_created_events_db">
+
+    <ul class="unorder_list">
+        {{#each events}}
+          <li class="order_list">
+            <a class="sticky" href="/events/{{_id}}" >
+              {{> my_created_events_list}}
+            </a>
+            <br><br>
+          </li>
+        {{/each}}
+    </ul>
+
+
+</template>
+
+<!-- Template for displaying the events registered by the user-->
+<template name="my_registered_events">
+  {{> centerheader}}
+  <div class="container">
+    <br><br>
+    <p>{{_id}}</p>
+    <p class="text-center" style="font-weight:bold;font-family:varela round;font-size:240%">Dear {{currentUser.profile.name}}, Below are list of all Events that you have registered:</p>
+    <br>
+    <p class="text-center" style="font-weight:bold;font-family:varela round;font-size:200%">{{> canceldb}}</p>
+  </div>
+  <br><br><br>
+</template>
+
+<!-- Template for my_events main page -->
+<template name="my_event_buttons">
+   {{> centerheader}}
+   <div class="container-fluid myeventsMainCSS">
+     <!-- Events Registered by me Button -->
+     <div class="col-xs-6">
+       <br><br><br><br><br>
+       <div class="container" style="background: black; border:none; border-radius: 40px 10px; width: 400px; height: 200px; ">
+         <p class="lead" style="color: #030805; font-weight: bold; font-size: 45px;font-family: cursive; margin-top: 40px">
+           <a href="/MyEvents/my_created_events" style="color:white" >Events I have Registered</a>
+         </p>
+       </div>
+       <br><br><br><br><br><br><br>
+     </div>
+     <!-- Events Created by me Button -->
+     <div class="col-xs-6">
+       <br><br><br><br><br>
+       <div class="container" style="background: black; border:none; border-radius: 40px 10px; width: 400px; height: 200px; ">
+         <p class="lead" style="color: #030805; font-weight: bold; font-size: 45px;font-family: cursive; margin-top: 40px;">
+           <a href="/MyEvents/my_registered_events" style="color:white">Events I have Created</a>
+         </p>
+       </div>
+     </div>
+     <br><br><br><br><br><br><br>
+   </div>
+</template>
+
+
+<template name="my_event_discr">
+{{>centerheader}}
+  <!-- Applying display to the events -->
+    <p class="text-center" style="font-weight: bold; font-size: 20px;">  {{eventName}} </p>
+    <p class="text-center" style="font-weight: normal; font-size: 20px;"> {{eventDate}}</p>
+</template>
