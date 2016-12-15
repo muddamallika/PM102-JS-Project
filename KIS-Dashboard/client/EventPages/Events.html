@@ -110,11 +110,7 @@
           <!-- Verifying whether user had logged in or not -->
           <br>
           <div class="container">
-            {{#if currentUser}}
-              <a href="/Events/my_events" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" >My Events</a>
-            {{else}}
-              <a href="/login" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" >My Events</a>
-            {{/if}}
+              <a href="/my_event_buttons" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" >My Events</a>    
           </div>
 
           <br><hr><br>
@@ -167,18 +163,6 @@
     </ul>
 </template>
 
-<!-- Template for my_events main page -->
-<template name="my_events">
-   {{> centerheader}}
-   <a href="/Events_My_Created_Events/my_created_events" class="btn btn-info cevent" role="button" >
-     My Created Events
-   </a>
-   <a href="/Events_My_Created_Events/my_registered_events" class="btn btn-info cevent" role="button" >
-     My Registered Events
-   </a>
-   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</template>
-
 <!--Template for my_created_events_list page-->
 <template name="my_created_events_list">
   <div class="stickyinfo">
@@ -201,3 +185,29 @@
       {{/each}}
   </ul>
 </template>
+
+<!-- Template for 404 error -->
+
+<template name="notFound">
+{{> centerheader}}
+<div class="col-xs-1"></div>
+<div class="col-xs-5">
+  <p class="errorpage text-center">Oops!</p>
+  <p class="errorsearchpage text-center"> We can't seem to find the page you're looking for.</p> 
+  <p class="errorcodepage"> Error Code: 404</p>
+  <br>
+  <p class="errorcodepage">Here are some helpful link instead: </p>
+  <!--<a href="#" role="button" class="btn btn-link">Home Page</a><br>
+  <a href="/Login/login" class="btn btn-link" role="button">Login</a><br>
+  <a href="/ArticleHome/ArticleHome" class="btn btn-link" role="button">Articles</a><br>
+  <a href="/Events/event" class="btn btn-link" role="button">Events</a><br>
+  <a href="#" class="btn btn-link" role="button">About Us</a><br>-->
+  <a href="/login" role="button" class="btn btn-link">Home Page</a>
+  <a href="#" class="btn btn-info" role="button">Link Button</a>
+
+</div>
+<div class="col-xs-6">
+  <img src="/Images/Events/woman.png" style="margin-top: -70px;">
+</div>
+</template>
+

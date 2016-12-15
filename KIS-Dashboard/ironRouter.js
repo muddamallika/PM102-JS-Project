@@ -347,8 +347,16 @@ Router.route('/Events_My_Created_Events/my_registered_events', {
     }
 });
 
-Router.route('/my_event_buttons', function() {
-  this.render('my_event_buttons');
+Router.route('/my_event_buttons', {
+  template:'my_event_buttons',
+  onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            this.next();
+        } else {
+            this.render("login");
+        }
+    }
 });
 
 Router.route('Event_cancel/regis_events/:_id', {

@@ -1,42 +1,65 @@
-<!-- New Event creation form template-->
 <template name="event_new">
  {{> centerheader}}
- <div class="container"> <!--Container start-->
+
+
+<div class="container"> <!--Container start-->
     <div class="row"> <!--Row start-->
         <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+         {{> flashMessages}}
             <form role="form" id="createEvent-form"> <!--Form start-->
                 <fieldset>
                     <h2 style="text-align: center;">Here's Your Chance To Earn or Teach</h2>
+
                     <hr class="colorgraph">
-                    
+
                     <div class="form-group">
-                      <input type="text" name="eventName" id="eventName" class="form-control input-lg" placeholder="Event Name">
-                    </div>
-                    <div class="form-group">
-                      <input type="text" name="eventDesc" id="eventDesc" class="form-control input-lg" placeholder="Event Description">
-                    </div>
-                    <div class="form-group">
-                      <input type="text" name="eventLoc" id="eventLoc" class="form-control input-lg" placeholder="Event Location">
-                    </div>
-                    <div class="form-group">
-                      <input type="date" name="eventDate" id="eventDate" class="form-control input-lg" placeholder="Event Date">
-                    </div>
-                    <div class="form-group">
-                      <input type="time" name="eventTime" id="eventTime" class="form-control input-lg" placeholder="Event Time">
-                    </div>
+              <input type="text" name="eventName" id="eventName" class="form-control input-lg" placeholder="Event Name" required>
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="eventDesc" id="eventDesc" class="form-control input-lg" placeholder="Event Description" required>
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="eventLoc" id="eventLoc" class="form-control input-lg" placeholder="Event Location" required>
+            </div>
+
+            <div class="form-group">
+              <input type="date" name="eventDate" id="eventDate" class="form-control input-lg" placeholder="Event Date" required>
+            </div>
+
+            <div class="form-group">
+              <input type="time" name="eventTime" id="eventTime" class="form-control input-lg" placeholder="Event Time" required>
+            </div>
+
+            <div class="form-group">
+              <input type="number" name="eventPrice" id="eventPrice" class="form-control input-lg" placeholder="Event Price in €" required>
+            </div>
+
+            <div class="form-group">
+              <input type="number" name="eventSeats" id="eventSeats" class="form-control input-lg" placeholder="Event Seats" required>
+            </div>
+
+
+
+
+
                     <hr class="colorgraph">
 
                     <div class="row"> <!-- Div for Centered Register Button-->
-                      <div class="col-xs-4"></div>
-                      <div class="col-xs-4">
-                          <input class="btn btn-lg btn-primary btn-block" value="Create Event" type="submit">
-                      </div>
-                      <div class="col-xs-4"></div>
+              <div class="col-xs-4"></div>
+                        <div class="col-xs-4">
+                            <input class="btn btn-lg btn-primary btn-block" value="Create Event" type="submit">
+                        </div>
+              <div class="col-xs-4"></div>
                     </div><!-- Div for Centered Register Button-->
                 </fieldset>
             </form> <!--Form end-->
         </div>
     </div> <!--Row end-->
   </div> <!--Container end-->
+
 <br><br><br>
+
+ 
 </template>
