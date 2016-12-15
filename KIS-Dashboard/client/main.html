@@ -15,6 +15,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Exo+2:700" rel="stylesheet">
+  <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:500" rel="stylesheet">
 
 <style>
 
@@ -118,16 +121,9 @@ footer {
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <form class="navbar-form navbar-right">
         {{#if currentUser}}
-          <div class="btn-group">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{currentUser.profile.name}}
-                <b class="caret"></b>
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item btn btn-default" href="/accountHome">Account</a><br>
-                <a class="dropdown-item" href="#">{{> logout}}</a>
-              </div>
-          </div>
+        <p> {{currentUser.profile.name}}</p>
+        <a class="dropdown-item btn btn-default" href="/accountHome">Account</a>
+        <a class="dropdown-item" href="#">{{> logout}}</a>
         {{else}}
           <a type="submit" href="/login" class="btn btn-default">Login</a>
           <a type="submit" href="/Register/register" class="btn btn-default">SignUp</a>

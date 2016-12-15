@@ -6,9 +6,9 @@ Router.configure({
 
 
 //Home page
-Router.route('/', function () {
- this.render('Home');
-});
+//Router.route('/', function () {
+ //this.render('Home');
+//});
 
 // Contact
 Router.route('/Contact', function(){
@@ -300,7 +300,15 @@ Router.route('/total_events/:_id', {
    data: function(){
        var currentList = this.params._id;
        return Total_Events.findOne({ _id: currentList });
-   }
+   },
+   onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            this.next();
+        } else {
+            this.render("login");
+        }
+    }
 });
 
 Router.route('/events/:_id', {
@@ -323,7 +331,7 @@ Router.route('/Event_new/event_new',{
     }
 });
 
-Router.route('/Events_My_Created_Events/my_created_events',{
+Router.route('/MyEvents/my_created_events',{
   template:'my_created_events',
   onBeforeAction: function(){
         var currentUser = Meteor.userId();
@@ -335,7 +343,7 @@ Router.route('/Events_My_Created_Events/my_created_events',{
     }
 });
 
-Router.route('/Events_My_Created_Events/my_registered_events', {
+Router.route('/my_registered_events', {
   template:'my_registered_events',
   onBeforeAction: function(){
         var currentUser = Meteor.userId();
@@ -359,7 +367,7 @@ Router.route('/my_event_buttons', {
     }
 });
 
-Router.route('Event_cancel/regis_events/:_id', {
+Router.route('/regis_events/:_id', {
    template: 'cancel_event',
    data: function(){
        var currentList = this.params._id;
@@ -400,23 +408,20 @@ Router.route('forum/:_id', {
        return Regis_Events.findOne({ _id: currentList });
 }
 });
-//*******************************DISCUSSION FORUM PAGES*******************************
 
-//Admin Routes
-Router.route('/admin',{
-  template: 'admin',
-  '/admin': function() {
-  return {
-    as: 'admin',
-    to: function() {
-      if (Meteor.user() && Meteor.user().username === 'admin@gmail.com') {
-        return 'admin';
-      } else {
-        return 'teamPage';
-      }
-    }
-  };
-}
+//*******************************ADMIN PAGES ROUTES*******************************
+
+Router.route('/',{
+  template:'Home',
+  onBeforeAction: function(){
+       if(Meteor.userId()=="Yuk326XXAZt4FMXXo")
+       {
+        this.render('admin')
+
+       } else {
+           this.next();
+       }
+   }
 });
 
 //*******************************CHAT PAGES ROUTES*******************************

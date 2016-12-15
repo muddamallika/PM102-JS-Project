@@ -39,7 +39,7 @@
  .unorder_list .order_list .sticky {
   text-decoration:none;
   color:#000;
-  background:#ffc;
+  background:white;
   display:block;
   height:10em;
   width:10em;
@@ -107,32 +107,37 @@
   {{> centerheader}}
   <div class="container eventCSS">
       <div class="col-xs-3">
-          <!-- Verifying whether user had logged in or not -->
-          <br>
-          <div class="container">
-              <a href="/my_event_buttons" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" >My Events</a>    
-          </div>
+          <div class="col-xs-1"></div>
+          <div class="col-xs-1">
+            <br><br><br><br>
+            <div class="container">
+                <a href="/my_event_buttons" class="lead btn btn-lg btn-default" style="color: #030805;font-weight: bold; font-family: Varela Round;font-size: 20px;" >My Events</a>
+            </div>
 
-          <br><hr><br>
-          <!-- Verifying whether user had logged in or not -->
-          <div class="container">
-            {{#if currentUser}}
-              <a href="/Event_new/event_new" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" >Create Event</a>
-            {{else}}
-              <a href="/login" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" >Create Event</a>
-            {{/if}}
+            <br><br><br><br>
+            <!-- Verifying whether user had logged in or not -->
+            <div class="container">
+                <a href="/Event_new/event_new" class="lead btn btn-lg btn-default" style="color: #030805;font-weight: bold; font-family: Varela Round;font-size: 20px;" >Create Event</a>
+            </div>
           </div>
+          <div class="col-xs-1"></div>
+          <!-- Verifying whether user had logged in or not -->
+
       </div>
 
       <div class="col-xs-9">
         <!-- Template call to display all the events that are present -->
-        <div class="container">
-         <p class="lead text-center" style="text-decoration: underline;font-weight: bold; font-size: 35px;color: black;margin-right: 220px" >Latest Events</p>
+        <div class="container-fluid">
+         <h1 align="center" style="color:white;font-size:300%;font-family: Varela Round;font-weight: bold;" > Latest Events </h1>
+         <hr>
         </div>
-        <div class="container">
+        <div class="container-fluid">
           {{> total_events_display}}
+          <br><br><br><br>
         </div>
       </div>
+
+      <br><br><br><br><br><br><br><br>
    </div>
 <hr>
 </template>
@@ -140,15 +145,15 @@
 <!-- Template for event_display -->
 <template name="event_display">
   <!-- Applying Sticky notes display to the events -->
-    <h3 class="lead" style="font-weight: bold; font-size: 10px;">  {{eventName}} </h3>
-    <h3 class="lead" style="font-weight: normal; font-size: 10px;"> {{eventDate}}</h3>
-    <h3 class="lead" style="font-weight: normal; font-size: 10px;"> {{eventLoc}}</h3>
+    <h2 style="font-weight: bold; font-size: 20px;font-family:cursive;color:red">  {{eventName}} </h2>
+    <h4 style="font-weight: normal; font-size: 15px;font-family:cursive;"> {{eventDate}}</h4>
+    <h4 style="font-weight: normal; font-size: 15px;font-family:cursive;"> {{eventLoc}}</h4>
 </template>
 
 <!-- Template for total_events_display page -->
 <template name="total_events_display">
     <ul class="unorder_list">
-      <br><br><div style="margin-left:30px;">
+      <br><div style="margin-left:30px;">
         <!-- Fetching from the total_events collection - this collection contains list of all the events-->
         {{#each total_events}}
         <!-- Implementing looping for the collection total_events -->
@@ -161,53 +166,5 @@
         {{/each}}
       </div>
     </ul>
-</template>
-
-<!--Template for my_created_events_list page-->
-<template name="my_created_events_list">
-  <div class="stickyinfo">
-    <h2> {{eventName}} </h2>
-    <h3> {{eventDate}} </h3>
-    <h3> {{eventLoc}} </h3>
-  </div>
-</template>
-
-<!--Template for my_created_events_db page-->
-<template name="my_created_events_db">
-  <ul class="unorder_list">
-      {{#each events}}
-        <li class="order_list">
-          <a class="sticky" href="/events/{{_id}}" >
-            {{> my_created_events_list}}
-          </a>
-          <br><br>
-        </li>
-      {{/each}}
-  </ul>
-</template>
-
-<!-- Template for 404 error -->
-
-<template name="notFound">
-{{> centerheader}}
-<div class="col-xs-1"></div>
-<div class="col-xs-5">
-  <p class="errorpage text-center">Oops!</p>
-  <p class="errorsearchpage text-center"> We can't seem to find the page you're looking for.</p> 
-  <p class="errorcodepage"> Error Code: 404</p>
-  <br>
-  <p class="errorcodepage">Here are some helpful link instead: </p>
-  <!--<a href="#" role="button" class="btn btn-link">Home Page</a><br>
-  <a href="/Login/login" class="btn btn-link" role="button">Login</a><br>
-  <a href="/ArticleHome/ArticleHome" class="btn btn-link" role="button">Articles</a><br>
-  <a href="/Events/event" class="btn btn-link" role="button">Events</a><br>
-  <a href="#" class="btn btn-link" role="button">About Us</a><br>-->
-  <a href="/login" role="button" class="btn btn-link">Home Page</a>
-  <a href="#" class="btn btn-info" role="button">Link Button</a>
-
-</div>
-<div class="col-xs-6">
-  <img src="/Images/Events/woman.png" style="margin-top: -70px;">
-</div>
 </template>
 

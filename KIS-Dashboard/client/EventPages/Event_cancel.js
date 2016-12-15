@@ -12,7 +12,10 @@ Template.cancel_event.events({
 		var currentid = event.target.cancel.value;
     // Cancelling the registration for the Event
 		Regis_Events.remove({_id: currentid});
-		  Router.go('/Events/event');
+		FlashMessages.sendSuccess("Successfully Cancelled the Event Registration");
+		  Meteor.setTimeout(function () {
+            Router.go('/Events/event');
+        }, 5000);
 	}
 });
 
