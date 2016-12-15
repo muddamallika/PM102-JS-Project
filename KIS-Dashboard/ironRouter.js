@@ -300,7 +300,15 @@ Router.route('/total_events/:_id', {
    data: function(){
        var currentList = this.params._id;
        return Total_Events.findOne({ _id: currentList });
-   }
+   },
+   onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            this.next();
+        } else {
+            this.render("login");
+        }
+    }
 });
 
 Router.route('/events/:_id', {
@@ -335,7 +343,7 @@ Router.route('/MyEvents/my_created_events',{
     }
 });
 
-Router.route('/MyEvents/my_registered_events', {
+Router.route('/my_registered_events', {
   template:'my_registered_events',
   onBeforeAction: function(){
         var currentUser = Meteor.userId();
@@ -359,7 +367,7 @@ Router.route('/my_event_buttons', {
     }
 });
 
-Router.route('Event_cancel/regis_events/:_id', {
+Router.route('/regis_events/:_id', {
    template: 'cancel_event',
    data: function(){
        var currentList = this.params._id;

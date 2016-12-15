@@ -121,16 +121,9 @@ footer {
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <form class="navbar-form navbar-right">
         {{#if currentUser}}
-          <div class="btn-group">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{currentUser.profile.name}}
-                <b class="caret"></b>
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item btn btn-default" href="/accountHome">Account</a><br>
-                <a class="dropdown-item" href="#">{{> logout}}</a>
-              </div>
-          </div>
+        <p> {{currentUser.profile.name}}</p>
+        <a class="dropdown-item btn btn-default" href="/accountHome">Account</a>
+        <a class="dropdown-item" href="#">{{> logout}}</a>
         {{else}}
           <a type="submit" href="/login" class="btn btn-default">Login</a>
           <a type="submit" href="/Register/register" class="btn btn-default">SignUp</a>
