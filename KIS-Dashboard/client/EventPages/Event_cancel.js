@@ -15,10 +15,5 @@ Template.cancel_event.events({
 		  Router.go('/Events/event');
 	}
 });
-//Sends Flash Messages
-FlashMessages.sendSuccess("Cancelled the event successfully");
-//Navigates back to the Event Main Page after event deletion
-Meteor.setTimeout(function () {
-    Router.go('/Events/event');
-}, 5000);
+
 }
