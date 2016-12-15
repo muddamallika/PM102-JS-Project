@@ -1,8 +1,7 @@
 <template name="ArticleHome">
 {{> centerheader}}
-  <form>
 <div class="container articlehome">
-<div class="container">
+      <form>
 <h1 style="text-align: center;">Article <small>Put your thoughts here...</small></h1><br><br>
     <div class="container">
     <div class="row">
@@ -43,7 +42,7 @@
 <div class="col-xs-4">
  <div class="well" style="height: 310px;width: 320px">
                     <h4>Latest Articles</h4>
-    <div class="marquee marqBox" style="color: #030805;height: 240px;width: 300px" data-direction='up' data-duration='3000' data-pauseOnHover="true" >
+    <div class="marquee ver" style="color: #030805;height: 240px;width: 300px" data-direction='up' data-duration='3000' data-pauseOnHover="true" >
  
       <p style="text-decoration: none !important">
           {{> Allarticle}}
@@ -57,8 +56,8 @@
         </div>
     </div>
     </div>
-    </div>
-    </div>
+      </form>
+    
             
   <script>
         $(function() {
@@ -67,9 +66,8 @@
           });
          }); 
   </script>
-      </form>
     <br><br><br>
- 
+ </div>
 </template>
 <template name="Article1">
      {{#each articles}}
