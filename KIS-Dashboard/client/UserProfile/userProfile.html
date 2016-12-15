@@ -1,15 +1,15 @@
 <head>
   <title> User Profile </title>
   <style>
-.profile-head { width:100%;background-color: rgb(255, 102, 0);float: left;padding: 15px 5px;}
+.profile-head { width:100%;background-color: rgb(39, 164, 132);float: left;padding: 15px 5px;}
 .profile-head img { height:150px; width:150px; margin:0 auto; border:5px solid #fff; border-radius:5px;}
-.profile-head h5 {width: 100%;padding:5px 5px 0px 5px;text-align:justify;font-weight: bold;color: #fff;font-size: 25px;text-transform:capitalize;
+.profile-head h5 {width: 100%;padding:5px 5px 0px 5px;text-align:justify;font-weight: bold;color: #1c1a1a;font-size: 25px;text-transform:capitalize;
 margin-bottom: 0;}
-.profile-head p {width: 100%;text-align: justify;padding:0px 5px 5px 5px;color: #fff;font-size:17px;text-transform:capitalize;margin:0;}
-.profile-head a {width: 100%;text-align: center;padding: 10px 5px;color: #fff;font-size: 15px;text-transform: capitalize;}
+.profile-head p {width: 100%;text-align: justify;padding:0px 5px 5px 5px;color: #1c1a1a;font-size:17px;margin:0;}
+.profile-head a {width: 100%;text-align: center;padding: 10px 5px;color: #fff;font-size: 15px;}
 
 .profile-head ul { list-style:none;padding: 0;}
-.profile-head ul li { display:block; color:#ffffff;padding:5px;font-weight: 400;font-size: 15px;}
+.profile-head ul li { display:block; color:#ffffff;padding:15px;font-weight: 400;font-size: 15px;}
 .profile-head ul li:hover span { color:rgb(0, 4, 51);}
 .profile-head ul li span { color:#ffffff;padding-right: 10px;}
 .profile-head ul li a { color:#ffffff;}
@@ -64,27 +64,26 @@ margin-bottom: 0;}
 
   <div class="container" style="margin-top: 30px;">
   <div class="profile-head">
+
   <div class="col-md- col-sm-4 col-xs-12">
-  <img src="/profile_default.jpg" class="img-responsive" />
+    <img src="profile_default.jpg" class="img-responsive" />
   <br>
   <div class="col-xs-12" style="margin-left:110px;">
   <a href="/userProfile/edit" class="btn-default" style="color:black" target="_blank">Edit Profile</a>
   </div>
   </div><!--col-md-4 col-sm-4 col-xs-12 close-->
 
-
   <div class="col-md-5 col-sm-5 col-xs-12">
     {{#each register_search}}
   <h5>{{firstname}} {{lastname}}</h5>
   <p><span class="glyphicon glyphicon-envelope"></span> {{email}}</p>
-
-
     {{#each register_update}}
   <ul>
   <li><span class="glyphicon glyphicon-map-marker"></span> {{city}} </li>
   <li><span class="glyphicon glyphicon-home"></span> {{address}}</li>
   <li><span class="glyphicon glyphicon-phone"></span> {{phone}}</li>
   <li><span class="glyphicon glyphicon-user"></span> {{gender}}</li>
+  <li><span class="glyphicon glyphicon-gift"></span> {{birthday}}</li>
   </ul>
       {{/each}}
           {{/each}}
@@ -104,22 +103,60 @@ margin-bottom: 0;}
 
   <div class="editprofileui">
     <form action=" " method="post" class="edit_form">
-      <label for="phone">Phone #</label>
-      <input type="text" id="phone" name="phone" placeholder="0176311157329" required> <br><br>
 
-      <label for="address">Address</label>
-      <input type="text" id="address" name="address" placeholder="Street name, house #, City, Zipcode" required> <br><br>
+      <div class="form-group row">
+      <label for="phone" class="col-xs-2 col-form-label">Phone</label>
+      <div class="col-xs-10">
+      <input class="form-control" type="text" id="phone" name="phone" placeholder="0176311157329" required>
+      </div>
+      </div>
 
-      <label for="city">Place of residence</label>
-      <input type="text" id="city" name="city" placeholder="City" required> <br><br>
+      <div class="form-group row">
+      <label for="address" class="col-xs-2 col-form-label">Address</label>
+      <div class="col-xs-10">
+      <input class="form-control" type="text" id="address" name="address" placeholder="Street name, house #, City, Zipcode" required>
+      </div>
+      </div>
 
-        <label for="gender">Gender</label>
-            <input type="radio" name="gender" value="male"> Male
-            <input type="radio" name="gender" value="female"> Female<br><br>
+      <div class="form-group row">
+      <label for="city" class="col-xs-2 col-form-label">Place of residence</label>
+      <div class="col-xs-10">
+      <input class="form-control" type="text" id="city" name="city" placeholder="City" required>
+      </div>
+      </div>
 
-        <label for="photo">Upload Photo</label>
-            <input type="file" name="photo" accept="image/*">
-            <br>
+      <div class="form-group row">
+      <label for="gender" class="custom-control custom-radio">
+            <div class="col-xs-10">
+            <input type="radio" class="custom-control-input" name="gender" value="male">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Male</span>
+            </div>
+      </label>
+      <label for="gender" class="custom-control custom-radio">
+            <div class="col-xs-10">
+            <input type="radio" class="custom-control-input" name="gender" value="female">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Female</span>
+            </div>
+      </label>
+      </div>
+
+      <div class="form-group row">
+      <label for="birthday" class="col-xs-2 col-form-label">Birthday</label>
+      <div class="col-xs-10">
+      <input class="form-control" type="date" id="birthday" name="birthday" placeholder="MM/DD/YYYY" required>
+      </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label for="photo" class="col-xs-2 col-form-label">Upload Photo</label>
+              <div class="col-xs-10">
+              <input class="form-control" id="photo" type="file" name="photo" accept="image/*">
+              </div>
+      </div>
+      <br>
       <!-- Button -->
           <button type="submit" class="btn btn-info" >Save</button>
           <a href="/userProfile" class="btn btn-info" >Cancel</a>

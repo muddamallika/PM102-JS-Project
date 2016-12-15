@@ -15,22 +15,27 @@ if(Meteor.isClient){
         var address = event.target.address.value;
         var city = event.target.city.value;
         var gender = event.target.gender.value;
+        var birthday = event.target.birthday.value;
         var timestamp = new Date();
+
 
         Register_Update.insert({
           phone : phone,
           address : address,
           city : city,
           gender : gender,
+          birthday : birthday,
           usrid: Meteor.userId(),
           time: timestamp
-
-
         });
+
+
+
         event.target.phone.value = "";
         event.target.address.value = "";
         event.target.city.value = "";
         event.target.gender.value = "";
+        event.target.birthday.value = "";
         Meteor.setTimeout(function () {
             Router.go('/userProfile');
         }, 2000);
@@ -41,7 +46,9 @@ if(Meteor.isClient){
     register_update: function() {
     var curr_Userid= Meteor.userId();
     return Register_Update.find({usrid: curr_Userid}).fetch();
+
   }
   });
+
 
 }

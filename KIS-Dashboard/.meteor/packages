@@ -39,4 +39,10 @@ zuuk:stale-session
 easy:search
 huttonr:bootstrap3
 accounts-facebook
+<<<<<<< HEAD
 http
+=======
+cfs:standard-packages
+cfs:gridfs
+cfs:filesystem
+>>>>>>> 3c7af1d7c35698ef2ebc7c5975000f043de5b605
