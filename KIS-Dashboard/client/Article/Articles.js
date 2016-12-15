@@ -14,7 +14,27 @@ Template.Articles_Sel.events({
   "change #chats": function(event, template){
     var selectValue = template.$("#chats").val();
     Session.set("selectval",selectValue);
-      
+    switch(selectValue){
+        case "Fashion":
+            $("#imgF").show();
+            $("#imgT").hide();
+            $("#imgL").hide();
+            break;
+        case "Technology":
+            $("#imgT").show();
+            $("#imgF").hide();
+            $("#imgL").hide();
+            break;
+        case "Lifestyle":
+            $("#imgL").show();
+            $("#imgF").hide();
+            $("#imgT").hide();
+            break;
+        default:
+            $("#imgF").hide();
+            $("#imgT").hide();
+            $("#imgL").hide();
+  }
   }
    
 });

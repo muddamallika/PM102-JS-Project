@@ -25,16 +25,20 @@
     <h3>{{ArticleName}}</h3>
     <p>{{MyArticleInitial}}.....
      <button type="button" class="btn btn-link" onclick="window.open('/readArticle/{{_id}}')">Read More</button></p>
-    <p>{{> CommentsCount}}
+    <p><span class="glyphicon glyphicon-comment"></span>{{> CommentsCount}} comments
     {{> LikesCount}}</p>
   </li>
 </template>
 
 <template name="myarticle_group">
   <ul class="unorder">
-      {{#each articles}}
-         {{> myarticle_r}} <br><br><br><br><br><br><br><br>
+       {{#if articles}} 
+       {{#each articles}}
+         {{> myarticle_r}}  <br><br><br><br><br><br><br><br>
       {{/each}}
+    {{else}}
+       {{> NoArticleFound}}
+    {{/if}}
   </ul>
 </template>
 
@@ -44,7 +48,7 @@
       {{#each articles}} <li class="stickyliClass">
       <a class="stickyaClass" href="/readArticle/{{_id}}" target="_blank">
         <h4 class="stickyh4Class">{{ArticleName}}</h4>
-        <p class="stickypClass">Category : {{Category}}</p>
+        <h4 class="stickyh4Class">Category: {{Category}}</h4>
       </a></li>
       {{/each}}
 
