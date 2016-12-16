@@ -295,10 +295,7 @@ Router.route('/myCreateEvents', function() {
 
 
 
-
 //Team Page
 Router.route('/team',function (){
    this.render('team');
 });
-
-)
