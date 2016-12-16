@@ -428,8 +428,16 @@ Router.route('forum/:_id', {
    template: 'discDetailPage',
    data: function(){
        var currentList = this.params._id;
-       return Regis_Events.findOne({ _id: currentList });
-}
+       return Forum.findOne({ _id: currentList });
+},
+onBeforeAction: function(){
+     var currentUser = Meteor.userId();
+     if(currentUser){
+         this.next();
+     } else {
+         this.render("login");
+     }
+ }
 });
 
 //*******************************ADMIN PAGES ROUTES*******************************

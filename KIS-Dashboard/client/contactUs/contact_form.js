@@ -6,10 +6,12 @@ if (Meteor.isClient){
      var from = event.target.email.value;
      var subj = event.target.subject.value;
      var text = event.target.message.value;
+     var adminId = "Yuk326XXAZt4FMXXo";
      Contact_Details.insert({
        from: from,
        subj: subj,
-       text: text
+       text: text,
+       adminId: adminId
      });
      event.target.email.value="";
      event.target.subject.value="";
