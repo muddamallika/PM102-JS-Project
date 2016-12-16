@@ -40,8 +40,7 @@
            <br><br></form>
     </div>
 <script> 
-        $(document).ready(function(){    
-                    
+        $(document).ready(function(){                
                var x= document.getElementById("liked").value;
             if(x=="yes")
                 {
@@ -49,6 +48,7 @@
                     $("#divUnlike").show();
                 }
             else{ 
+                
                 $("#divlike").show();
                 $("#divUnlike").hide();
                 
@@ -72,7 +72,7 @@
            <small>{{createdat}}</small>
            </h4>{{Comment}}<br>             
            <input type="hidden" name="currentCommenterID" value="{{commenterUserID}}" id="currentCommenterID" >
-             {{> Commentby}}
+             <small>{{createdby}}</small>
          </div>
         </div> 
     {{/each}}
@@ -90,11 +90,7 @@
      <span class="glyphicon glyphicon-thumbs-up"></span> {{likes}} likes
 </template>
 <template name="Liked">
-       {{#if liked}}
-    <input type="hidden" name="liked" value="yes" id="liked" >
-    {{else}}
-    <input type="hidden" name="liked" value="no" id="liked" >
-    {{/if}}
+    <input type="hidden" name="liked" id="liked" >
      {{#each liked}}
      <input type="hidden" name="LikeID" value="{{_id}}" id="LikeID" >
     {{/each}}
