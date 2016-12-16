@@ -121,8 +121,7 @@ footer {
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <form class="navbar-form navbar-right">
         {{#if currentUser}}
-        <p> {{currentUser.profile.name}}</p>
-        <a class="dropdown-item btn btn-default" href="/accountHome">Account</a>
+        <a class="dropdown-item btn btn-default" href="/accountHome">{{currentUser.profile.name}}</a>
         <a class="dropdown-item" href="#">{{> logout}}</a>
         {{else}}
           <a type="submit" href="/login" class="btn btn-default">Login</a>
@@ -226,11 +225,11 @@ footer {
       <div class="col-xs-4">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <form class="navbar-form navbar-right">
-            {{#if currentUser}}
-              <p class="username"> {{currentUser.profile.name}}</p>
-            {{else}}
-            {{/if}}
-          </form>
+        {{#if currentUser}}
+        <a class="dropdown-item" href="#">{{> logout}}</a>
+        {{else}}
+        {{/if}}
+      </form>
         </div>
       </div>
 </div>

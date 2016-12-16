@@ -214,19 +214,34 @@ this.render('Articles_Sel')
 });
 
 //View my Article
-Router.route('/myArticle/myArticle',function(){
-this.render('myArticle')
+Router.route('/myArticle/myArticle',{
+  template:'myArticle',
+   onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            this.next();
+        } else {
+            this.render("login");
+        }
+    }
 });
-
 //Post Article
-Router.route('/postArticle/pArticle', function() {
-	this.render('pArticle');
+Router.route('/postArticle/pArticle',{
+  template:'pArticle',
+   onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            this.next();
+        } else {
+            this.render("login");
+        }
+    }
 });
-
 //read Article (optional)
 Router.route('/readArticles/rArticle', function() {
     this.render('rArticle');
 });
+
 
 //search Article
 Router.route('/searchArticle/searchArticle', function() {
@@ -238,7 +253,15 @@ Router.route('/readArticle/:_id', {
    data: function(){
        var currentArticle = this.params._id;
        return Articles.findOne({ _id: currentArticle });
-   }
+   },
+    onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            this.next();
+        } else {
+            this.render("login");
+        }
+    }
 
 });
 
@@ -405,8 +428,16 @@ Router.route('forum/:_id', {
    template: 'discDetailPage',
    data: function(){
        var currentList = this.params._id;
-       return Regis_Events.findOne({ _id: currentList });
-}
+       return Forum.findOne({ _id: currentList });
+},
+onBeforeAction: function(){
+     var currentUser = Meteor.userId();
+     if(currentUser){
+         this.next();
+     } else {
+         this.render("login");
+     }
+ }
 });
 
 //*******************************ADMIN PAGES ROUTES*******************************
