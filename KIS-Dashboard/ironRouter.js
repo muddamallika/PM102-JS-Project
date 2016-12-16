@@ -463,6 +463,7 @@ Router.route('/',{
 });
 
 //*******************************CHAT PAGES ROUTES*******************************
+
 // Chat Route
 Router.route('/chat',{
   template:'chat',
