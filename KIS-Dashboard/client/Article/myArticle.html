@@ -9,7 +9,8 @@
 <div class="col-xs-6">
     {{> articleDropdwn}}
 <br><br>
-  {{> myarticle_group}}
+    <div id="myarticlesel"> {{> myarticle_group}}</div>
+    <div id="welcomeyou"><h3>Hello {{currentUser.profile.name}}, Welcome to your Article Hub</h3></div>
     </div>
     <div class="col-xs-6">
         {{> myarticle_stickyNote}}
@@ -18,12 +19,17 @@
     </form>
     </div>
 <br><br><br>
+    <script>
+         $(document).ready(function(){
+            $("#myarticlesel").hide();
+  });
+    </script>
 </template>
 
 <template name="myarticle_r">
 <li>
     <h3>{{ArticleName}}</h3>
-    <p>{{MyArticleInitial}}.....
+    <p>{{MyArticleInitial}}....
      <button type="button" class="btn btn-link" onclick="window.open('/readArticle/{{_id}}')">Read More</button></p>
     <p><span class="glyphicon glyphicon-comment"></span>{{> CommentsCount}} comments
     {{> LikesCount}}</p>
@@ -34,7 +40,7 @@
   <ul class="unorder">
        {{#if articles}} 
        {{#each articles}}
-         {{> myarticle_r}}  <br><br><br><br><br><br><br><br>
+         {{> myarticle_r}}  <br><br><br><br><br><br><br><br><br><br>
       {{/each}}
     {{else}}
        {{> NoArticleFound}}
@@ -47,8 +53,8 @@
    
       {{#each articles}} <li class="stickyliClass">
       <a class="stickyaClass" href="/readArticle/{{_id}}" target="_blank">
-        <h4 class="stickyh4Class">{{ArticleName}}</h4>
-        <h4 class="stickyh4Class">Category: {{Category}}</h4>
+        <h4>{{ArticleName}}</h4>
+        <h6><i>Category: {{Category}}</i></h6>
       </a></li>
       {{/each}}
 

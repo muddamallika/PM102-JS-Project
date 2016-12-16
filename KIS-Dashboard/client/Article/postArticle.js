@@ -8,13 +8,13 @@
     var currentUserId = Meteor.userId();
     var ArticleInitial= "",MyArticleInitial = "";
     var spliter= Article.split(" ");
-    var len = (spliter.length > 5)? 5 :spliter.length;
+    //var len = (spliter.length > 5)? 5 :spliter.length;
     var mylen = (spliter.length > 25)? 25 :spliter.length;
 
-        for(var i=0;i < len; i++)
+      /*  for(var i=0;i < len; i++)
         {
             ArticleInitial=ArticleInitial+" "+spliter[i];
-        }
+        }*/
          for(var i=0;i < mylen; i++)
         {
             MyArticleInitial=MyArticleInitial+" "+spliter[i];
@@ -32,7 +32,7 @@
         Article: Article  ,
         ArticleName: ArticleName,
         AuthorName : AuthorName,
-        ArticleInitial: ArticleInitial,
+        ArticleInitial: MyArticleInitial,
         MyArticleInitial: MyArticleInitial,
         createdBy: currentUserId,
         createdat:createdat

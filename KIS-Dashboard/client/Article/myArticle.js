@@ -15,6 +15,8 @@ Template.myArticle.events({
   "change #chats": function(event, template){
     var selectValue = template.$("#chats").val();
     Session.set("selectval",selectValue);
+    $("#myarticlesel").show();
+    $("#welcomeyou").hide();
   }
 
 });

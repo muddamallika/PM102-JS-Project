@@ -330,12 +330,16 @@
 
 
 
-/* Article CSS starts */
+/* Article All CSS starts */
 
 /*Article Home Page*/
 .articlehome{
-  background-image: url("/Images/articlesHome.jpg") ;
+  background-image: url("https://www.clipartsgram.com/image/1016866898-dark-blue-bg.jpg") ;
   background-size: 1000px 800px;
+}
+.Top3Article{
+ background-image: url("/Images/Technology-Top.jpg") ;
+  background-size: 800px 800px;
 }
 .allArticle{
   background-image: url("/Images/MyArticle.jpg")  ;
@@ -496,7 +500,40 @@ ol{text-align:center;}
 ol .stickyliClass{display:inline;padding-right:1em;}
 ol .stickyliClass .stickyaClass{color:#fff;}
 
+ .marquee {
+  width: 100px;
+  overflow: hidden;
+  border: 5px solid #ccc;
+  background: #ccc;
+  animation-iteration-count: infinite;
+  padding-right: 20px;
+  margin-right: 30px;
+}
 
+/* Carousel base class */
+.carouselArticle {
+  height: 200px;
+  margin-bottom: 60px;
+}
+
+
+/* Declare heights because of positioning of img element */
+.carouselArticle .item {
+  height: 200px;
+  background-color: #777;
+}
+.mar{
+    padding-right: 30px;
+}
+.art{
+    padding-left: 10px;
+    padding-bottom: 20px;
+    height: 100px;
+    width: 330px;
+    padding-right: 20px;
+    margin-left: 9px;
+}
+ 
 /*Article CSS Ends  */
 
 /*  duringAccom.html page CSS start */
@@ -768,3 +805,4 @@ ol .stickyliClass .stickyaClass{color:#fff;}
 .cancelEveCSS{
   font-family: 'Varela Round';
 }
+  
