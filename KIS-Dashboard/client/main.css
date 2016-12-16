@@ -112,6 +112,7 @@
 
 /*  During.html css ---------------END----------------------------------- */
 
+/
 /*css for chat START*/
 .sendButton:hover{
   color: #a3d063;
@@ -189,7 +190,6 @@ float: right;
   text-align: left;
   font-size: 15px;
 }
-
 .icon {
   background-color: transparent;
   margin-top: 10px;
@@ -719,4 +719,3 @@ ol .stickyliClass .stickyaClass{color:#fff;}
 .answersFetchCSS .quote-text{
     font-size: 19px;
 }
->>>>>>> fbfdf8fb21cab00d0034e4d92d704c59e7b35dc7
