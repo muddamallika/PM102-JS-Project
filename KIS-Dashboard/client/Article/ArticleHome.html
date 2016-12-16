@@ -44,12 +44,16 @@
                   <li data-target="#myArticleCarousel" data-slide-to="1"></li>
                   <li data-target="#myArticleCarousel" data-slide-to="2"></li>
                   <li data-target="#myArticleCarousel" data-slide-to="3"></li>
+                  <li data-target="#myArticleCarousel" data-slide-to="3"></li>
                 </ol>
        
            <!-- myArticleCarousel Wrapper for slides -->
                <div class="carousel-inner" role="listbox">
                  <div class="item active">
                   <img src="http://2.bp.blogspot.com/-KdsIyOjgOVE/USMbdoFYuJI/AAAAAAAACu8/xWkuCTdMsUo/s1600/54_large.png" alt="">
+                 </div>
+                 <div class="item">
+                  <img src="http://www.dentistryiq.com/content/dam/diq/online-articles/2015/12/best-of-the-best.jpg" alt="">
                  </div>
                 <!-- myArticleCarousel Fetching of top 3 articles  -->
                   
@@ -112,10 +116,11 @@
   </div>
     <!-- script for marquee starts-->
       <script>
-        $(function() {
+        $(document).ready(function(){ 
           $('.marquee').marquee({
           startVisible: true
           });
+          $(window).scrollTop(0);
          }); 
        </script>
     <!-- script for marquee ends-->
