@@ -1,0 +1,102 @@
+<!--Forum Main Page template-->
+<template name="forumMain">
+  {{> centerheader}}
+  <div class="container-fluid forumMainCSS">
+     <!--Title-->
+     <div class="container">
+      <h1 align="center" style="color:black;font-size:300%;font-family: Varela Round;font-weight: bold" > Discussion Forum </h1>
+      <hr>
+     </div>
+     <!--Search field and button-->
+     <div class="container">
+		     <div class="col-xs-8">
+         </div>
+         <div class="col-xs-4">
+           <a href="/newDisc" class="btn btn-default btn-lg" style="color:black"> Post New</a>
+         </div>
+	   </div>
+
+     <!--Discussions listed in tabular format-->
+     <div class="container">
+       <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <table class="table table-striped lead">
+              <thead>
+                  <tr>
+                    <th>Discussion Thread </th>
+                    <th>Posted By </th>
+                    <th>Last Updated</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 <tr>
+                    <td>{{> discTitleFetch}} </td>
+                    <td>{{> discAuthorFetch}} </td>
+                    <td>{{> discDateFetch}}</td>
+                 </tr>
+              </tbody>
+            </table>
+           </div>
+       </div>
+	   </div>
+  </div>
+  <br>
+</template>
+<!--Forum Main Page template end-->
+
+<!--Template to fetch the discTitle field values from the Database-->
+<template name="discTitleFetch">
+  <ul class="lead discTitleFetchCSS">
+      <!--Values are fetched from the collection - forum-->
+      {{#each forum}}
+        <a href="/forum/{{_id}}" target="_blank">
+         {{> discTitleDisplay}} <br>
+        </a>
+      {{/each}}
+  </ul>
+</template>
+
+<!--Template to display the discTitle values from the Database-->
+<template name="discTitleDisplay">
+  <li>
+    {{dTitle}}
+    <br>
+  </li>
+</template>
+
+<!--Template to fetch the discAuthor field values from the Database-->
+<template name="discAuthorFetch">
+  <ul class="lead discAuthorFetchCSS">
+      <!--Values are fetched from the collection - forum-->
+      {{#each forum}}
+         {{> discAuthorDisplay}}
+      {{/each}}
+  </ul>
+</template>
+
+<!--Template to fetch the discAuthor field values from the Database-->
+<template name="discAuthorDisplay">
+  <li>
+    {{dAuthor}}
+    <br>
+  </li>
+</template>
+
+
+<!--Template to fetch the discDate field values from the Database-->
+<template name="discDateFetch">
+  <ul class="lead discDateFetchCSS">
+      <!--Values are fetched from the collection - forum-->
+      {{#each forum}}
+         {{> discDateDisplay}}
+      {{/each}}
+  </ul>
+</template>
+
+<!--Template to fetch the discDate field values from the Database-->
+<template name="discDateDisplay">
+  <li>
+    {{dTime}}
+    <br>
+  </li>
+</template>

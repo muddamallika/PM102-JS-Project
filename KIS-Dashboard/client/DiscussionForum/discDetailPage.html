@@ -1,0 +1,33 @@
+<!--Discussion Details Page Template start-->
+<template name="discDetailPage">
+  {{> centerheader}}
+  <div class="container-fluid discDetailCSS">
+    <div class="container">
+     {{> flashMessages}}  
+     <h1 align="center" style="color:black;font-size:300%;font-family: Varela Round;font-weight: bold" > {{dTitle}} </h1>
+     <hr>
+     <h4 class="text-center" style="color:black;font-size:150%;font-family: Varela Round;font-weight: bold" > {{dContent}}</h4>
+     <hr>
+     <h4 class="text-center" style="color:black;font-size:200%;font-family: Varela Round;font-weight: bold" > Posted Answers</h4>
+     {{> answersFetch}}
+     <form class="text-center ansPostCSS" action="index.html" method="post">
+       <div class="container">
+         <div class="col-xs-2"></div>
+         <div class="col-xs-5">
+           <br>
+           <textarea name="answerQuery" rows="4" cols="50" placeholder="Please post your answers for the Query here" style="color:black;font-size:150%;font-family: Varela Round;font-weight: normal;border-radius:20px;" required="true"></textarea>
+         </div>
+         <div class="col-xs-5">
+           <br><br>
+           <input class="btn btn-lg btn-default" value="Post Answer" type="submit" name="postAnswer">
+         </div>
+       </div>
+       <input type="text" name="discId" value="{{_id}}" style="color:white" readonly>
+
+     </form>
+    </div>
+
+  </div>
+  <br><br>
+</template>
+<!--Discussion Details Page Template end-->

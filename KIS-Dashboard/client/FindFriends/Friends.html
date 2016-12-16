@@ -1,113 +1,14 @@
-<head>
-  <title>KIS-Dashboard</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-  <style>
-      .up {
-        margin-top: -36px;
-      }
-
-      .down {
-        margin-top: 10px;
-      }
-
-      .carousel-inner > .item > img,
-    .carousel-inner > .item > a > img {
-        width: 70%;
-        margin: auto;
-      }
-
-      .fa {
-        size: 20px;
-      }
-
-      .foot_img {
-        margin-bottom: : -50px;
-      }
-
-    .img-circle {
-      margin-top: -10px;
-    }
-
-
-    a{
-      text-decoration: none !important;
-      color: black;
-    }
-
-    .jumbotron{
-      background-color: azure;
-    }
-
-    .friendsui {
-
-      background-image: url("http://wallpapercave.com/wp/nkTc1C9.jpg");
-      background-size: 1000px 800px;
-
-    }
-
-    .searchresult {
-      font-family: 'Nunito', sans-serif;
-      font-size: 18px;
-      color: white;
-    }
-
-    .card {
-      /* Add shadows to create the "card" effect */
-      position: absolute;
-      top:60px;
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-      background-color: #19ABA7;
-      color: white;
-      width: 320px;
-      height: 300px;
-      transition: 0.3s;
-      border-radius: 5px; /* 5px rounded corners */
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
-
-  }
-
-  .container {
-    padding: 2px 16px;
-}
-
-  .card-title{
-    font-size: 25px;
-  }
-
-  .card-text{
-    font-size: 18px;
-  }
-  </style>
-</head>
-
-<body>
-
-</body>
-
+<!--Template for Searching friends page -->
 <template name="search">
+  <!--Script for cursor to top of page -->
   <script>
   $(document).ready(function(){
       $(window).scrollTop(0);
   });
   </script>
+  <!--Calling the defauft centerhead template -->
   {{> centerheader}}
+  <!-- Creating the Find Friends UI -->
   <div class="container friendsui">
   <div class="container">
   <h1 align="center" style="color:white; font-family: Varela Round;font-size:300%;" > FIND FRIENDS </h1>
@@ -116,6 +17,7 @@
   <br><br>
   <div class="col-xs-2"></div>
   <div class="col-xs-5">
+    <!-- Search bar -->
   <form id="searchForm">
     <div class="form-group col-sm-4 col-sm-offset-4">
       <div class="input-group input-group-lg center-block">
@@ -127,34 +29,36 @@
 </div>
 <div class="col-xs-5"></div>
 </div>
+<!--Calling searchdb template to search through registered users -->
   {{> searchdb}}
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 <br>
 </template>
-
+<!-- Template for displaying the search results-->
 <template name="searchresult">
   <br><br><br>
   <div>
     <div class="col-xs-5"></div>
     <div class="col-xs-2 searchresult">
       <p id="text"></p>
+
   {{firstname}} {{lastname}}
   </div>
   <div class="col-xs-5"></div>
 </div>
 </template>
-
+<!--Template for searching registered users in the register_search collection -->
 <template name="searchdb">
   <ul class="unorder">
       {{#each register_search}}
       <a href="/register_search/{{_id}}" target="_blank">
-         {{> searchresult}}
+         {{> searchresult}} <!-- Calling searchresult template for displaying search results -->
        </a>
       {{/each}}
   </ul>
 </template>
-
+<!-- Template for creating a public profile for all registered users -->
 <template name="publicprofile">
   {{> centerheader}}
   <div class="container friendsui">
@@ -163,7 +67,7 @@
     <div class="card">
       <div class="card-container">
         <br>
-      <h4 class="card-title" align="center">{{firstname}} {{lastname}}</h4>
+      <h4 class="card-title" align="center" text-transform = "uppercase">{{firstname}} {{lastname}}</h4>
       <p class="card-text" align="center">{{email}}</p>
       <br>
       <div class="col-xs-4"></div>

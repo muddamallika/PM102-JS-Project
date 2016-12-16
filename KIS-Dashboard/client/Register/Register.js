@@ -12,7 +12,8 @@ Template.register.events({
         var firstname = event.target.firstname.value;
         var lastname = event.target.lastname.value;
 
-        var user = {'email':email,password:password,profile:{name:firstname +" "+lastname}};
+
+        var user = {email:email,password:password,profile:{name:firstname +" "+lastname}};
 
 
 
@@ -21,12 +22,14 @@ Template.register.events({
                 FlashMessages.sendError("Already user exist. Go and try to login");
             }
             else {
+              
             	FlashMessages.sendSuccess("Successfully Registered");
 
               Register_Search.insert({
                        firstname :firstname,
                        lastname:lastname,
-                       email: email
+                       email: email,
+                       usrId: Meteor.userId()
                 });
 
             }
@@ -38,7 +41,7 @@ Template.register.events({
         event.target.firstname.value="";
         event.target.lastname.value="";
         Meteor.setTimeout(function () {
-            Router.go('/Login/login');
+            Router.go('/login');
         }, 8000);
     }
 

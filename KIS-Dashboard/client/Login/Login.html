@@ -58,17 +58,8 @@
               </div>
               <br>  <br> <br>
 
-
-              <div class="etc-login-form">
-
-                  <div class="col-xs-1"></div>
-                  <div class="col-xs-10" style="margin-left: 30px;color: white;">
-                    <p>forgot your password? <a href="#">click here</a></p>
-                    <p>new user? <a href="#">create new account</a></p>
-                  </div>
-                  <div class="col-xs-1"></div>
-
-              </div>
+              {{> forgotPassword}}
+              
             </form>
           </div>
 
@@ -78,4 +69,19 @@
     <br><br><br><br><br>
 </div>
 <br>
+</template>
+<template name="forgotPassword">
+  <form>
+    <div class="etc-login-form">
+
+                  <div class="col-xs-1"></div>
+                  <div class="col-xs-10" style="margin-left: 30px;color: white;">
+                    <p>forgot your password? <a href="/404error" type="submit" class="forgotpassword">click here</a></p>
+                    <p>new user? <a href="/Register/register">create new account</a></p>
+                    {{> loginButtons}} 
+                  </div>
+                  <div class="col-xs-1"></div>
+
+              </div>
+  </form>
 </template>

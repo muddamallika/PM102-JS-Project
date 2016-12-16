@@ -1,0 +1,53 @@
+
+
+<template name="chat">
+  {{> centerheader}}
+  <div class="container-fluid">
+<div class="scroll" id="myDIV">
+    {{> chatting_display}}
+  </div>
+
+  <form>
+      <input type="text" name="username" value="{{currentUser.profile.name}}" readonly style="color:#A9A9A9">
+  		<input type="text" name="chat" placeholder="Enter the Text ..." id="chat" required style="border: 1px solid #000000;">
+      <span id="demo"></span>
+  		<input class="btn" value="send" type="submit" onclick="myFunction()">
+	</form>
+
+      <script>
+          document.getElementById("demo").innerHTML = new Date().toLocaleTimeString();
+      </script>
+      <script>
+function myFunction() {
+    var elmnt = document.getElementById("myDIV");
+    elmnt.scrollLeft = 0;
+    var num=0;
+    while(num<1000){
+      elmnt.scrollTop = num;
+      num=num+10;
+      console.log(num);
+    }
+
+}
+</script>
+  </div>
+  <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+</template>
+
+
+
+<!--Template for my_created_events_db page-->
+<template name="chatting_display">
+  <ul style="background-color:white;margin-left:80px;">
+      {{#each chatting}}
+        {{> chatting_msg}}<br>
+      {{/each}}
+  </ul>
+</template>
+<template name="chatting_msg">
+	<li>
+    <span style="color:#A9A9A9">{{username}}</span>
+    <span autofocus>{{message}}</span>
+  </li>
+</template>

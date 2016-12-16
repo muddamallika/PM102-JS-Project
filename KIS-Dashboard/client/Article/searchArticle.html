@@ -1,0 +1,31 @@
+<!-- searchArticle Template Starts  -->
+<template name="searchArticle">
+    {{> centerheader}}
+    <div class="container searcharticles">
+        <div class="row">
+            <div class="col-xs-8">
+              {{#if articles}} 
+               {{#each articles}}
+                <li>
+                    <h1>{{ArticleName}}</h1>
+                    <p class="lead">
+                        by <I>{{AuthorName}}</I>
+                    </p>
+                    <hr>
+                    <p>
+                        <span class="glyphicon glyphicon-time"></span> Posted on {{createdat}}
+                    </p>
+                    <a class="btn btn-primary" href="/readArticle/{{_id}}"> Click to View </a><br><br>
+                </li>
+               {{/each}}
+              {{else}}
+                {{> NoArticleFound}}
+              {{/if}}
+            </div>
+            <div class="col-xs-4">
+                <img src="/Images/Dude_With_Magnifying_Glass.png" >
+            </div>
+        </div>
+    </div>
+</template>
+<!-- searchArticle Template Ends  -->

@@ -1,22 +1,18 @@
-
-
 if(Meteor.isClient){
+//Search Functionality
+  Template.searchdb.helpers({
+    register_search: function() {
+    	var selectval=Session.get("searchValue");
+      if(Register_Search.find({firstname: selectval}).count()==0)
+      return Register_Search.find({lastname: selectval}).fetch();
+      else if(Register_Search.find({lastname: selectval}).count()==0)
+        return Register_Search.find({firstname: selectval}).fetch();
+        else
+          return Register_Search.find({firstname: selectval},{lastname: selectval}).fetch();
+    }
+  });
 
-Template.searchdb.helpers({
-  register_search: function() {
-  	var selectval=Session.get("searchValue");
-    if(Register_Search.find({firstname: selectval}).count()==0)
-    return Register_Search.find({lastname: selectval}).fetch();
-    else if(Register_Search.find({lastname: selectval}).count()==0)
-      return Register_Search.find({firstname: selectval}).fetch();
-      else if(Register_Search.find({firstname: selectval}).count()==Register_Search.find({lastname: selectval}).count())
-      return Register_Search.find({firstname: selectval},{lastname: selectval}).fetch();
-      else
-        return "No Results found";
-  }
-});
-
-
+//Event to get the entered search value
 Template.search.events({
   "keyup form": function(event, template){
     var searchValue = template.$("#search").val();
@@ -24,7 +20,5 @@ Template.search.events({
     console.log(searchValue);
   }
 });
-
-
 
 }
