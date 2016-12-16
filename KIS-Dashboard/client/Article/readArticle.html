@@ -1,66 +1,88 @@
+<!-- readArticle Template Starts  -->
 <template name="readArticle">
  {{> Header}}
-<br><br><br><br>
-   <div class="container readarticles">
-      <form>
-          <div class="row">
-              <div class="col-xs-10">
-          <h1>{{ArticleName}}</h1>
-          <p class="lead">
-          by <a href="#">{{AuthorName}}</a>
-          </p>
-                        </div> 
-              <div class="col-xs-2"><br><br><br><br> 
-                  <input type="hidden" name="currentArticle" value="{{_id}}" id="currentArticle">
-                  <div id="divlike">
-                      <span class="glyphicon glyphicon-thumbs-up"></span> <input type="button" id="btnlike" class="btn btn-primary" value="Like"></div>
-                   <div id="divUnlike"><span class="glyphicon glyphicon-thumbs-down"></span><input type="button" id="btnunlike" class="btn btn-primary" value="Unlike"></div> {{> Liked}}
-              </div>
-           </div>
-          <hr>
-            <p><span class="glyphicon glyphicon-time"></span> Posted on {{createdat}}</p>
-      <p>Category: <i>{{Category}} </i> </p>
- <p><span class="glyphicon glyphicon-comment"></span> {{> CommentsCount}} comments 
-    {{> LikesCount}}</p>
-          <br>
-                <!-- Post Content -->
-                <p class="lead">{{Article}}</p>
-          <br>
-          <h5><I>COMMENTS:  {{> CommentsCount}}</I> </h5>
-                        <div class="form-group">
-                            <input type="hidden" name="currentArticleID" value="{{_id}}" id="currentArticleID" >
-                            <textarea id="comment" class="form-control" rows="3" required="true" placeholder="Leave a Comment"></textarea>
-                        </div>
-                        <input type="submit" class="btn btn-primary" value="Submit">
+    <br><br><br><br>
+    
+    <div class="container readarticles">
+        
+        <form>
+            
+            <div class="row">
                 
-             
-        <!-- Comment -->  
+                <div class="col-xs-10">
+                    <h1>{{ArticleName}}</h1>
+                    <p class="lead">by 
+                        <a href="#">{{AuthorName}}</a>
+                    </p>
+                </div> 
+                
+                
+                <div class="col-xs-2"><br><br><br><br> 
+                    <input type="hidden" name="currentArticle" value="{{_id}}" id="currentArticle">
+                    <div id="divlike">
+                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                        <input type="button" id="btnlike" class="btn btn-primary" value="Like">
+                    </div>
+                    <div id="divUnlike">
+                        <span class="glyphicon glyphicon-thumbs-down"></span>
+                        <input type="button" id="btnunlike" class="btn btn-primary" value="Unlike">
+                    </div> 
+                    {{> Liked}}
+                </div>
+                
+                
+            </div>
+            <hr>
+            
+            <p><span class="glyphicon glyphicon-time"></span> Posted on {{createdat}}</p>
+            <p>Category: <i>{{Category}} </i> </p>
+            <p><span class="glyphicon glyphicon-comment"></span> {{> CommentsCount}} comments 
+                {{> LikesCount}}
+            </p><br>
+            
+            
+            
+            <!-- Post Content -->
+            <p class="lead">{{Article}}</p><br>
+            
+            <h5><I>COMMENTS:  {{> CommentsCount}}</I> </h5>
+            
+            
+            <div class="form-group">
+                <input type="hidden" name="currentArticleID" value="{{_id}}" id="currentArticleID" >
+                <textarea id="comment" class="form-control" rows="3" required="true" placeholder="Leave a Comment"></textarea>
+            </div>
+            
+            <input type="submit" class="btn btn-primary" value="Submit">
+                
+          <!-- Comment -->  
           {{> comments}}
                
-           <br><br></form>
+           <br><br>
+        </form>
     </div>
-<script> 
-        $(document).ready(function(){    
-                    
-               var x= document.getElementById("liked").value;
-            if(x=="yes")
-                {
-                     $("#divlike").hide();
-                    $("#divUnlike").show();
-                }
+    
+    
+    <script> 
+        $(document).ready(function(){                
+            var x= document.getElementById("liked").value;
+            if(x=="yes"){
+                    $("#divlike").hide();
+                    $("#divUnlike").show();}
             else{ 
                 $("#divlike").show();
-                $("#divUnlike").hide();
-                
-            }
-      $(window).scrollTop(0);
-  });</script>
+                $("#divUnlike").hide();}
+            $(window).scrollTop(0);
+        });
+    </script>
+    
+    
 </template>
 
-<template name="CommentsCount">
-    {{comments}}  
-</template>
+<!-- readArticle Template Starts  -->
 
+
+<!-- comments Template Starts  -->
 <template name="comments"> 
    {{#each comments}}
         <div class="media">
@@ -72,11 +94,43 @@
            <small>{{createdat}}</small>
            </h4>{{Comment}}<br>             
            <input type="hidden" name="currentCommenterID" value="{{commenterUserID}}" id="currentCommenterID" >
-             {{> Commentby}}
+             <small>{{createdby}}</small>
          </div>
         </div> 
     {{/each}}
 </template>
+<!-- comments Template Ends  -->
+
+
+<!-- CommentsCount Template Starts  -->
+<template name="CommentsCount">
+    {{comments}}  
+</template>
+<!-- CommentsCount Template Ends  -->
+
+
+
+
+<!-- LikesCount Template Starts  -->
+<template name="LikesCount">
+     <span class="glyphicon glyphicon-thumbs-up"></span> {{likes}} likes
+</template>
+<!-- LikesCount Template Ends  -->
+
+
+
+
+<!-- Liked Template Starts  -->
+<template name="Liked">
+    <input type="hidden" name="liked" id="liked" >
+    {{#each liked}}
+    <input type="hidden" name="LikeID" value="{{_id}}" id="LikeID" >
+    {{/each}}
+</template>
+<!-- Liked Template Ends  -->
+
+
+<!-- Commentby Template Starts  -->
 <template name="Commentby"> 
     {{#if commentby}}
      {{#each commentby}}
@@ -86,17 +140,4 @@
     <h6>anonymous</h6>
     {{/if}}
 </template>
-  <template name="LikesCount">
-     <span class="glyphicon glyphicon-thumbs-up"></span> {{likes}} likes
-</template>
-<template name="Liked">
-       {{#if liked}}
-    <input type="hidden" name="liked" value="yes" id="liked" >
-    {{else}}
-    <input type="hidden" name="liked" value="no" id="liked" >
-    {{/if}}
-     {{#each liked}}
-     <input type="hidden" name="LikeID" value="{{_id}}" id="LikeID" >
-    {{/each}}
-    
-</template>
+  <!-- Commentby Template Ends  -->
