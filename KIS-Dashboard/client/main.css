@@ -186,3 +186,8 @@ float: right;
   text-align: left;
   font-size: 15px;
 }
+
+.icon {
+  background-color: transparent;
+  margin-top: 10px;
+}
