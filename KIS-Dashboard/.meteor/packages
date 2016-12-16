@@ -39,8 +39,6 @@ zuuk:stale-session
 easy:search
 huttonr:bootstrap3
 accounts-facebook
-cfs:standard-packages
-cfs:gridfs
-cfs:filesystem
+
 accounts-ui
 email

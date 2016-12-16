@@ -1,7 +1,5 @@
-
-
 if(Meteor.isClient){
-
+//Search Functionality
   Template.searchdb.helpers({
     register_search: function() {
     	var selectval=Session.get("searchValue");
@@ -14,7 +12,7 @@ if(Meteor.isClient){
     }
   });
 
-
+//Event to get the entered search value
 Template.search.events({
   "keyup form": function(event, template){
     var searchValue = template.$("#search").val();
@@ -22,7 +20,5 @@ Template.search.events({
     console.log(searchValue);
   }
 });
-
-
 
 }

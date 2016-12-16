@@ -76,6 +76,7 @@
 /* My Events Main page */
 .myeventsMainCSS {
   text-align: center;
+  background-color: black;
 }
 
 
@@ -536,7 +537,7 @@ ol .stickyliClass .stickyaClass{color:#fff;}
     padding-right: 20px;
     margin-left: 9px;
 }
- 
+
 /*Article CSS Ends  */
 
 /*  duringAccom.html page CSS start */
@@ -800,8 +801,9 @@ ol .stickyliClass .stickyaClass{color:#fff;}
 /*Events_tab.html start*/
 .eveDetails{
   color:black;
-  font-size:130%;
+  font-size:150%;
   font-weight: normal;
+  font-family: 'Varela Round';
 }
 
 /*Event_cancel.html start*/
@@ -824,3 +826,33 @@ ol .stickyliClass .stickyaClass{color:#fff;}
   font-size: 20px;
 }
 
+
+/****answersFetch.html CSS start ***/
+.answersFetchCSS{
+  font-family: 'Varela Round';
+}
+
+.answersFetchCSS ul{
+  background-color: transparent;
+  font-family: 'Varela Round';
+  font-size: 20px;
+
+}
+
+.answersFetchCSS blockquote{
+    border-left:none
+}
+
+.answersFetchCSS .quote-box{
+    overflow: hidden;
+    padding-top: -100px;
+    border-radius: 17px;
+    background-color: #D78892;
+    margin-top: 10px;
+    color:whitesmoke;
+    box-shadow: 2px 2px 2px 2px #E0E0E0;
+}
+
+.answersFetchCSS .quote-text{
+    font-size: 19px;
+}
