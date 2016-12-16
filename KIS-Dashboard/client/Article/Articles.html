@@ -1,83 +1,166 @@
+<!-- Articles_Sel Template STarts  -->
+
 <template name="Articles_Sel">
  {{> Header}}
 <br><br><br><br>
-<div class="container allArticle">
-    <h1 align="center">Article Hub<small> find all articles here...</small></h1>
-    <br><br>
-<div class="row">
-    <div class="col-xs-6">
-  {{> articleDropdwn}}
-     <div class="col-xs-6">  
-  {{> article_group}}</div> 
-        </div>
-    <div class="col-xs-6 mar" style="height: 150px">
-           {{> LatestArticle}}
-    </div>
-    </div>
-<br/>
-
-<script >
- $(function() {
-  $('.marquee').marquee({
-    startVisible: true
-  });
-});
-</script>
-
-    </div>
-<br><br><br>
+    <!-- Articles_Sel Container Starts -->
+   <div class="container allArticle">
+       
+    <!-- Articles_Sel Header -->
+       
+    <h1 align="center">Article Hub<small> find all articles here...</small></h1><br><br>
+       
+        <div class="row">
+         <!-- Articles_Sel articleDropdwn display Starts  -->
+            
+         <div class="col-md-6">
+          {{> articleDropdwn}}<br><br>
+            <div class="col-xs-12">  
+                
+                <!-- Articles_Sel display catagory wise -->
+               <div id="articlesel"> {{> article_group}}</div>
+                
+                <!-- Articles_Sel default display -->
+               <div id="Welcome"><h3>Hello {{currentUser.profile.name}}, Welcome to Article Hub</h3></div>
+                
+             </div>
+         </div>
+            
+         <!-- Articles_Sel articleDropdwn display Ends  -->
+         
+         <!-- Articles_Sel image display catagory wise Starts  -->
+         <div class="col-md-6">
+            <div id="imgF" style="height: 100px width:100px">
+                <img  src="/Images/6359636369325365532128639689_fashion2.jpg">
+            </div>
+            <div id="imgT" style="height: 100px width:100px">
+                <img src="/Images/Technology.jpg">
+             </div>
+             <div id="imgL" style="height: 100px width:100px">
+                 <img src="/Images/22eab4ed66_lifestyle.jpg">
+             </div>
+         </div>
+          <!-- Articles_Sel image display catagory wise Ends  -->
+      </div>
+      <br/><br>
+</div>
+  <!-- Articles_Sel Container Ends -->
+  <br><br><br>
+    
+    <!-- Articles_Sel script for hide/display divs Starts-->
+    <script>
+        $(document).ready(function(){
+              $("#imgF").hide();
+              $("#imgT").hide();
+              $("#imgL").hide();
+              $("#articlesel").hide();
+          });
+    </script>
+    <!-- Articles_Sel script for hide/display divs Ends-->
+    
 </template>
+
+     <!-- Articles_Sel Template Ends  -->
+
+
+
+<!-- articleDropdwn Template Starts  -->
 
 <template name="articleDropdwn">
-<form>
-    <div class="dropdown">
-  <select class="dropbtn" id="chats">
-
-  <div>
-      <option selected disabled>Select Your Category </option>
-    <option value="Technology">Technology</option>
-    <option value="Fashion">Fashion</option>
-    <option value="Lifestyle">Lifestyle</option>
-
+  <form>
+   <div class="dropdown">
+    <select class="dropbtn" id="chats">
+       <div>
+         <option selected disabled>Select Your Category </option>
+         <option value="Technology">Technology</option>
+         <option value="Fashion">Fashion</option>
+         <option value="Lifestyle">Lifestyle</option>
+       </div>
+    </select>
   </div>
-        </select>
-</div>
-</form>
-<br><br>
-        </template>
+  </form><br><br>
+</template>
+
+<!-- articleDropdwn Template Ends  -->
+
+<!-- article_group Template Starts  -->
+<template name="article_group">
+     <ul class="unorder">
+         {{#if articles}} 
+            {{#each articles}}
+                {{> article_r}}  <br><br><br><br>
+            {{/each}}
+         {{else}}
+             {{> NoArticleFound}}
+         {{/if}}
+    </ul>
+</template>
+
+<!-- article_group Template Ends  -->
+
+<!-- article_r Template Starts  -->
 <template name="article_r">
-        <li>
+    <li>
           <h3>{{ArticleName}}</h3>
-          <p>
-          by <I>{{AuthorName}} </I> 
-          </p>
-            <hr>
-            <p><span class="glyphicon glyphicon-time"></span> Posted on {{createdat}}</p>
-    <a class="authourclass"  href="/readArticle/{{_id}}">{{ArticleInitial}}....<br> <br> Click to View </a><br><br>
-  </li>
+           <p>
+           by <I>{{AuthorName}} </I> 
+           </p>
+           <hr>
+           <p><span class="glyphicon glyphicon-time"></span> Posted on {{createdat}}</p>
+           <p>{{ArticleInitial}}....</p>
+            <a class="btn btn-primary" href="/readArticle/{{_id}}">Click to View</a><br><br>
+     </li>
   <br><br><br><br><br>
 </template>
-
-<template name="article_group">
-  <ul class="unorder">
-      {{#each articles}}
-         {{> article_r}}  <br><br><br><br>
-      {{/each}}
-  </ul>
+<!-- article_r Template Ends  -->
 
 
+<!-- NoArticleFound Template Starts  -->
+<template name="NoArticleFound">
+    <h3>No Article found</h3>
 </template>
+<!-- NoArticleFound Template Ends  -->
 
+
+<!-- Allarticle Template Starts  -->
 <template name="Allarticle">
   <ul class="unorder">
       {{#each articles}}
-      <a href="/readArticle/{{_id}}" target="_blank">
-        <li>
-          <h4>{{ArticleName}}</h4>
-          <h5>
-          By: {{AuthorName}}</h5>
-        </li>
-      </a> <br><br><br><br><br>
+           <a href="/readArticle/{{_id}}" target="_blank">
+              <li>
+                  <h4>{{ArticleName}}</h4>
+                  <h5>By: {{AuthorName}}</h5>
+              </li>
+           </a> <br><br><br><br><br>
       {{/each}}
-  </ul>
-    </template>
+</ul>
+</template>
+<!-- Allarticle Template Ends  -->
+
+
+<!-- paging Template Starts  -->
+
+<template name="paging">
+    <ul class="pagination">
+        {{#if paging}}
+           {{#each paging}}
+              <li><a href="'#article'+{{id}}">{{id}}</a></li>
+           {{/each}}
+        {{else}} 
+             <li><a href="#">1</a></li>
+        {{/if}}
+    </ul>
+    <ul id="'article'+{{id}}" class="unorder">
+         {{#if paging}} 
+            {{#each paging}}
+               {{#each Article}} 
+                    <li>{{ArticleName}}</li>
+               {{/each}} <br><br><br><br>
+            {{/each}}
+         {{else}}
+             {{> NoArticleFound}}
+         {{/if}}
+    </ul>
+</template>
+
+<!-- paging Template Ends  -->

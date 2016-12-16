@@ -1,44 +1,60 @@
-<template name="pArticle">
+<!-- pArticle Template Starts  -->
 
- {{> Header}}
-<br><br><br><br>
- <div class="container postarticle">
- <form> 
-     <div class="container">
-     <h1 align="center">Put your thoughts in words</h1>
-         <br>
-     <div class="row">
-      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-     <div class="alert alert-success alert-dismissable fade in">
-      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-      <strong>Success!</strong> The article has been successfully posted
-     </div>
-          <input type="text" name="ArticleName" id="ArticleName" class="form-control input-lg" placeholder="Give a name to your article" required="true" >
-          <br>
-          <select  name="Category" id="Category" class="form-control input-lg">
-            <option value="Technology"  >Technology</option>
-            <option value="Fashion" >Fashion</option>
-            <option value="Lifestyle" >Lifestyle</option>
-          </select>
-        <br>
-       <textarea id="Article" rows="4" cols="120" placeholder="Please write the content of your article here" required="true"  class="form-control input-lg" ></textarea>
-        <br>
-      <input type="text" name="AuthorName" id="AuthorName" placeholder="Give a name of the Author"  class="form-control input-lg"><br>
-          <div class="col-xs-3"> </div>
-          <div class="col-xs-3">  <input type="submit" class="btn btn-submit btn-primary" value="Post your Blog"></div>
-          
-          <div class="col-xs-1"></div>
-          <div class="col-xs-2"><input id="back" type="reset" class="btn btn-submit" value="Reset"></div>
-      
+<template name="pArticle">
+   {{> Header}}
+    <br><br><br><br>
+     <div class="container postarticle">
+       <form> 
+        <div class="container">
+            
+           <h1 align="center">Put your thoughts in words</h1><br>
+            
+         <div class="row">
+             <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                 
+                 <!-- flash message starts-->
+                 <div class="alert alert-success alert-dismissable fade in">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                     <strong>Success!</strong> The article has been successfully posted
+                 </div>
+                 <!-- flash message Ends-->
+                 
+                 <input type="text" name="ArticleName" id="ArticleName" class="form-control input-lg" placeholder="Give a name to your article" required="true" ><br>
+                 
+                 <select  name="Category" id="Category" class="form-control input-lg">
+                     <option value="Technology"  >Technology</option>
+                     <option value="Fashion" >Fashion</option>
+                     <option value="Lifestyle" >Lifestyle</option>
+                 </select><br>
+                 
+                 <textarea id="Article" rows="4" cols="120" placeholder="Please write the content of your article here" required="true"  class="form-control input-lg" ></textarea><br>
+                 
+                 <input type="text" name="AuthorName" id="AuthorName" placeholder="Give a name of the Author"  class="form-control input-lg"><br>
+                 <div class="col-xs-3"> </div>
+                 <div class="col-xs-3">  
+                     <input type="submit" class="btn btn-submit btn-primary" value="Post your Blog">
+                 </div>
+                 <div class="col-xs-1"></div>
+                 <div class="col-xs-2"><input id="back" type="reset" class="btn btn-submit" value="Reset"></div>
+             </div>
          </div>
-         </div>
-          </div>
+            
+            
+        </div>
+           
      </form>
+         
     </div>
-    <script>
-          $(document).ready(function(){
+    
+        <script>
+              $(document).ready(function(){
               $(".alert").hide()
-      $(window).scrollTop(0);
-  });
-    </script>
+              $(window).scrollTop(0);});
+        </script>
+    
 </template>
+
+<!-- pArticle Template Ends  -->
+
+
+

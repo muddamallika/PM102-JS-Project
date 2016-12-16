@@ -12,7 +12,7 @@
   padding:0;
 }
 .eventCSS{
-  font-family:arial,sans-serif;
+  font-family:varela round;
   font-size:100%;
   margin:3em;
   color:#fff;
@@ -39,7 +39,7 @@
  .unorder_list .order_list .sticky {
   text-decoration:none;
   color:#000;
-  background:#ffc;
+  background:white;
   display:block;
   height:10em;
   width:10em;
@@ -94,7 +94,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: white;
+    background-color: transparent;
 }
 </style>
 </head>
@@ -105,39 +105,39 @@
 <!-- Template for the event main page-->
 <template name="event">
   {{> centerheader}}
-  <hr>
-  <div class="container-fluid eventCSS">
+  <div class="container eventCSS">
       <div class="col-xs-3">
-          <!-- Verifying whether user had logged in or not -->
-          <br>
-          <div class="container">
-            {{#if currentUser}}
-              <a href="/Events/my_events" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">My Events</a>
-            {{else}}
-              <a href="/Login/login" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">My Events</a>
-            {{/if}}
-          </div>
+          <div class="col-xs-1"></div>
+          <div class="col-xs-1">
+            <br><br><br><br>
+            <div class="container">
+                <a href="/my_event_buttons" class="lead btn btn-lg btn-default" style="color: #030805;font-weight: bold; font-family: Varela Round;font-size: 20px;" >My Events</a>
+            </div>
 
-          <br><hr><br>
-          <!-- Verifying whether user had logged in or not -->
-          <div class="container">
-            {{#if currentUser}}
-              <a href="/Event_new/event_new" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">Create Event</a>
-            {{else}}
-              <a href="/Login/login" class="lead btn btn-default" style="color: #030805;font-weight: bold; font-size: 20px;" target="_blank">Create Event</a>
-            {{/if}}
+            <br><br><br><br>
+            <!-- Verifying whether user had logged in or not -->
+            <div class="container">
+                <a href="/Event_new/event_new" class="lead btn btn-lg btn-default" style="color: #030805;font-weight: bold; font-family: Varela Round;font-size: 20px;" >Create Event</a>
+            </div>
           </div>
+          <div class="col-xs-1"></div>
+          <!-- Verifying whether user had logged in or not -->
+
       </div>
 
       <div class="col-xs-9">
         <!-- Template call to display all the events that are present -->
-        <div class="container">
-         <p class="lead" style="text-decoration: underline;font-weight: bold; font-size: 35px;color: black;text-align:center">Latest Events</p>
+        <div class="container-fluid">
+         <h1 align="center" style="color:white;font-size:300%;font-family: Varela Round;font-weight: bold;" > Latest Events </h1>
+         <hr>
         </div>
-        <div class="container">
+        <div class="container-fluid">
           {{> total_events_display}}
+          <br><br><br><br>
         </div>
       </div>
+
+      <br><br><br><br><br><br><br><br>
    </div>
 <hr>
 </template>
@@ -145,19 +145,20 @@
 <!-- Template for event_display -->
 <template name="event_display">
   <!-- Applying Sticky notes display to the events -->
-    <p class="lead" style="font-weight: bold; font-size: 10px;">  {{eventName}} </p>
-    <p class="lead" style="font-weight: normal; font-size: 10px;"> {{eventDate}}</p>
+    <h2 style="font-weight: bold; font-size: 20px;font-family:cursive;color:red">  {{eventName}} </h2>
+    <h4 style="font-weight: normal; font-size: 15px;font-family:cursive;"> {{eventDate}}</h4>
+    <h4 style="font-weight: normal; font-size: 15px;font-family:cursive;"> {{eventLoc}}</h4>
 </template>
 
 <!-- Template for total_events_display page -->
 <template name="total_events_display">
     <ul class="unorder_list">
-      <br><br><div style="margin-left:30px;">
+      <br><div style="margin-left:30px;">
         <!-- Fetching from the total_events collection - this collection contains list of all the events-->
         {{#each total_events}}
         <!-- Implementing looping for the collection total_events -->
         <li class="order_list">
-          <a class="sticky" href="/total_events/{{_id}}" target="_blank">
+          <a class="sticky" href="/total_events/{{_id}}">
             {{> event_display}}
           </a>
           <br><br>
@@ -165,38 +166,4 @@
         {{/each}}
       </div>
     </ul>
-</template>
-
-<!-- Template for my_events main page -->
-<template name="my_events">
-   {{> centerheader}}
-   <a href="/Events_My_Created_Events/my_created_events" class="btn btn-info cevent" role="button" target="_blank">
-     My Created Events
-   </a>
-   <a href="/Events_My_Created_Events/my_registered_events" class="btn btn-info cevent" role="button" target="_blank">
-     My Registered Events
-   </a>
-   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</template>
-
-<!--Template for my_created_events_list page-->
-<template name="my_created_events_list">
-  <div class="stickyinfo">
-    <h2> {{eventName}} </h2>
-    <p> {{eventDate}} </p>
-  </div>
-</template>
-
-<!--Template for my_created_events_db page-->
-<template name="my_created_events_db">
-  <ul class="unorder_list">
-      {{#each events}}
-        <li class="order_list">
-          <a class="sticky" href="/events/{{_id}}" target="_blank">
-            {{> my_created_events_list}}
-          </a>
-          <br><br>
-        </li>
-      {{/each}}
-  </ul>
 </template>

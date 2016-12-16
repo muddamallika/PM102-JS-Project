@@ -1,53 +1,81 @@
+<!-- myArticle Template Starts  -->
 <template name="myArticle">
  {{> Header}}
-<br><br><br><br>
-<div class="container myarticle">
-<h1 align="center">My Articles</h1>
-  <br><br>
+   <br><br><br><br>
+    <div class="container myarticle">
+        <h1 align="center">My Articles</h1><br><br>
     <form>
-<div class="row">      
-<div class="col-xs-6">
-    {{> articleDropdwn}}
-<br><br>
-  {{> myarticle_group}}
-    </div>
-    <div class="col-xs-6">
-        {{> myarticle_stickyNote}}
-         </div>
-    </div>   
+        <div class="row">      
+            <div class="col-xs-6">
+                {{> articleDropdwn}}<br><br>
+                <div id="myarticlesel"> {{> myarticle_group}}</div>
+                <div id="welcomeyou"><h3>Hello {{currentUser.profile.name}}, Welcome to your Article Hub</h3></div>
+            </div>
+            
+            <div class="col-xs-6">
+                 {{> myarticle_stickyNote}}
+            </div>
+        </div>   
     </form>
-    </div>
-<br><br><br>
+   </div><br><br><br>
+    
+    <!--  script for myArticle page onload starts-->
+    <script>
+         $(document).ready(function(){
+            $("#myarticlesel").hide();
+          });
+    </script>
+     <!--  script for myArticle page onload ends-->
+    
 </template>
+<!-- myArticle Template Ends  -->
 
-<template name="myarticle_r">
-<li>
-    <h3>{{ArticleName}}</h3>
-    <p>{{MyArticleInitial}}.....
-     <button type="button" class="btn btn-link" onclick="window.open('/readArticle/{{_id}}')">Read More</button></p>
-    <p>{{> CommentsCount}}
-    {{> LikesCount}}</p>
-  </li>
-</template>
 
+
+<!-- myarticle_group Template Starts  -->
 <template name="myarticle_group">
   <ul class="unorder">
-      {{#each articles}}
-         {{> myarticle_r}} <br><br><br><br><br><br><br><br>
+       {{#if articles}} 
+       {{#each articles}}
+         {{> myarticle_r}}  <br><br><br><br><br><br><br><br><br><br>
       {{/each}}
+    {{else}}
+       {{> NoArticleFound}}
+    {{/if}}
   </ul>
 </template>
+<!-- myarticle_group Template Ends  -->
 
+
+
+
+<!-- myarticle_r Template Starts  -->
+<template name="myarticle_r">
+    <li>
+        <h3>{{ArticleName}}</h3>
+        <p>{{MyArticleInitial}}....
+            <button type="button" class="btn btn-link" onclick="window.open('/readArticle/{{_id}}')">Read More</button>
+        </p>
+        <p><span class="glyphicon glyphicon-comment"></span>{{> CommentsCount}} comments
+            {{> LikesCount}}</p>
+    </li>
+</template>
+<!-- myarticle_r Template Ends  -->
+
+
+
+<!-- myarticle_stickyNote Template Starts  -->
 <template name="myarticle_stickyNote">
-<ul class="stickyulClass">
-   
-      {{#each articles}} <li class="stickyliClass">
-      <a class="stickyaClass" href="/readArticle/{{_id}}" target="_blank">
-        <h4 class="stickyh4Class">{{ArticleName}}</h4>
-        <p class="stickypClass">Category : {{Category}}</p>
-      </a></li>
+    <ul class="stickyulClass">
+      {{#each articles}} 
+        <li class="stickyliClass">
+            <a class="stickyaClass" href="/readArticle/{{_id}}" target="_blank">
+                <h4>{{ArticleName}}</h4>
+                <h6><i>Category: {{Category}}</i></h6>
+            </a>
+        </li>
       {{/each}}
-
-  </ul>
+    </ul>
 </template>
 
+<!-- myarticle_stickyNote Template Ends  -->

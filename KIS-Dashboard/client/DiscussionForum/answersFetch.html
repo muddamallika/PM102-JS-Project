@@ -1,0 +1,28 @@
+<!--Template to specify the details the we need from DB start-->
+<template name="answersSpecify">
+  <li>
+    {{answerQuery}}
+  </li>
+</template>
+<!-- end-->
+
+<!--Template to specify the details the we need from DB start-->
+<template name="answersFetch">
+  <div class="container answersFetchCSS">
+    <ul>
+        {{#each answer}}
+          <div class="container">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-7">
+              <blockquote class="quote-box">
+                <p class="quote-text" style="margin-left:130px;">
+                  {{> answersSpecify}}
+                </p>
+              </blockquote>
+            </div>
+            <div class="col-xs-3"></div>
+          </div>
+        {{/each}}
+    </ul>
+  </div>
+</template>

@@ -41,10 +41,17 @@ Template.event_tab.events({
         eventDate:eventDate,
         eventTime:eventTime
 	 });
+   //Sends Flash Messages
+   FlashMessages.sendSuccess("Registered to the event successfully");
+   //Navigates back to the forum main page after displaying the success message
+   Meteor.setTimeout(function () {
+       Router.go('/Events/event');
+   }, 5000);
 	}
 });
 
-
+//To verify whether the user is already Registered
+//If the user is registered this will disable the register button
 Template.mytemplate.helpers({
 	productcount: function(x){
 		var x=0;

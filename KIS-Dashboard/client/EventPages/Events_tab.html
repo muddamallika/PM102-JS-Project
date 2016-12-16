@@ -13,75 +13,81 @@
       color: transparent;
     }
 
-    .col8{
-      margin-left: 170px;
-      background-image: url(http://slodive.com/wp-content/uploads/2012/09/plain-backgrounds/grungy-greenish-background.jpg);
-    }
+
 </style>
 </head>
 
 <body>
 </body>
 
-<!-- -->
+<!-- Template to display the particular event details-->
 <template name="event_tab">
  {{> centerheader}}
  {{#if currentUser}}
  <div class="container">
+   <h1 align="center" style="color:black;font-size:300%;font-weight: normal;font-family:varela round" > Details of the Event - {{eventName}} </h1>
+   <hr>
+ </div>
+
+ <div class="container">
    <br>
    <form>
-     <div class="col-xs-2"></div>
-     <div class="col-xs-8 col8">
+     <div class="col-xs-3"></div>
+     <div class="col-xs-7 eveDetails">
+       {{> flashMessages}}
        <!-- Event Name field-->
        <div class="form-group row">
-         <label class="col-sm-2 col-form-label label_events">
+         <label class="col-sm-4 col-form-label label_events">
            Event Name
          </label>
          <div class="col-sm-5">
-           <input type="text" class="form-control" id="eventName" name="eventName" value="{{eventName}}" readonly>
+           <legend> <input id="eventName" name="eventName" style="color:red" value="{{eventName}}" readonly ></legend>
          </div>
        </div>
        <!-- Event Description field-->
        <div class="form-group row">
-          <label class="col-sm-2 col-form-label">
+          <label class="col-sm-4 col-form-label">
             Event Description
           </label>
           <div class="col-sm-5">
-            <input type="text" class="form-control" id="eventDesc" name="eventDesc" value="{{eventDesc}}" readonly>
+            <legend> <input id="eventDesc" name="eventDesc" value="{{eventDesc}}" style="color:red" readonly ></legend>
           </div>
        </div>
        <!-- Event Location field-->
        <div class="form-group row">
-         <label class="col-sm-2 col-form-label">
+         <label class="col-sm-4 col-form-label">
            Event Location
          </label>
          <div class="col-sm-5">
-           <input type="text" class="form-control" id="eventLoc" name="eventLoc" value="{{eventLoc}}" readonly>
+           <legend> <input id="eventLoc" name="eventLoc" value="{{eventLoc}}" style="color:red" readonly ></legend>
          </div>
        </div>
        <!--Event Date field -->
        <div class="form-group row">
-          <label class="col-sm-2 col-form-label">
+          <label class="col-sm-4 col-form-label">
             Event Date
           </label>
           <div class="col-sm-5">
-            <input type="text" class="form-control" id="eventDate" name="eventDate" value="{{eventDate}}" readonly>
+            <legend> <input id="eventDate" name="eventDate" value="{{eventDate}}" style="color:red" readonly ></legend>
           </div>
        </div>
        <!-- Event Time field-->
        <div class="form-group row">
-         <label class="col-sm-2 col-form-label">
+         <label class="col-sm-4  col-form-label">
            Event Time
          </label>
          <div class="col-sm-5">
-           <input type="text" class="form-control" id="eventTime" name="eventTime" value="{{eventTime}}" readonly>
+           <legend> <input id="eventTime" name="eventTime" value="{{eventTime}}" style="color:red" readonly ></legend>
          </div>
        </div>
        <!-- Register and Cancel buttons-->
+       <br>
        <div class="form-group row">
-          <div class="offset-sm-2 col-sm-10">
+         <div class="col-sm-1"> </div>
+          <div class="col-sm-10">
             {{> mytemplate}}
           </div>
+          <div class="col-sm-1"> </div>
        </div>
 
      </div>
@@ -92,19 +98,17 @@
 </div>
 
   {{else}}
-    <p>Please log in
-      <a href="/Login/login"></a>
-    </p>
+    <a href="/login"><p>Please log in</p></a>
   {{/if}}
     <br><br><br><br><br><br>
 </template>
 
-<!-- -->
+<!-- Template to verify whether the user have registered for the particular event-->
 <template name="eventuser">
   <ul class="unorder1">
       {{#each total_events}}
         {{> todo1}}
-        <br><br>
+        <br>
       {{/each}}
   </ul>
 </template>
@@ -118,21 +122,17 @@
 
 <!-- -->
 <template name="mytemplate">
+  <!--To verify the count and activate/deactivate the register button accordingly -->
+  {{#if productcount x}}
+    <input type="submit" class="btn btn-lg btn-success active" name="status" value="Register">
+  {{else}}
+    <input type="submit" class="btn btn-lg btn-success disabled" name="status" value="Register">
+  {{/if}}
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <!-- -->
   {{#if productcount x}}
-    <input type="submit" class="btn btn-primary active" name="status" value="Register">
+    <input type="submit" class="btn btn-lg btn-danger disabled" name="status" value="Cancel">
   {{else}}
-    <input type="submit" class="btn btn-primary disabled" name="status" value="Register">
+    <a href="/Event_cancel/event_cancel" class="btn btn-lg btn-danger active" name="status" value="Cancel">Cancel</a>
   {{/if}}
-  <!-- -->
-  {{#if productcount x}}
-    <input type="submit" class="btn btn-primary disabled" name="status" value="Cancel">
-  {{else}}
-    <a href="/Event_cancel/event_cancel" class="btn btn-primary active" name="status" value="Cancel">Cancel</a>
-  {{/if}}
-</template>
-
-<!-- -->
-<template name="totalregistrations">
-{{totalnum}}
 </template>

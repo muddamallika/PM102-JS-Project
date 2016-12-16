@@ -22,6 +22,7 @@ Template.register.events({
                 FlashMessages.sendError("Already user exist. Go and try to login");
             }
             else {
+              
             	FlashMessages.sendSuccess("Successfully Registered");
 
               Register_Search.insert({

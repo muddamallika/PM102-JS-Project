@@ -1,9 +1,9 @@
-//
 if(Meteor.isClient) {
 Template.event_new.events({
     'submit form': function(event){
     event.preventDefault();
-    var eventName = event.target.eventName.value;   // Extracting values from front end and assigning to specific variables
+    // Extracting values from front end and assigning to specific variables
+    var eventName = event.target.eventName.value;
     var eventDesc = event.target.eventDesc.value;
     var eventLoc = event.target.eventLoc.value;
     var eventDate = event.target.eventDate.value;
@@ -12,7 +12,8 @@ Template.event_new.events({
     var eventSeats = event.target.eventSeats.value;
     var currentUserId = Meteor.userId();
 
-    Total_Events.insert({       // Inserting Variables in a Collection named Total_Events
+    // Inserting Variables in a Collection named Total_Events
+    Total_Events.insert({
         eventName:eventName,
         eventDesc:eventDesc,
         eventLoc:eventLoc,
@@ -22,7 +23,9 @@ Template.event_new.events({
         eventSeats:eventSeats,
         user_id: currentUserId
     });
-    Events.insert({           // Inserting Variables in a Collection named Events
+
+    // Inserting Variables in a Collection named Events
+    Events.insert({
         eventName:eventName,
         eventDesc:eventDesc,
         eventLoc:eventLoc,
@@ -33,7 +36,8 @@ Template.event_new.events({
         eventSeats:eventSeats
     });
 
-    event.target.eventName.value="";        // After Adding them Emptying the values.
+    // After Adding them Emptying the values.
+    event.target.eventName.value="";
     event.target.eventDesc.value="";
     event.target.eventLoc.value="";
     event.target.eventDate.value="";
