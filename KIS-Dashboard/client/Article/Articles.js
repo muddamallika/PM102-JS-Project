@@ -37,13 +37,17 @@ Template.article_group.helpers({
           }*/
   }
 });
+    
+    
 
 Template.Articles_Sel.events({
   "change #chats": function(event, template){
     var selectValue = template.$("#chats").val();
     Session.set("selectval",selectValue);
+      
       $("#articlesel").show();
       $("#Welcome").hide();
+      
     switch(selectValue){
         case "Fashion":
             $("#imgF").show();
@@ -68,40 +72,46 @@ Template.Articles_Sel.events({
   }
    
 });
+    
+    
 
     Template.Allarticle.helpers({
-  articles: function() {
-    return Articles.find().fetch().reverse();
-  }
-});
+      articles: function() {
+      return Articles.find().fetch().reverse();
+      }
+    });
+    
     Template.readArticle.helpers({
-  articles: function() {
-    return Articles.find().fetch();
-  }
-});
-      Template.readArticle.helpers({
-  myarticles: function() {
-    return myArticles.find().fetch();
-  }
-});    
+     articles: function() {
+     return Articles.find().fetch();
+     }
+    });
+    
+     
     
     Template.ArticleHome.helpers({
-  articles: function() {
-    return Articles.find().fetch();
-  }
-}); 
+        articles: function() {
+            return Articles.find().fetch();
+        }
+    }); 
     
       Template.Top3Article.helpers({
-  articles: function() {
-    return Articles.find({},{limit:3}).fetch();
-  }
-}); 
-       
-      Template.paging.helpers({
-  paging: function() {
-    return Paging.find().fetch();
-  }
-}); 
+          articles: function() {
+              return Articles.find({},{limit:3}).fetch();
+          }
+      }); 
+    
+    Template.readArticle.helpers({
+      myarticles: function() {
+          return myArticles.find().fetch();
+      }
+      }); 
+    
+    Template.paging.helpers({
+        paging: function() {
+            return Paging.find().fetch();
+        }
+    }); 
     
 if(Meteor.isServer) {
 

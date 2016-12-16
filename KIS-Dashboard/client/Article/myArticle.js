@@ -2,6 +2,18 @@ import { Session } from 'meteor/session'
 
 if(Meteor.isClient) {
 
+/* myArticle Template Binding functionality */  
+    
+Template.myArticle.helpers({
+         articles: function() {
+              var currentUserId = Meteor.userId();
+              return Articles.find({createdBy: currentUserId}).fetch().reverse();}
+ });
+    
+    
+    
+/* myarticle_group Template Binding functionality */  
+    
 Template.myarticle_group.helpers({
   articles: function() {
   	var selectval=Session.get("selectval");
@@ -11,6 +23,8 @@ Template.myarticle_group.helpers({
   }
 });
 
+/* view myarticle by category functionality */ 
+    
 Template.myArticle.events({
   "change #chats": function(event, template){
     var selectValue = template.$("#chats").val();
@@ -21,19 +35,16 @@ Template.myArticle.events({
 
 });
 
-    Template.myArticle.helpers({
-         articles: function() {
-              var currentUserId = Meteor.userId();
-              return Articles.find({createdBy: currentUserId}).fetch().reverse();}
-    });
-    
- Template.myarticle_stickyNote.helpers({
+   
+    /* myarticle_stickyNote Template Binding functionality */  
+   Template.myarticle_stickyNote.helpers({
          articles: function() { 
             var currentUserId = Meteor.userId();
             return Articles.find({createdBy: currentUserId}).fetch().reverse();
          }
     });
     
+    /* CommentsCount Template Binding functionality */  
      Template.CommentsCount.helpers({
          comments: function() {
               var currentArticleId = this._id;
