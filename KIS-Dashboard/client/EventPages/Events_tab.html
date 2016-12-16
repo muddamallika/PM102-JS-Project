@@ -25,15 +25,15 @@
  {{> centerheader}}
  {{#if currentUser}}
  <div class="container">
-   <h1 align="center" style="color:black;font-size:300%;font-weight: normal" > Details of the Event - {{eventName}} </h1>
+   <h1 align="center" style="color:black;font-size:300%;font-weight: normal;font-family:varela round" > Details of the Event - {{eventName}} </h1>
    <hr>
  </div>
 
  <div class="container">
    <br>
    <form>
-     <div class="col-xs-4"></div>
-     <div class="col-xs-6 eveDetails">
+     <div class="col-xs-3"></div>
+     <div class="col-xs-7 eveDetails">
        {{> flashMessages}}
        <!-- Event Name field-->
        <div class="form-group row">
@@ -41,7 +41,7 @@
            Event Name
          </label>
          <div class="col-sm-5">
-           <input type="text" class="form-control eventIp" id="eventName" name="eventName" value="{{eventName}}" readonly>
+           <legend> <input id="eventName" name="eventName" style="color:red" value="{{eventName}}" readonly ></legend>
          </div>
        </div>
        <!-- Event Description field-->
@@ -50,7 +50,7 @@
             Event Description
           </label>
           <div class="col-sm-5">
-            <input type="text" class="form-control eventIp" id="eventDesc" name="eventDesc" value="{{eventDesc}}" readonly>
+            <legend> <input id="eventDesc" name="eventDesc" value="{{eventDesc}}" style="color:red" readonly ></legend>
           </div>
        </div>
        <!-- Event Location field-->
@@ -59,7 +59,7 @@
            Event Location
          </label>
          <div class="col-sm-5">
-           <input type="text" class="form-control eventIp" id="eventLoc" name="eventLoc" value="{{eventLoc}}" readonly>
+           <legend> <input id="eventLoc" name="eventLoc" value="{{eventLoc}}" style="color:red" readonly ></legend>
          </div>
        </div>
        <!--Event Date field -->
@@ -68,7 +68,7 @@
             Event Date
           </label>
           <div class="col-sm-5">
-            <input type="text" class="form-control eventIp" id="eventDate" name="eventDate" value="{{eventDate}}" readonly>
+            <legend> <input id="eventDate" name="eventDate" value="{{eventDate}}" style="color:red" readonly ></legend>
           </div>
        </div>
        <!-- Event Time field-->
@@ -77,7 +77,7 @@
            Event Time
          </label>
          <div class="col-sm-5">
-           <input type="text" class="form-control eventIp" id="eventTime" name="eventTime" value="{{eventTime}}" readonly>
+           <legend> <input id="eventTime" name="eventTime" value="{{eventTime}}" style="color:red" readonly ></legend>
          </div>
        </div>
        <!-- Register and Cancel buttons-->
@@ -108,7 +108,7 @@
   <ul class="unorder1">
       {{#each total_events}}
         {{> todo1}}
-        <br><br>
+        <br>
       {{/each}}
   </ul>
 </template>
@@ -136,5 +136,3 @@
     <a href="/Event_cancel/event_cancel" class="btn btn-lg btn-danger active" name="status" value="Cancel">Cancel</a>
   {{/if}}
 </template>
-
-

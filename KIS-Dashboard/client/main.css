@@ -77,6 +77,7 @@
 /* My Events Main page */
 .myeventsMainCSS {
   text-align: center;
+  background-color: black;
 }
 
 
@@ -764,8 +765,9 @@ ol .stickyliClass .stickyaClass{color:#fff;}
 /*Events_tab.html start*/
 .eveDetails{
   color:black;
-  font-size:130%;
+  font-size:150%;
   font-weight: normal;
+  font-family: 'Varela Round';
 }
 
 /*Event_cancel.html start*/
@@ -806,11 +808,10 @@ ol .stickyliClass .stickyaClass{color:#fff;}
 
 .answersFetchCSS .quote-box{
     overflow: hidden;
-    margin-top: -50px;
     padding-top: -100px;
     border-radius: 17px;
     background-color: #D78892;
-    margin-top: 25px;
+    margin-top: 10px;
     color:whitesmoke;
     box-shadow: 2px 2px 2px 2px #E0E0E0;
 }
