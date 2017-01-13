@@ -1,13 +1,15 @@
-# PM102-JS-Project
-PM102 - Advance Application Programming Course. Planning and developing an application using Javascript.
+KIS-DASHBOARD
 
-This project was undertaken as a part of course curriculum for the module Advanced Application Programming. It's main objective is to impart Programming in Javascript knowledge to the Students. Also, students are expected to gain full-stack developer capabilities by the end of the
-project.Apart from this, teamwork and management of goals is an integral aspect.
+This is a web application that serves as Knowledge Information System for International Students. The Project is developed on Meteor Framework.
 
+Instructions To Run the Project:
+1. Download the GIT repository of the Project. / Clone the project on to your local system.
+2. Unzip the repository and open the path in which it is stored.
+3. Type 'Meteor' to run the project. ( If Meteor is not installed earlier then install Meteor first and run the above command )
 
-#About the project
-
-A complete interactive dashboard has been developed for students, with the focus being on International Students.
-
-The main features of this application are as follows:
-*Signup and Login Functionality
+Meteor Installation Instructions:
+1. Open Command line and type in the below command to install Meteor (For MAC OS users)
+    curl https://install.meteor.com/ | sh
+    
+2. For Windows user download the installation file from Meteor website and follow the instructions provided.
+    https://www.meteor.com/install

@@ -1,27 +1,5 @@
 Amritha Das (Mt No : 930024)
-Being a veteran in programming this avid traveler came up with the idea that,
-students in Germany might need an appropriate platform to come together learn,
-earn and share experiences. She has been an integral part of development of KIS dashboard.
-With a clear mind-map of how to proceed at every stage with not too much, or too less of any thing,
-she kept the ideas and thoughts flowing in balance and satisfying every member of the team.
-
 Mallika Mudda(Mt No:927904)
-She is the person under whose guidance KIS dashboard has strived to be the best.
-She has bought the team together and with ample experience in IT and management,
-taught the pros and cons of a decision and kept us on track through thick and thin.
-
 Ojeswini Balasani(Mt no: 928382)
-The most loved and pampered member of this team, through constant guidance of her mentors
-has become an active member of the KIS Dashboard team. Being creative or coming up with criticism,
-she has become the front face of the team.
-
 Sravan Kumar Katta(Mt No : 927937)
-A dynamic ever learning programmer, who is dedicated to the KIS Dashboard since its inception.
-He has spent sleepless nights making it look the way it is now. With a couple of years of programming
-experience he is the team’s best resort in case of a bug.
-
 Vinitha Thanasekaran(Mt no :930026)
-She came up with the working of all the software. She understands and works in a way that is
-appreciated by every team member. An excellent team player and also puts work before everything.
-She has made sure KIS dashboard has shown progress through all phases.
-She figured out the working of each platform and which framework would best suit our working conditions.
