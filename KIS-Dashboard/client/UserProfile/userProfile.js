@@ -1,5 +1,5 @@
 if(Meteor.isClient){
-
+ /* Helper to fetch the details of current user from Register_Search collection*/
   Template.userProfile.helpers({
     register_search: function() {
     var current_Userid= Meteor.userId();
@@ -8,6 +8,7 @@ if(Meteor.isClient){
   }
   });
 
+  /* Event to get the entered data from the edit profile form*/
   Template.editProfile.events({
     'submit .editprofileui': function (event){
         event.preventDefault();
@@ -18,7 +19,7 @@ if(Meteor.isClient){
         var birthday = event.target.birthday.value;
         var timestamp = new Date();
 
-
+        /* Inserting the entered data from form into Register_Update collection*/
         Register_Update.insert({
           phone : phone,
           address : address,
@@ -30,18 +31,19 @@ if(Meteor.isClient){
         });
 
 
-
+        /* Initializing the form value to null again */
         event.target.phone.value = "";
         event.target.address.value = "";
         event.target.city.value = "";
         event.target.gender.value = "";
         event.target.birthday.value = "";
+        /* Routing back to user profile page from edit profile page*/
         Meteor.setTimeout(function () {
             Router.go('/userProfile');
         }, 2000);
     }
   });
-
+  /* Helper to display currentuser details from Register_Update collection*/
   Template.userProfile.helpers({
     register_update: function() {
     var curr_Userid= Meteor.userId();

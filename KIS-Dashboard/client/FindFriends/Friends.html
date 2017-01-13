@@ -1,11 +1,14 @@
-
+<!--Template for Searching friends page -->
 <template name="search">
+  <!--Script for cursor to top of page -->
   <script>
   $(document).ready(function(){
       $(window).scrollTop(0);
   });
   </script>
+  <!--Calling the defauft centerhead template -->
   {{> centerheader}}
+  <!-- Creating the Find Friends UI -->
   <div class="container friendsui">
   <div class="container">
   <h1 align="center" style="color:white; font-family: Varela Round;font-size:300%;" > FIND FRIENDS </h1>
@@ -14,6 +17,7 @@
   <br><br>
   <div class="col-xs-2"></div>
   <div class="col-xs-5">
+    <!-- Search bar -->
   <form id="searchForm">
     <div class="form-group col-sm-4 col-sm-offset-4">
       <div class="input-group input-group-lg center-block">
@@ -25,34 +29,36 @@
 </div>
 <div class="col-xs-5"></div>
 </div>
+<!--Calling searchdb template to search through registered users -->
   {{> searchdb}}
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 <br>
 </template>
-
+<!-- Template for displaying the search results-->
 <template name="searchresult">
   <br><br><br>
   <div>
     <div class="col-xs-5"></div>
     <div class="col-xs-2 searchresult">
       <p id="text"></p>
+
   {{firstname}} {{lastname}}
   </div>
   <div class="col-xs-5"></div>
 </div>
 </template>
-
+<!--Template for searching registered users in the register_search collection -->
 <template name="searchdb">
   <ul class="unorder">
       {{#each register_search}}
       <a href="/register_search/{{_id}}" target="_blank">
-         {{> searchresult}}
+         {{> searchresult}} <!-- Calling searchresult template for displaying search results -->
        </a>
       {{/each}}
   </ul>
 </template>
-
+<!-- Template for creating a public profile for all registered users -->
 <template name="publicprofile">
   {{> centerheader}}
   <div class="container friendsui">

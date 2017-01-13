@@ -1,13 +1,5 @@
 /* CSS declarations go here */
-/* accountHome.html page - CSS body of the account Home page */
-.acctHome {
-  background: #efefef;
-  background-image: url("https://trace.theprotag.com/public/src/assets/images/pages-bg.jpg");
-  font-family: 'Varela Round';
-}
-/* accountHome.html page - END */
-
-/* event_new.html page - CSS for colorgraph in the form */
+/* createEvent.html page - CSS for colorgraph in the form */
 .colorgraph {
   height: 5px;
   border-top: 0;
@@ -80,218 +72,6 @@
 }
 
 
-/* Articles Main page */
-.articleMainCSS {
-  background-image: url("/Images/Backgrounds/bg9.jpg");
-  text-align: center;
-}
-
-/*Post Article Page CSS start*/
-.postArticlesCSS{
-  background-image: url("/Images/Backgrounds/bg9.jpg");
-}
-
-.form-style-5{
-    max-width: 500px;
-    padding: 10px 20px;
-    background: #f4f7f8;
-    margin: 10px auto;
-    padding: 20px;
-    background: #f4f7f8;
-    border-radius: 8px;
-    font-family: Georgia, "Times New Roman", Times, serif;
-}
-.form-style-5 fieldset{
-    border: none;
-}
-.form-style-5 legend {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-}
-.form-style-5 label {
-    display: block;
-    margin-bottom: 8px;
-}
-.form-style-5 input[type="text"],
-.form-style-5 input[type="date"],
-.form-style-5 input[type="datetime"],
-.form-style-5 input[type="email"],
-.form-style-5 input[type="number"],
-.form-style-5 input[type="search"],
-.form-style-5 input[type="time"],
-.form-style-5 input[type="url"],
-.form-style-5 textarea,
-.form-style-5 select {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    background: rgba(255,255,255,.1);
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    margin: 0;
-    outline: 0;
-    padding: 7px;
-    width: 100%;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    background-color: #e8eeef;
-    color:#8a97a0;
-    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-    margin-bottom: 30px;
-
-}
-.form-style-5 input[type="text"]:focus,
-.form-style-5 input[type="date"]:focus,
-.form-style-5 input[type="datetime"]:focus,
-.form-style-5 input[type="email"]:focus,
-.form-style-5 input[type="number"]:focus,
-.form-style-5 input[type="search"]:focus,
-.form-style-5 input[type="time"]:focus,
-.form-style-5 input[type="url"]:focus,
-.form-style-5 textarea:focus,
-.form-style-5 select:focus{
-    background: #d2d9dd;
-}
-.form-style-5 select{
-    -webkit-appearance: menulist-button;
-    height:35px;
-}
-.form-style-5 .number {
-    background: #1abc9c;
-    color: #fff;
-    height: 30px;
-    width: 30px;
-    display: inline-block;
-    font-size: 0.8em;
-    margin-right: 4px;
-    line-height: 30px;
-    text-align: center;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
-    border-radius: 15px 15px 15px 0px;
-}
-
-.form-style-5 input[type="submit"],
-.form-style-5 input[type="button"]
-{
-    position: relative;
-    display: block;
-    padding: 19px 39px 18px 39px;
-    color: #FFF;
-    margin: 0 auto;
-    background: #1abc9c;
-    font-size: 18px;
-    text-align: center;
-    font-style: normal;
-    width: 100%;
-    border: 1px solid #16a085;
-    border-width: 1px 1px 3px;
-    margin-bottom: 10px;
-}
-.form-style-5 input[type="submit"]:hover,
-.form-style-5 input[type="button"]:hover
-{
-    background: #109177;
-}
-/*Post Article Page CSS end*/
-
-
-
-
-/*Friends.html CSS start*/
-
-    .friendsui {
-
-      background-image: url("http://wallpapercave.com/wp/nkTc1C9.jpg");
-      background-size: 1000px 800px;
-
-    }
-
-    .searchresult {
-      font-family: 'Nunito', sans-serif;
-      font-size: 18px;
-      color: white;
-    }
-
-    .card {
-      /* Add shadows to create the "card" effect */
-      position: absolute;
-      top:60px;
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-      background-color: #19ABA7;
-      color: white;
-      width: 320px;
-      height: 300px;
-      transition: 0.3s;
-      border-radius: 5px; /* 5px rounded corners */
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
-
-  }
-
-
-
-  .card-title{
-    font-size: 25px;
-  }
-
-  .card-text{
-    font-size: 18px;
-  }
-
-  #searchForm {
-
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    top:20%;
-
-  }
-
-  #searchForm input[type="text"] {
-      background: url(http://www.books360degree.com/home/img/home/search.png) #19ABA7;
-      background-size: 30px 30px;
-      background-position: left;
-      background-repeat: no-repeat;
-      border: 0 none;
-      outline-width: 0;
-      font-size: 18px;
-      font-style: bold;
-      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-      color: white;
-      width: 400px;
-      padding: 15px 15px 15px 35px;
-      -webkit-border-radius: 20px;
-      -moz-border-radius: 20px;
-      border-radius: 20px;
-      text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-
-      -webkit-transition: all 0.7s ease 0s;
-      -moz-transition: all 0.7s ease 0s;
-      -o-transition: all 0.7s ease 0s;
-      transition: all 0.7s ease 0s;
-      }
-
-      ::-webkit-input-placeholder { /* Chrome */
-        color: white;
-      };
-      :-ms-input-placeholder { /* IE 10+ */
-        color: white;
-      };
-      ::-moz-placeholder { /* Firefox 19+ */
-        color: white;
-        opacity: 1;
-      };
-
-  #searchForm input[type="text"]:focus {
-      width: 550px;
-      }
-
-
-/*Friends.html end*/
 /*  During.html css -------------------------START------------------------- */
 
 /* Carousel base class */
@@ -331,6 +111,89 @@
 }
 
 /*  During.html css ---------------END----------------------------------- */
+
+/
+/*css for chat START*/
+.sendButton:hover{
+  color: #a3d063;
+  background-color: #fff;
+}
+.sendButton{
+  width: 140px;
+height: 50px;
+display: inline-block;
+border-radius: 50px;
+background-color: #a3d063;
+border: 2px solid #a3d063;
+color: #fff;
+cursor: pointer;
+transition: all 0.2s linear;
+text-align: center;
+float: right;
+}
+.sendButton .text {
+  font-size: 18px;
+  font-weight: 300;
+  display: inline-block;
+  line-height: 48px;
+}
+
+.message_input_wrapper {
+ display: inline-block;
+ height: 50px;
+ border-radius: 25px;
+ border: 1px solid #bcbdc0;
+ width: calc(100% - 160px);
+ position: relative;
+ padding: 0 20px;
+}
+
+.message_input_wrapper .message_input {
+ border: none;
+ height: 100%;
+ box-sizing: border-box;
+ width: calc(100% - 40px);
+ position: absolute;
+ outline-width: 0;
+ color: gray;
+}
+
+.chat_window {
+  position: absolute;
+  width: calc(100% - 20px);
+  max-width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+  overflow: hidden;
+}
+
+.top_menu {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px 0 15px;
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+}
+.top_menu .title {
+  text-align: center;
+  color: #bcbdc0;
+  font-size: 20px;
+}
+
+.chat_display{
+  color: #72A0C1;
+  text-align: left;
+  font-size: 15px;
+}
+.icon {
+  background-color: transparent;
+  margin-top: 10px;
+}
 
 
 
@@ -855,6 +718,7 @@ ol .stickyliClass .stickyaClass{color:#fff;}
 
 .answersFetchCSS .quote-text{
     font-size: 19px;
+
 }
 
 .emailform{
